@@ -1,0 +1,8 @@
+.sf/
+.sfdx/
+node_modules/
+data/snapshots/
+*.log
+.env
+*.key
+**/secrets/**

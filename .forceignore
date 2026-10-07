@@ -1,0 +1,7 @@
+# Force.com Ignore file
+# Get it from https://github.com/forcedotcom/tools-gitignore/tree/master
+# To add entries to this file, see .forceignore documentation
+# These are defaults for a force-app project
+
+.gitignore
+*.md
