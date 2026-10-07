@@ -1,6 +1,7 @@
 {
-  "package": "northgate-motors-demo",
+  "name": "northgate-motors-demo",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "67.0"
+  "sourceApiVersion": "67.0",
+  "packageDirectories": [{ "path": "force-app", "default": true }]
 }
