@@ -67,8 +67,8 @@ Companions: `DEMO_ORG_MASTER_PLAN.md` (conventions §5, ledger §4), `DEMO_ORG_B
 **13 custom objects.** Comfortably within any org's limits; deliberately kept under 15 so the
 build stays maintainable.
 
-> **Why `Staff__c`:** Developer Edition licences allow at most 5 interactive internal
-> logins (2 Salesforce + 3 Platform — see §6.1), but dashboards and reports must group by
+> **Why `Staff__c`:** interactive logins are licence-bound (Stop B: 4 Salesforce +
+> 6 Platform per org — see §6.1), but dashboards and reports must group by
 > rep, advisor and technician. `Staff__c` holds the 14 people; only a handful of them
 > correspond to real users. Lookups
 > like `Opportunity.Sales_Staff__c` and `Service_Visit__c.Advisor_Staff__c` feed every
@@ -130,6 +130,7 @@ Legend: **Req** = required on create · **FLS** = permission-set gated · **MD**
 | Transmission | `Transmission__c` | Picklist | `Automatic`, `Manual`, `CVT` |
 | Segments | `Segment__c` | Picklist | `Entry`, `Mainstream`, `Premium` |
 | Active | `Is_Active__c` | Checkbox | |
+| Image path | `Image_Path__c` | Text(255) | Static-resource URL of the model photo, e.g. `/resource/NG_VehicleImages/aurelia_solara_ex.webp` — one AI-generated fictional webp (~50 KB) per model (~30), no logos (backlog P7-22) |
 
 ### 3.3 `Vehicle__c` (core)
 
@@ -157,6 +158,7 @@ Legend: **Req** = required on create · **FLS** = permission-set gated · **MD**
 | Reserved by | `Reserved_By__c` | L → Contact | |
 | Reserved on | `Reserved_On__c` | DateTime | |
 | Seed tag | `Seed_Tag__c` | Text(80) | `SEED-03-VEH-0472`; **External ID, Unique** |
+| Photo | `Photo__c` | Formula(Text) | `IMAGE(Vehicle_Model__r.Image_Path__c, "Vehicle photo")` — renders the model's image with no code on layouts and LWC (needs `Image_Path__c` populated, P7-22) |
 
 **Indexes:** `VIN__c` (Unique), `Seed_Tag__c` (External ID, Unique).
 **Enforcement:** `VR_Vehicle_VIN17` (length/charset), `VR_Vehicle_PriceFloor`;
@@ -482,7 +484,7 @@ Staff__c ──< Opportunity.Sales_Staff__c
 ```
 
 `Staff__c` is the reporting dimension for staff-level analytics; `User` is only the login
-mechanism for ≤5 interactive users (§6.1).
+mechanism for ≤6 interactive users (§6.1).
 
 ### 5.2 Cardinality decisions
 
@@ -596,29 +598,34 @@ Rules of engagement:
 
 ### 6.1 Personas, licences and role hierarchy
 
-Developer Edition licence budget (**[VERIFY] in Phase 0**, Setup → Company Information —
-backlog P0-08): ≈2 Salesforce licences, ≈3 Salesforce Platform licences, ≈1 Salesforce
-Integration licence, ≈5 External Identity licences.
+**Stop B measured (per org): 4 Salesforce licences (2 used, 2 free), 6 Platform licences,
+1 Integration licence** — recorded from the `UserLicense` query in `docs/VERIFY_RESULTS.md`;
+re-confirmed at backlog P0-08. External Identity licences **[VERIFY P0-08]** (expect ≈5).
 
-**Licence rule (v2.1 correction): Login As does not lift licence limits.** A Platform
-user cannot use Opportunity, Lead, Case, Quote or Campaign — regardless of any permission
-set or sharing granted. The design therefore puts **every standard-object persona demo on
-a Salesforce licence**, and Platform users only on objects their licence allows.
+**Licence rule: Login As does not lift licence limits.** A Platform user cannot use
+Opportunity, Lead, Case, Quote or Campaign — regardless of any permission set or sharing
+granted. The design therefore puts **every standard-object persona demo on a Salesforce
+licence**, and Platform users only on objects their licence allows.
 
 | # | Persona | Username | Licence | Role | What it can demonstrate |
 |---|---|---|---|---|---|
-| 1 | Admin / presenter | `ngadmin@northgate.demo` | Salesforce | CEO | Everything; also Login As origin for admin/Setup demos |
-| 2 | **Persona Switcher** | `ngpersona@northgate.demo` | Salesforce | *swapped by script* | Role + permission-set-group swapped by `scripts/persona.sh <rep\|manager\|finance\|service>` to demonstrate **Sales Rep**, **Sales Manager**, **Finance Manager** and **Service Advisor** security on one licence |
-| 3 | Inventory Coordinator | `nginv@northgate.demo` | Platform | Inventory Coordinator | `Vehicle__c`, `Vehicle_Model__c`, `Rooftop__c`, `Staff__c` |
-| 4 | Service Technician | `ngtech@northgate.demo` | Platform | Service Technician | `Service_Visit__c`, `Vehicle__c`, Account/Contact **read** |
-| 5 | Spare | `ngspare@northgate.demo` | Platform | (outside tree) | Unassigned platform seat for future personas |
-| 6 | CI / DMS integration | `dms.integration@northgate.demo` | Integration | (outside tree) | JWT auth for pipelines only; no interactive login |
+| 1 | Admin / presenter | `ngadmin@northgate.demo` | Salesforce | CEO | Everything; also the Login As origin for admin/Setup demos |
+| 2 | Sales Rep | `ngrep@northgate.demo` | Salesforce | Sales Rep | **Real login:** lead → opportunity → quote, normal rep limits (`PSG_Rep`) |
+| 3 | Service Advisor | `ngsvc@northgate.demo` | Salesforce | Service Advisor | **Real login:** Case, `Service_Visit__c`, Contact, service reports (`PSG_Service`) |
+| 4 | **Persona Switcher** | `ngpersona@northgate.demo` | Salesforce | *swapped by script* | Role + permission-set-group swapped by `scripts/persona.sh <manager\|finance>` to demonstrate **Sales Manager** and **Finance Manager** security on one licence |
+| 5 | Inventory Coordinator | `nginv@northgate.demo` | Platform | Inventory Coordinator | `Vehicle__c`, `Vehicle_Model__c`, `Rooftop__c`, `Staff__c` |
+| 6 | Service Technician | `ngtech@northgate.demo` | Platform | Service Technician | `Service_Visit__c`, `Vehicle__c`, Account/Contact **read** |
+| 7 | CI / DMS integration | `dms.integration@northgate.demo` | Integration | (outside tree) | JWT auth for pipelines only; no interactive login |
+
+Seven accounts, six interactive logins — must all fit inside the measured ceilings
+(4 Salesforce, 6 Platform). **P0-08 records the exact used/free split**; any shortfall hits
+the shrink gate (fold a real login into Persona Switcher coverage) — never a licence
+overrun.
 
 `scripts/persona.sh` (backlog P1-21) swaps the Persona Switcher's role **and** assigns
-exactly one of `PSG_Rep`, `PSG_Manager`, `PSG_Finance`, `PSG_Service` at a time; it records
-the active persona in a comment in the script log so demos are reproducible. It never
-touches users, licences or profiles — only the switcher's role and permission set group
-assignments.
+exactly one of `PSG_Manager` / `PSG_Finance` at a time; it records the active persona in a
+comment in the script log so demos are reproducible. It never touches users, licences or
+profiles — only the switcher's role and permission set group assignments.
 
 All interactive emails are real plus-addressed inboxes (activation requires deliverable
 email); `dms.integration` uses a plus address for the same reason. Every dashboard that
@@ -628,18 +635,19 @@ groups by person uses `Staff__c`, not User (§3.15).
 CEO                                     [ngadmin — Salesforce] ✓
 ├── VP Sales                            [empty — presentational]
 │   ├── Sales Manager — Downtown        [~ persona switcher when manager]
-│   │   └── Sales Rep                   [~ persona switcher when rep]
+│   │   └── Sales Rep                   [ngrep — Salesforce] ✓
 │   ├── Sales Manager — North           [empty]
 │   ├── Sales Manager — Airport         [empty]
 │   └── Inventory Coordinator           [nginv — Platform] ✓
 ├── Finance Manager                     [~ persona switcher when finance]
 └── Service Manager                     [empty]
+    ├── Service Advisor                 [ngsvc — Salesforce] ✓
     └── Service Technician              [ngtech — Platform] ✓
 ```
 
-✓ = fixed interactive user. ~ = the single Persona Switcher user occupying that role
-whenever `scripts/persona.sh` selects it. Roles are kept as a full tree so sharing demos
-are realistic; empty roles are deliberate (structure without spending licences).
+✓ = fixed interactive user. ~ = the Persona Switcher occupying that role whenever
+`scripts/persona.sh` selects it. Roles are kept as a full tree so sharing demos are
+realistic; empty roles are deliberate (structure without wasting licences).
 
 Persona demo matrix (which persona needs which PSG, and what each can see) lives in
 `docs/security/PERMISSION_MATRIX.md`; every demo script opens with its "Activate persona"
@@ -647,9 +655,10 @@ step (master plan §10).
 
 ### 6.2 Permission sets and FLS
 
-Permission sets are assigned to the **Persona Switcher** as permission set groups
-(`PSG_Rep`, `PSG_Manager`, `PSG_Finance`, `PSG_Service`), one active group at a time via
-`scripts/persona.sh`; the Admin holds `PS_Demo_Admin` permanently.
+`PS_Sales_Rep` → `ngrep` and `PS_Service_Advisor` → `ngsvc` are assigned permanently as
+`PSG_Rep` / `PSG_Service`; `PSG_Manager` / `PSG_Finance` are assigned to the **Persona
+Switcher**, one active group at a time via `scripts/persona.sh`; the Admin holds
+`PS_Demo_Admin` permanently.
 
 | Permission set | Object grants | Critical FLS |
 |---|---|---|
@@ -678,6 +687,29 @@ Permission sets are assigned to the **Persona Switcher** as permission set group
 2. Service Advisor can see Vehicle + Contact for any rooftop where a service visit exists (criteria-based sharing).
 3. Finance can see all opportunities (role hierarchy above sales managers, or a direct sharing rule).
 4. Cross-rooftop vehicle visibility (already via Public Read/Write) — keep, do not over-engineer.
+
+### 6.5 Profiles (seamless-UX exception, default app + tabs only)
+
+**Seamless UX rule (master plan §3.2-6):** each demo user lands directly in their own app
+on login, with only the tabs that persona needs; every app has its own tab list and home
+page.
+
+**Narrow exception to the no-profile-edits rule:** small custom profiles hold **only two
+settings** — the login **default app** and **tab visibility**. All object access, FLS and
+record types stay in permission sets and permission set groups (§6.2). A profile never
+grants access.
+
+| Profile | Default app | Tab visibility (examples) | Assigned to |
+|---|---|---|---|
+| `NG_Admin` | `Northgate Admin` | full Admin tab set | `ngadmin` |
+| `NG_Sales` | `Northgate Sales` | Leads, Opportunities, Quotes, Test Drives, Vehicles (read) | `ngrep`, `ngpersona` |
+| `NG_Service` | `Northgate Service` | Cases, Service Visits, Contacts, Vehicles | `ngsvc`, `ngtech` |
+| `NG_Inventory` | `Northgate Inventory` | Vehicles, Vehicle Models, Rooftops, Staff | `nginv` |
+
+Apps: `Northgate Admin`, `Northgate Sales`, `Northgate Service`, `Northgate Inventory` —
+each with its own tab list and its own home page (backlog P1-07). Profiles are deployed or
+retrieved with care (never hand-edited beyond these two settings) and any profile change is
+logged in `metadata-log/README.md`.
 
 ---
 
@@ -807,6 +839,7 @@ the same permission through `Automation_Settings__c` (§5.6). State changes are 
 | Flows (est.) | ~30 | Per §5.6 automation map |
 | Validation rules | 17 | Complete list §9 |
 | Permission sets | 6 (+4 groups) | §6.2 |
+| Profiles | 4 (default app + tab visibility only) | §6.5 |
 | Report folders | 6 | |
 | Dashboard folders | 3 | 3 dynamic (limit: 3 of 10) + fixed dashboards |
 

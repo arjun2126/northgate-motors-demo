@@ -60,7 +60,7 @@ Anchor everything in this profile so that screenshots, reports, and demo scripts
 | Brand short code | `NG` |
 | Roof tops | 4 — Northgate Downtown, Northgate North, Northgate Airport, Northgate Service Centre |
 | Markets | Canada (Ontario), currency CAD, locale `en_CA`, time zone `America/Toronto` |
-| Staff | **Persona model (v2.1, licence-corrected):** 2 Salesforce licences → Admin + a **Persona Switcher** user whose role/permission set group is swapped by `scripts/persona.sh <rep|manager|finance|service>` to demonstrate Rep, Sales Manager, Finance and Service Advisor security; 3 Platform licences → Inventory Coordinator, Service Technician, one spare; 1 Integration licence → `dms.integration`. Login As does **not** lift licence limits (§6.1 of the data model). 14 fictional staff members modelled in `Staff__c` as the reporting dimension, so dashboards group by staff without needing 14 logins. |
+| Staff | **Persona model (Stop B measured: 4 Salesforce licences [2 used, 2 free] + 6 Platform per org):** Salesforce users = **Admin** (`ngadmin`), **Sales Rep** (`ngrep`, real login), **Service Advisor** (`ngsvc`, real login), **Persona Switcher** (`ngpersona` — manager/finance demos via PSG swap by `scripts/persona.sh <manager\|finance>`); Platform users = **Inventory Coordinator** (`nginv`), **Service Technician** (`ngtech`); Integration = `dms.integration`. Login As does **not** lift licence limits (§6.1 of the data model). 14 fictional staff members modelled in `Staff__c` as the reporting dimension, so dashboards group by staff without needing 14 logins. |
 | Customer mix | Household buyers (majority), small business/fleet buyers, independent dealer trade partners |
 | Vehicle makes | Invented makes only — `Aurelia`, `Cascadia`, `Meridian`, `Vantage`, `Halcyon`, `Kestrel`. **Never use real manufacturer brands** (trademark exposure in screenshots and public repos). |
 | Lifecycle | Web/walk-in lead → qualify → test drive → trade-in appraisal → quote → financing → approval → delivery → service → loyalty → repeat purchase |
@@ -91,9 +91,19 @@ Release flow: feature branch → deploy to `ng-dev` → UAT → **validate-only*
 3. Never run destructive metadata deploys without explicit written approval in a higher-priority
    session. See §7.4.
 4. Never store org credentials, tokens, or passwords in this repository.
-5. Never edit the System Administrator **profile** as a configuration mechanism. Use permission
-   sets (and permission set groups). Profiles are not safely revertible in a source-controlled
-   permanent org.
+5. Never edit the System Administrator **profile**, and never use profiles to grant access
+   (object permissions, FLS, record types). **Narrow exception:** small custom profiles hold
+   *only* the default app and tab visibility (seamless-UX rule, guardrail 6); all access
+   stays in permission sets and permission set groups. Profiles are not safely revertible
+   in a source-controlled permanent org, which is why they are restricted to these two
+   presentation settings.
+6. **Seamless user experience.** Each demo user lands directly in their own app on login,
+   with only the tabs that persona needs. The default app is set on the per-type custom
+   profile (guardrail 5). Each app has its own tab list and its own home page.
+7. **No-workaround rule.** Anything the build agent cannot deploy from source it must not
+   work around: it writes exact click-by-click Setup steps for the owner, waits for the
+   owner's "done", then verifies the result read-only and logs it in
+   `metadata-log/README.md`.
 
 ### 3.3 Why a permanent org changes the build pattern
 
@@ -194,6 +204,7 @@ This is the honesty section. Do not claim a feature exists in the free org unles
 | Reports (summary, matrix, joined), dashboards, custom report types, folders | Analyst surface |
 | Role hierarchy, OWD, sharing rules, queues, public groups, profiles, permission sets, permission set groups | Security model |
 | Tasks, email templates, letterhead | Follow-up automation |
+| Static resources (images) | `NG_VehicleImages` — ~30 AI-generated fictional vehicle photos (~50 KB webp each), displayed via formula field + LWC (data model §3.2/§3.3) |
 | Agentforce — this edition includes ~150 LLM requests/hour | One service agent + one Prompt Builder template (backlog P7-15). **[VERIFY] in Phase 0** |
 | Data Cloud — this edition includes 10 GB, 1 data space, manual refresh/publish only | One ingestion + identity-resolution demo (backlog P7-16). **[VERIFY] in Phase 0** |
 | Lightning Knowledge (~10 articles) | Service answers and recall knowledge (backlog P6-15) |
@@ -237,6 +248,7 @@ These must be checked in the actual org during Phase 0. Record each result in
 | Data Cloud availability (expect 10 GB, 1 data space, manual refresh only) | Setup → Data Cloud. Absent → architecture-note fallback (§4.2) |
 | Knowledge, Entitlements, Milestones, Omni-Channel, Service Console | Setup → feature settings. Expected **standard in DE** — plan to build (P6-14/15/16); if genuinely absent, mark paid and do not build |
 | Dynamic dashboard limit (expect 3) | Attempt a 4th dynamic dashboard; record the rejection |
+| Static resource / file storage limit (expect generous, but measure) | `sf org list limits` → `FileStorageMB`; record cap + headroom before `NG_VehicleImages` is committed (checklist §0-E #21) |
 | Duplicate Rules enforcement limits | Setup → Duplicate Rules |
 | Web-to-Lead | Setup → Web-to-Lead (daily cap applies; forward address must be valid) |
 | Report/dashboard folder behaviour in this org | Create folders, confirm sharing model |
@@ -318,10 +330,10 @@ and bulk path gets a dedicated test.
 | Type | Convention | Example |
 |---|---|---|
 | Permission set | `PS_<Area>_<Level>` | `PS_Sales_Rep`, `PS_Finance_Officer`, `PS_Service_Advisor`, `PS_Sales_Manager` |
-| Permission set group | `PSG_<Function>` | `PSG_Rep`, `PSG_Manager`, `PSG_Finance`, `PSG_Service` (one active on the Persona Switcher at a time) |
+| Permission set group | `PSG_<Function>` | `PSG_Rep`, `PSG_Service` on their real users; `PSG_Manager`, `PSG_Finance` swapped one-at-a-time on the Persona Switcher |
 | Queue | `Q_<Purpose>` | `Q_Internet_Leads`, `Q_Service_Intake`, `Q_Finance_Review` |
 | Public group | `PG_<Function>` | `PG_All_Sales`, `PG_Rooftop_Downtown` |
-| Role | `<Function> <Level>` label | `CEO`, `VP Sales`, `Sales Manager — Downtown`, `Sales Rep`, `Finance Manager`, `Service Technician` |
+| Role | `<Function> <Level>` label | `CEO`, `VP Sales`, `Sales Manager — Downtown`, `Sales Rep`, `Finance Manager`, `Service Advisor`, `Service Technician` |
 
 ### 5.5 Reports, dashboards, templates, users
 
@@ -334,7 +346,7 @@ and bulk path gets a dedicated test.
 | Email template folder | `<Area>_Emails` | `Sales_Emails`, `Service_Emails` |
 | Email template | `ET_<Area>_<Purpose>` | `ET_Sales_TestDriveConfirm` |
 | Document/screenshot folder | `<Area>/<Phase>` | `evidence/P2_CoreLifecycle/` |
-| Demo user username | `ng<role>@northgate.demo` | `ngadmin@…`, `ngpersona@…`, `nginv@…`, `ngtech@…`, `ngspare@…`, `dms.integration@…` |
+| Demo user username | `ng<role>@northgate.demo` | `ngadmin@…`, `ngrep@…`, `ngsvc@…`, `ngpersona@…`, `nginv@…`, `ngtech@…`, `dms.integration@…` |
 | Demo user email | plus-addressed real inbox | `you+ngpersona@yourdomain.com` |
 
 **Username note:** Salesforce usernames must be globally unique. Using `<role>@northgate.demo`
@@ -423,13 +435,18 @@ Dealership Demo Org/
 | Flows | Setup → Flows → folder | `01_LeadToQuote`, `02_Financing`, `03_Service`, `04_Loyalty`, `90_Deferred` |
 | Documents/screenshots | Salesforce Files / Documents folder | optional mirror; primary store is repo `evidence/` |
 | Record types | per object | see §5.1 |
-| Custom apps | App Launcher | `Northgate Sales`, `Northgate Service`, `Northgate Admin` |
+| Custom apps | App Launcher | `Northgate Sales`, `Northgate Service`, `Northgate Inventory`, `Northgate Admin` — each with its own tab list and home page (seamless-UX rule, §3.2-6) |
 
 **Metadata tracking rule:** every Setup-only change (record type, layout tweak, report folder,
 queue, role, site config) must be logged the same day in `metadata-log/README.md` with date,
 change, and why Git cannot hold it. Then attempt `sf project retrieve start --metadata <type>`
 and commit the XML. If retrieval fails, the log entry is the fallback. This is what makes the
 permanent org recoverable after a bad change.
+
+**No-workaround flow (guardrail 7):** if the build agent cannot deploy something from
+source, it does not improvise or skip — it writes exact click-by-click Setup steps for the
+owner, waits for the owner's "done", verifies the result read-only, then logs it in
+`metadata-log/README.md`.
 
 ---
 
@@ -612,10 +629,12 @@ checklist green → UAT script signed → screenshots filed → tag applied.
 documentation-only. Overclaiming a simulation as native is the single largest credibility risk
 in this demo.
 
-**Demo-script rule (v2.1):** every script in `evidence/DEMO_SCRIPTS/` opens with a
-**"Activate persona"** step — `scripts/persona.sh <rep|manager|finance|service>` (or
-"log in as `ngadmin`" for Admin demonstrations) — so a presenter never shows the wrong
-permission context mid-demo.
+**Demo-script rule:** every script in `evidence/DEMO_SCRIPTS/` opens with a
+**"Activate persona"** step — log in as the persona's own user for Admin, Sales Rep
+(`ngrep`) and Service Advisor (`ngsvc`), run `scripts/persona.sh <manager|finance>` for
+manager/finance demos, or log in as `ngadmin` for pure Setup demonstrations — so a
+presenter never shows the wrong permission context mid-demo. On login every persona lands
+in their own app with only their tabs (§3.2-6).
 
 ---
 
@@ -771,8 +790,8 @@ start without metadata changes.
 | 4 | Currency misconfiguration before data load | Set corporate currency to CAD in Phase 0, before any import |
 | 5 | Validation rules or flows block seed import mid-load | Bypass design: `Automation_Settings__c` + `Bypass_Automation` on during load, off immediately after (§7.5); validation rules themselves stay always-active |
 | 6 | **Data storage ceiling** — 5 MB ≈ ~2,500 records at ~2 KB each | Budget ≤ 4.0 MB with arithmetic (`DEMO_ORG_SYNTHETIC_DATA_PLAN.md` §2), legacy + burst sets purged, storage check after every load and reset |
-| 7 | **Licence ceiling** — roughly 2 Salesforce + 3 Platform + 1 Integration (+5 External Identity) | Persona Switcher design (§2): one Salesforce licence demonstrates Rep/Manager/Finance/Service via `scripts/persona.sh`; exact counts verified in Phase 0 before any user is created |
-| 8 | Platform-licence personas cannot use Opportunity, Lead, Case, Quote or Campaign — **Login As does not lift licence limits** | Platform users restricted to what their licence allows (`Vehicle__c`, `Vehicle_Model__c`, `Rooftop__c`, `Staff__c`, `Service_Visit__c`); all standard-object persona demos run on the Persona Switcher's Salesforce licence, role/PSG swapped by `scripts/persona.sh` |
+| 7 | **Licence ceiling** — Stop B measured 4 Salesforce (2 used, 2 free) + 6 Platform + Integration per org | 4 real Salesforce logins (Admin, Sales Rep, Service Advisor, Persona Switcher) + 2 Platform logins; persona matrix records used/free at 0-D; shrink gate folds real logins into Persona Switcher coverage rather than exceeding counts |
+| 8 | Platform-licence personas cannot use Opportunity, Lead, Case, Quote or Campaign — **Login As does not lift licence limits** | Inventory Coordinator and Service Technician stay on custom objects (`Vehicle__c`, `Vehicle_Model__c`, `Rooftop__c`, `Staff__c`, `Service_Visit__c`); Sales Rep and Service Advisor are real Salesforce-licence logins; manager/finance demos run on the Persona Switcher's Salesforce licence (role/PSG swapped by `scripts/persona.sh`) |
 | 9 | Agent overclaims simulated features | §4 ledger is authoritative; every artifact labels native/simulate/verify/paid; Agentforce/Data Cloud fallbacks labelled SIMULATION |
 | 10 | Two-org drift (`ng-dev` diverges from `ng-demo`) | Only validated states reach `ng-demo` (§7.3 steps 7–8); tags mark both; UAT evidence per release |
 | 11 | Username collisions on signup | Namespaced `@northgate.demo` usernames with plus-addressed real emails |

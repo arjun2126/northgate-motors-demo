@@ -7,8 +7,11 @@ decision depends on them.
 Companions: `DEMO_ORG_MASTER_PLAN.md` (§3.5–§3.6 keep-alive/rebuild, §4 ledger, §7 releases),
 `DEMO_ORG_BACKLOG.md` (P0), `DEMO_ORG_DATA_MODEL.md` (§11 decisions log).
 
-**Guardrails that apply to every box below:** no scratch orgs · no profile edits · no deleting
-users · no external writes · every Setup change logged in `metadata-log/`.
+**Guardrails that apply to every box below:** no scratch orgs · no profile edits beyond the
+**narrow seamless-UX exception** (profiles hold only default app + tab visibility — DATA_MODEL
+§6.5) · no deleting users · no external writes · every Setup change logged in `metadata-log/` ·
+**no-workaround rule** (anything not deployable from source = click-by-click steps for the
+owner → "done" → read-only verify → log; master plan §3.2-7).
 
 **Phase 0 scope rule (v2):** Phase 0 creates **no metadata** — no users, roles, permission
 sets, queues, groups, record types, picklists, layouts, validation rules or sharing settings.
@@ -80,29 +83,29 @@ human login cadence; CI auth comes later as an External Client App (P1-22).
 
 ## Phase 0-D — Licence count and persona matrix (verify + document, create nothing)
 
-- [ ] **[VERIFY] Licence inventory.** `Setup → Company Information` — count available
-      Salesforce, Salesforce Platform, Salesforce Integration and External Identity
-      licences. Expected ≈2 / ≈3 / ≈1 / ≈5 — **measure, never assume.**
-- [ ] Write `docs/security/PERMISSION_MATRIX.md` for the **licence-corrected persona model
-      (v2.1)** — **Login As does not lift licence limits**; Platform users cannot use
-      Opportunity, Lead, Case, Quote or Campaign regardless of PSG:
+- [ ] **[VERIFY] Licence inventory.** Stop B `UserLicense` query measured **4 Salesforce
+      licences (2 used, 2 free) and 6 Platform licences** per org; record Integration and
+      External Identity counts (expect ≈1 / ≈5) — **measure, never assume.**
+- [ ] Write `docs/security/PERMISSION_MATRIX.md` for the **7-account persona model
+      (licence-corrected)** — **Login As does not lift licence limits**; Platform users
+      cannot use Opportunity, Lead, Case, Quote or Campaign regardless of PSG:
       - **Salesforce #1** — Admin (`ngadmin`);
-      - **Salesforce #2** — **Persona Switcher** (`ngpersona`): role + PSG swapped by
-        `scripts/persona.sh <rep|manager|finance|service>` to demonstrate Rep, Sales
-        Manager, Finance and Service Advisor security;
+      - **Salesforce #2** — **Sales Rep** (`ngrep`, real login: lead → opportunity → quote);
+      - **Salesforce #3** — **Service Advisor** (`ngsvc`, real login: Case, Service Visits);
+      - **Salesforce #4** — **Persona Switcher** (`ngpersona`): role + PSG swapped by
+        `scripts/persona.sh <manager|finance>` for Sales Manager and Finance demos;
       - **Platform #1** — Inventory Coordinator (`nginv`): `Vehicle__c`,
         `Vehicle_Model__c`, `Rooftop__c`, `Staff__c`;
       - **Platform #2** — Service Technician (`ngtech`): `Service_Visit__c`,
         `Vehicle__c`, Account/Contact read;
-      - **Platform #3** — spare (`ngspare`, unassigned);
       - **Integration** — `dms.integration` (no interactive login);
       - the `Staff__c` roster mapping (14 fictional staff → 6 logins + "no login");
       - the role-hierarchy tree with roles marked *fixed user* / *persona-switcher* /
         *empty*;
       - which demo scripts need which persona (every script starts "activate persona X").
-- [ ] Decision gate: if measured licences < plan, **shrink persona coverage, not the
-      licence rule** (the Persona Switcher demonstrates fewer personas; spare Platform
-      seat dropped first) — **never exceed the licence count.**
+- [ ] Decision gate: if free licences < the plan's new accounts, **shrink coverage, not
+      the licence rule** (Sales Rep or Service Advisor folds into Persona Switcher
+      coverage) — **never exceed the licence count.**
 - [ ] No users, roles or permission sets are created in Phase 0 — P1 creates them from
       source (checklist 1-A).
 
@@ -133,6 +136,7 @@ to `docs/VERIFY_RESULTS.md` with the date. Never assume.
 | 18 | Sandbox types on DE | `sf org list` / Setup → Sandboxes | Use for preview if present | **Never a scratch org** — `ng-demo` itself is the preview target |
 | 19 | Report/folder limits | Create 1 folder per type, observe cap | Stay under cap | Consolidate folders |
 | 20 | Deployment status / packaging limits | Setup → Deployment Status | Note for release strategy | Unlocked package still preferred |
+| 21 | Static resource / file storage limit | `sf org list limits` → `FileStorageMB`; record cap + headroom **before** `NG_VehicleImages` (~30 × ~50 KB webp) is committed | Headroom recorded → `docs/VERIFY_RESULTS.md` | Shrink images or defer gallery (P7-01/22) |
 
 ## Phase 0-F — Repo and CI bootstrap (local + GitHub, no org metadata)
 
@@ -174,7 +178,11 @@ points; work resumes only after the owner confirms each stop.
    `~/Documents/JobSearch/` — those folders are outside this project entirely.
 3. Phase 0 creates **no metadata, no data, no users**. No `project deploy start` of any
    kind (dry-run or real), no data import, no user creation.
-4. Only the five `.md` planning files and the Stop-A scaffold files may be written before
+4. **No-workaround rule (master plan §3.2-7):** anything you cannot deploy from source you
+   do not work around — write exact click-by-click Setup steps for the owner, **wait for
+   the owner's "done"**, then verify the result read-only and log it in
+   `metadata-log/README.md`.
+5. Only the five `.md` planning files and the Stop-A scaffold files may be written before
    approval; no Phase 1 work without explicit owner approval of the Phase 0 exit report.
 
 ### Stop A — Local bootstrap (no org access yet)
@@ -260,9 +268,10 @@ Phase 0 is done when **all** of the following are true:
 3. Keep-alive protocol active: 30-day login reminder scheduled, login log started in
    `ORG_INFO.md`, CI auth deferred to P1-22 (External Client App, planned not clicked),
    rebuild runbook (§3.6) referenced.
-4. Licence counts measured; `PERMISSION_MATRIX.md` written for the licence-corrected
-   persona model (Admin + Persona Switcher + 3 Platform + `dms.integration`) — **no users
-   created yet**.
+4. Licence counts measured (Stop B: 4 Salesforce [2 used, 2 free] + 6 Platform);
+   `PERMISSION_MATRIX.md` written for the 7-account persona model (Admin, Sales Rep,
+   Service Advisor, Persona Switcher, Inventory Coordinator, Service Technician,
+   `dms.integration`) — **no users created yet**.
 5. §0-E verification matrix fully answered with evidence; MASTER_PLAN §4 buckets updated
    (including Agentforce/Data Cloud/Knowledge/Entitlements/Experience/dynamic-dashboard
    rows).
@@ -288,7 +297,7 @@ from source, P1-01..P1-22).**
 | Create users, roles, permission sets, queues, groups | Phase 0 creates no identity metadata — P1 deploys from source (M9) |
 | Create record types, picklists, layouts, apps, tabs, VRs, OWD changes | Same: P1 from source; anything click-only goes through `metadata-log/` in P1 |
 | Create a Connected App in Phase 0 | Spring '26 restriction (0-A); CI External Client App is P1-22 |
-| Edit or clone a profile | Permission sets only — profiles drift across a permanent org |
+| Edit a profile for access (object/FLS/record types), or clone a profile | Permission sets only — profiles drift across a permanent org. **Exception:** the four `NG_*` profiles hold only default app + tab visibility (DATA_MODEL §6.5) |
 | Enable Person Accounts | One-way door |
 | Set email deliverability to "No Email" or a sending state | Default is "System email only"; activation needs system email; tests toggle briefly then back |
 | Import any real person's data | Privacy rule |
