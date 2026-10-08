@@ -53,8 +53,12 @@ P0-01, P0-02, P0-03, P0-04, P0-05, P0-06, P0-07, P0-08, P0-09, P0-10, P0-11, P0-
 - **Action needed:** In Setup, change Web-to-Lead Default Lead Creator to `arjun.ngdev@northgate.demo`; then I will deactivate OrgFarm EPIC and create ngpersona.
 - Evidence `evidence/P1/users.txt`.
 
+### Phase 1 step 12 (P1-16) — commit pending
+- **P1-16** All 17 validation rules from DATA_MODEL §9 deployed and active, each guarded by `AND(NOT($Permission.Bypass_Automation), ...)`. Added non-required standard-field FLS to persona permission sets so users can actually interact with the records. Representative bypass test passed: `ngrep` blocked by `VR_Lead_EmailFormat`, admin allowed through. Evidence `evidence/P1/vr_tests.md`.
+
 ## Next
-**P1-16** — validation rules per DATA_MODEL §9 (17 rules), each guarded by `AND(NOT($Permission.Bypass_Automation), ...)`. Continue while waiting for ngpersona unblock.
+**P1-17** — duplicate rules `DR_Contact_Email`, `DR_Lead_EmailPhone` and matching rule on email+lastname, warn mode first.
+
 
 ## Gates and rules
 - **Source-first rule:** anything that can be Metadata API metadata is deployed from `force-app/`. Records are never created through the API for metadata (e.g., UserRole). Only data (users, assignments, seed records) may be created via records, and each such case is listed in the phase evidence.

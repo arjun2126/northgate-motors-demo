@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Lead_EmailFormat</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT($Permission.Bypass_Automation), NOT(ISBLANK(Email)), NOT(REGEX(Email, &quot;^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.(test|example)$&quot;)))</errorConditionFormula>
+    <errorDisplayField>Email</errorDisplayField>
+    <errorMessage>Lead email must be well-formed and use a .test or .example domain.</errorMessage>
+</ValidationRule>

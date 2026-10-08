@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Opportunity_ClosedWonNeedsDelivery</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT($Permission.Bypass_Automation), ISPICKVAL(StageName, &quot;Closed Won&quot;), NOT(Delivery_Completed__c))</errorConditionFormula>
+    <errorDisplayField>StageName</errorDisplayField>
+    <errorMessage>Closed Won requires delivery to be completed.</errorMessage>
+</ValidationRule>

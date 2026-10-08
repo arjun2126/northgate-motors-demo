@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_TestDrive_EndAfterStart</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT($Permission.Bypass_Automation), Scheduled_End__c &lt;= Scheduled_Start__c)</errorConditionFormula>
+    <errorDisplayField>Scheduled_End__c</errorDisplayField>
+    <errorMessage>Test drive must end after it starts.</errorMessage>
+</ValidationRule>

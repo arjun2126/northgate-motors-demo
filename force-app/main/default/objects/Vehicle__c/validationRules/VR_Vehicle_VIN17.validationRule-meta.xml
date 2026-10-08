@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Vehicle_VIN17</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT($Permission.Bypass_Automation), OR(LEN(VIN__c) &lt;&gt; 17, REGEX(VIN__c, &quot;.*[IOQ ].*&quot;)))</errorConditionFormula>
+    <errorDisplayField>VIN__c</errorDisplayField>
+    <errorMessage>VIN must be 17 characters and cannot contain I, O, Q, or spaces.</errorMessage>
+</ValidationRule>

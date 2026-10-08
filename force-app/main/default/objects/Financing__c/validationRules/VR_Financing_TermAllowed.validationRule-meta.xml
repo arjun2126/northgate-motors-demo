@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_Financing_TermAllowed</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(NOT($Permission.Bypass_Automation), NOT(ISBLANK(Term_Months__c)), NOT(OR(Term_Months__c = 36, Term_Months__c = 48, Term_Months__c = 60, Term_Months__c = 72, Term_Months__c = 84, Term_Months__c = 96)))</errorConditionFormula>
+    <errorDisplayField>Term_Months__c</errorDisplayField>
+    <errorMessage>Term must be one of 36, 48, 60, 72, 84, or 96 months.</errorMessage>
+</ValidationRule>
