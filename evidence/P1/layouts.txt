@@ -1,0 +1,10 @@
+P1-06 page layouts (ng-dev 2026-10-08, 13/13 present)
+Lead-Retail/Fleet Layout (7 items; Email/Company/Status/Name required + Rooftop, Assigned Batch, Seed Tag)
+Account-Household/Business/Dealer Partner Layout (4 items; Name, ParentId required + Household Size, Preferred Rooftop, Seed Tag)
+Opportunity-Retail/Fleet Layout (16 items; Name, Account, Close Date, Stage, Probability required + 11 custom incl Channel, Rooftop, Sales Staff, Vehicle, finance fields, stage tracking)
+Case-Service/Complaint/Warranty Layout (9 items; Status, Priority, Contact, Origin, Subject, Description, SuppliedEmail required + Service Type, Escalated On, Vehicle, Seed Tag)
+Vehicle__c-New/Used Layout (22 items; Name readonly, Vehicle_Model required, formulas readonly; Invoice_Cost__c excluded = finance-gated from sales layouts)
+Service_Visit__c-Standard Layout (23 items; formulas readonly)
+Layout rules learned: file basename must equal fullName; exactly 2 layoutColumns for TwoColumnsTopToBottom; required layout fields per object enforced by server; formula fields must be Readonly; RelatedTaskList is not a valid relatedList name (relatedLists block omitted).
+Finance note: Invoice_Cost__c excluded from Vehicle sales layouts; finance visibility via P1-11 FLS + finance layouts follow-up.
+Owner evidence still needed: layout previews -> evidence/P1/layouts/

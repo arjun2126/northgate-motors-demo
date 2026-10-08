@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prepared_By__c</fullName>
+    <label>Prepared By</label>
+    <referenceTo>Staff__c</referenceTo>
+    <relationshipName>QuotePreparedBy</relationshipName>
+    <type>Lookup</type>
+</CustomField>

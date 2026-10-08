@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category__c</fullName>
+    <label>Category</label>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Vehicle_Trim</fullName>
+                <default>false</default>
+                <label>Vehicle Trim</label>
+            </value>
+            <value>
+                <fullName>Service_Package</fullName>
+                <default>false</default>
+                <label>Service Package</label>
+            </value>
+            <value>
+                <fullName>Accessory</fullName>
+                <default>false</default>
+                <label>Accessory</label>
+            </value>
+            <value>
+                <fullName>Protection_Plan</fullName>
+                <default>false</default>
+                <label>Protection Plan</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
