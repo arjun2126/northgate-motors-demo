@@ -43,8 +43,11 @@ P0-01, P0-02, P0-03, P0-04, P0-05, P0-06, P0-07, P0-08, P0-09, P0-10, P0-11, P0-
 ### Phase 1 step 9 (P1-13) — commit pending
 - **P1-13** Custom permission `Bypass_Automation` from source; `PS_Bypass_Load` created (custom permission only) and `PS_Demo_Admin` carries it. Hierarchy setting from step 1. Evidence `evidence/P1/bypass.txt`. Owner behaviour demo pending (needs VR/flows from P1-16).
 
+### Phase 1 step 10 (P1-14) — commit pending
+- **P1-14** Sharing rule decision recorded in DATA_MODEL §6.4: option (b) — owner-based Contact read-only sharing from All Internal Users to Service Manager role and Service Advisor role+subordinates. Reason: "Customers can be serviced at any rooftop; service needs read-only visibility." Source: `force-app/main/default/sharingRules/Contact.sharingRules-meta.xml` with `Contact_Service_Manager_Read` and `Contact_Service_Advisor_Read`. Vehicle cross-rooftop via Public Read/Write. Evidence `evidence/P1/sharing.txt`; user-level read/edit test deferred to P1-15 users.
+
 ## Next
-**P1-14 (blocked on decision):** sharing. Vehicle is Public Read/Write (native), so cross-rooftop visibility is satisfied. Service Advisor needs Contact record access, but Contact OWD is Private and no field links Contact to a rooftop, so no criteria-based rule can express §6.4 item 2 without a design decision. See Blocked.
+**P1-15** — create users from source/records: `ngadmin` (Salesforce), `ngrep` (Salesforce + PSG_Rep), `ngsvc` (Salesforce + PSG_Service), `ngpersona` (Salesforce, role Sales_Manager_Airport for manager switch), `nginv` (Platform + Inventory_Coordinator role), `ngtech` (Platform + Service_Technician role), `dms.integration` (Integration or Platform). Verify licence counts first.
 
 ## Gates and rules
 - **Source-first rule:** anything that can be Metadata API metadata is deployed from `force-app/`. Records are never created through the API for metadata (e.g., UserRole). Only data (users, assignments, seed records) may be created via records, and each such case is listed in the phase evidence.
@@ -52,7 +55,11 @@ P0-01, P0-02, P0-03, P0-04, P0-05, P0-06, P0-07, P0-08, P0-09, P0-10, P0-11, P0-
 - **Known retrieve gap:** `sf project retrieve start --metadata <type>` returns "Nothing retrieved" for Role, CustomObject, and StandardValueSet on ng-dev. Verify with SOQL/Tooling API until resolved.
 
 ## Blocked
-- **P1-14 sharing decision (owner):** DATA_MODEL §6.4 item 2 wants Service Advisor to see Vehicle + Contact for rooftops with service visits. Vehicle works natively. Contact is Private and has no rooftop field, so a criteria-based sharing rule needs a criterion. Options: (a) add `Preferred_Rooftop__c`/service-rooftop criteria on Contact via a new lookup, (b) share all Contacts with the Service role (broader), (c) Contacts via Account owner only (service sees accounts it can read). Reply with a choice; security decisions are not made without you.
+- None.
+
+## Click steps waiting (owner)
+- P1-14 user-level sharing inspector check after users exist.
+- P1-15 activation emails / passwords / login-as landing tests.
 
 ## Click steps waiting (owner)
 - None yet. Expected: P1-15 user creation review, P1-22 External Client App creation/sign-off, Setup screenshots for evidence (roles, OWD, layouts, apps), M1 gate sign-off.

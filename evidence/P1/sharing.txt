@@ -1,0 +1,8 @@
+P1-14 sharing rules (ng-dev, 2026-10-08)
+Decision: option (b) — owner-based read-only Contact sharing.
+Reason: Customers can be serviced at any rooftop; service needs read-only visibility. Contact has no rooftop/service-visit field, so criteria-based rule needs schema changes.
+Source: force-app/main/default/sharingRules/Contact.sharingRules-meta.xml
+  Contact_Service_Manager_Read: AllInternalUsers -> Read -> role Service_Manager
+  Contact_Service_Advisor_Read: AllInternalUsers -> Read -> roleAndSubordinatesInternal Service_Advisor
+Vehicle__c is Public Read/Write by OWD; no sharing rule needed.
+Deployed successfully. Owner-level verification (Service Advisor reads a Sales Rep-owned Contact, cannot edit) deferred to P1-15 users and recorded there.
