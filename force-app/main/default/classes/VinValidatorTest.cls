@@ -13,4 +13,12 @@ private class VinValidatorTest {
         System.assertEquals(false, VinValidator.isValid(null));
         System.assertEquals(false, VinValidator.isValid('123'));
     }
+    @isTest static void triggerSetsIsVinValid() {
+        Vehicle_Model__c vm = new Vehicle_Model__c(Name = 'Test Model');
+        insert vm;
+        Vehicle__c v = new Vehicle__c(VIN__c = '4NDM4NJ96V8L0KGCJ', Vehicle_Model__c = vm.Id);
+        insert v;
+        v = [SELECT Is_VIN_Valid__c FROM Vehicle__c WHERE Id = :v.Id];
+        System.assertEquals(true, v.Is_VIN_Valid__c, 'Trigger should set Is_VIN_Valid__c for valid VIN');
+    }
 }
