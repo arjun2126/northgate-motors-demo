@@ -1,0 +1,10 @@
+P1-20 VinValidator (ng-dev, 2026-10-08)
+Apex: classes/VinValidator.cls (ISO 3779 mod-11 check digit)
+Trigger: triggers/VehicleTrigger.trigger (before insert/update, honors Bypass_Automation permission)
+Tests: VinValidatorTest.cls
+  - valid VIN 4NDM4NJ96V8L0KGCJ -> true
+  - wrong check digit -> false
+  - invalid charset Q -> false
+  - null / short -> false
+All 4 tests pass.
+VR_Vehicle_VIN17 keeps length/charset only; check digit is Apex.

@@ -62,8 +62,14 @@ P0-01, P0-02, P0-03, P0-04, P0-05, P0-06, P0-07, P0-08, P0-09, P0-10, P0-11, P0-
 ### Phase 1 step 14 (P1-18) — commit pending
 - **P1-18** 4 custom metadata types deployed from source: `Price_Rule__mdt`, `Rate_Table__mdt`, `Loyalty_Tier__mdt`, `Lead_Routing__mdt`. Evidence `evidence/P1/mdt.txt`.
 
+### Phase 1 step 15 (P1-20) — commit pending
+- **P1-20** `VinValidator` Apex class + `VehicleTrigger` before-save trigger sets `Vehicle__c.Is_VIN_Valid__c`. Honors `Bypass_Automation` permission. 4 unit tests pass. Evidence `evidence/P1/vin_tests.txt`.
+
+### Phase 1 step 16 (P1-21) — commit pending
+- **P1-21** `scripts/persona.sh <manager|finance>` switches `ngpersona` role and PSG assignment. Script created; verification pending `ngpersona` user creation.
+
 ## Next
-**P1-20** — `VinValidator` Apex check-digit validator and before-save trigger on `Vehicle__c` (ISO 3779 mod-11), updating `Is_VIN_Valid__c`. P1-19 matrix and P1-21 persona script follow.
+**P1-19** — finalise `PERMISSION_MATRIX.md` (object × PS × FLS × roles × personas). Then **P1-22** External Client App / CI (owner sign-off on credentials).
 
 
 ## Gates and rules
