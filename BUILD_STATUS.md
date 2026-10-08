@@ -32,10 +32,13 @@ P0-01, P0-02, P0-03, P0-04, P0-05, P0-06, P0-07, P0-08, P0-09, P0-10, P0-11, P0-
 ### Phase 1 step 6 (P1-10) — commit pending
 - **P1-10** Queues from source: Inbound Leads (Lead), Service Intake (Case), Finance Approvals (Financing__c). Verified by SOQL. Evidence `evidence/P1/queues.txt`.
 
-## Next
-**P1-11** — permission sets `PS_Sales_Rep`, `PS_Sales_Manager`, `PS_Finance_Officer`, `PS_Service_Advisor`, `PS_Bypass_Load` (PS_Bypass_Load needs P1-13 custom permission first; defer it). FLS check: rep cannot see `Financing__c.Annual_Rate__c`.
+### Phase 1 step 7 (P1-11) — commit pending
+- **P1-11** 4 of 6 permission sets from source (DATA_MODEL 6.2): PS_Sales_Rep, PS_Sales_Manager, PS_Finance_Officer, PS_Service_Advisor (+ existing PS_Demo_Admin). FLS check passes: rep has no grant on Financing__c.Annual_Rate__c or Vehicle__c.Invoice_Cost__c. Required/MD fields not granted (server limit). Evidence `evidence/P1/fls_matrix.txt`.
+- **Deferred:** PS_Bypass_Load → needs P1-13 custom permission `Bypass_Automation` first.
+- **Pending user assignments (P1-15):** PS_Sales_Rep→ngrep, PS_Service_Advisor→ngsvc.
 
-Then in backlog order: P1-10 queues, P1-11 remaining sets, P1-12 groups, P1-13 custom permission, P1-14 sharing, P1-15 users, P1-16 VRs, P1-17 dup rules, P1-18 CMDTs, P1-19 matrix, P1-20 VinValidator, P1-21 persona script, P1-22 External Client App -> M1 gate.
+## Next
+**P1-12** — permission set groups `PSG_Rep`, `PSG_Manager`, `PSG_Finance`, `PSG_Service` from source (`permissionsetgroups/*.permissionsetgroup-meta.xml`). PSG_Demo? Not in spec; only these four.
 
 ## Gates and rules
 - **Source-first rule:** anything that can be Metadata API metadata is deployed from `force-app/`. Records are never created through the API for metadata (e.g., UserRole). Only data (users, assignments, seed records) may be created via records, and each such case is listed in the phase evidence.

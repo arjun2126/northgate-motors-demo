@@ -1,0 +1,65 @@
+P1-11 FLS matrix (ng-dev, ObjectPermissions + FieldPermissions via SOQL, 2026-10-08)
+PS_Bypass_Load deferred to P1-13 (needs Bypass_Automation custom permission).
+Required and master-detail fields are not granted (server rejects FLS on them); they are implicitly accessible.
+
+== Object grants
+Parent.Name,SobjectType,PermissionsCreate,PermissionsRead,PermissionsEdit,PermissionsDelete
+PS_Demo_Admin,Consent__c,true,true,true,true
+PS_Demo_Admin,Data_Load_Batch__c,true,true,true,true
+PS_Demo_Admin,Delivery__c,true,true,true,true
+PS_Demo_Admin,Financing__c,true,true,true,true
+PS_Demo_Admin,Loyalty_Member__c,true,true,true,true
+PS_Demo_Admin,Loyalty_Transaction__c,true,true,true,true
+PS_Demo_Admin,Rooftop__c,true,true,true,true
+PS_Demo_Admin,Service_Visit__c,true,true,true,true
+PS_Demo_Admin,Staff__c,true,true,true,true
+PS_Demo_Admin,Test_Drive__c,true,true,true,true
+PS_Demo_Admin,Trade_In__c,true,true,true,true
+PS_Demo_Admin,Vehicle_Model__c,true,true,true,true
+PS_Demo_Admin,Vehicle__c,true,true,true,true
+PS_Finance_Officer,Financing__c,true,true,true,true
+PS_Finance_Officer,Trade_In__c,false,true,false,false
+PS_Finance_Officer,Vehicle__c,false,true,false,false
+PS_Finance_Officer,Account,false,true,false,false
+PS_Finance_Officer,Contact,false,true,false,false
+PS_Finance_Officer,Opportunity,false,true,false,false
+PS_Finance_Officer,Quote,false,true,false,false
+PS_Sales_Manager,Financing__c,false,true,false,false
+PS_Sales_Manager,Test_Drive__c,true,true,true,true
+PS_Sales_Manager,Trade_In__c,true,true,true,true
+PS_Sales_Manager,Vehicle__c,false,true,false,false
+PS_Sales_Manager,Account,true,true,true,true
+PS_Sales_Manager,Contact,true,true,true,true
+PS_Sales_Manager,Lead,true,true,true,true
+PS_Sales_Manager,Opportunity,true,true,true,true
+PS_Sales_Manager,Quote,true,true,true,true
+PS_Sales_Rep,Test_Drive__c,true,true,true,true
+PS_Sales_Rep,Trade_In__c,true,true,true,true
+PS_Sales_Rep,Vehicle__c,false,true,false,false
+PS_Sales_Rep,Account,true,true,true,true
+PS_Sales_Rep,Contact,true,true,true,true
+PS_Sales_Rep,Lead,true,true,true,true
+PS_Sales_Rep,Opportunity,true,true,true,true
+PS_Sales_Rep,Quote,true,true,true,true
+PS_Service_Advisor,Service_Visit__c,true,true,true,true
+PS_Service_Advisor,Vehicle__c,false,true,false,false
+PS_Service_Advisor,Case,true,true,true,true
+PS_Service_Advisor,Contact,false,true,false,false
+
+== Critical field checks
+Parent.Name,Field,PermissionsRead,PermissionsEdit
+PS_Demo_Admin,Financing__c.Annual_Rate__c,true,true
+PS_Demo_Admin,Financing__c.Exception_Reason__c,true,true
+PS_Demo_Admin,Trade_In__c.Appraisal_Amount__c,true,true
+PS_Demo_Admin,Vehicle__c.Invoice_Cost__c,true,true
+PS_Finance_Officer,Financing__c.Annual_Rate__c,true,true
+PS_Finance_Officer,Financing__c.Exception_Reason__c,true,true
+PS_Finance_Officer,Trade_In__c.Appraisal_Amount__c,true,false
+PS_Finance_Officer,Vehicle__c.Invoice_Cost__c,true,false
+PS_Sales_Manager,Financing__c.Annual_Rate__c,true,false
+PS_Sales_Manager,Financing__c.Exception_Reason__c,true,false
+PS_Sales_Manager,Trade_In__c.Appraisal_Amount__c,true,true
+PS_Sales_Rep,Trade_In__c.Appraisal_Amount__c,true,false
+
+Checks: PS_Sales_Rep has no row for Financing__c.Annual_Rate__c or Vehicle__c.Invoice_Cost__c (PASS). PS_Sales_Manager reads Financing, no edit (PASS). PS_Finance_Officer edits Annual_Rate__c (PASS). PS_Sales_Rep Appraisal_Amount__c read-only (PASS).
+Assignments pending P1-15 users: PS_Sales_Rep->ngrep, PS_Service_Advisor->ngsvc.
