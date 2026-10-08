@@ -1,0 +1,9 @@
+P2-04 conflict guard (ng-dev, 2026-10-08)
+Apex: classes/TestDriveBookingGuard.cls + triggers/TestDriveTrigger.trigger
+Deploy: 0Afg800000GNt2cCAD success (dry-run clean)
+Tests: TestDriveBookingGuardTest 3/3 pass
+- overlappingDriveIsBlocked: conflict rejected with clear message
+- adjacentDriveIsAllowed: back-to-back slots allowed
+- cancelledDriveDoesNotBlock: non-blocking statuses ignored
+Subflow (P2-03 screen-flow conflict check) pending Flow Builder.
+Race limitation: before-save guard cannot lock across concurrent transactions (see TECH_DEBT when created).

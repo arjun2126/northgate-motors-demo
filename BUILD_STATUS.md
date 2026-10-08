@@ -19,7 +19,7 @@ with automation, reports and tests. First demoable state.
 | P2-01 | Lead intake assignment (FSA → rooftop, round-robin) | Blocked (Flow XML; routing table + Apex action staged) | `evidence/P2/p201_blocked.txt` |
 | P2-02 | Lead conversion guidance | Pending | `evidence/P2/conversion.png` |
 | P2-03 | Test-drive screen flow | Pending | `evidence/P2/testdrive_conflict.png` |
-| P2-04 | Conflict-check subflow + Apex | Pending | `evidence/P2/conflict_tests.txt` |
+| P2-04 | Conflict-check subflow + Apex | Apex guard done; subflow pending | `evidence/P2/conflict_tests.txt` |
 | P2-05 | Opportunity stage model + stage-stamp flow | Pending | `evidence/P2/stages.png` |
 | P2-06 | Vehicle reservation logic | Pending | `evidence/P2/reserve_block.png` |
 | P2-07 | Task auto-creation | Pending | `evidence/P2/tasks.png` |
