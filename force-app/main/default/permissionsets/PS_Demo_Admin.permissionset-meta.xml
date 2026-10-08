@@ -995,6 +995,11 @@
     </fieldPermissions>
     <fieldPermissions>
         <editable>true</editable>
+        <field>Vehicle_Model__c.Completed_Test_Drives__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
         <field>Vehicle_Model__c.Drivetrain__c</field>
         <readable>true</readable>
     </fieldPermissions>
