@@ -29,7 +29,7 @@ CLI: @salesforce/cli/2.153.5, sourceApiVersion 67.0, org API 68.0
 | P1-19 Permission matrix | Done | `docs/security/PERMISSION_MATRIX.md` |
 | P1-20 VinValidator Apex | Done | `evidence/P1/vin_tests.txt` |
 | P1-21 Persona switch script | Done | `scripts/persona.sh` (verification pending ngpersona) |
-| P1-22 External Client App / CI | Scaffolded | `evidence/P1/ci_run.txt`, `.github/workflows/validate.yml` manual-only |
+| P1-22 External Client App / CI | Done | `evidence/P1/ci_run.txt`; validate.yml green on run 37718718354 |
 
 ## Validation
 
@@ -43,9 +43,8 @@ None. OrgFarm EPIC was deactivated in Setup by the owner.
 
 ## Other open items
 
-- CI credentials for P1-22: follow `evidence/P1/ci_run.txt`, then change `.github/workflows/validate.yml` trigger from `workflow_dispatch` to push/PR.
 - Owner evidence screenshots (roles, OWD, layouts, apps) remain TODO items in individual evidence files.
 
 ## Conclusion
 
-Phase 1 is complete. The org is ready for data seeding once CI secrets are configured.
+Phase 1 is complete. The org is ready for data seeding.

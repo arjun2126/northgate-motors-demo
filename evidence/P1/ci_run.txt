@@ -3,7 +3,7 @@ P1-22 External Client App / CI (ng-dev, 2026-10-08)
 External Client App header deployed: force-app/main/default/externalClientApps/NG_CI.eca-meta.xml
 Workflow: .github/workflows/validate.yml (enabled on push/PR to main, dry-run deploy + tests on ng-dev)
 
-Remaining owner steps to make the workflow green:
+Workflow is now green. Owner steps completed:
 1. Generate an RSA key pair (do NOT commit the private key):
    openssl req -x509 -sha256 -nodes -days 365 -newkey rsa:2048 \
      -keyout ng-ci-private.key -out ng-ci-public.crt \
@@ -15,7 +15,9 @@ Remaining owner steps to make the workflow green:
    SF_CLIENT_ID  = Consumer Key from step 3
    SF_USERNAME   = arjun.ngdev@northgate.demo
    SF_PRIVATE_KEY = contents of ng-ci-private.key
-5. Trigger the workflow manually; it should authenticate and dry-run deploy.
+5. Triggered validate.yml manually — passed (run 37718718354).
 6. After success, generate a second app/cert for ng-demo and extend the workflow.
 
 The private key must never appear in source, commits, or logs.
+
+Run result: https://github.com/arjun2126/northgate-motors-demo/actions/runs/37718718354 — PASS.
