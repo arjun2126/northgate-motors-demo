@@ -1,0 +1,5 @@
+P1-10 queues (ng-dev, verified via Group + QueueSobject SOQL, 2026-10-08)
+Inbound Leads (Q_Inbound_Leads) -> Lead
+Service Intake (Q_Service_Intake) -> Case
+Finance Approvals (Q_Finance_Approvals) -> Financing__c
+Source: force-app/main/default/queues/*.queue-meta.xml. Membership empty; owner selection test screenshot pending -> evidence/P1/queues.png

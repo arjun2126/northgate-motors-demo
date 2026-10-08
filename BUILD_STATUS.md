@@ -29,8 +29,11 @@ P0-01, P0-02, P0-03, P0-04, P0-05, P0-06, P0-07, P0-08, P0-09, P0-10, P0-11, P0-
 ### Phase 1 step 5 (P1-09) — commit pending
 - **P1-09** OWD set from source per §6.3: Account/Contact/Lead/Opportunity/Case Private, Quote ControlledByParent, Vehicle/Rooftop/Vehicle_Model ReadWrite, Financing/Service_Visit Private. Standard objects use `<sharingModel>` in `objects/<Std>/<Std>.object-meta.xml` (Settings/SharingSettings rejected). Recalc async (~2 min). Deviation: Loyalty_Transaction ControlledByParent (MD child). Evidence `evidence/P1/owd.txt`.
 
+### Phase 1 step 6 (P1-10) — commit pending
+- **P1-10** Queues from source: Inbound Leads (Lead), Service Intake (Case), Finance Approvals (Financing__c). Verified by SOQL. Evidence `evidence/P1/queues.txt`.
+
 ## Next
-**P1-10** — queues `Q_Inbound_Leads`, `Q_Service_Intake`, `Q_Finance_Approvals` as source (`queues/*.queue-meta.xml`).
+**P1-11** — permission sets `PS_Sales_Rep`, `PS_Sales_Manager`, `PS_Finance_Officer`, `PS_Service_Advisor`, `PS_Bypass_Load` (PS_Bypass_Load needs P1-13 custom permission first; defer it). FLS check: rep cannot see `Financing__c.Annual_Rate__c`.
 
 Then in backlog order: P1-10 queues, P1-11 remaining sets, P1-12 groups, P1-13 custom permission, P1-14 sharing, P1-15 users, P1-16 VRs, P1-17 dup rules, P1-18 CMDTs, P1-19 matrix, P1-20 VinValidator, P1-21 persona script, P1-22 External Client App -> M1 gate.
 
