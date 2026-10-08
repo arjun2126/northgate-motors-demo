@@ -3,18 +3,18 @@ private class LeadRoundRobinTest {
     @isTest
     static void cyclesOwnersWithinSamePrefix() {
         LeadRoundRobin.prefixCounts.clear();
-        LeadRoundRobin.Request first = new LeadRoundRobin.Request();
+        LeadRoundRobinRequest first = new LeadRoundRobinRequest();
         first.fsaPrefix = 'M';
         first.ownerIds = new List<String>{ '005000000000000AAA', '00G000000000000EAA' };
-        LeadRoundRobin.Request second = new LeadRoundRobin.Request();
+        LeadRoundRobinRequest second = new LeadRoundRobinRequest();
         second.fsaPrefix = 'M';
         second.ownerIds = new List<String>{ '005000000000000AAA', '00G000000000000EAA' };
-        LeadRoundRobin.Request other = new LeadRoundRobin.Request();
+        LeadRoundRobinRequest other = new LeadRoundRobinRequest();
         other.fsaPrefix = 'L4H';
         other.ownerIds = new List<String>{ '005000000000000AAA', '00G000000000000EAA' };
 
-        List<LeadRoundRobin.Response> results = LeadRoundRobin.nextSlot(
-            new List<LeadRoundRobin.Request>{ first, second, other }
+        List<LeadRoundRobinResponse> results = LeadRoundRobin.nextSlot(
+            new List<LeadRoundRobinRequest>{ first, second, other }
         );
 
         System.assertEquals(3, results.size());
