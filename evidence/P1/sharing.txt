@@ -6,3 +6,9 @@ Source: force-app/main/default/sharingRules/Contact.sharingRules-meta.xml
   Contact_Service_Advisor_Read: AllInternalUsers -> Read -> roleAndSubordinatesInternal Service_Advisor
 Vehicle__c is Public Read/Write by OWD; no sharing rule needed.
 Deployed successfully. Owner-level verification (Service Advisor reads a Sales Rep-owned Contact, cannot edit) deferred to P1-15 users and recorded there.
+
+P1-14 Service Advisor read/no-edit test (ng-dev, 2026-10-08)
+- Created Account + Contact owned by ngrep (Sales Rep).
+- Apex test ran as ngsvc (Service Advisor): query returned the Contact (read succeeded via Contact_Service_Advisor_Read sharing rule).
+- Update was blocked (NG_Service profile grants Contact read-only; DML update not allowed).
+- Test class P1_14_SharingTest deployed, passed, and removed.

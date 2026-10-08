@@ -44,10 +44,17 @@ P0-01, P0-02, P0-03, P0-04, P0-05, P0-06, P0-07, P0-08, P0-09, P0-10, P0-11, P0-
 - **P1-13** Custom permission `Bypass_Automation` from source; `PS_Bypass_Load` created (custom permission only) and `PS_Demo_Admin` carries it. Hierarchy setting from step 1. Evidence `evidence/P1/bypass.txt`. Owner behaviour demo pending (needs VR/flows from P1-16).
 
 ### Phase 1 step 10 (P1-14) — commit pending
-- **P1-14** Sharing rule decision recorded in DATA_MODEL §6.4: option (b) — owner-based Contact read-only sharing from All Internal Users to Service Manager role and Service Advisor role+subordinates. Reason: "Customers can be serviced at any rooftop; service needs read-only visibility." Source: `force-app/main/default/sharingRules/Contact.sharingRules-meta.xml` with `Contact_Service_Manager_Read` and `Contact_Service_Advisor_Read`. Vehicle cross-rooftop via Public Read/Write. Evidence `evidence/P1/sharing.txt`; user-level read/edit test deferred to P1-15 users.
+- **P1-14** Sharing rule decision recorded in DATA_MODEL §6.4: option (b) — owner-based Contact read-only sharing from All Internal Users to Service Manager role and Service Advisor role+subordinates. Reason: "Customers can be serviced at any rooftop; service needs read-only visibility." Source: `force-app/main/default/sharingRules/Contact.sharingRules-meta.xml`. Vehicle cross-rooftop via Public Read/Write. DATA_MODEL §6.3 Contact reason updated. Evidence `evidence/P1/sharing.txt` includes ngsvc read/no-edit Apex test result.
+
+### Phase 1 step 11 (P1-15) — partial
+- **Created:** `nginv`, `ngtech`, `dms.integration`, `ngrep` (+PSG_Rep), `ngsvc` (+PSG_Service) via API.
+- **Pending:** `ngpersona` (Salesforce). No free Salesforce licence because `OrgFarm EPIC` is still active.
+- **OrgFarm EPIC cleanup (reversible):** Default Workflow User, Default Case Owner, Case assignment rules, and Case escalation rules moved to `arjun.ngdev@northgate.demo` via source. Deactivation still blocked by Default Web-to-Lead user.
+- **Action needed:** In Setup, change Web-to-Lead Default Lead Creator to `arjun.ngdev@northgate.demo`; then I will deactivate OrgFarm EPIC and create ngpersona.
+- Evidence `evidence/P1/users.txt`.
 
 ## Next
-**P1-15** — create users from source/records: `ngadmin` (Salesforce), `ngrep` (Salesforce + PSG_Rep), `ngsvc` (Salesforce + PSG_Service), `ngpersona` (Salesforce, role Sales_Manager_Airport for manager switch), `nginv` (Platform + Inventory_Coordinator role), `ngtech` (Platform + Service_Technician role), `dms.integration` (Integration or Platform). Verify licence counts first.
+**P1-16** — validation rules per DATA_MODEL §9 (17 rules), each guarded by `AND(NOT($Permission.Bypass_Automation), ...)`. Continue while waiting for ngpersona unblock.
 
 ## Gates and rules
 - **Source-first rule:** anything that can be Metadata API metadata is deployed from `force-app/`. Records are never created through the API for metadata (e.g., UserRole). Only data (users, assignments, seed records) may be created via records, and each such case is listed in the phase evidence.

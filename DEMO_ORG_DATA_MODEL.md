@@ -673,7 +673,7 @@ Switcher**, one active group at a time via `scripts/persona.sh`; the Admin holds
 
 | Object | OWD | Reason |
 |---|---|---|
-| Account, Contact, Opportunity, Case, Lead | Private | Makes role hierarchy and sharing rules visible and demonstrable |
+| Account, Contact, Opportunity, Case, Lead | Private | Makes role hierarchy and sharing rules visible and demonstrable. Contact stays Private so the P1-14 owner-based sharing rule can grant service read-only access; customers can be serviced at any rooftop. |
 | Quote | Controlled by parent | Follows opportunity |
 | `Vehicle__c` | Public Read/Write | Inventory is shared across rooftops by design |
 | `Rooftop__c`, `Vehicle_Model__c` | Public Read/Write | Reference data |

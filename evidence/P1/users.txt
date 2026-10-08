@@ -1,0 +1,14 @@
+P1-15 users created in ng-dev via API (2026-10-08)
+Salesforce licence users:
+- arjun.ngdev@northgate.demo (existing admin, treated as admin persona)
+- ngrep@northgate.demo / NG_Sales / Sales Rep / PSG_Rep
+- ngsvc@northgate.demo / NG_Service / Service Advisor / PSG_Service
+- ngpersona@northgate.demo — pending (no free Salesforce licence; OrgFarm EPIC still active)
+Platform users:
+- nginv@northgate.demo / NG_Inventory / Inventory Coordinator
+- ngtech@northgate.demo / Standard Platform User / Service Technician
+Integration user:
+- dms.integration@northgate.demo / Salesforce API Only System Integrations
+Emails are plus-addressed to arjun.subramanya@gmail.com. Activation emails will arrive there.
+Blocker: OrgFarm EPIC cannot be deactivated while it is Default Web-to-Lead user. Change Setup -> Web-to-Lead -> Default Lead Creator to arjun.ngdev@northgate.demo, then I can deactivate OrgFarm EPIC and create ngpersona.
+Owner verification: user list screenshot -> evidence/P1/users.png; login-as landing tests -> P1-07/P1-21 evidence.
