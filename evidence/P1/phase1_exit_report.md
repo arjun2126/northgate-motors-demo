@@ -22,7 +22,7 @@ CLI: @salesforce/cli/2.153.5, sourceApiVersion 67.0, org API 68.0
 | P1-12 Permission set groups | Done | `evidence/P1/psg.txt` |
 | P1-13 Bypass mechanism | Done | `evidence/P1/bypass.txt` |
 | P1-14 Sharing rules | Done | `evidence/P1/sharing.txt` |
-| P1-15 Users | Partial | `evidence/P1/users.txt` — see blocker below |
+| P1-15 Users | Done | `evidence/P1/users.txt`; `ngpersona` created and `scripts/persona.sh` verified |
 | P1-16 Validation rules (17) | Done | `evidence/P1/vr_tests.md` |
 | P1-17 Duplicate rules | Done | `evidence/P1/duplicate_rules.txt` |
 | P1-18 Custom metadata types (4) | Done | `evidence/P1/mdt.txt` |
@@ -37,24 +37,9 @@ CLI: @salesforce/cli/2.153.5, sourceApiVersion 67.0, org API 68.0
 - Apex tests: `VinValidatorTest` 4/4 pass; representative VR bypass test passed.
 - PSG statuses: Updated.
 
-## Blocker preventing full Phase 1 exit
+## Blocker
 
-`OrgFarm EPIC` cannot be deactivated. Dependencies already moved to admin:
-- Default Workflow User
-- Default Case Owner / Case assignment rules / escalation rules
-- Web-to-Lead Default Creator
-
-Remaining error: `cannot inactivate owner of lead queue`.
-
-**Required owner click:**
-Setup → Lead Settings → **Default Lead Owner** → set to `arjun.ngdev@northgate.demo`.
-(You already set Default Lead Creator; this is the separate Default Lead Owner setting.)
-
-After that:
-1. Deactivate `OrgFarm EPIC`.
-2. Create `ngpersona@northgate.demo` (Salesforce, role `Sales_Manager_Airport`, PSG `PSG_Manager`).
-3. Verify `scripts/persona.sh manager` and `scripts/persona.sh finance`.
-4. Update `PERMISSION_MATRIX.md` with `ngpersona`.
+None. OrgFarm EPIC was deactivated in Setup by the owner.
 
 ## Other open items
 
@@ -63,4 +48,4 @@ After that:
 
 ## Conclusion
 
-Phase 1 is source-complete and deploy-clean. The org is ready for data seeding once `ngpersona` exists and CI secrets are configured.
+Phase 1 is complete. The org is ready for data seeding once CI secrets are configured.

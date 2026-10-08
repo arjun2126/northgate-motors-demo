@@ -56,6 +56,5 @@ components; profiles carry only default app + tab visibility.
 
 ## Known gaps / pending
 
-- `ngpersona` user not yet created (Salesforce licence blocked by OrgFarm EPIC default web-to-lead user).
-- Persona-switch script `scripts/persona.sh` created but not yet verified end-to-end.
-- This matrix should be re-exported after P1-15 is complete.
+- `ngpersona` created and `scripts/persona.sh` verified for manager and finance.
+- 

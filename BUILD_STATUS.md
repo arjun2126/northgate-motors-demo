@@ -1,7 +1,7 @@
 # Build Status — Northgate Motors demo org
 
 ## Phase 1 Exit Report
-See `evidence/P1/phase1_exit_report.md` (2026-10-08). Phase 1 is source-complete and deploy-clean; full exit is blocked only by the P1-15 OrgFarm EPIC deactivation (needs Setup → Lead Settings → Default Lead Owner set to admin).
+See `evidence/P1/phase1_exit_report.md` (2026-10-08). Phase 1 is complete.
 
 Target org: **ng-dev only** (`arjun.ngdev@northgate.demo`). Never touch ng-demo or other orgs.
 CLI: @salesforce/cli 2.153.5 (upgraded 2026-10-08; 2.140.6 could not resolve `.object`/`.set`/`.customSetting` source files). sourceApiVersion 67.0, org API 68.0.
