@@ -16,7 +16,7 @@ with automation, reports and tests. First demoable state.
 
 | ID | Item | Status | Evidence |
 |---|---|---|---|
-| P2-01 | Lead intake assignment (FSA → rooftop, round-robin) | Blocked (Flow XML; routing table + Apex action staged) | `evidence/P2/p201_blocked.txt` |
+| P2-01 | Lead intake assignment (FSA → rooftop, round-robin) | Flow retrieved (Draft); owner to activate after approval | `evidence/P2/blocked-metadata/flows/` |
 | P2-02 | Lead conversion guidance | Pending | `evidence/P2/conversion.png` |
 | P2-03 | Test-drive screen flow | Pending | `evidence/P2/testdrive_conflict.png` |
 | P2-02 | Lead conversion guidance + seed-tag behavior | Done (Apex) | `evidence/P2/conversion.txt` |
@@ -46,16 +46,15 @@ with automation, reports and tests. First demoable state.
 - **Known retrieve gap:** `sf project retrieve start --metadata <type>` returns "Nothing retrieved" for Role, CustomObject, StandardValueSet on ng-dev. Verify with SOQL/Tooling API until resolved.
 
 ## Blocked
-- **P2-01 Lead Enrich Rooftop:** corrected design at `evidence/P2/blocked-metadata/flows/LEAD_ENRICH_ROOFTOP_design.md`. Before-save Flow (only supported elements: Assignment/Decision/Get Records/Loop) sets Rooftop__c + Assigned_Batch__c placeholder; before-trigger Apex does the round-robin Owner assignment. Owner click steps in `evidence/P2/OWNER_ACTION_LIST.md` §2b.
-- **P2-09 / P2-10 / P2-11 reports and dashboard:** corrected checklist in `evidence/P2/OWNER_ACTION_LIST.md` (3 widgets, viewer mode, conversion % via row-level flag + percent summary, staff grouping on `Opportunity.Sales_Staff__c`, public-group folder sharing).
+- **P2-01 Lead Enrich Rooftop:** retrieved (Draft) and validated (commit `fb781f2`); owner to activate after approval, then end-to-end UAT. Design at `evidence/P2/blocked-metadata/flows/LEAD_ENRICH_ROOFTOP_design.md`; checklist `evidence/P2/OWNER_ACTION_LIST.md` §2.
+- **P2-09 / P2-10 / P2-11 reports and dashboard:** corrected checklist in `evidence/P2/OWNER_ACTION_LIST.md` (3 widgets, viewer mode, conversion % via row-level flag + percent summary, staff grouping on `Opportunity.Sales_Staff__c`, one new group `PG_All_Sales`). Conversion-rate spec treated as unverified until validated in Report Builder.
 
 ## Click steps waiting (owner)
-- **0.** Create 5 public groups (`PG_All_Sales`, `PG_All_Service`, `PG_All_Inventory`, `PG_All_Finance`, `PG_Admins`).
+- **0.** Create public group `PG_All_Sales` (members: ngrep, arjun.ngdev@northgate.demo).
 - **1.** Build the 3 reports + 1 dashboard and share folders per `evidence/P2/OWNER_ACTION_LIST.md` §1.
-- **2.** Build `Lead_Enrich_Rooftop` record-triggered (before-save) Flow per `evidence/P2/OWNER_ACTION_LIST.md` §2b and the design at `evidence/P2/blocked-metadata/flows/LEAD_ENRICH_ROOFTOP_design.md`. Export the XML into the repo.
-- **3.** Activation gate per MASTER_PLAN §7.5: deploy inactive, UAT, activate, log to `metadata-log/README.md`.
-- **C.** CI validation: `gh workflow run validate.yml` after each step (current run `37779791983` PASS, head `9074a9e`).
+- **3.** Activation gate per MASTER_PLAN §7.5: approval line in `metadata-log/README.md`, then activate, then end-to-end UAT.
+- **C.** CI validation: `gh workflow run validate.yml` after each step (current run `37810319248` PASS).
 - **D.** P1-15 follow-up after OrgFarm EPIC deactivation: done.
-- **E.** Phase 2 exit gate (M1): blocked on 0/1/2/3; agent will retrieve, validate, commit, and produce the M1 gate report once owner says done.
+- **E.** Phase 2 exit gate (M1): blocked on 0/1/3; agent will retrieve, validate, commit, and produce the M1 gate report once owner says done.
 - Owner evidence screenshots (P1 roles/OWD/layouts/apps) and `evidence/P2/uat/` screenshots still pending; M1 gate sign-off.
 - **No Phase 3 or ng-demo deployment without explicit approval.**
