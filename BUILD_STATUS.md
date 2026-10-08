@@ -33,8 +33,8 @@ with automation, reports and tests. First demoable state.
 | P2-11 | Dashboard: sales snapshot (dynamic) | Click steps issued | `evidence/P2/reports_blocked.txt` |
 | P2-12 | Flow-maintained counters v1 | Done (Apex; Flow XML blocked) | `evidence/P2/counters_test.txt` |
 | P2-13 | Apex test suite v1 | Done (P2TestDataFactory + 200-row bulk) | `evidence/P2/tests.txt` |
-| P2-14 | UAT script for slice | Pending | `evidence/UAT/UAT_P2.md` |
-| P2-15 | Demo script v1 | Pending | `evidence/DEMO_SCRIPTS/01_lead_to_testdrive.md` |
+| P2-14 | UAT script for slice | Done (template; to run after P2-01/09/10/11 land) | `evidence/UAT/UAT_P2.md` |
+| P2-15 | Demo script v1 | Done (Lead → Test Drive → Opportunity) | `evidence/DEMO_SCRIPTS/01_lead_to_testdrive.md` |
 
 **M1 gate:** dry-run clean, tests ≥90%, DQ 0 rows, UAT_P2 signed, screenshots, tag `demo/v0.1`.
 
@@ -50,6 +50,9 @@ with automation, reports and tests. First demoable state.
 - **P2-09 / P2-10 / P2-11 reports and dashboard:** click-by-click checklist issued (`evidence/P2/reports_blocked.txt`). Owner to author Pipeline by Stage, Lead Source Effectiveness, Sales Pipeline Snapshot in Setup. Folders `NG_01_Pipeline`, `NG_02_Leads`, `NG_Sales` already exist (Hidden access; set Public). After “done”, retrieve, validate, commit. Not marked complete until acceptance passes.
 
 ## Click steps waiting (owner)
-- Screenshots for evidence (P1 roles/OWD/layouts/apps) and Phase 2 evidence files.
-- M1 gate sign-off.
-- **No Phase 3 or ng-demo deployment without explicit approval.**
+- **A.** P2-09/10/11 reports + dashboard (full spec in `evidence/P2/blocked-metadata/REPORTS_DASHBOARDS_checklist.md`).
+- **B.** P2-01 Lead Enrich Rooftop flow in Flow Builder (spec in `evidence/P2/p201_blocked.txt`).
+- **C.** CI validation: `gh workflow run validate.yml` after each step (already green; current run 37779791983 PASS, head `9074a9e`).
+- **D.** P1-15 follow-up after OrgFarm EPIC deactivation: done.
+- **E.** Phase 2 exit gate (M1): blocked on A and B; agent will retrieve/validate/commit once owner says done.
+- Owner evidence screenshots (P1 roles/OWD/layouts/apps) and `evidence/P2/uat/` screenshots still pending; M1 gate sign-off.
