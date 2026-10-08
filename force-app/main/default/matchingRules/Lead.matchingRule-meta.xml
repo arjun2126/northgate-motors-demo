@@ -4,14 +4,17 @@
         <fullName>Lead_Email_Phone_LastName</fullName>
         <label>Lead Email + Phone + LastName</label>
         <matchingRuleItems>
+            <blankValueBehavior>NullNotAllowed</blankValueBehavior>
             <fieldName>Email</fieldName>
             <matchingMethod>Exact</matchingMethod>
         </matchingRuleItems>
         <matchingRuleItems>
+            <blankValueBehavior>NullNotAllowed</blankValueBehavior>
             <fieldName>Phone</fieldName>
             <matchingMethod>Exact</matchingMethod>
         </matchingRuleItems>
         <matchingRuleItems>
+            <blankValueBehavior>NullNotAllowed</blankValueBehavior>
             <fieldName>LastName</fieldName>
             <matchingMethod>Exact</matchingMethod>
         </matchingRuleItems>
