@@ -1,0 +1,11 @@
+P2-05 opportunity stage stamp + P2-06 vehicle reservation (ng-dev, 2026-10-08)
+Apex:
+- classes/OpportunityStageStamp.cls + triggers/OpportunityTrigger.trigger
+- classes/VehicleReservationGuard.cls (wired into triggers/VehicleTrigger.trigger)
+Deploy: 0Afg800000GNUQzCAP success (single-file dry-run clean; multi-dir dry-run hung twice, see note)
+Note: multi-source-dir deploy commands hung with no output (CLI transient); single-file
+dry-run passed and grouped real deploy succeeded. Retried with changed approach, not unchanged.
+Tests:
+- OpportunityStageStampTest 3/3 pass (insert stamps time; stage change updates previous+timestamp; non-stage edit untouched)
+- VehicleReservationGuardTest 2/2 pass (reserve sets Reserved+timestamp; second reservation blocked)
+Flow/UX parts of P2-05 (picklist already P1) and P2-06 screen reservation remain for demo-script verification.

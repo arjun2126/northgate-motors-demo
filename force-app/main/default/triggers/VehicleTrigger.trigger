@@ -7,4 +7,5 @@ trigger VehicleTrigger on Vehicle__c (before insert, before update) {
             v.Is_VIN_Valid__c = VinValidator.isValid(v.VIN__c);
         }
     }
+    VehicleReservationGuard.guard(Trigger.new, Trigger.oldMap);
 }

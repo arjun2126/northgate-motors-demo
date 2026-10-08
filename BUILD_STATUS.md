@@ -20,8 +20,8 @@ with automation, reports and tests. First demoable state.
 | P2-02 | Lead conversion guidance | Pending | `evidence/P2/conversion.png` |
 | P2-03 | Test-drive screen flow | Pending | `evidence/P2/testdrive_conflict.png` |
 | P2-04 | Conflict-check subflow + Apex | Apex guard done; subflow pending | `evidence/P2/conflict_tests.txt` |
-| P2-05 | Opportunity stage model + stage-stamp flow | Pending | `evidence/P2/stages.png` |
-| P2-06 | Vehicle reservation logic | Pending | `evidence/P2/reserve_block.png` |
+| P2-05 | Opportunity stage model + stage-stamp | Apex stamp done; layout verify pending | `evidence/P2/stages_reserve_tests.txt` |
+| P2-06 | Vehicle reservation logic | Apex guard done; screen verify pending | `evidence/P2/stages_reserve_tests.txt` |
 | P2-07 | Task auto-creation | Pending | `evidence/P2/tasks.png` |
 | P2-08 | Email alert (TestDrive confirm) | Pending | `evidence/P2/confirm_email.png` |
 | P2-09 | Report: pipeline by stage | Pending | `evidence/P2/rpt_pipeline.png` |
