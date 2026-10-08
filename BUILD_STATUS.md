@@ -68,8 +68,11 @@ P0-01, P0-02, P0-03, P0-04, P0-05, P0-06, P0-07, P0-08, P0-09, P0-10, P0-11, P0-
 ### Phase 1 step 16 (P1-21) — commit pending
 - **P1-21** `scripts/persona.sh <manager|finance>` switches `ngpersona` role and PSG assignment. Script created; verification pending `ngpersona` user creation.
 
+### Phase 1 step 17 (P1-19) — commit pending
+- **P1-19** `docs/security/PERMISSION_MATRIX.md` created from live org data: object permissions, sensitive-field checks, persona/role/PSG mapping, OWD/sharing summary. Flagged pending `ngpersona` creation.
+
 ## Next
-**P1-19** — finalise `PERMISSION_MATRIX.md` (object × PS × FLS × roles × personas). Then **P1-22** External Client App / CI (owner sign-off on credentials).
+**P1-22** — External Client App for CI / JWT bearer flow. This requires owner sign-off and a GitHub secret; I can scaffold the metadata, but you need to create/store the consumer key.
 
 
 ## Gates and rules
