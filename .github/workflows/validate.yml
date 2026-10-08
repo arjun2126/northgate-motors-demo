@@ -1,10 +1,7 @@
 name: Validate ng-dev
 
+# Manual only until SF_CLIENT_ID, SF_USERNAME, and SF_PRIVATE_KEY secrets are configured.
 on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
   workflow_dispatch:
 
 jobs:
