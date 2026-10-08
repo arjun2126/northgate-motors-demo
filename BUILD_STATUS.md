@@ -37,8 +37,11 @@ P0-01, P0-02, P0-03, P0-04, P0-05, P0-06, P0-07, P0-08, P0-09, P0-10, P0-11, P0-
 - **Deferred:** PS_Bypass_Load → needs P1-13 custom permission `Bypass_Automation` first.
 - **Pending user assignments (P1-15):** PS_Sales_Rep→ngrep, PS_Service_Advisor→ngsvc.
 
+### Phase 1 step 8 (P1-12) — commit pending
+- **P1-12** 4 permission set groups from source: PSG_Rep, PSG_Manager, PSG_Finance, PSG_Service (each wraps one persona set; status Updated). Evidence `evidence/P1/psg.txt`. Test-user assignment pending P1-15.
+
 ## Next
-**P1-12** — permission set groups `PSG_Rep`, `PSG_Manager`, `PSG_Finance`, `PSG_Service` from source (`permissionsetgroups/*.permissionsetgroup-meta.xml`). PSG_Demo? Not in spec; only these four.
+**P1-13** — custom permission `Bypass_Automation` (source), then `PS_Bypass_Load` (deferred from P1-11) and wire `Bypass_Automation` into PS_Demo_Admin. Hierarchy setting already deployed. Bypass demo is an owner click/test step.
 
 ## Gates and rules
 - **Source-first rule:** anything that can be Metadata API metadata is deployed from `force-app/`. Records are never created through the API for metadata (e.g., UserRole). Only data (users, assignments, seed records) may be created via records, and each such case is listed in the phase evidence.

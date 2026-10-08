@@ -1,0 +1,7 @@
+P1-12 permission set groups (ng-dev, verified via PermissionSetGroup + PermissionSetGroupComponent SOQL, 2026-10-08)
+PSG_Rep     -> PS_Sales_Rep       (Status Updated)
+PSG_Manager -> PS_Sales_Manager   (Status Updated)
+PSG_Finance -> PS_Finance_Officer (Status Updated)
+PSG_Service -> PS_Service_Advisor (Status Updated)
+Source: force-app/main/default/permissionsetgroups/*.permissionsetgroup-meta.xml
+Persona Switcher swaps PSG_Manager/PSG_Finance (P1-21 script). Group assignment on a test user pending P1-15 users.
