@@ -1,0 +1,8 @@
+P1-17 duplicate rules (ng-dev, 2026-10-08)
+Matching rules (warn mode):
+- Contact_Email_LastName on Contact (Email + LastName exact)
+- Lead_Email_Phone_LastName on Lead (Email + Phone + LastName exact)
+Duplicate rules:
+- Contact.DR_Contact_Email: warn on insert/update, references Contact_Email_LastName
+- Lead.DR_Lead_EmailPhone: warn on insert/update, references Lead_Email_Phone_LastName
+Both deployed from source. Twin-record test pending seed data load.

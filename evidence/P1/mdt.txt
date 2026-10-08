@@ -1,0 +1,7 @@
+P1-18 custom metadata types (ng-dev, 2026-10-08)
+Deployed from source:
+- Price_Rule__mdt (11 fields)
+- Rate_Table__mdt (5 fields)
+- Loyalty_Tier__mdt (5 fields)
+- Lead_Routing__mdt (3 fields)
+Verified via EntityDefinition Tooling API.

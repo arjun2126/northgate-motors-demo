@@ -5,3 +5,5 @@
 
 .gitignore
 *.md
+**/jsconfig.json
+**/.eslintrc.json

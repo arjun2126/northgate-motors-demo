@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Attribute__c</fullName>
+    <label>Attribute</label>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+                <value>
+                    <fullName>Trim</fullName>
+                    <default>false</default>
+                    <label>Trim</label>
+                </value>
+                <value>
+                    <fullName>Condition</fullName>
+                    <default>false</default>
+                    <label>Condition</label>
+                </value>
+                <value>
+                    <fullName>Age_Days</fullName>
+                    <default>false</default>
+                    <label>Age Days</label>
+                </value>
+                <value>
+                    <fullName>Segment</fullName>
+                    <default>false</default>
+                    <label>Segment</label>
+                </value>
+                <value>
+                    <fullName>Loyalty_Tier</fullName>
+                    <default>false</default>
+                    <label>Loyalty Tier</label>
+                </value>
+                <value>
+                    <fullName>Volume</fullName>
+                    <default>false</default>
+                    <label>Volume</label>
+                </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

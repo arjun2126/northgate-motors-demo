@@ -56,8 +56,14 @@ P0-01, P0-02, P0-03, P0-04, P0-05, P0-06, P0-07, P0-08, P0-09, P0-10, P0-11, P0-
 ### Phase 1 step 12 (P1-16) — commit pending
 - **P1-16** All 17 validation rules from DATA_MODEL §9 deployed and active, each guarded by `AND(NOT($Permission.Bypass_Automation), ...)`. Added non-required standard-field FLS to persona permission sets so users can actually interact with the records. Representative bypass test passed: `ngrep` blocked by `VR_Lead_EmailFormat`, admin allowed through. Evidence `evidence/P1/vr_tests.md`.
 
+### Phase 1 step 13 (P1-17) — commit pending
+- **P1-17** Duplicate rules from source: matching rules `Contact_Email_LastName` and `Lead_Email_Phone_LastName`; duplicate rules `DR_Contact_Email` and `DR_Lead_EmailPhone` in warn mode (allow + alert/report). Evidence `evidence/P1/duplicate_rules.txt`.
+
+### Phase 1 step 14 (P1-18) — commit pending
+- **P1-18** 4 custom metadata types deployed from source: `Price_Rule__mdt`, `Rate_Table__mdt`, `Loyalty_Tier__mdt`, `Lead_Routing__mdt`. Evidence `evidence/P1/mdt.txt`.
+
 ## Next
-**P1-17** — duplicate rules `DR_Contact_Email`, `DR_Lead_EmailPhone` and matching rule on email+lastname, warn mode first.
+**P1-20** — `VinValidator` Apex check-digit validator and before-save trigger on `Vehicle__c` (ISO 3779 mod-11), updating `Is_VIN_Valid__c`. P1-19 matrix and P1-21 persona script follow.
 
 
 ## Gates and rules
