@@ -1,0 +1,66 @@
+# Phase 1 Exit Report — Northgate Motors Demo Org
+
+Date: 2026-10-08
+Target org: ng-dev (`arjun.ngdev@northgate.demo`)
+CLI: @salesforce/cli/2.153.5, sourceApiVersion 67.0, org API 68.0
+
+## Completed P1 items
+
+| Item | Status | Evidence |
+|---|---|---|
+| P1-01 Core custom objects (13) | Done | Source + org counts match DATA_MODEL §2 |
+| P1-02 Field set (189 custom fields, Seed_Tag__c) | Done | `evidence/P1/field_diff.txt` area |
+| P1-03 Relationships | Done | Only custom MD is Loyalty_Transaction → Loyalty_Member |
+| P1-04 Picklists / stable API values | Done | `evidence/P1/picklists.txt` |
+| P1-05 Record types (13) + business processes | Done | `evidence/P1/record_types.txt` |
+| P1-06 Page layouts | Done | `evidence/P1/layouts.txt` |
+| P1-07 Apps, tabs, profiles | Done | 4 apps, 13 tabs, 4 profiles |
+| P1-08 Role hierarchy (11 roles) | Done | `evidence/P1/roles.txt` |
+| P1-09 OWD | Done | Account/Contact/Lead/Opp/Case Private; `evidence/P1/owd.txt` |
+| P1-10 Queues | Done | `evidence/P1/queues.txt` |
+| P1-11 Permission sets (5 of 6) | Done | `evidence/P1/fls_matrix.txt` |
+| P1-12 Permission set groups | Done | `evidence/P1/psg.txt` |
+| P1-13 Bypass mechanism | Done | `evidence/P1/bypass.txt` |
+| P1-14 Sharing rules | Done | `evidence/P1/sharing.txt` |
+| P1-15 Users | Partial | `evidence/P1/users.txt` — see blocker below |
+| P1-16 Validation rules (17) | Done | `evidence/P1/vr_tests.md` |
+| P1-17 Duplicate rules | Done | `evidence/P1/duplicate_rules.txt` |
+| P1-18 Custom metadata types (4) | Done | `evidence/P1/mdt.txt` |
+| P1-19 Permission matrix | Done | `docs/security/PERMISSION_MATRIX.md` |
+| P1-20 VinValidator Apex | Done | `evidence/P1/vin_tests.txt` |
+| P1-21 Persona switch script | Done | `scripts/persona.sh` (verification pending ngpersona) |
+| P1-22 External Client App / CI | Scaffolded | `evidence/P1/ci_run.txt`, `.github/workflows/validate.yml` manual-only |
+
+## Validation
+
+- Full source dry-run to ng-dev: clean.
+- Apex tests: `VinValidatorTest` 4/4 pass; representative VR bypass test passed.
+- PSG statuses: Updated.
+
+## Blocker preventing full Phase 1 exit
+
+`OrgFarm EPIC` cannot be deactivated. Dependencies already moved to admin:
+- Default Workflow User
+- Default Case Owner / Case assignment rules / escalation rules
+- Web-to-Lead Default Creator
+
+Remaining error: `cannot inactivate owner of lead queue`.
+
+**Required owner click:**
+Setup → Lead Settings → **Default Lead Owner** → set to `arjun.ngdev@northgate.demo`.
+(You already set Default Lead Creator; this is the separate Default Lead Owner setting.)
+
+After that:
+1. Deactivate `OrgFarm EPIC`.
+2. Create `ngpersona@northgate.demo` (Salesforce, role `Sales_Manager_Airport`, PSG `PSG_Manager`).
+3. Verify `scripts/persona.sh manager` and `scripts/persona.sh finance`.
+4. Update `PERMISSION_MATRIX.md` with `ngpersona`.
+
+## Other open items
+
+- CI credentials for P1-22: follow `evidence/P1/ci_run.txt`, then change `.github/workflows/validate.yml` trigger from `workflow_dispatch` to push/PR.
+- Owner evidence screenshots (roles, OWD, layouts, apps) remain TODO items in individual evidence files.
+
+## Conclusion
+
+Phase 1 is source-complete and deploy-clean. The org is ready for data seeding once `ngpersona` exists and CI secrets are configured.
