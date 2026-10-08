@@ -1,0 +1,6 @@
+P1-07 apps/tabs/profiles (ng-dev, verified via org list metadata + Profile query)
+13 CustomTabs (motif CustomN: Name required; plain CustomN rejected): Rooftop Building24, Vehicle_Model Chip63, Vehicle Car31, Test_Drive People15, Trade_In Diamond8, Financing Bank16, Delivery Truck98, Service_Visit Gears67, Loyalty_Member Cup65, Loyalty_Transaction Sack17, Consent Shield91, Data_Load_Batch Computer21, Staff Presenter84
+4 apps (Lightning Standard): Northgate_Sales (16 tabs), Northgate_Service (10), Northgate_Inventory (9), Northgate_Admin (all). Tab naming: standard tabs use standard-X (dash), NOT standard__X; landing standard-home; Chatter tab not allowed in Lightning apps (removed from Admin).
+4 custom profiles (app + tabs ONLY, no grants): NG_Admin (Salesforce, all visible, Admin default), NG_Sales (Salesforce, Sales default), NG_Service (Salesforce, Service default), NG_Inventory (Salesforce Platform, Inventory default). Non-default apps visible=false except Admin.
+Home pages: default Home per app (custom home pages deferred).
+Owner evidence still needed: login-as each persona landing screenshots -> evidence/P1/app_landing.png

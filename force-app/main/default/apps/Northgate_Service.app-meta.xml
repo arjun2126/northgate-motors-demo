@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <description>Service app: cases and visits, one tab list.</description>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Northgate Service</label>
+    <navType>Standard</navType>
+    <tabs>standard-home</tabs>
+    <tabs>standard-Case</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>Service_Visit__c</tabs>
+    <tabs>Vehicle__c</tabs>
+    <tabs>Rooftop__c</tabs>
+    <tabs>Staff__c</tabs>
+    <tabs>Consent__c</tabs>
+    <tabs>standard-Report</tabs>
+    <uiType>Lightning</uiType>
+</CustomApplication>
