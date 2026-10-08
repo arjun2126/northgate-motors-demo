@@ -26,8 +26,11 @@ P0-01, P0-02, P0-03, P0-04, P0-05, P0-06, P0-07, P0-08, P0-09, P0-10, P0-11, P0-
 ### Phase 1 step 4 (P1-08) — commit pending
 - **P1-08** Role hierarchy deployed from source: `force-app/main/default/roles/*.role-meta.xml` (11 roles, DATA_MODEL §6.1). Verified: SOQL on UserRole matches source for all 11; org has exactly 11 roles. Sample roles deleted (CFO, SVP Sales & Marketing, VP North American Sales, Director Channel Sales, Channel Sales Team, earlier sample children); zero users affected. Sample `CEO` kept as root. Owner Setup screenshot pending → `evidence/P1/roles.png`. Evidence `evidence/P1/roles.txt`.
 
+### Phase 1 step 5 (P1-09) — commit pending
+- **P1-09** OWD set from source per §6.3: Account/Contact/Lead/Opportunity/Case Private, Quote ControlledByParent, Vehicle/Rooftop/Vehicle_Model ReadWrite, Financing/Service_Visit Private. Standard objects use `<sharingModel>` in `objects/<Std>/<Std>.object-meta.xml` (Settings/SharingSettings rejected). Recalc async (~2 min). Deviation: Loyalty_Transaction ControlledByParent (MD child). Evidence `evidence/P1/owd.txt`.
+
 ## Next
-**P1-09** — OWD per DATA_MODEL §6.3 before any data loads (check source support for Sharing settings first).
+**P1-10** — queues `Q_Inbound_Leads`, `Q_Service_Intake`, `Q_Finance_Approvals` as source (`queues/*.queue-meta.xml`).
 
 Then in backlog order: P1-10 queues, P1-11 remaining sets, P1-12 groups, P1-13 custom permission, P1-14 sharing, P1-15 users, P1-16 VRs, P1-17 dup rules, P1-18 CMDTs, P1-19 matrix, P1-20 VinValidator, P1-21 persona script, P1-22 External Client App -> M1 gate.
 

@@ -1,0 +1,19 @@
+P1-09 org-wide defaults (ng-dev, EntityDefinition.InternalSharingModel, 2026-10-08)
+QualifiedApiName,InternalSharingModel
+Account,Private
+Case,Private
+Contact,Private
+Financing__c,Private
+Lead,Private
+Loyalty_Member__c,ReadWrite
+Loyalty_Transaction__c,ControlledByParent
+Opportunity,Private
+Quote,ControlledByParent
+Rooftop__c,ReadWrite
+Service_Visit__c,Private
+Vehicle__c,ReadWrite
+Vehicle_Model__c,ReadWrite
+Source: standard objects Account/Contact/Lead/Opportunity/Case/Quote carry <sharingModel> in force-app/main/default/objects/<Std>/<Std>.object-meta.xml (Settings/SharingSettings element names rejected by server). Custom objects: sharingModel in each *.object-meta.xml.
+Loyalty_Transaction__c = ControlledByParent (master-detail child; cannot be Public Read/Write as §6.3 says for Loyalty_*). Recorded as deviation.
+Recalculation is async: values appeared ~2 min after deploy.
+Owner check still needed: Setup > Sharing Settings screenshot -> evidence/P1/owd.png
