@@ -71,8 +71,11 @@ P0-01, P0-02, P0-03, P0-04, P0-05, P0-06, P0-07, P0-08, P0-09, P0-10, P0-11, P0-
 ### Phase 1 step 17 (P1-19) — commit pending
 - **P1-19** `docs/security/PERMISSION_MATRIX.md` created from live org data: object permissions, sensitive-field checks, persona/role/PSG mapping, OWD/sharing summary. Flagged pending `ngpersona` creation.
 
+### Phase 1 step 18 (P1-22) — scaffolded, credentials pending
+- **P1-22** External Client App header `NG_CI` deployed to ng-dev; workflow `.github/workflows/validate.yml` enabled for push/PR (dry-run + tests). Owner must enable OAuth/JWT in Setup, upload cert, and add `SF_CLIENT_ID`, `SF_USERNAME`, `SF_PRIVATE_KEY` GitHub secrets. Evidence `evidence/P1/ci_run.txt`.
+
 ## Next
-**P1-22** — External Client App for CI / JWT bearer flow. This requires owner sign-off and a GitHub secret; I can scaffold the metadata, but you need to create/store the consumer key.
+**Close P1-15**: flip Setup → Web-to-Lead → Default Lead Creator to `arjun.ngdev@northgate.demo`, then I deactivate OrgFarm EPIC and create `ngpersona`, verify `scripts/persona.sh`.
 
 
 ## Gates and rules

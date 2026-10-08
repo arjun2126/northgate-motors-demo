@@ -1,26 +1,39 @@
-name: Validate — DISABLED until P1-22 External Client App
+name: Validate ng-dev
 
 on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
-# The following jobs are disabled until P1-22 External Client App credentials exist.
-# Until then, this workflow only runs on manual dispatch.
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-# jobs:
-#   validate:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - name: Checkout repo
-#         uses: actions/checkout@v4
-#       - name: Authenticate orgs
-#         # TODO: Add org auth steps after P1-22 External Client App is created
-#         # credentials must NOT be committed; store as GitHub secrets
-#         run: echo "Auth steps disabled — see P1-22"
-#       - name: Dry-run deploy to ng-dev
-#         # TODO: uncomment after P1-22
-#         # run: sf project deploy start --dry-run --test-level RunLocalTests -o ng-dev
-#         run: echo "Dry-run deploy disabled — see P1-22"
-#       - name: Dry-run deploy to ng-demo
-#         # TODO: uncomment after P1-22
-#         # run: sf project deploy start --dry-run --test-level RunLocalTests -o ng-demo
-#         run: echo "Dry-run deploy to ng-demo disabled — see P1-22"
+      - name: Install Salesforce CLI
+        run: npm install --global @salesforce/cli
+
+      - name: Write JWT key
+        env:
+          SF_PRIVATE_KEY: ${{ secrets.SF_PRIVATE_KEY }}
+        run: |
+          echo "$SF_PRIVATE_KEY" > /tmp/server.key
+          chmod 600 /tmp/server.key
+
+      - name: Authenticate to ng-dev
+        env:
+          SF_CLIENT_ID: ${{ secrets.SF_CLIENT_ID }}
+          SF_USERNAME: ${{ secrets.SF_USERNAME }}
+        run: |
+          sf org login jwt --username "$SF_USERNAME" --jwt-key-file /tmp/server.key \
+            --client-id "$SF_CLIENT_ID" --set-default --alias ng-dev
+
+      - name: Dry-run deploy to ng-dev with tests
+        run: |
+          sf project deploy start --dry-run --test-level RunLocalTests --target-org ng-dev
+
+      # TODO: ng-demo validation requires its own External Client App / credentials (P1-22 follow-up)
