@@ -27,7 +27,7 @@ P0-01, P0-02, P0-03, P0-04, P0-05, P0-06, P0-07, P0-08, P0-09, P0-10, P0-11, P0-
 - **P1-08** Role hierarchy deployed from source: `force-app/main/default/roles/*.role-meta.xml` (11 roles, DATA_MODEL §6.1). Verified: SOQL on UserRole matches source for all 11; org has exactly 11 roles. Sample roles deleted (CFO, SVP Sales & Marketing, VP North American Sales, Director Channel Sales, Channel Sales Team, earlier sample children); zero users affected. Sample `CEO` kept as root. Owner Setup screenshot pending → `evidence/P1/roles.png`. Evidence `evidence/P1/roles.txt`.
 
 ### Phase 1 step 5 (P1-09) — commit pending
-- **P1-09** OWD set from source per §6.3: Account/Contact/Lead/Opportunity/Case Private, Quote ControlledByParent, Vehicle/Rooftop/Vehicle_Model ReadWrite, Financing/Service_Visit Private. Standard objects use `<sharingModel>` in `objects/<Std>/<Std>.object-meta.xml` (Settings/SharingSettings rejected). Recalc async (~2 min). Deviation: Loyalty_Transaction ControlledByParent (MD child). Evidence `evidence/P1/owd.txt`.
+- **P1-09** OWD set from source per §6.3: Account/Contact/Lead/Opportunity/Case Private (rechecked 2026-10-08; still Private via EntityDefinition), Quote ControlledByParent, Vehicle/Rooftop/Vehicle_Model ReadWrite, Financing/Service_Visit Private. Standard objects use `<sharingModel>` in `objects/<Std>/<Std>.object-meta.xml` (Settings/SharingSettings rejected). Recalc async (~2 min). Deviation: Loyalty_Transaction ControlledByParent (MD child). Evidence `evidence/P1/owd.txt`.
 
 ### Phase 1 step 6 (P1-10) — commit pending
 - **P1-10** Queues from source: Inbound Leads (Lead), Service Intake (Case), Finance Approvals (Financing__c). Verified by SOQL. Evidence `evidence/P1/queues.txt`.
@@ -51,7 +51,7 @@ P0-01, P0-02, P0-03, P0-04, P0-05, P0-06, P0-07, P0-08, P0-09, P0-10, P0-11, P0-
 
 ## Gates and rules
 - **Source-first rule:** anything that can be Metadata API metadata is deployed from `force-app/`. Records are never created through the API for metadata (e.g., UserRole). Only data (users, assignments, seed records) may be created via records, and each such case is listed in the phase evidence.
-- **ng-demo gate:** Delete sample roles in ng-demo before deploying roles.
+- **ng-demo gate:** Delete sample roles in ng-demo before deploying roles. Deactivate `OrgFarm EPIC` in ng-demo before creating users (reversible; needed to free Salesforce licences).
 - **Known retrieve gap:** `sf project retrieve start --metadata <type>` returns "Nothing retrieved" for Role, CustomObject, and StandardValueSet on ng-dev. Verify with SOQL/Tooling API until resolved.
 
 ## Blocked

@@ -6,6 +6,12 @@
 |---|---|---|---|
 | YYYY-MM-DD | Description of change | Why the change was needed | P0-XX or P1-XX, etc. |
 
+## User/License Changes
+
+| Date | Org | Change | Reason | Ticket/Phase |
+|---|---|---|---|---|
+| 2026-10-08 | ng-dev | Planned deactivation of `OrgFarm EPIC` user (reversible) | Free 2 Salesforce licenses for P1-15 persona users; blocked because user is Default Workflow User | P1-15 |
+
 ## Org Info Login Log Table
 
 | Date | Org | Who | Why |
