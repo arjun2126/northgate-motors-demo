@@ -1,0 +1,15 @@
+P2-01 Lead_Enrich_Rooftop — BLOCKED (hand-written Flow XML)
+
+Valid and staged (not yet committed):
+- Lead_Routing__mdt records M/L4H/L5V/L1G (customMetadata/)
+- LeadRoundRobin invocable Apex + LeadRoundRobinTest (classes/)
+- 4 Rooftop__c test rows in ng-dev (SEED-P2-ROOFTOP-*)
+
+Blocked:
+- flows/Lead_Enrich_Rooftop.flow-meta.xml fails Metadata API validation repeatedly:
+  1. triggerType must live in <start>, not top level (+ customMetadata xsd namespace)
+  2. assignNullValuesIfNoRecords invalid name/position in FlowRecordLookup
+  3. full rewrite still fails: "Element decisions is duplicated" (same-type grouping rule)
+Per /next rule (3 failed fixes), stop hand-editing Flow XML here.
+Next: build the flow in Flow Builder, or use a Flow-authoring skill, then commit the flow file.
+The flow file is intentionally NOT committed.

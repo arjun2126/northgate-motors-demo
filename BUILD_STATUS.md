@@ -16,7 +16,7 @@ with automation, reports and tests. First demoable state.
 
 | ID | Item | Status | Evidence |
 |---|---|---|---|
-| P2-01 | Lead intake assignment (FSA → rooftop, round-robin) | Next | `evidence/P2/lead_routing.png` |
+| P2-01 | Lead intake assignment (FSA → rooftop, round-robin) | Blocked (Flow XML; routing table + Apex action staged) | `evidence/P2/p201_blocked.txt` |
 | P2-02 | Lead conversion guidance | Pending | `evidence/P2/conversion.png` |
 | P2-03 | Test-drive screen flow | Pending | `evidence/P2/testdrive_conflict.png` |
 | P2-04 | Conflict-check subflow + Apex | Pending | `evidence/P2/conflict_tests.txt` |
@@ -42,7 +42,7 @@ with automation, reports and tests. First demoable state.
 - **Known retrieve gap:** `sf project retrieve start --metadata <type>` returns "Nothing retrieved" for Role, CustomObject, StandardValueSet on ng-dev. Verify with SOQL/Tooling API until resolved.
 
 ## Blocked
-- None.
+- **P2-01 Flow:** hand-written `Lead_Enrich_Rooftop.flow-meta.xml` fails Metadata API schema validation after 3 fixes (start element, lookup element name/order, same-type grouping). Routing table records + `LeadRoundRobin` Apex action are valid and staged; the flow file is intentionally uncommitted. Build the flow in Flow Builder (or via a Flow-authoring skill), then commit. Evidence `evidence/P2/p201_blocked.txt`.
 
 ## Click steps waiting (owner)
 - Screenshots for evidence (P1 roles/OWD/layouts/apps) and Phase 2 evidence files.
