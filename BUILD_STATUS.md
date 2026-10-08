@@ -40,8 +40,11 @@ P0-01, P0-02, P0-03, P0-04, P0-05, P0-06, P0-07, P0-08, P0-09, P0-10, P0-11, P0-
 ### Phase 1 step 8 (P1-12) — commit pending
 - **P1-12** 4 permission set groups from source: PSG_Rep, PSG_Manager, PSG_Finance, PSG_Service (each wraps one persona set; status Updated). Evidence `evidence/P1/psg.txt`. Test-user assignment pending P1-15.
 
+### Phase 1 step 9 (P1-13) — commit pending
+- **P1-13** Custom permission `Bypass_Automation` from source; `PS_Bypass_Load` created (custom permission only) and `PS_Demo_Admin` carries it. Hierarchy setting from step 1. Evidence `evidence/P1/bypass.txt`. Owner behaviour demo pending (needs VR/flows from P1-16).
+
 ## Next
-**P1-13** — custom permission `Bypass_Automation` (source), then `PS_Bypass_Load` (deferred from P1-11) and wire `Bypass_Automation` into PS_Demo_Admin. Hierarchy setting already deployed. Bypass demo is an owner click/test step.
+**P1-14 (blocked on decision):** sharing. Vehicle is Public Read/Write (native), so cross-rooftop visibility is satisfied. Service Advisor needs Contact record access, but Contact OWD is Private and no field links Contact to a rooftop, so no criteria-based rule can express §6.4 item 2 without a design decision. See Blocked.
 
 ## Gates and rules
 - **Source-first rule:** anything that can be Metadata API metadata is deployed from `force-app/`. Records are never created through the API for metadata (e.g., UserRole). Only data (users, assignments, seed records) may be created via records, and each such case is listed in the phase evidence.
@@ -49,7 +52,7 @@ P0-01, P0-02, P0-03, P0-04, P0-05, P0-06, P0-07, P0-08, P0-09, P0-10, P0-11, P0-
 - **Known retrieve gap:** `sf project retrieve start --metadata <type>` returns "Nothing retrieved" for Role, CustomObject, and StandardValueSet on ng-dev. Verify with SOQL/Tooling API until resolved.
 
 ## Blocked
-- None (CLI upgrade removed the source-format blocker).
+- **P1-14 sharing decision (owner):** DATA_MODEL §6.4 item 2 wants Service Advisor to see Vehicle + Contact for rooftops with service visits. Vehicle works natively. Contact is Private and has no rooftop field, so a criteria-based sharing rule needs a criterion. Options: (a) add `Preferred_Rooftop__c`/service-rooftop criteria on Contact via a new lookup, (b) share all Contacts with the Service role (broader), (c) Contacts via Account owner only (service sees accounts it can read). Reply with a choice; security decisions are not made without you.
 
 ## Click steps waiting (owner)
 - None yet. Expected: P1-15 user creation review, P1-22 External Client App creation/sign-off, Setup screenshots for evidence (roles, OWD, layouts, apps), M1 gate sign-off.

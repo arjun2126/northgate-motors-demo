@@ -1,0 +1,4 @@
+P1-13 bypass mechanism (ng-dev, 2026-10-08)
+CustomPermission Bypass_Automation: deployed from source (customPermissions/Bypass_Automation.customPermission-meta.xml); SetupEntityAccess links it to PS_Bypass_Load and PS_Demo_Admin.
+Hierarchy setting Automation_Settings__c: deployed earlier (Bypass_Validation__c, Bypass_Flows__c, Bypass_Triggers__c).
+Owner demo still needed: flip setting in Setup and show behaviour change -> evidence/P1/bypass.png (depends on VR/flows from P1-16 and P2).

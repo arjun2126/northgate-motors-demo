@@ -1163,4 +1163,8 @@
         <field>Product2.Category__c</field>
         <readable>true</readable>
     </fieldPermissions>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Bypass_Automation</name>
+    </customPermissions>
 </PermissionSet>

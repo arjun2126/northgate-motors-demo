@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Loader admin only: Bypass_Automation custom permission; assign for a load, then remove (DATA_MODEL 6.2).</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>PS Bypass Load</label>
+    <customPermissions>
+        <enabled>true</enabled>
+        <name>Bypass_Automation</name>
+    </customPermissions>
+</PermissionSet>
