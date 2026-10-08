@@ -1,0 +1,9 @@
+P2-02 lead conversion guidance + seed-tag behavior (ng-dev, 2026-10-08)
+Apex:
+- triggers/LeadBeforeConvertGuard.trigger (blocks convert with no selected Account; honors Bypass_Triggers__c)
+- triggers/LeadAfterConvertSeedBlock.trigger (clears Seed_Tag__c on converted Account, Contact, Opportunity)
+Deploy: 0Afg800000GQWRMCA5, 0Afg800000GRCbnCAH, 0Afg800000GQmflCAD — all succeeded
+Tests: LeadConvertGuardTest 2/2 pass
+- unselectedAccountIsBlocked: convert without ConvertedAccountId raises DmlException with clear message
+- seedTagClearedOnConvertedRecords: converted Account/Contact/Opportunity have Seed_Tag__c cleared
+EOF

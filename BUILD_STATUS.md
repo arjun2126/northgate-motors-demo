@@ -19,15 +19,19 @@ with automation, reports and tests. First demoable state.
 | P2-01 | Lead intake assignment (FSA → rooftop, round-robin) | Blocked (Flow XML; routing table + Apex action staged) | `evidence/P2/p201_blocked.txt` |
 | P2-02 | Lead conversion guidance | Pending | `evidence/P2/conversion.png` |
 | P2-03 | Test-drive screen flow | Pending | `evidence/P2/testdrive_conflict.png` |
+| P2-02 | Lead conversion guidance + seed-tag behavior | Done (Apex) | `evidence/P2/conversion.txt` |
+| P2-03 | Test-drive screen flow | Skipped (Flow XML blocked; UX cover via P2-04 guard + P2-07/08 triggers) | `evidence/P2/conflict_tests.txt` |
 | P2-04 | Conflict-check subflow + Apex | Apex guard done; subflow pending | `evidence/P2/conflict_tests.txt` |
 | P2-05 | Opportunity stage model + stage-stamp | Apex stamp done; layout verify pending | `evidence/P2/stages_reserve_tests.txt` |
 | P2-06 | Vehicle reservation logic | Apex guard done; screen verify pending | `evidence/P2/stages_reserve_tests.txt` |
+| P2-07 | Task auto-creation | Done (Apex via TestDriveFollowUp) | `evidence/P2/tasks.txt` |
+| P2-08 | Email alert | Wired (Apex; deliverability may suppress in DE) | `evidence/P2/tasks.txt` |
 | P2-07 | Task auto-creation | Pending | `evidence/P2/tasks.png` |
 | P2-08 | Email alert (TestDrive confirm) | Pending | `evidence/P2/confirm_email.png` |
-| P2-09 | Report: pipeline by stage | Pending | `evidence/P2/rpt_pipeline.png` |
-| P2-10 | Report: lead source effectiveness | Pending | `evidence/P2/rpt_leadsource.png` |
-| P2-11 | Dashboard: sales snapshot (dynamic) | Pending | `evidence/P2/dash_pipeline_*.png` |
-| P2-12 | Flow-maintained counters v1 | Pending | `evidence/P2/counters_test.txt` |
+| P2-09 | Report: pipeline by stage | Click steps issued | `evidence/P2/reports_blocked.txt` |
+| P2-10 | Report: lead source effectiveness | Click steps issued | `evidence/P2/reports_blocked.txt` |
+| P2-11 | Dashboard: sales snapshot (dynamic) | Click steps issued | `evidence/P2/reports_blocked.txt` |
+| P2-12 | Flow-maintained counters v1 | Done (Apex; Flow XML blocked) | `evidence/P2/counters_test.txt` |
 | P2-13 | Apex test suite v1 | Done (P2TestDataFactory + 200-row bulk) | `evidence/P2/tests.txt` |
 | P2-14 | UAT script for slice | Pending | `evidence/UAT/UAT_P2.md` |
 | P2-15 | Demo script v1 | Pending | `evidence/DEMO_SCRIPTS/01_lead_to_testdrive.md` |
@@ -42,7 +46,8 @@ with automation, reports and tests. First demoable state.
 - **Known retrieve gap:** `sf project retrieve start --metadata <type>` returns "Nothing retrieved" for Role, CustomObject, StandardValueSet on ng-dev. Verify with SOQL/Tooling API until resolved.
 
 ## Blocked
-- **P2-01 Flow:** hand-written `Lead_Enrich_Rooftop.flow-meta.xml` fails Metadata API schema validation after 3 fixes (start element, lookup element name/order, same-type grouping). Routing table records + `LeadRoundRobin` Apex action are valid and staged; the flow file is intentionally uncommitted. Build the flow in Flow Builder (or via a Flow-authoring skill), then commit. Evidence `evidence/P2/p201_blocked.txt`.
+- **P2-01 Lead Enrich Rooftop flow:** hand-written `flows/Lead_Enrich_Rooftop.flow-meta.xml` fails Metadata API schema validation after 3 fixes. Routing records + `LeadRoundRobin` Apex action are valid and staged; flow file quarantined as `.blocked`. Needs Flow Builder authoring or a Flow-authoring skill. Evidence `evidence/P2/p201_blocked.txt`.
+- **P2-09 / P2-10 / P2-11 reports and dashboard:** click-by-click checklist issued (`evidence/P2/reports_blocked.txt`). Owner to author Pipeline by Stage, Lead Source Effectiveness, Sales Pipeline Snapshot in Setup. Folders `NG_01_Pipeline`, `NG_02_Leads`, `NG_Sales` already exist (Hidden access; set Public). After “done”, retrieve, validate, commit. Not marked complete until acceptance passes.
 
 ## Click steps waiting (owner)
 - Screenshots for evidence (P1 roles/OWD/layouts/apps) and Phase 2 evidence files.

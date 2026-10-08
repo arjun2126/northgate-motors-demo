@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Completed_Test_Drives__c</fullName>
+    <label>Completed Test Drives</label>
+    <precision>8</precision>
+    <scale>0</scale>
+    <description>Flow/Apex-maintained count of Completed test drives for this model.</description>
+    <inlineHelpText>Maintained by TestDriveCounters; not a roll-up.</inlineHelpText>
+    <type>Number</type>
+</CustomField>

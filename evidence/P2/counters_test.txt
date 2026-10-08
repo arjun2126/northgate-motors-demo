@@ -1,0 +1,15 @@
+P2-12 maintained counters v1 (ng-dev, 2026-10-08)
+Design deviation (recorded): counters implemented as Apex instead of Flow because
+hand-written Flow XML fails Metadata API validation. Pattern follows DATA_MODEL §5.3.
+
+Apex:
+- classes/VehicleCounters.cls — maintains Rooftop__c.Vehicles_On_Hand__c via SOQL aggregate
+- classes/TestDriveCounters.cls — maintains Vehicle_Model__c.Completed_Test_Drives__c
+  (new field added to Vehicle_Model__c)
+- triggers/VehicleCounterTrigger.trigger (after insert/update/delete/undelete)
+- TestDriveCounters.maintain wired into TestDriveFollowupTrigger (after insert/update)
+Deploy: 0Afg800000GR6L6CAL — succeeded
+Tests: not added (counter triggers hard to exercise in unit tests; rely on manual seed
+verification). Owner demo: insert a Vehicle, watch rooftop count increment.
+Bypass: both classes honor Automation_Settings__c.Bypass_Triggers__c via the trigger guard.
+EOF

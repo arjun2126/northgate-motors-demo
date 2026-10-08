@@ -1,0 +1,14 @@
+P2-07 task auto-creation + P2-08 email alert (ng-dev, 2026-10-08)
+Apex:
+- classes/TestDriveFollowUp.cls (after insert creates Task; status change creates follow-up Task; Scheduled sends email)
+- triggers/TestDriveFollowupTrigger.trigger (after insert/update)
+Deploy: 0Afg800000GReo9CAD, 0Afg800000GRf97CAD, 0Afg800000GQO7CCAX — all succeeded
+Tests: TestDriveFollowUpTest 2/2 pass
+- insertCreatesTask: Task auto-created on insert
+- statusChangeCreatesAdditionalTask: status change creates follow-up Task
+Design deviation (recorded): Tasks are linked via WhoId (Contact) only; WhatId is omitted
+because Task WhatId does not allow custom objects (only Account, Opportunity, Campaign,
+Case). Owner must confirm Task visibility on Test Drive layout.
+Email alert: `Messaging.sendEmail` invoked on Scheduled status change; may be suppressed
+in DE due to "System email only" deliverability. Evidence of intent only.
+EOF
