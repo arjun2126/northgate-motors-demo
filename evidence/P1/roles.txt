@@ -1,0 +1,16 @@
+P1-08 role hierarchy (ng-dev, 2026-10-08) — source: force-app/main/default/roles/*.role-meta.xml (11 files)
+CEO
+  VP Sales (VP_Sales)
+    Sales Manager - Downtown -> Sales Rep
+    Sales Manager - North
+    Sales Manager - Airport
+    Inventory Coordinator
+  Finance Manager
+  Service Manager
+    Service Advisor
+    Service Technician
+Verification: SOQL on UserRole (Name, DeveloperName, ParentRole.DeveloperName) == source for all 11; org has exactly 11 roles.
+Retrieve note: `sf project retrieve start --metadata Role` returned "Nothing retrieved" (same as earlier retrieves); SOQL used instead.
+Cleanup: Salesforce sample roles deleted (CFO, SVP Sales & Marketing, VP North American Sales, Director Channel Sales, Channel Sales Team, plus earlier sample children). Zero users were on them. Sample CEO kept as root (DATA_MODEL §6.1 top role).
+Exception to source-only rule: user-to-role assignment is data; ngadmin/ngrep etc. are not created yet (P1-15).
+Owner evidence still needed: Setup Roles tree screenshot -> evidence/P1/roles.png
