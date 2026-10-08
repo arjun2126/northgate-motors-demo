@@ -141,7 +141,7 @@ Legend: **Req** = required on create · **FLS** = permission-set gated · **MD**
 | Is VIN valid | `Is_VIN_Valid__c` | Checkbox | Computed by Apex `VinValidator` (ISO 3779 mod-11 check digit + charset). Not a formula — the check digit exceeds formula size limits. |
 | Model | `Vehicle_Model__c` | **Required Lookup → Vehicle_Model__c** | *Not* master-detail: MD would cascade-delete vehicles with a model, force OWD "Controlled by Parent", and take vehicle ownership away from the rooftop sharing model |
 | Year | `Year__c` | Number(4,0) | Range 2015–2027 |
-| Colour | `Colour__c` | Picklist | 10 values — the single colour field (a free-text twin was removed in v2) |
+| Colour | `Colour__c` | Picklist | 10 values (`Black`, `White`, `Silver`, `Grey`, `Blue`, `Red`, `Green`, `Brown`, `Beige`, `Orange`) — the single colour field (a free-text twin was removed in v2) |
 | Odometer | `Odometer__c` | Number(7,0) | km (Canada) |
 | Condition | `Condition__c` | Picklist | `New`, `Certified_Pre-Owned`, `Used` |
 | Status | `Status__c` | Picklist | `Available`, `Reserved`, `In_Appraisal`, `Sold`, `Delivered`, `In_Transit`, `On_Hold` |
