@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+<fullName>Payment_Calc_Help__c</fullName>
+        <formula>&quot;Monthly payment is calculated by the Payment Calculator from the amount financed, term, and annual rate.&quot;</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Payment Calc Help</label>
+        
+        <type>Text</type>
+</CustomField>

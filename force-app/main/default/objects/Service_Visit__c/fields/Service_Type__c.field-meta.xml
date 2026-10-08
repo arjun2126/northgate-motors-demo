@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+<fullName>Service_Type__c</fullName>
+        <label>Service Type</label>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Oil_Change</fullName>
+                    <default>false</default>
+                    <label>Oil Change</label>
+                </value>
+                <value>
+                    <fullName>Brakes</fullName>
+                    <default>false</default>
+                    <label>Brakes</label>
+                </value>
+                <value>
+                    <fullName>Tire_Change</fullName>
+                    <default>false</default>
+                    <label>Tire Change</label>
+                </value>
+                <value>
+                    <fullName>Recall</fullName>
+                    <default>false</default>
+                    <label>Recall</label>
+                </value>
+                <value>
+                    <fullName>Warranty_Repair</fullName>
+                    <default>false</default>
+                    <label>Warranty Repair</label>
+                </value>
+                <value>
+                    <fullName>Diagnostics</fullName>
+                    <default>false</default>
+                    <label>Diagnostics</label>
+                </value>
+                <value>
+                    <fullName>Detailing</fullName>
+                    <default>false</default>
+                    <label>Detailing</label>
+                </value>
+                <value>
+                    <fullName>Inspection</fullName>
+                    <default>false</default>
+                    <label>Inspection</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+</CustomField>

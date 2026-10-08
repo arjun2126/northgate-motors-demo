@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+<fullName>Trade_Make__c</fullName>
+        <label>Trade Make</label>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Aurelia</fullName>
+                    <default>false</default>
+                    <label>Aurelia</label>
+                </value>
+                <value>
+                    <fullName>Cascadia</fullName>
+                    <default>false</default>
+                    <label>Cascadia</label>
+                </value>
+                <value>
+                    <fullName>Meridian</fullName>
+                    <default>false</default>
+                    <label>Meridian</label>
+                </value>
+                <value>
+                    <fullName>Vantage</fullName>
+                    <default>false</default>
+                    <label>Vantage</label>
+                </value>
+                <value>
+                    <fullName>Halcyon</fullName>
+                    <default>false</default>
+                    <label>Halcyon</label>
+                </value>
+                <value>
+                    <fullName>Kestrel</fullName>
+                    <default>false</default>
+                    <label>Kestrel</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+</CustomField>

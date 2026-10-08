@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+<fullName>Accessories__c</fullName>
+        <label>Accessories</label>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Floor_Mats</fullName>
+                    <default>false</default>
+                    <label>Floor Mats</label>
+                </value>
+                <value>
+                    <fullName>Roof_Rack</fullName>
+                    <default>false</default>
+                    <label>Roof Rack</label>
+                </value>
+                <value>
+                    <fullName>Winter_Tires</fullName>
+                    <default>false</default>
+                    <label>Winter Tires</label>
+                </value>
+                <value>
+                    <fullName>Extended_Warranty</fullName>
+                    <default>false</default>
+                    <label>Extended Warranty</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>5</visibleLines>
+</CustomField>

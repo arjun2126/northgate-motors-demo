@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+<fullName>Object__c</fullName>
+        <label>Object</label>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Account</fullName>
+                    <default>false</default>
+                    <label>Account</label>
+                </value>
+                <value>
+                    <fullName>Contact</fullName>
+                    <default>false</default>
+                    <label>Contact</label>
+                </value>
+                <value>
+                    <fullName>Lead</fullName>
+                    <default>false</default>
+                    <label>Lead</label>
+                </value>
+                <value>
+                    <fullName>Opportunity</fullName>
+                    <default>false</default>
+                    <label>Opportunity</label>
+                </value>
+                <value>
+                    <fullName>Case</fullName>
+                    <default>false</default>
+                    <label>Case</label>
+                </value>
+                <value>
+                    <fullName>Vehicle_Model__c</fullName>
+                    <default>false</default>
+                    <label>Vehicle Model</label>
+                </value>
+                <value>
+                    <fullName>Vehicle__c</fullName>
+                    <default>false</default>
+                    <label>Vehicle</label>
+                </value>
+                <value>
+                    <fullName>Rooftop__c</fullName>
+                    <default>false</default>
+                    <label>Rooftop</label>
+                </value>
+                <value>
+                    <fullName>Test_Drive__c</fullName>
+                    <default>false</default>
+                    <label>Test Drive</label>
+                </value>
+                <value>
+                    <fullName>Trade_In__c</fullName>
+                    <default>false</default>
+                    <label>Trade-In</label>
+                </value>
+                <value>
+                    <fullName>Financing__c</fullName>
+                    <default>false</default>
+                    <label>Financing</label>
+                </value>
+                <value>
+                    <fullName>Delivery__c</fullName>
+                    <default>false</default>
+                    <label>Delivery</label>
+                </value>
+                <value>
+                    <fullName>Service_Visit__c</fullName>
+                    <default>false</default>
+                    <label>Service Visit</label>
+                </value>
+                <value>
+                    <fullName>Loyalty_Member__c</fullName>
+                    <default>false</default>
+                    <label>Loyalty Member</label>
+                </value>
+                <value>
+                    <fullName>Loyalty_Transaction__c</fullName>
+                    <default>false</default>
+                    <label>Loyalty Transaction</label>
+                </value>
+                <value>
+                    <fullName>Consent__c</fullName>
+                    <default>false</default>
+                    <label>Consent</label>
+                </value>
+                <value>
+                    <fullName>Staff__c</fullName>
+                    <default>false</default>
+                    <label>Staff</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+</CustomField>

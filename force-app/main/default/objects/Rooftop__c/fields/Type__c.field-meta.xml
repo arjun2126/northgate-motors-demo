@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+<fullName>Type__c</fullName>
+        <label>Type</label>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>New_Sales</fullName>
+                    <default>false</default>
+                    <label>New Sales</label>
+                </value>
+                <value>
+                    <fullName>Used_Sales</fullName>
+                    <default>false</default>
+                    <label>Used Sales</label>
+                </value>
+                <value>
+                    <fullName>Service_Center</fullName>
+                    <default>false</default>
+                    <label>Service Center</label>
+                </value>
+                <value>
+                    <fullName>Full_Service</fullName>
+                    <default>false</default>
+                    <label>Full Service</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+</CustomField>

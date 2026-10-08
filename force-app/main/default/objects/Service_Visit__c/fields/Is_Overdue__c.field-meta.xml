@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+<fullName>Is_Overdue__c</fullName>
+        <formula>AND(Scheduled_Start__c &lt; NOW(), NOT(OR(ISPICKVAL(Status__c, &quot;Completed&quot;), ISPICKVAL(Status__c, &quot;Cancelled&quot;), ISPICKVAL(Status__c, &quot;No_Show&quot;))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Is Overdue</label>
+        <type>Checkbox</type>
+</CustomField>

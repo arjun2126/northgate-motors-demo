@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<CustomSetting xmlns="http://www.force.com/2009/06/some-schema">
-    <customFieldApiNames>Bypass_Validation__c,Bypass_Flows__c,Bypass_Triggers__c</customFieldApiNames>
-    <label>Automation Settings</label>
-    <pluralLabel>Automation Settings</label>
-</CustomSetting>

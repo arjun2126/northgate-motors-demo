@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+<fullName>Outcome__c</fullName>
+        <label>Outcome</label>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>No_Followup</fullName>
+                    <default>false</default>
+                    <label>No Followup</label>
+                </value>
+                <value>
+                    <fullName>Follow_Up_Scheduled</fullName>
+                    <default>false</default>
+                    <label>Follow Up Scheduled</label>
+                </value>
+                <value>
+                    <fullName>Converted</fullName>
+                    <default>false</default>
+                    <label>Converted</label>
+                </value>
+                <value>
+                    <fullName>Lost</fullName>
+                    <default>false</default>
+                    <label>Lost</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+</CustomField>

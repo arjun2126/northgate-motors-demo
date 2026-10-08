@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+<fullName>Rate_Source__c</fullName>
+        <label>Rate Source</label>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Rate_Table</fullName>
+                    <default>false</default>
+                    <label>Rate Table</label>
+                </value>
+                <value>
+                    <fullName>Manual_Exception</fullName>
+                    <default>false</default>
+                    <label>Manual Exception</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+</CustomField>

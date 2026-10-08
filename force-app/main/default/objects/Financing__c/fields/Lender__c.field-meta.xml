@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+<fullName>Lender__c</fullName>
+        <label>Lender</label>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Northgate_Financial</fullName>
+                    <default>false</default>
+                    <label>Northgate Financial</label>
+                </value>
+                <value>
+                    <fullName>Maple_Trust</fullName>
+                    <default>false</default>
+                    <label>Maple Trust</label>
+                </value>
+                <value>
+                    <fullName>Cascade_Credit_Union</fullName>
+                    <default>false</default>
+                    <label>Cascade Credit Union</label>
+                </value>
+                <value>
+                    <fullName>Self_Funded</fullName>
+                    <default>false</default>
+                    <label>Self Funded</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+</CustomField>

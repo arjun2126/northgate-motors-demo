@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+<fullName>Checklist_Complete__c</fullName>
+        <formula>AND(Checklist_Documents__c, Checklist_Inspection__c, Checklist_Walkthrough__c, Checklist_Signature__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Checklist Complete</label>
+        <type>Checkbox</type>
+</CustomField>

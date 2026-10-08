@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+<fullName>Scheduled_End__c</fullName>
+        <formula>Scheduled_Start__c + (Duration_Minutes__c / 1440)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Scheduled End</label>
+        <type>DateTime</type>
+</CustomField>

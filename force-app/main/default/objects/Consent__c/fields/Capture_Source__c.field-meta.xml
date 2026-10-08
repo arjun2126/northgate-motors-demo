@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+<fullName>Capture_Source__c</fullName>
+        <label>Capture Source</label>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Web_Form</fullName>
+                    <default>false</default>
+                    <label>Web Form</label>
+                </value>
+                <value>
+                    <fullName>In_Store</fullName>
+                    <default>false</default>
+                    <label>In Store</label>
+                </value>
+                <value>
+                    <fullName>Service_Visit</fullName>
+                    <default>false</default>
+                    <label>Service Visit</label>
+                </value>
+                <value>
+                    <fullName>Import</fullName>
+                    <default>false</default>
+                    <label>Import</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+</CustomField>

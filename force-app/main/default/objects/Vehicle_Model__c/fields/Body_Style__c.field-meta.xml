@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+<fullName>Body_Style__c</fullName>
+        <label>Body Style</label>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Sedan</fullName>
+                    <default>false</default>
+                    <label>Sedan</label>
+                </value>
+                <value>
+                    <fullName>SUV</fullName>
+                    <default>false</default>
+                    <label>SUV</label>
+                </value>
+                <value>
+                    <fullName>Hatchback</fullName>
+                    <default>false</default>
+                    <label>Hatchback</label>
+                </value>
+                <value>
+                    <fullName>Truck</fullName>
+                    <default>false</default>
+                    <label>Truck</label>
+                </value>
+                <value>
+                    <fullName>Coupe</fullName>
+                    <default>false</default>
+                    <label>Coupe</label>
+                </value>
+                <value>
+                    <fullName>Wagon</fullName>
+                    <default>false</default>
+                    <label>Wagon</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+</CustomField>

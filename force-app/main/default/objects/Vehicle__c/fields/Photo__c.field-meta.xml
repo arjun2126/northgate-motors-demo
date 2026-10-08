@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+<fullName>Photo__c</fullName>
+        <formula>IMAGE(Vehicle_Model__r.Image_Path__c, &quot;Vehicle photo&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Photo</label>
+        
+        <type>Text</type>
+</CustomField>
