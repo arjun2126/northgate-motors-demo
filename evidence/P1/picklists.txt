@@ -1,0 +1,85 @@
+P1-04 picklist API-value audit (source: force-app, CLI 2.153.5)
+Rule: Title_Case_With_Underscores; Term_Months__c is Number
+
+Capture_Source__c.field-meta.xml: Web_Form,In_Store,Service_Visit,Import
+
+Channel__c.field-meta.xml: Email,SMS,Phone,Mail
+
+Purpose__c.field-meta.xml: Marketing,Service_Notices,Recall_Alerts,Loyalty
+
+Status__c.field-meta.xml: Granted,Revoked,Expired
+
+Object__c.field-meta.xml: Account,Contact,Lead,Opportunity,Case,Vehicle_Model__c,Vehicle__c,Rooftop__c,Test_Drive__c,Trade_In__c,Financing__c,Delivery__c,Service_Visit__c,Loyalty_Member__c,Loyalty_Transaction__c,Consent__c,Staff__c
+
+Status__c.field-meta.xml: Loaded,Partial,Reset,Archived
+
+Accessories__c.field-meta.xml: Floor_Mats,Roof_Rack,Winter_Tires,Extended_Warranty
+
+Status__c.field-meta.xml: Scheduled,In_Progress,Completed,Postponed
+
+Credit_Tier__c.field-meta.xml: A,B,C,D,Sub_Prime
+
+Lender__c.field-meta.xml: Northgate_Financial,Maple_Trust,Cascade_Credit_Union,Self_Funded
+
+Previous_Status__c.field-meta.xml: Draft,Submitted,Conditional,Approved,Declined,Funded,Cancelled
+
+Rate_Source__c.field-meta.xml: Rate_Table,Manual_Exception
+
+Status__c.field-meta.xml: Draft,Submitted,Conditional,Approved,Declined,Funded,Cancelled
+
+Status__c.field-meta.xml: Active,Suspended,Closed
+
+Tier__c.field-meta.xml: Bronze,Silver,Gold,Platinum
+
+Reason__c.field-meta.xml: Vehicle_Purchase,Service_Spend,Referral,Birthday,Promotion,Annual_Expiry,Manual_Adjustment
+
+Type__c.field-meta.xml: Accrual,Redemption,Expiry,Adjustment,Bonus
+
+Province__c.field-meta.xml: ON,QC,BC,AB,MB
+
+Type__c.field-meta.xml: New_Sales,Used_Sales,Service_Center,Full_Service
+
+Service_Type__c.field-meta.xml: Oil_Change,Brakes,Tire_Change,Recall,Warranty_Repair,Diagnostics,Detailing,Inspection
+
+Status__c.field-meta.xml: Requested,Scheduled,Checked_In,In_Progress,Completed,No_Show,Cancelled
+
+Role__c.field-meta.xml: Sales_Rep,Sales_Manager,Finance,Service_Advisor,Technician,Inventory
+
+Outcome__c.field-meta.xml: No_Followup,Follow_Up_Scheduled,Converted,Lost
+
+Purchase_Intent__c.field-meta.xml: High,Medium,Low,None
+
+Route__c.field-meta.xml: Urban,Highway,Mixed
+
+Status__c.field-meta.xml: Requested,Scheduled,Completed,No_Show,Cancelled,Declined
+
+Status__c.field-meta.xml: Requested,Pending_Appraisal,Appraised,Accepted,Rejected,Withdrawn
+
+Trade_Condition__c.field-meta.xml: Excellent,Good,Fair,Poor
+
+Trade_Make__c.field-meta.xml: Aurelia,Cascadia,Meridian,Vantage,Halcyon,Kestrel
+
+Body_Style__c.field-meta.xml: Sedan,SUV,Hatchback,Truck,Coupe,Wagon
+
+Drivetrain__c.field-meta.xml: FWD,RWD,AWD
+
+Fuel_Type__c.field-meta.xml: Gasoline,Hybrid,EV,Diesel
+
+Make__c.field-meta.xml: Aurelia,Cascadia,Meridian,Vantage,Halcyon,Kestrel
+
+Segment__c.field-meta.xml: Entry,Mainstream,Premium
+
+Transmission__c.field-meta.xml: Automatic,Manual,CVT
+
+Trim__c.field-meta.xml: LX,EX,Sport,Limited,Premium
+
+Colour__c.field-meta.xml: Black,White,Silver,Grey,Blue,Red,Green,Brown,Beige,Orange
+
+Condition__c.field-meta.xml: New,Used,Certified_Pre_Owned
+
+Status__c.field-meta.xml: Available,Reserved,In_Appraisal,Sold,Delivered,In_Transit,On_Hold
+
+Picklist fields audited: 39
+Violations: NONE
+Term_Months__c type: Number
+Org check Vehicle__c.Condition__c values: Certified_Pre_Owned, New, Used (Tooling API CustomField Metadata)

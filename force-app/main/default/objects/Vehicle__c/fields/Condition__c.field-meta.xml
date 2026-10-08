@@ -12,14 +12,14 @@
                 <label>New</label>
             </value>
             <value>
-                <fullName>Certified_Pre-Owned</fullName>
-                <default>false</default>
-                <label>Certified Pre-Owned</label>
-            </value>
-            <value>
                 <fullName>Used</fullName>
                 <default>false</default>
                 <label>Used</label>
+            </value>
+            <value>
+                <fullName>Certified_Pre_Owned</fullName>
+                <default>false</default>
+                <label>Certified Pre-Owned</label>
             </value>
         </valueSetDefinition>
     </valueSet>
