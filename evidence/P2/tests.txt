@@ -1,0 +1,8 @@
+P2-13 apex test suite v1 (ng-dev, 2026-10-08)
+Apex:
+- classes/P2TestDataFactory.cls (account/contact/model/vehicle/bulk helpers)
+- classes/P2BulkTest.cls (200-row vehicle bulk + 50 contacts/accounts bulk)
+- LeadRoundRobinTest, TestDriveBookingGuardTest, OpportunityStageStampTest, VehicleReservationGuardTest, VinValidatorTest
+All deploys succeeded (deploy ids in evidence/P2/stages_reserve_tests.txt, conflict_tests.txt, vin_tests.txt, ci_run.txt).
+Coverage for new classes: P2TestDataFactory/P2BulkTest need run at suite level; org run reported all green in interactive streams.
+Bulk pattern: makeVehicleBulk now seeded by ms-timestamp + index to stay unique across test reruns; all VINs are 17-char right-padded 'B...' placeholder (not valid ISO 3779).

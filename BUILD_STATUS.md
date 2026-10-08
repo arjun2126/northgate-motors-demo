@@ -28,7 +28,7 @@ with automation, reports and tests. First demoable state.
 | P2-10 | Report: lead source effectiveness | Pending | `evidence/P2/rpt_leadsource.png` |
 | P2-11 | Dashboard: sales snapshot (dynamic) | Pending | `evidence/P2/dash_pipeline_*.png` |
 | P2-12 | Flow-maintained counters v1 | Pending | `evidence/P2/counters_test.txt` |
-| P2-13 | Apex test suite v1 | Pending | `evidence/P2/tests.txt` |
+| P2-13 | Apex test suite v1 | Done (P2TestDataFactory + 200-row bulk) | `evidence/P2/tests.txt` |
 | P2-14 | UAT script for slice | Pending | `evidence/UAT/UAT_P2.md` |
 | P2-15 | Demo script v1 | Pending | `evidence/DEMO_SCRIPTS/01_lead_to_testdrive.md` |
 
