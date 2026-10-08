@@ -1,0 +1,10 @@
+P1-05 record types (org query, ng-dev 2026-10-08)
+Lead: Retail, Fleet (process NG_Lead_Process)
+Account: Business, Dealer_Partner, Household
+Opportunity: Retail, Fleet (process NG_Sales_Process)
+Case: Service, Complaint, Warranty (process NG_Support_Process)
+Vehicle__c: Used, New
+Service_Visit__c: Standard
+Opportunity StageName (exactly 8 per DATA_MODEL s7): Appraisal, Closed Lost, Closed Won, Financing, Prospecting, Qualification, Quoting, Test_Drive
+Source: objects/*/recordTypes/*.recordType-meta.xml, */businessProcesses/*.businessProcess-meta.xml, standardValueSets/OpportunityStage.standardValueSet-meta.xml
+Owner evidence still needed: Setup screenshots per object -> evidence/P1/record_types/

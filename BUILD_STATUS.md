@@ -16,10 +16,13 @@ P0-01, P0-02, P0-03, P0-04, P0-05, P0-06, P0-07, P0-08, P0-09, P0-10, P0-11, P0-
 - **P1-11 (partial)** `PS_Demo_Admin` deployed (13 objectPerms + 185 fieldPerms) and assigned to arjun.ngdev@northgate.demo. Required/MD-field FLS (16 entries) omitted — Metadata API rejects FLS on required fields; they are implicitly accessible. Other 5 sets pending.
 - **P1-04** picklist API values all `Title_Case_With_Underscores` (`Certified_Pre-Owned` → `Certified_Pre_Owned` via 2-pass deploy; verified in org); `Term_Months__c` is Number ✓. Evidence `evidence/P1/picklists.txt`.
 
-## Next
-**P1-05** — record types (Lead ×2, Account ×3, Opportunity ×2 + sales process, Case ×3 + support process, Vehicle ×2, Service_Visit ×1).
+### Phase 1 step 2 (P1-05) — commit (pending)
+- **P1-05** 13 record types deployed and verified (Lead 2, Account 3, Opp 2, Case 3, Vehicle 2, Service_Visit 1) + `NG_Lead_Process` / `NG_Sales_Process` / `NG_Support_Process` + `OpportunityStage` standard value set cut to exactly the 8 DATA_MODEL §7 stages (verified via describe). New stages added through StandardValueSet (`standardValue` elements); StageName-field and BusinessProcess-only routes rejected by server. Owner screenshots still needed → `evidence/P1/record_types/`.
 
-Then in backlog order: P1-06 layouts, P1-07 apps/tabs/profiles, P1-08 roles, P1-09 OWD, P1-10 queues, P1-11 remaining sets, P1-12 groups, P1-13 custom permission, P1-14 sharing, P1-15 users, P1-16 VRs, P1-17 dup rules, P1-18 CMDTs, P1-19 matrix, P1-20 VinValidator, P1-21 persona script, P1-22 External Client App → M1 gate.
+## Next
+**P1-06** — page layouts (≥1 per record type; finance-only fields hidden from sales layouts).
+
+Then in backlog order: P1-07 apps/tabs/profiles, P1-07 apps/tabs/profiles, P1-08 roles, P1-09 OWD, P1-10 queues, P1-11 remaining sets, P1-12 groups, P1-13 custom permission, P1-14 sharing, P1-15 users, P1-16 VRs, P1-17 dup rules, P1-18 CMDTs, P1-19 matrix, P1-20 VinValidator, P1-21 persona script, P1-22 External Client App → M1 gate.
 
 ## Blocked
 - None (CLI upgrade removed the source-format blocker).
