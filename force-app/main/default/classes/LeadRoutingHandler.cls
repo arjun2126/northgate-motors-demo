@@ -6,6 +6,16 @@ public with sharing class LeadRoutingHandler {
         'Northgate Service Centre' => new List<String>()
     };
 
+    // Production lane resolution: rooftop name -> (sales role, queue).
+    // Matches the approved per-rooftop lane table; resolved live so no IDs are
+    // hard-coded. Test seam configureLanes() takes precedence when populated.
+    private static final Map<String, List<String>> ROLE_QUEUE_BY_ROOFTOP = new Map<String, List<String>>{
+        'Northgate Downtown' => new List<String>{ 'Sales_Rep', 'Q_Inbound_Leads' },
+        'Northgate North' => new List<String>{ 'Sales_Rep', 'Q_Inbound_Leads' },
+        'Northgate Airport' => new List<String>{ 'Sales_Rep', 'Q_Inbound_Leads' },
+        'Northgate Service Centre' => new List<String>{ 'Service_Advisor', 'Q_Service_Intake' }
+    };
+
     private static Boolean inFlight = false;
 
     public static void configureLanes(String rooftopName, String userId, String queueId) {
@@ -17,6 +27,35 @@ public with sharing class LeadRoutingHandler {
             lane.add(queueId);
         }
         LANE_BY_ROOFTOP.put(rooftopName, lane);
+    }
+
+    private static List<String> resolveLane(String rooftopName) {
+        List<String> lane = LANE_BY_ROOFTOP.get(rooftopName);
+        if (lane != null && !lane.isEmpty()) {
+            return lane;
+        }
+        List<String> spec = ROLE_QUEUE_BY_ROOFTOP.get(rooftopName);
+        if (spec == null) {
+            return new List<String>();
+        }
+        lane = new List<String>();
+        List<User> users = [
+            SELECT Id FROM User
+            WHERE IsActive = true AND UserRole.DeveloperName = :spec[0]
+            ORDER BY Username LIMIT 1
+        ];
+        if (!users.isEmpty()) {
+            lane.add(users[0].Id);
+        }
+        List<Group> queues = [
+            SELECT Id FROM Group
+            WHERE Type = 'Queue' AND DeveloperName = :spec[1]
+            LIMIT 1
+        ];
+        if (!queues.isEmpty()) {
+            lane.add(queues[0].Id);
+        }
+        return lane;
     }
 
     public static String fsaPrefix(String postalCode) {
@@ -71,8 +110,8 @@ public with sharing class LeadRoutingHandler {
             if (rooftopName == null) {
                 continue;
             }
-            List<String> lane = LANE_BY_ROOFTOP.get(rooftopName);
-            if (lane == null || lane.isEmpty()) {
+            List<String> lane = resolveLane(rooftopName);
+            if (lane.isEmpty()) {
                 continue;
             }
             String prefix = fsaPrefix(l.PostalCode);
