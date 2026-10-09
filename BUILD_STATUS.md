@@ -55,6 +55,39 @@ with automation, reports and tests. First demoable state.
 - **Real-save evidence:** `M5V2T6` → Rooftop `Northgate Downtown`, owner Sales Rep, `Assigned_Batch M-R1`.
 - **Testing permissions:** `PS_Demo_Admin_No_Bypass` is assigned so field access stays complete while `Bypass_Automation` stays off; original `PS_Demo_Admin` is unassigned.
 
+### Runnable test result
+`sf apex run test` on ng-dev: **31 pass / 0 fail** across the whole suite (2026-10-08).
+`P2UAT_RoutingTemp.uatRoutingAsSalesRep` passes individually.
+
+### Permission change captured in source
+
+`force-app/main/default/permissionsets/PS_Sales_Rep.permissionset-meta.xml` now carries:
+
+```
+<userPermissions>
+    <enabled>true</enabled>
+    <name>ViewRoles</name>
+</userPermissions>
+```
+
+**Why it is needed:** `LeadRoutingHandler.resolveLane` resolves the lane table by querying
+`SELECT Id FROM User WHERE IsActive = true AND UserRole.DeveloperName = :spec[0]`.
+Querying across a relationship path requires the running user to hold
+**View Roles and Role Hierarchy**. When `ngrep` executed the routing UAT, `PS_Sales_Rep`
+did not grant it, so the query threw:
+
+```
+System.QueryException: Didn't understand relationship 'UserRole' in field path.
+```
+
+`LeadRoutingTrigger` runs `resolveLane` on Lead after-insert, so the exception rolled the
+whole insert back.
+
+**Why it is safe:** the trigger query runs in system context in the real UI, so this grant
+only widens `PS_Sales_Rep`'s ability to read role metadata. It grants no object access, no
+record visibility, and no record-level data. Role existence is already visible through the
+role hierarchy UI, so this exposes nothing new.
+
 ## Blocked
 - **P2-01 cross-transaction round-robin:** open design decision, separate from the test fix. Routing and in-transaction rotation are verified; rotation across sequential saves is not. Recorded in `docs/TECH_DEBT.md`.
 - **P2-09 / P2-10 / P2-11 reports and dashboard:** corrected checklist in `evidence/P2/OWNER_ACTION_LIST.md` (3 widgets, viewer mode, conversion % via row-level flag + percent summary, staff grouping on `Opportunity.Sales_Staff__c`, one new group `PG_All_Sales`). Conversion-rate spec treated as unverified until validated in Report Builder.

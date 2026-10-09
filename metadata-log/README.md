@@ -12,6 +12,7 @@
 |---|---|---|---|---|
 | 2026-10-08 | ng-dev | Planned deactivation of `OrgFarm EPIC` user (reversible) | Free 2 Salesforce licenses for P1-15 persona users; Default Workflow User, Default Case Owner, Case assignment rules, and Case escalation rules already moved to `arjun.ngdev@northgate.demo`. Deactivation still blocked: user is Default Web-to-Lead user (Setup click needed) | P1-15 |
 | 2026-10-08 | ng-dev | Created users via API | `nginv`, `ngtech`, `dms.integration`, `ngrep`, `ngsvc` created; PSG_Rep/PSG_Service assigned to ngrep/ngsvc; ngpersona pending license slot | P1-15 |
+| 2026-10-08 | ng-dev | APPROVED: activate `Lead_Enrich_Rooftop` (Draft → Active) | Owner approval: Arjun Subramanya; dry-run and CI passed | P2-01 |
 
 ## Org Info Login Log Table
 
@@ -42,4 +43,4 @@
 
 ---
 
-Last updated: 2026-10-07
+Last updated: 2026-10-08
