@@ -16,7 +16,7 @@ with automation, reports and tests. First demoable state.
 
 | ID | Item | Status | Evidence |
 |---|---|---|---|
-| P2-01 | Lead intake assignment (FSA → rooftop, round-robin) | Flow retrieved (Draft); owner to activate after approval | `evidence/P2/blocked-metadata/flows/` |
+| P2-01 | Lead intake assignment (FSA → rooftop, round-robin) | Owner-verified by real save; round-robin rotates per-transaction only | `evidence/P2/blocked-metadata/flows/`, `docs/TECH_DEBT.md` |
 | P2-02 | Lead conversion guidance | Pending | `evidence/P2/conversion.png` |
 | P2-03 | Test-drive screen flow | Pending | `evidence/P2/testdrive_conflict.png` |
 | P2-02 | Lead conversion guidance + seed-tag behavior | Done (Apex) | `evidence/P2/conversion.txt` |
@@ -44,9 +44,10 @@ with automation, reports and tests. First demoable state.
 - **Org settings / Setup / user-admin settings:** one source-deploy attempt max. On failure: write numbered click steps, stop, wait for 'done', verify with one query.
 - **Error diagnosis:** never retry unchanged. After 3 distinct failed fixes, mark blocked and continue independent work.
 - **Known retrieve gap:** `sf project retrieve start --metadata <type>` returns "Nothing retrieved" for Role, CustomObject, StandardValueSet on ng-dev. Verify with SOQL/Tooling API until resolved.
+- **Routing test persona:** UAT runs as `PS_Demo_Admin_No_Bypass` so field access stays complete while `Bypass_Automation` stays off. `PS_Demo_Admin` is unassigned while that set exists.
 
 ## Blocked
-- **P2-01 Lead Enrich Rooftop:** retrieved (Draft) and validated (commit `fb781f2`); owner to activate after approval, then end-to-end UAT. Design at `evidence/P2/blocked-metadata/flows/LEAD_ENRICH_ROOFTOP_design.md`; checklist `evidence/P2/OWNER_ACTION_LIST.md` §2.
+- **P2-01 Lead Enrich Rooftop:** active in ng-dev; owner-verified end-to-end save (`M5V2T6` → `Northgate Downtown` → owner Sales Rep → `Assigned_Batch M-R1`). Remaining gap: round-robin rotation is per-transaction only, so sequential saves repeat the same slot. **Cross-transaction rotation is not verified** and is recorded in `docs/TECH_DEBT.md` as an owner decision (durable counter object with `FOR UPDATE` vs accepted limitation). Design at `evidence/P2/blocked-metadata/flows/LEAD_ENRICH_ROOFTOP_design.md`.
 - **P2-09 / P2-10 / P2-11 reports and dashboard:** corrected checklist in `evidence/P2/OWNER_ACTION_LIST.md` (3 widgets, viewer mode, conversion % via row-level flag + percent summary, staff grouping on `Opportunity.Sales_Staff__c`, one new group `PG_All_Sales`). Conversion-rate spec treated as unverified until validated in Report Builder.
 
 ## Click steps waiting (owner)
