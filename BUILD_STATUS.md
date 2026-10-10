@@ -30,7 +30,7 @@ with automation, reports and tests. First demoable state.
 | P2-08 | Email alert | Wired (Apex; deliverability may suppress in DE) | `evidence/P2/tasks.txt` |
 | P2-07 | Task auto-creation | Pending | `evidence/P2/tasks.png` |
 | P2-08 | Email alert (TestDrive confirm) | Pending | `evidence/P2/confirm_email.png` |
-| P2-09 | Report: pipeline by stage | Click steps issued | `evidence/P2/reports_blocked.txt` |
+| P2-09 | Report: pipeline by stage | Retrieved + validated; Matrix grouping PASS; screenshot pending | `evidence/P2/p209_validation.txt` |
 | P2-10 | Report: lead source effectiveness | Click steps issued | `evidence/P2/reports_blocked.txt` |
 | P2-11 | Dashboard: sales snapshot (dynamic) | Click steps issued | `evidence/P2/reports_blocked.txt` |
 | P2-12 | Flow-maintained counters v1 | Done (Apex; Flow XML blocked) | `evidence/P2/counters_test.txt` |
@@ -90,7 +90,7 @@ role hierarchy UI, so this exposes nothing new.
 
 ## Blocked
 - **P2-01 cross-transaction round-robin:** open design decision, separate from the test fix. Routing and in-transaction rotation are verified; rotation across sequential saves is not. Recorded in `docs/TECH_DEBT.md`.
-- **P2-09 / P2-10 / P2-11 reports and dashboard:** corrected checklist in `evidence/P2/OWNER_ACTION_LIST.md` (3 widgets, viewer mode, conversion % via row-level flag + percent summary, staff grouping on `Opportunity.Sales_Staff__c`, one new group `PG_All_Sales`). Conversion-rate spec treated as unverified until validated in Report Builder.
+- **P2-09 / P2-10 / P2-11 reports and dashboard:** corrected checklist in `evidence/P2/OWNER_ACTION_LIST.md` (3 widgets, viewer mode, staff grouping on `Opportunity.Sales_Staff__c`, one new group `PG_All_Sales`). Conversion-rate spec is a proposed summary-only formula `Converted:SUM / RowCount` with Percent output, UNVALIDATED in Report Builder. The earlier row-level-flag wording was incorrect and has been removed. Validation is a required owner-click step for P2-10.
 
 ## Click steps waiting (owner)
 - **0.** Create public group `PG_All_Sales` (members: ngrep, arjun.ngdev@northgate.demo).

@@ -1,0 +1,42 @@
+P2-09 Pipeline by Stage - metadata validation (ng-dev)
+======================================================
+
+First retrieve: Summary format, no groupingsAcross. Sales_Staff__c was a plain column.
+Owner applied the grouping fix (Group Columns: Opportunity.Sales_Staff__c ascending).
+
+Second retrieve (after fix): ALL CRITERIA PASS
+-----------------------------------------------------------
+- Folder placement: PASS - retrieved under NG_01_Pipeline/
+- Format: PASS - <format>Matrix</format>
+- Stage row grouping: PASS - groupingsDown field STAGE_NAME, sortOrder Asc
+- Sales_Staff__c column grouping: PASS - groupingsAcross field
+  Opportunity.Sales_Staff__c, sortOrder Asc (was absent on first retrieve)
+- Amount SUM: PASS - columns AMOUNT with aggregateTypes Sum,
+  showGrandTotal true, showSubTotals true
+- Filters preserved: PASS - filter STAGE_NAME notEqual 'Closed Lost'
+  (unchanged between the two retrieves)
+- Duplicate column removed: PASS - plain Opportunity.Sales_Staff__c column no
+  longer present; it exists only in groupingsAcross
+- Extras confirmed: reportType Opportunity, scope organization,
+  showDetails true
+
+Local source state
+-----------------------------------------------------------
+force-app/main/default/reports/NG_01_Pipeline/Pipeline_by_Stage.report-meta.xml
+now matches the re-retrieved Matrix report. The first copy held the outdated
+Summary version; it was refreshed from the org so the working tree is current.
+
+Owner preview data (shared in conversation, 20 opportunities / $3,410,000)
+-----------------------------------------------------------
+The report renders 20 existing opportunities totalling $3,410,000, grouped
+under a blank Sales Staff value (unstaffed opportunities).
+
+IMPORTANT - this preview was shared in conversation and is NOT captured in the
+repository. No screenshot file has been saved. Screenshot evidence for P2-09
+remains PENDING.
+
+Staff-populated dealership-data validation remains pending. Sales_Staff__c
+values populate only when seeded opportunity data (Phase 4 seed load) is
+present. No records were modified to resolve the blank grouping.
+
+Status: structural validation PASS. Data validation pending.
