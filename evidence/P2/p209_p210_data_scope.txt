@@ -1,0 +1,125 @@
+P2-09 / P2-10 data-scope verification (ng-dev, read-only)
+==================================================
+No sharing, ownership, data or filter changes were made.
+No records were inserted, updated or deleted.
+
+1. ARE THE 31 OPPORTUNITIES PRE-EXISTING SAMPLE DATA?
+-----------------------------------------------------------
+YES. Pre-existing OrgFarm generator sample data, not
+Northgate seed data.
+
+  Opportunity COUNT()                                   = 31
+  Distinct owner                                         = 1
+  Owner username      : epic.3623e0cffa54@orgfarm.salesforce.com
+  Owner profile       : System Administrator (OrgFarm EPIC)
+  Owner UserRole      : null (outside Northgate hierarchy)
+  SUM(Amount)                                            = $5,760,000
+    Closed Won subtotal                                 = $3,645,000 (18)
+    Open subtotal                                       = $2,115,000 (13)
+    Closed Lost rows                                   = 0
+
+  CORRECTION: an earlier draft of this file recorded
+  $5,750,000 total and $2,105,000 open via manual hand
+  summation. BOTH WERE WRONG. Re-verified twice:
+    Python sum over 31 records = 5,760,000
+    SOQL SUM(Amount)          = 5,760,000
+  Correct figures: $5,760,000 total, $2,115,000 open.
+  The owner's $5.76M report reading is correct and
+  reconciles exactly.
+  Closed Lost rows                                       = 0
+
+Account names confirm classic provision-time sample data:
+Edge Communications, Burlington Textiles Corp of America,
+Pyramid Construction, Dickenson plc, Grand Hotels & Resorts,
+United Oil & Gas Corp / UK / Singapore, Express Logistics,
+University of Arizona, GenePoint, sForce, 'Sample Account
+for Entitlements'. All owned by the same OrgFarm EPIC user.
+
+Opportunity names are generator / SLA / installations deals
+(e.g. 'Edge Emergency Generator', 'United Oil Refinery
+Generators', 'Grand Hotels SLA').
+
+Sales_Staff__c on Opportunity: 31 of 31 are NULL.
+  SELECT Sales_Staff__c, COUNT(Id) FROM Opportunity
+  GROUP BY Sales_Staff__c  ->  {null: 31}
+
+Only 2 Accounts are Northgate-owned:
+  'P1-14 Test Account' owned by ngrep@northgate.demo
+  'Sample Account for Entitlements' owned by autoproc@...
+
+2. IS NORTHGATE OPPORTUNITY SEED DATA SCHEDULED LATER?
+-----------------------------------------------------------
+YES - Phase 5. Northgate opportunities are seeded at
+P5-03 'Seed data loaded', which loads all volumes from the
+synthetic data plan. Per DEMO_ORG_SYNTHETIC_DATA_PLAN.md the
+tagged batches are SEED-01..76 (clean), SEED-77-BURST
+(disposable volume), SEED-98 (schema-invalid legacy batch),
+SEED-99 (business-bad). Every row carries Seed_Tag__c.
+
+  P5-03 | Seed data loaded          | 1,843 clean + 30 legacy + 250 activities
+  P5-06 | Edge-case records SEED-99 | BAD-01..10
+  P5-13 | Report: duplicate audit   | Counts match 8 pairs / 6 emails
+
+Phase 2 seeds no opportunities. No Opportunity row exists
+with a Seed_Tag__c, and Seed_Tag__c has not been deployed
+onto the standard Opportunity object for live data.
+
+3. WHY DOES ngrep SEE ZERO ROWS? (record visibility, not a report defect)
+-----------------------------------------------------------
+CONFIRMED: Opportunity OWD is PRIVATE in source.
+  force-app/main/default/objects/Opportunity/
+  Opportunity.object-meta.xml -> <sharingModel>Private</sharingModel>
+
+Report scope is correct in the report itself:
+  <scope>org</scope> = All Opportunities (org-wide scope)
+Scope is NOT the limiting factor. Org-wide scope never
+overrides OWD: with Private OWD a user only sees records
+they own or that are shared to them or their role subtree.
+
+ngrep = 005g800000Bsi49AAB, role Sales Rep
+(00Eg80000071YurEAE). ngrep owns 0 opportunities and shares
+0 opportunities. No sharing rule grants Opportunities to
+role Sales Rep - the only deployed sharing rule in source is
+sharingRules/Contact.sharingRules-meta.xml, which covers
+Contact only, shared to Service_Advisor and Service_Manager.
+
+The single record owner (OrgFarm EPIC) has no UserRole, so
+its records are outside every Northgate role subtree.
+
+  => ngrep sees 0 rows. arjun.ngdev (System Administrator)
+     sees all 31 rows / $5,760,000.
+  => THIS IS THE EXPECTED PHASE 2 OUTCOME.
+
+4. REPORT SCOPE CHECKED AGAINST THE BACKLOG
+-----------------------------------------------------------
+Backlog P2-09 acceptance criterion:
+  'Report run returns SEEDED rows -> evidence/P2/rpt_pipeline.png'
+
+CONFLICT / GAP TO FLAG TO OWNER:
+The criterion requires SEEDED rows, but Northgate seed data
+loads at P5-03 in Phase 5. At Phase 2 the only opportunity
+rows in the org are OrgFarm sample data that ngrep cannot
+see under Private OWD. So this acceptance criterion cannot
+be satisfied during Phase 2.
+
+Proposed reading (owner decision required, not applied):
+  a) Defer the seeded-rows criterion to Phase 5 and treat
+     Phase 2 as structural validation only, or
+  b) Reword the criterion to 'report runs and grouping /
+     aggregate structure confirmed', with data validation
+     tracked at P5-13.
+
+5. STATUS
+-----------------------------------------------------------
+P2-09 structural validation: PASS (committed 5df82eb)
+P2-10 structural / formula validation: PASS, with Created
+  Date range still unconfirmed and numerical validation
+  untested.
+P2-09 / P2-10 data validation: DEFERRED to Phase 5.
+ngrep zero rows: EXPECTED, not a defect.
+Pipeline by Stage blank Sales Staff column: EXPECTED until
+  Phase 5 seeds Sales_Staff__c on opportunities.
+Range screenshot for P2-09 is achievable only with
+System Administrator visibility.
+
+No sharing, ownership, data or filter changes were made.

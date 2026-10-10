@@ -36,7 +36,7 @@ repository. No screenshot file has been saved. Screenshot evidence for P2-09
 remains PENDING.
 
 Staff-populated dealership-data validation remains pending. Sales_Staff__c
-values populate only when seeded opportunity data (Phase 4 seed load) is
+values populate only when seeded opportunity data (Phase 5 seed load, P5-03) is
 present. No records were modified to resolve the blank grouping.
 
 Status: structural validation PASS. Data validation pending.

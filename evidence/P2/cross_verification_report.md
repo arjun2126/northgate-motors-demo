@@ -171,3 +171,11 @@ Current status, recorded as a **temporary source-reconciliation item**:
 - Cross-transaction round-robin is recorded as an **accepted Phase 2 acceptance exception**,
   not as a passed requirement, and remains in technical debt. Durable rotation is deferred.
 - Production-ready fair distribution is not claimed.
+
+## 7. Closeout-batch addendum (supersedes stale findings above)
+- §5/F-3 ('0 reports, 0 dashboards, not built') is SUPERSEDED: ng-dev now holds 3 reports
+  (Pipeline_by_Stage `00Og8000008aVYXEA2`, Lead_Source_Effectiveness `00Og8000008aZsHEAU`,
+  Open_Opps_by_Sales_Staff `00Og8000008abZ7EAI`) and dashboard DM_Sales_PipelineSnapshot
+  (`01Zg80000045WTBEA2`, 3 components, LoggedInUser) — all retrieved to source in the
+  closeout batch. §5.2 exit item 1 is partially done; dynamic-by-role evidence still missing.
+- F-4 probe decision, §3.3 table approval, and §4 exception language are unchanged.

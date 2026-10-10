@@ -43,9 +43,6 @@
     <columns>
         <field>TYPE</field>
     </columns>
-    <columns>
-        <field>Opportunity.Sales_Staff__c</field>
-    </columns>
     <filter>
         <criteriaItems>
             <column>STAGE_NAME</column>
@@ -56,7 +53,12 @@
         </criteriaItems>
         <language>en_US</language>
     </filter>
-    <format>Summary</format>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity.Sales_Staff__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
         <field>STAGE_NAME</field>

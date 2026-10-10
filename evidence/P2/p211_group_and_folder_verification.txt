@@ -1,0 +1,304 @@
+P2-11 PG_All_Sales group + report-folder verification (ng-dev)
+==========================================================
+
+AUTHORITATIVE GROUP COUNTS (reconciled)
+-----------------------------------------------------------
+Source: SELECT Type, COUNT(Id) FROM Group GROUP BY Type
+
+  ManagedContentSpaceRole        9
+  RoleAndSubordinatesInternal   11
+  Queue                          3
+  Organization                   1
+  Role                          11
+  --------------------------------
+  TOTAL                         35
+
+RECONCILIATION: an earlier message stated a total of 35
+records but broke it down as Organization x1, Role x14,
+RoleAndSubordinatesInternal x14, ManagedContentSpaceRole x5,
+Queue x3, which sums to 37. The TOTAL OF 35 IS CORRECT; the
+per-type breakdown was WRONG and is corrected above.
+
+Note: SELECT COUNT() FROM Group returned 0 records (SOQL
+COUNT() semantics), so it is not a usable total check. The
+GROUP BY query is the authoritative source.
+
+KEY FINDING: WHERE Type = 'Regular' returns 0 rows and
+WHERE DeveloperName = 'PG_All_Sales' returns 0 rows. There
+are ZERO public groups in the org. This is why the Setup
+Public Groups list offered only 'All Internal Users'.
+
+A. PG_AL_SALES MEMBERSHIP - RESOLVED TARGETS
+-----------------------------------------------------------
+All three active. Integration, inventory, service and
+technician personas EXCLUDED per owner instruction.
+
+  arjun.ngdev @ nort.hgate.demo
+    Name    : Arjun Subramanya
+    Id      : 005g800000BroZpAAJ
+    Active  : true
+    Profile : System Administrator
+    Role    : none
+
+  ngrep @ nort.hgate.demo
+    Name    : Sales Rep
+    Id      : 005g800000Bsi49AAB
+    Active  : true
+    Profile : NG_Sales
+    Role    : Sales Rep
+
+  ngpersona @ nort.hgate.demo
+    Name    : Switcher Persona
+    Id      : 005g800000Bso7xAAB
+    Active  : true
+    Profile : NG_Sales
+    Role    : Finance Manager
+
+FLAG - ngpersona UserRole is 'Finance Manager', not a sales
+manager role. If P2-11 intended a manager who sees staff
+across Downtown/North/Airport, that sits in the Finance
+branch of the role hierarchy, not under VP_Sales /
+Sales_Manager. Raised for owner decision; nothing changed.
+
+B. TOOLCHAIN - CORRECTED
+-----------------------------------------------------------
+Group IS a supported Metadata API type and IS present in the
+installed CLI registry. An earlier message claimed it was
+absent. That was WRONG.
+
+  CLI            : @salesforce/cli 2.153.5 (darwin-arm64, node v24.21.0)
+  registry key   : 'group'  (registry keys are LOWERCASE)
+  registry entry : directoryName 'groups', id 'group',
+                   name 'Group', suffix 'group', inFolder false
+  sfdx also installed at /usr/local/bin/sfdx
+
+The earlier check ran types.get('Group') case-sensitively
+against a lowercase-keyed map and returned None.
+
+sf project retrieve start --metadata 'Group:*' returned
+'Nothing retrieved' with Status Succeeded. That is CORRECT:
+zero public groups exist, so there is no Group metadata to
+retrieve.
+
+Group definition vs membership - SEPARATE:
+  - Registry shows 'group' has NO childTypes, so the CLI
+    models no nested member element in .group-meta.xml.
+  - Salesforce docs list Group as a Metadata API type that
+    'can have users, roles, and other groups' and describe
+    members. GroupMember is the SObject for membership
+    ('you can adjust group membership using the GroupMember
+    API object').
+  - Four attempts to obtain the authoritative member-element
+    schema from the org Metadata WSDL all failed on this My
+    Domain develop org ('URL No Longer Exists').
+  => Whether members are declarable inside .group-meta.xml
+     is UNCONFIRMED. Not guessed.
+
+Folder IS genuinely absent from the registry
+('folder' in types => False). Folder sharing is therefore NOT
+deployable through this CLI and remains an owner-click Setup
+action, recorded here as evidence.
+
+C. FOLDER STATE
+-----------------------------------------------------------
+  NG_01_Pipeline  00lg8000007YAc1AAG  Report    Hidden
+  NG_02_Leads    00lg8000007YAddAAG  Report    Hidden
+  NG_Sales       00lg8000007YAfFAAW  Dashboard Hidden
+
+Folder.AccessType = Hidden for all three. FolderShare rows
+are NOT readable by any available interface: SOQL, Tooling
+API, REST and Apex all reject 'FolderShare', and the
+Metadata CLI has no 'Folder' type. Owner-reported shares on
+NG_01_Pipeline and NG_02_Leads are therefore UNVERIFIED and
+must be confirmed by reading the Setup share dialog.
+
+D. STATUS
+-----------------------------------------------------------
+  NG_01_Pipeline sales-group share : NOT DONE (group does not exist)
+  NG_02_Leads   sales-group share : NOT DONE (group does not exist)
+  NG_Sales      sales-group share : NOT DONE / BLOCKED
+  All Internal Users shares        : owner-reported, UNVERIFIED
+
+No group created, no share added or removed, no records
+inserted, nothing deployed, nothing committed.
+
+E. GROUP DEFINITION DEPLOYED - SOURCE-FIRST
+-----------------------------------------------------------
+APPROVED BY OWNER: create + validate/deploy the group
+definition only. No manual Setup creation, no programmatic
+membership, no commit.
+
+FILE: force-app/main/default/groups/PG_All_Sales.group-meta.xml
+CONTENT:
+  <?xml version="1.0" encoding="UTF-8"?>
+  <Group xmlns="http://soap.sforce.com/2006/04/metadata">
+      <name>PG_All_Sales</name>
+      <doesIncludeBosses>false</doesIncludeBosses>
+  </Group>
+
+DRY RUN  : deploy 0Afg800000Gjlw3CAB  Status Succeeded
+          1/1 components. Validated Source.
+          'Running Tests - Skipped'.
+REAL DEP : deploy 0Afg800000Gk8uECAR  Status Succeeded
+          1/1 components. Created. STDERR empty.
+
+ROUND-TRIP RETRIEVE (Group:PG_All_Sales) returned:
+  <doesIncludeBosses>false</doesIncludeBosses>
+  <name>PG_All_Sales</name>
+=> The Group metadata type in this org carries EXACTLY
+   these two elements. There is NO member element. Member
+   metadata cannot be expressed in the .group file, which
+   settles the earlier open question definitively.
+
+VERIFIED IN ORG:
+  Id            : 00Gg800000A5GXpEAN
+  Name          : PG_All_Sales
+  DeveloperName : PG_All_Sales   <-- MATCHES REQUIREMENT
+  Type          : Regular         <-- MATCHES REQUIREMENT
+  Email         : null
+  OwnerId       : 00Dg800000LxahhEAB
+
+MEMBERS AS OF DEPLOY: 0. Verified via
+  SELECT Id, GroupId, UserOrGroupId FROM GroupMember
+  WHERE GroupId='00Gg800000A5GXpEAN'  -> 0 records.
+  (Note: GroupMember has no UserOrGroupType column; that
+   field lives on FolderShare, not here.)
+
+GROUP COUNTS AFTER DEPLOY (GROUP BY Type):
+  ManagedContentSpaceRole        9
+  RoleAndSubordinatesInternal   11
+  Queue                          3
+  Regular                        1   <-- new
+  Organization                   1
+  Role                          11
+  --------------------------------
+  TOTAL                         36
+  (35 before this deploy; the Regular row is the new group.)
+
+FOLDER SHARES: unchanged. FolderShare remains unqueryable
+('sObject type FolderShare is not supported'). No share
+added or removed.
+
+GRANT ACCESS USING HIERARCHIES
+-----------------------------------------------------------
+The UI checkbox 'Grant Access Using Hierarchies' maps to the
+metadata element <doesIncludeBosses>. Deployed value is
+FALSE, so the checkbox is currently UNCHECKED.
+
+This setting is NOT about group membership. It controls
+whether records shared with this group also propagate up
+the role hierarchy of its members. It does not add users
+to the group.
+
+Relevant role facts (SELECT Id, UserRole FROM User WHERE
+UserRoleId != null):
+  ngrep     005g800000Bsi49AAB  Sales Rep
+  ngpersona 005g800000Bso7xAAB  Finance Manager
+  ngsvc     005g800000Bsi5lAAB  Service Advisor
+  nginv     005g800000Bshb7AAB  Inventory Coordinator
+  ngtech    005g800000BshsrAAB  Service Technician
+  arjun.ngdev: NO role
+No user holds Sales_Rep's superiors (Sales_Manager_Downtown,
+Sales_Manager_North, Sales_Manager_Airport, VP_Sales), so
+the practical effect of the setting differs per member.
+
+OWNER DECISION REQUIRED. If it must be true, change it in
+SOURCE and redeploy, do not click it in Setup:
+  <doesIncludeBosses>true</doesIncludeBosses>
+Nothing changed pending that decision.
+
+NOT COMMITTED. force-app/main/default/groups/
+PG_All_Sales.group-meta.xml is a new untracked file. HEAD
+unchanged at 5df82eb.
+
+G. POST-CLICK VERIFICATION (owner reported membership saved)
+-----------------------------------------------------------
+MEMBERCOUNT = 1 OF 3. Owner report is INCOMPLETE.
+  SELECT Id, GroupId, UserOrGroupId FROM GroupMember
+  WHERE GroupId='00Gg800000A5GXpEAN'
+  -> 1 row: 011g8000003PyaLAAS, UserOrGroupId
+     005g800000Bsi49AAB = ngrep@nort.hgate.demo
+
+  MISSING (intended, not present):
+    ngpersona@nort.hgate.demo     005g800000Bso7xAAB
+    arjun.ngdev@nort.hgate.demo 005g800000BroZpAAJ
+
+ngrep opening reports is therefore explained by folder
+sharing, not by group membership ability alone.
+
+H. RUN REPORTS - METADATA DRIFT FOUND (source vs org)
+-----------------------------------------------------------
+How ngrep gains 'Run Reports':
+  ngrep profile            = NG_Sales, PermissionsRunReports FALSE
+  ngrep permission set asgn= PSG_Rep (0PSg800000DIelvGAD)
+  PSG_Rep member           = PS_Sales_Rep
+  PS_Sales_Rep in ORG = PermissionsRunReports TRUE
+  (0PSg800000DIdNtGAL)
+
+DRIFT: the ORG copy of PS_Sales_Rep carries
+  <userPermissions>
+      <enabled>true</enabled>
+      <name>RunReports</name>
+  </userPermissions>
+but the COMMITTED SOURCE at
+force-app/main/default/permissionsets/PS_Sales_Rep.permissionset-meta.xml
+has NO RunReports userPermission. Its only userPermission is
+ViewRoles (true). Verified against git HEAD too: HEAD copy
+contains ViewRoles but NOT RunReports.
+
+Diff SOURCE vs ORG, PS_Sales_Rep, is +4 lines, exactly the
+RunReports userPermissions block. No other differences.
+
+CONCLUSION: 'Run Reports' was enabled in the org by an
+out-of-band change (Setup click) and was never captured in
+source. It is REQUIRED for ngrep to open reports. Source
+reconciliation in the working tree is the fix, not a deploy:
+the org already has the correct value, so the file only
+needs the +4 lines added and committed. Nothing deployed.
+
+I. GROUP METADATA DELTA (post-deploy retrieve)
+-----------------------------------------------------------
+Retrieve Group:PG_All_Sales from org after the membership
+and folder-share clicks.
+
+ORG COPY:
+  <doesIncludeBosses>false</doesIncludeBosses>
+  <name>PG_All_Sales</name>
+LOCAL SOURCE COPY:
+  <name>PG_All_Sales</name>
+  <doesIncludeBosses>false</doesIncludeBosses>
+
+DELTA: XML ELEMENT ORDER ONLY. Values identical:
+  Name = PG_All_Sales, doesIncludeBosses = false in both.
+Salesforce serialises <Group> children alphabetically, so
+the retrieved order differs from the hand-written file.
+Element order is semantically irrelevant in Metadata API.
+=> NO SEMANTIC DRIFT. doesIncludeBosses is still FALSE,
+   as the owner confirmed.
+
+Group membership is NOT metadata deployable (the Group type
+has only name and doesIncludeBosses), so group membership
+will never appear in source. It stays a Setup-time
+action, which is why the missing two members must be fixed
+by click and verified by query.
+
+J. CLOSEOUT-BATCH ADDENDUM (supersedes stale sections above)
+-----------------------------------------------------------
+- §B 'member declarability UNCONFIRMED' is SUPERSEDED by §E:
+  the Group type carries only name + doesIncludeBosses
+  (verified by round-trip retrieve). Membership is Setup-only.
+- §D status block is SUPERSEDED by §E + §G + §I: the group
+  exists (Regular), membership is 1 of 3, shares unverified.
+- §C folder table still current: NG_01_Pipeline
+  (00lg8000007YAc1AAG), NG_02_Leads (00lg8000007YAddAAG),
+  NG_Sales (00lg8000007YAfFAAW), all AccessType Hidden.
+- P2-09 source reconciled to the org Matrix version in the
+  closeout batch (re-retrieved, element-compared, copied).
+- P2-11 dashboard + Open Opps report retrieved and captured
+  to source in the closeout batch: 3 components with headers
+  'Pipeline Amount by Stage' (Pipeline_by_Stage),
+  'Opportunity Count' (Pipeline_by_Stage),
+  'Conversion Rate by Lead Source' (Lead_Source_Effectiveness);
+  dashboardType LoggedInUser; title DM_Sales_PipelineSnapshot.
+  Headers live in dashboard metadata XML, which settles the
+  earlier inconclusive 'Untitled Component' Name-field note.

@@ -1,0 +1,78 @@
+P2-10 Lead Source Effectiveness - metadata validation (ng-dev)
+==========================================================
+
+Retrieval: sf project retrieve start --metadata
+  Report:NG_02_Leads/Lead_Source_Effectiveness
+Result: retrieved successfully (1,361 bytes). Copied into
+force-app/main/default/reports/NG_02_Leads/ - UNCOMMITTED.
+
+A. STRUCTURAL / FORMULA VALIDATION
+-----------------------------------------------------------
+PASS:
+  1. Lead Source row grouping ascending
+     groupingsDown field LEAD_SOURCE, sortOrder Asc
+  2. Summary formula present
+     calculatedFormula: CONVERTED:SUM / RowCount
+  3. Formula identity: masterLabel 'Conversion %',
+     developerName FORMULA1, isActive true, isCrossBlock false
+  4. Percent output: datatype percent, scale 1
+  5. Row counts enabled: showDetails true, showSubTotals true,
+     showGrandTotal true. No Count aggregate on Lead.Id is
+     required for standard report Row Counts.
+  6. Grand total enabled: showGrandTotal true
+  7. All Leads scope: scope org, reportType LeadList, co=1
+  8. Status includes converted AND unconverted: no status
+     filter present
+  9. Folder + unique name: NG_02_Leads / Lead Source Effectiveness
+
+REMAINING UNCONFIRMED (owner builder check required):
+  a. Percent output at all summary levels - NOW PASS
+     RESOLVED BY OWNER VISUAL CHECK: 'All summary levels'
+     was already selected in Report Builder. No formula
+     setting was changed.
+     For the record this could NOT be read from the XML: the
+     <aggregates> element carries NO summaryElement and NO
+     summaryLevel child. 'Grand Summary Only' is NOT equivalent
+     to 'All summary levels'. showGrandTotal=true only renders
+     the grand-total row and proves nothing about formula
+     scope. Owner confirmation was required and has been
+     supplied.
+
+  b. Date scope unrestricted.
+     timeFrameFilter present: dateColumn CREATED_DATE,
+     interval INTERVAL_CUSTOM. Zero <filter> elements alone
+     does not prove all-time - the XML carries no start/end
+     bounds for the custom range.
+
+CORRECTIONS APPLIED TO AN EARLIER READING
+-----------------------------------------------------------
+  - Row counts were wrongly marked PARTIAL for a missing
+    Count aggregate on Lead.Id. Standard report Row Counts
+    do not need it.
+  - showGrandTotal was wrongly treated as proving the formula
+    appears at all summary levels. It does not.
+  - Zero filter blocks was wrongly treated as proving
+    unrestricted dates. timeFrameFilter and report params must
+    also be inspected.
+
+B. NUMERICAL DATA VALIDATION
+-----------------------------------------------------------
+UNTESTED - keep marked untested:
+  - 4-lead / 1-converted = 25.0% example: not demonstrated.
+    No such group exists and none was created.
+  - Per-source-group Conversion % values: not evaluated.
+  - Grand total Conversion %: not evaluated.
+
+No records were created or converted for this check.
+
+STATUS: structure/formula validated by metadata. Numerical
+behaviour UNVALIDATED (tracked separately). Display:
+owner-confirmed (All summary levels). Created Date range:
+awaits owner inspection.
+
+OWNER UPDATE (received after the above was written)
+-----------------------------------------------------------
+- Conversion % Display setting: 'All summary levels'
+  visually confirmed. No formula setting was changed.
+  Structural item now PASS.
+- Created Date range: REMAINS UNCONFIRMED.
