@@ -33,3 +33,11 @@ non-blocked work may proceed.
 A failed check is a signal to stop and understand, not to keep perturbing. Repeating attempts
 against a corrupted or unclear signal wastes effort, risks unrelated damage, and hides the real
 cause from the owner.
+
+## Lessons learned
+
+1. **Verify access as the actual persona** using `System.runAs` in Apex, never as admin. Admin context masks FLS/OWD gaps.
+2. **Status, IsConverted and similar standard fields are not permissionable** — never add FLS for them; they inherit access from the parent object.
+3. **A dashboard or report grouping by a lookup needs Read on the lookup's target object** (e.g., `Staff__c` for `Opportunity.Sales_Staff__c` groupings).
+4. **Verify against the live org**, not just source, for sharing, folder, and dashboard settings. Source may not reflect live org state (e.g., folder shares, dashboard running user).
+5. **Report only raw command output for verification**, and mark each claim `CONFIRMED` or `REFUTED`. No narrative summaries in place of evidence.
