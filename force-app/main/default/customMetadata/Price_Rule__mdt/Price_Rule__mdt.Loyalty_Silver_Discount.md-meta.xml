@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Loyalty Silver Member Discount</label>
+    <protected>false</protected>
+    <values>
+        <field>Attribute__c</field>
+        <value xsi:type="xsd:string">Loyalty_Tier</value>
+    </values>
+    <values>
+        <field>Description__c</field>
+        <value xsi:type="xsd:string">-2% discount for Silver tier loyalty members (Loyalty_Member__c.Tier__c = Silver)</value>
+    </values>
+    <values>
+        <field>Fixed_Adjustment__c</field>
+        <value xsi:type="xsd:double">0.00</value>
+    </values>
+    <values>
+        <field>Is_Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Max_Applies__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Operator__c</field>
+        <value xsi:type="xsd:string">Equals</value>
+    </values>
+    <values>
+        <field>Percent_Adjustment__c</field>
+        <value xsi:type="xsd:double">2.00</value>
+    </values>
+    <values>
+        <field>Priority__c</field>
+        <value xsi:type="xsd:double">29.0</value>
+    </values>
+    <values>
+        <field>Rule_Type__c</field>
+        <value xsi:type="xsd:string">Discount</value>
+    </values>
+    <values>
+        <field>Target__c</field>
+        <value xsi:type="xsd:string">Quote_Line</value>
+    </values>
+    <values>
+        <field>Value__c</field>
+        <value xsi:type="xsd:string">Silver</value>
+    </values>
+</CustomMetadata>

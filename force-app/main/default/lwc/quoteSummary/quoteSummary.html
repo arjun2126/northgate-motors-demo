@@ -1,0 +1,106 @@
+<template>
+    <lightning-card title="Quote Summary" icon-name="standard:quote">
+        <div class="slds-card__body slds-card__body_inner slds-p-horizontal_medium">
+            <template if:true={error}>
+                <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error slds-m-bottom_medium" role="alert">
+                    <span class="slds-assistive-text">Error</span>
+                    <p>{error}</p>
+                </div>
+            </template>
+
+            <template if:true={hasSummary}>
+                <div class="slds-grid slds-gutters_xx-small slds-m-bottom_medium">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                        <p class="slds-text-title_caps slds-text-color_weak slds-m-bottom_xx-small">Quote</p>
+                        <p class="slds-text-heading_small slds-truncate" title={summary.quoteName}>{summary.quoteName}</p>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
+                        <p class="slds-text-title_caps slds-text-color_weak slds-m-bottom_xx-small">Opportunity</p>
+                        <p class="slds-text-heading_small slds-truncate" title={summary.opportunityName}>{summary.opportunityName}</p>
+                    </div>
+                </div>
+
+                <div class="slds-section slds-is-relative slds-m-bottom_medium">
+                    <h3 class="slds-section__title slds-theme_shade slds-p-horizontal_small slds-p-vertical_xx-small">
+                        <span class="slds-truncate slds-text-body_small slds-text-color_weak">Line items</span>
+                    </h3>
+                    <div class="slds-scrollable_x">
+                        <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_col-bordered slds-m-bottom_xx-small">
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="slds-text-title_caps">Item</th>
+                                    <th scope="col" class="slds-text-title_caps">Category</th>
+                                    <th scope="col" class="slds-text-title_caps slds-text-align_right">Qty</th>
+                                    <th scope="col" class="slds-text-title_caps slds-text-align_right">Unit price</th>
+                                    <th scope="col" class="slds-text-title_caps slds-text-align_right">Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <template for:each={summary.lines} for:item="line">
+                                    <tr key={line.name}>
+                                        <td><div class="slds-truncate" title={line.name}>{line.name}</div></td>
+                                        <td>{line.category}</td>
+                                        <td class="slds-text-align_right"><lightning-formatted-number value={line.quantity} maximum-fraction-digits="0"></lightning-formatted-number></td>
+                                        <td class="slds-text-align_right"><lightning-formatted-number format-style="currency" currency-code="USD" value={line.unitPrice}></lightning-formatted-number></td>
+                                        <td class="slds-text-align_right"><lightning-formatted-number format-style="currency" currency-code="USD" value={line.subtotal}></lightning-formatted-number></td>
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="slds-grid slds-gutters_xx-small slds-m-bottom_medium">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+                        <p class="slds-text-title_caps slds-text-color_weak slds-m-bottom_xx-small">Standard list subtotal</p>
+                        <p class="slds-text-heading_small"><lightning-formatted-number format-style="currency" currency-code="USD" value={summary.listSubtotal}></lightning-formatted-number></p>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+                        <p class="slds-text-title_caps slds-text-color_weak slds-m-bottom_xx-small">Adjusted subtotal (rules)</p>
+                        <p class="slds-text-heading_small"><lightning-formatted-number format-style="currency" currency-code="USD" value={summary.adjustedSubtotal}></lightning-formatted-number></p>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+                        <p class="slds-text-title_caps slds-text-color_weak slds-m-bottom_xx-small">Signed net adjustment
+                            <lightning-helptext content="Positive = net discount. Negative = net premium uplift. Zero = no change."></lightning-helptext>
+                        </p>
+                        <p class="slds-text-heading_small"><lightning-formatted-number value={summary.discountPercent} format-style="percent-fixed" maximum-fraction-digits="2"></lightning-formatted-number></p>
+                    </div>
+                </div>
+
+                <div class="slds-grid slds-gutters_xx-small slds-m-bottom_medium">
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+                        <p class="slds-text-title_caps slds-text-color_weak slds-m-bottom_xx-small">Approval status</p>
+                        <p class="slds-text-heading_small">{approvalStatusLabel}</p>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+                        <p class="slds-text-title_caps slds-text-color_weak slds-m-bottom_xx-small">Rules applied</p>
+                        <p class="slds-text-heading_small"><lightning-formatted-number value={summary.rulesApplied} maximum-fraction-digits="0"></lightning-formatted-number></p>
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+                        <p class="slds-text-title_caps slds-text-color_weak slds-m-bottom_xx-small">Valid until</p>
+                        <p class="slds-text-heading_small"><lightning-formatted-date-time value={summary.validUntil} year="numeric" month="short" day="2-digit"></lightning-formatted-date-time></p>
+                    </div>
+                </div>
+
+                <div class="slds-grid slds-gutters_xx-small slds-m-bottom_medium">
+                    <div class="slds-col slds-size_2-of-3">
+                        <p class="slds-text-title_caps slds-text-color_weak slds-m-bottom_xx-small">Standard grand total
+                            <lightning-helptext content="Official document total on the Quote PDF. Tax and shipping are not included in the adjustment."></lightning-helptext>
+                        </p>
+                        <p class="slds-text-heading_small"><lightning-formatted-number format-style="currency" currency-code="USD" value={summary.grandTotal}></lightning-formatted-number></p>
+                    </div>
+                    <div class="slds-col slds-size_1-of-3 slds-grid slds-grid_align-end slds-grid_vertical-align-end">
+                        <lightning-button-group>
+                            <lightning-button label="Print / Quote PDF" variant="brand" onclick={handlePrint}></lightning-button>
+                            <lightning-button label="Open Opportunity" variant="neutral" disabled={isOpportunityLinkDisabled} onclick={handleOpenOpportunity}></lightning-button>
+                        </lightning-button-group>
+                    </div>
+                </div>
+
+                <p class="slds-text-body_small slds-text-color_weak slds-m-top_medium">
+                    Adjusted subtotal reflects age, trim, loyalty, and volume rules on list prices. The standard grand total and Quote PDF total are the official document totals. Tax and shipping are not included in the adjustment.
+                </p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

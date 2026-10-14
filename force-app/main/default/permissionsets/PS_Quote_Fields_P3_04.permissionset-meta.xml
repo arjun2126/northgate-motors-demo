@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Narrowly scoped: FLS for the 3 P3-04 Quote fields only. No object CRUD, no system permissions. For test-execution and buyer-controller run-as only.</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Quote.Quote_Valid_Until__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Quote.Adjusted_Subtotal__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Quote.Buyer_Contact__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>PS_Quote_Fields_P3_04</label>
+</PermissionSet>

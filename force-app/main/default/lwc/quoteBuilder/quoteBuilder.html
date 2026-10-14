@@ -1,0 +1,149 @@
+<template>
+    <lightning-card title="Quote Builder" icon-name="standard:quote">
+        <div class="slds-p-around_medium">
+            <template if:true={contextNote}>
+                <p class="slds-text-color_weak slds-m-bottom_small">
+                    Adjusted subtotal reflects age, trim, loyalty, and volume rules on list prices.
+                    Tax and shipping are excluded.
+                </p>
+            </template>
+
+            <lightning-layout>
+                <lightning-layout-item size="6">
+                    <lightning-combobox
+                        name="buyer"
+                        label="Buyer Contact (loyalty)"
+                        value={buyerContactId}
+                        placeholder="Select a buyer"
+                        options={buyers}
+                        onchange={handleBuyer}
+                    ></lightning-combobox>
+                </lightning-layout-item>
+            </lightning-layout>
+
+            <lightning-button-group class="slds-m-top_small" role="group">
+                <template for:each={categories} for:item="category">
+                    <lightning-button
+                        key={category.value}
+                        label={category.label}
+                        data-value={category.value}
+                        variant={category.variant}
+                        onclick={handleCategory}
+                    ></lightning-button>
+                </template>
+            </lightning-button-group>
+
+            <template if:true={catalog.length}>
+                <div class="slds-grid slds-wrap slds-grid_vertical-align-center slds-border_top slds-p-top_small slds-m-top_small">
+                    <template for:each={catalog} for:item="item">
+                        <div key={item.productId} class="slds-col slds-size_1-of-1 slds-m-bottom_small">
+                            <lightning-layout vertical-align="center">
+                                <lightning-layout-item size="7">
+                                    <span>{item.name}</span>
+                                </lightning-layout-item>
+                                <lightning-layout-item size="3">
+                                    <span>{item.unitPrice}</span>
+                                </lightning-layout-item>
+                                <lightning-layout-item size="2">
+                                    <lightning-input
+                                        type="number"
+                                        min="0"
+                                        value={item.quantity}
+                                        label="Qty"
+                                        data-id={item.productId}
+                                        onchange={handleQty}
+                                    ></lightning-input>
+                                </lightning-layout-item>
+                            </lightning-layout>
+                        </div>
+                    </template>
+                </div>
+            </template>
+
+            <template if:true={hasSelected}>
+                <div class="slds-m-top_medium">
+                    <lightning-layout>
+                        <lightning-layout-item size="4">
+                            <template for:each={selectedLines} for:item="line">
+                                <div key={line.productId}>
+                                    {line.name} x {line.quantity} = {line.subtotal}
+                                </div>
+                            </template>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="4">
+                            <strong>List subtotal: {listSubtotal}</strong>
+                        </lightning-layout-item>
+                        <lightning-layout-item size="4">
+                            <lightning-button
+                                label="Save and Price Quote"
+                                variant="brand"
+                                onclick={handleSave}
+                                disabled={busy}
+                            ></lightning-button>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </div>
+            </template>
+
+            <template if:true={error}>
+                <div class="slds-m-top_medium">
+                    <p class="slds-text-color_error">{error}</p>
+                </div>
+            </template>
+
+            <template if:true={hasResult}>
+                <div class="slds-m-top_large slds-border_top slds-p-top_medium">
+                    <template if:true={result.blockerMessage}>
+                        <p class="slds-text-color_error">{result.blockerMessage}</p>
+                    </template>
+                    <template if:false={result.blockerMessage}>
+                        <lightning-layout>
+                            <lightning-layout-item size="3">
+                                <div class="slds-text-title">List subtotal</div>
+                                <div>{result.listSubtotal}</div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="3">
+                                <div class="slds-text-title">Adjusted subtotal</div>
+                                <div>{result.adjustedSubtotal}</div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="3">
+                                <div class="slds-text-title">Signed net adjustment</div>
+                                <lightning-helptext content="Positive = net discount. Negative = net premium uplift. Zero = no change."></lightning-helptext>
+                                <div>{result.netDiscountPercent}%</div>
+                            </lightning-layout-item>
+                            <lightning-layout-item size="3">
+                                <div class="slds-text-title">Rules applied</div>
+                                <div>{result.rulesApplied}</div>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                        <template if:true={result.appliedRules.length}>
+                            <p class="slds-text-title_caps slds-m-top_small">Rule breakdown</p>
+                            <template for:each={result.appliedRules} for:item="rule">
+                                <div key={rule.developerName} class="slds-m-bottom_xx-small">
+                                    {rule.developerName}: {rule.direction} {rule.percent}% on {rule.base} = {rule.adjustment}
+                                    (category: {rule.category})
+                                </div>
+                            </template>
+                        </template>
+                        <p class="slds-text-color_weak slds-m-top_medium">
+                            Adjusted subtotal is the priced basis after rules. Standard subtotal
+                            (list prices) and totals remain on the quote. Tax and shipping are not part of the adjustment.
+                        </p>
+                        <template if:true={needsApproval}>
+                            <lightning-button
+                                label="Submit for Approval"
+                                variant="neutral"
+                                onclick={handleSubmit}
+                                disabled={busy}
+                                class="slds-m-top_small"
+                            ></lightning-button>
+                        </template>
+                        <template if:true={submitMessage}>
+                            <p class="slds-m-top_small">{submitMessage}</p>
+                        </template>
+                    </template>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

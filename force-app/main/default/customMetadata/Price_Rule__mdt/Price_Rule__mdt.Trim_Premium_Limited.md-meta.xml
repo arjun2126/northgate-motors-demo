@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Trim Premium - Limited</label>
+    <protected>false</protected>
+    <values>
+        <field>Attribute__c</field>
+        <value xsi:type="xsd:string">Trim</value>
+    </values>
+    <values>
+        <field>Description__c</field>
+        <value xsi:type="xsd:string">+3% premium for Limited trim level (Vehicle_Model__c.Trim__c = Limited)</value>
+    </values>
+    <values>
+        <field>Fixed_Adjustment__c</field>
+        <value xsi:type="xsd:double">0.00</value>
+    </values>
+    <values>
+        <field>Is_Active__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Max_Applies__c</field>
+        <value xsi:type="xsd:double">1.0</value>
+    </values>
+    <values>
+        <field>Operator__c</field>
+        <value xsi:type="xsd:string">Equals</value>
+    </values>
+    <values>
+        <field>Percent_Adjustment__c</field>
+        <value xsi:type="xsd:double">3.00</value>
+    </values>
+    <values>
+        <field>Priority__c</field>
+        <value xsi:type="xsd:double">10.0</value>
+    </values>
+    <values>
+        <field>Rule_Type__c</field>
+        <value xsi:type="xsd:string">Premium</value>
+    </values>
+    <values>
+        <field>Target__c</field>
+        <value xsi:type="xsd:string">Quote_Line</value>
+    </values>
+    <values>
+        <field>Value__c</field>
+        <value xsi:type="xsd:string">Limited</value>
+    </values>
+</CustomMetadata>

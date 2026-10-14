@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
-# Switch ngpersona between Sales Manager and Finance Officer personas.
-# Usage: scripts/persona.sh <manager|finance>
+# Switch ngpersona between Sales Manager, Finance Officer, and VP Sales personas.
+# Usage: scripts/persona.sh <manager|finance|vp>
+# NOTE: the vp case is prepared for the CP3 discount-approval demo and has not
+# been executed. It moves ngpersona out of the manager/finance pair; running
+# `manager` or `finance` afterwards restores the original pair.
 set -euo pipefail
 
 PERSONA="${1:-}"
@@ -16,8 +19,12 @@ case "$PERSONA" in
     ROLE_API="Finance_Manager"
     PSG_API="PSG_Finance"
     ;;
+  vp)
+    ROLE_API="VP_Sales"
+    PSG_API="PSG_Manager"
+    ;;
   *)
-    echo "Usage: $0 <manager|finance>"
+    echo "Usage: $0 <manager|finance|vp>"
     exit 1
     ;;
 esac

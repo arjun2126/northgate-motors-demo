@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Quote</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Quotes with status, expiration, and pricing adjustment fields for staleness monitoring.</description>
+    <label>Quote List</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Quote</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Opportunity</field>
+            <table>Quote</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Status</field>
+            <table>Quote</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>ExpirationDate</field>
+            <table>Quote</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Quote_Valid_Until__c</field>
+            <table>Quote</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Adjusted_Subtotal__c</field>
+            <table>Quote</table>
+        </columns>
+        <masterLabel>Quote Details</masterLabel>
+    </sections>
+</ReportType>
