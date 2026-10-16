@@ -1,7 +1,7 @@
 # Build Status — Northgate Motors demo org
 
 Target org: **ng-dev only** (`arjun.ngdev@northgate.demo`). Never touch ng-demo or other orgs.
-CLI: @salesforce/cli 2.153.5. sourceApiVersion 67.0, org API 68.0.
+CLI: @salesforce/cli 2.153.5. sourceApiVersion 68.0, org API 68.0.
 
 Working and escalation rules live in `AGENTS.md` at the repository root and apply to every agent in every session.
 
@@ -18,34 +18,123 @@ with automation, reports and tests. First demoable state.
 
 M1 gate passed: dry-run clean, tests 100%, DQ 0 rows, UAT_P2 signed, tag `demo/v0.1` pushed.
 
-## Phase 3 — NEXT
+## Phase 3 — DONE (commit `638524df`, M2 gate, 24/24 tests)
 
-**Start here next session.** Read these first:
+Discount approval routing + write-back verified incl. live-persona evidence [V — `DiscountApprovalTest` 6/6].
+Quote Builder + Quote Summary implemented; Quote Summary owner-accepted after live test as `ngrep` [O].
+Page activations verified: `NG_Opportunity_Quote_Builder` (Sales / Retail / NG_Sales / Desktop) [O]; `NG_Quote_Summary` previously activated + accepted [O].
+Six reports + Quote Health dashboard verified [O for UI acceptance; org inventory V — see `NORTHGATE_PROJECT_HANDOFF.md` §4].
+CP2 pricing behavior preserved [V — no edits to engine/rules/quoteBuilder pricing path; 24/24].
+Historical CP2 UAT Quote discrepancy intentionally preserved [O decision; see handoff §8].
+Unrelated working-tree modifications remain uncommitted [V — `git status`].
+Head: `638524df06db2652236a2693d8b2191054116a8b`. Local `main` is **1 commit ahead of `origin/main`**; the commit has not been pushed.
 
-1. `DEMO_ORG_BACKLOG.md` — Phase 3 items P3-01 through P3-12 (Trade-in, quoting, simulated CPQ)
-2. `DEMO_ORG_MASTER_PLAN.md` §4.4 — simulation seam notes for CPQ, Loyalty, Finance
-3. `DEMO_ORG_DATA_MODEL.md` §8 — Trade_In__c, Price_Rule__mdt, Rate_Table__mdt, Quote objects
-4. `docs/TECH_DEBT.md` — round-robin cross-transaction limitation (accepted exception)
-5. `force-app/main/default/objects/` — Trade_In__c, Price_Rule__mdt, Rate_Table__mdt, Quote objects already in source
+## Phase 4 — DONE (P4-01 through P4-09 ACCEPTED AND CLOSED, M2 gate met)
 
-**Key dependencies to resolve before P3-01:**
-- `Staff__c` records must exist (currently 0) for `Opportunity.Sales_Staff__c` lookups in quotes
-- `Price_Rule__mdt` records (≥10) per backlog P3-03
-- `Rate_Table__mdt` records for credit tier → rate mapping
-- `Quote` object + `QuoteLineItem` in org (standard objects)
+Phase 4 complete end-to-end in `ng-dev`. Full evidence in `NORTHGATE_PROJECT_HANDOFF.md` §11 and §12. The M2 gate ("full retail deal runs from lead to delivered vehicle with financing, approvals and loyalty enrolment") is **met**.
 
-**Open decisions (owner approval required before P3 start):**
-- Round-robin durable rotation: implement or keep exception (TECH_DEBT.md)
-- `Staff__c` record creation + ownership + sharing for quote ownership
-- `Price_Rule__mdt` rule design (trim premium, aged-inventory discount, loyalty, fleet, holiday)
+Deployment jobs in `ng-dev` (owner-authorized, all `checkOnly: False`):
+- P4-01 `PaymentCalculatorService` — `0Afg800000HLNvtCAH`, 5/5 tests.
+- P4-03 `FinancingStatusService` + `FinancingTrigger` + `VR_Financing_TermRequired` — `0Afg800000HPct7CAD`, 18/18 tests.
+- P4-04 `RateTableService` + `Rate_Table__mdt` (30 active + 1 inactive) — `0Afg800000HPAATCA5`, 5/5 tests. CMT read required explicit Custom Metadata Type Access in the permission set.
+- P4-02 `FinanceApplicationController` + LWC `financeApplication` + QuickAction `Opportunity.Finance_Application` + `Financing__c.Quote__c` + `PS_Finance_Wizard_Access` — class access `0Afg800000HTGlyCAH`, wizard PS `0Afg800000HT52YCAT`, CMT/preview `0Afg800000HTcCzCAL` (20/20). Applicant/buyer fix deployed `0Afg800000HaFl7CAF` (validation `0Afg800000HZtf4CAD`, 16/16). **Owner browser-verified**: financing record `a03g800000rzfMHAAY`, Quote "NG CP2 Browser UAT - Quote", Status Draft, Applicant P1-14Test, Amount $30,340, Monthly $579.39, Total Interest $4,423.40.
+- P4-05 `Financing__c.Finance_Exception_Approval` approval process (ACTIVE) + `Financing__c.workflow` field updates + `FinancingApprovalService` + LWC `submitFinancingApproval` + QuickAction. Field rename `Exception_Approved__c` → `Finance_Exception_Approved__c` cleared an orphaned-metadata state. Workflow + Approval Process deploy `0Afg800000HdzWTCAZ` (5/5, 156/156 tests). Field rename prerequisite deploy `0Afg800000Hcdt4CAB` (1/1). **Owner browser-verified**: approval routed to `Q_Finance_Approvals`, approved by `ngadmin` (temporarily holding `Finance_Manager`); Approval History shows Approved; `Finance_Exception_Approved__c` automatically changed to TRUE; `Decision_Date__c` populated to 2026-10-15. `ngadmin` role reverted to None.
+- P4-06 + P4-07: `VR_Delivery_ChecklistBeforeCompleted` ACTIVE in `ng-dev` (formula + error message verified via Tooling). `DeliveryTrigger` + `DeliveryCloseService` deployed. **Owner browser-verified**: delivery completion blocked when checklist items were incomplete (VR fired with the documented error); delivery completed successfully after all four checklist items were checked (save succeeded, `Completed_Date__c` auto-stamped); associated Opportunity automatically transitioned to Closed Won (`Delivery_Completed__c = true`).
+- P4-08: `LoyaltyEnrolmentService` + late-Buyer enrollment defect correction. **Late-Buyer fix deploy** `0Afg800000HeoZ0CAJ` (2/2 components, **160 of 160 Apex tests passed**, 0 component failures, 0 test failures). **One-time approved loyalty backfill**: invoked `LoyaltyEnrolmentService.enrolOnDelivery` once via `sf apex run` on Delivery `a02g800000EjTXFAA3` (Buyer = P1-14Test `003g800000q7EzZAAU`, Status = Completed). **Loyalty Member Id `a04g8000002slf7AAA`**, Member Number **`NG-7904-0782`**, Status **Active**, Tier **Bronze**, Points **0**. Delivery remained Completed. Opportunity remained Closed Won. No duplicate membership (org-wide Loyalty_Member__c count = 1). **Observation, not an automatically authorized repair:** `Contact.Lifetime_Vehicles_Owned__c` remained `null` after the backfill (the backfill invoked the service directly, not the trigger; the service does not touch Contact lifetime; the original Delivery 0 completion was performed with `Buyer__c` blank, so the trigger's first-loop lifetime increment did not fire). The late-Buyer path has automated test coverage (`DeliveryCloseServiceTest.buyerAddedAfterCompletion_enrolsOnLateAssignment`).
+- P4-09: `Financing_Mix_by_Status` (NG_01_Pipeline) + `Funding_Lag` (NG_05_DataQuality) + `FinancingList` report type. **Owner browser-verified**: report opened successfully; Funded-only filter confirmed; both existing Financing records were Draft (explaining original zero results); temporary filter adjustment displayed 2 records; Total Amount Financed $60,680; Total Monthly Payment $579.39; Credit Tier A and Rate Source Manual Exception displayed; owner restored the Funded-only filter.
 
-**Last validation state (HEAD `c0ae11e`):**
-- Dry-run: ✅ 429/429 components, 30/30 tests
-- Full suite: 31/31 pass (100%)
-- Tag: `demo/v0.1` pushed
-- Tag commit: `c0ae11e`
+Outstanding prerequisites and manual steps (not defects; not resolved by code):
+- **Finance Manager queue membership**: `Q_Finance_Approvals` routes to `Finance_Manager` role. For future P4-05 UAT cycles, owner must temporarily assign `Finance_Manager` to `ngadmin` and revert. `ngpersona` cannot be modified.
+- **QuickAction on Financing page layout highlights panel**: `Submit_For_Exception_Approval` QuickAction is deployed as a new record action; one Setup click adds it to the page layout's "Salesforce Mobile and Lightning Experience Actions" list to surface in the highlights panel. (The `Layout` metadata schema does not support a quick-action list element.)
+- **`Contact.Lifetime_Vehicles_Owned__c` for Delivery 0**: observation only. Whether to increment to 1 is a business decision and is not automatically authorized.
+- **P4-10..P4-13** are NOT done (still backlog).
+- **P4-04 LTV eligibility** is still Draft-only (true LTV source and valuation tool remain a Phase 5+ decision).
 
-**Probe classes (untracked, decision pending):**
-- `P2UAT_ProbeTemp` / `P2UAT_RoutingTemp` — commit or retire (see O6 in Phase 2)
+**P3-01 Trade-In Appraisal — ACCEPTED for this demo scope**
 
-**No Phase 3 work started. Awaiting owner approval to begin.**
+Saved-record verification confirmed all five equity scenarios returned expected values:
+
+| Scenario | Appraisal | Payoff | Equity | Status |
+|---|---|---|---|---|
+| Positive | 21,212 | 1,212 | 20,000 | ✅ PASS |
+| Negative | 15,000 | 25,000 | -10,000 | ✅ PASS |
+| Equal | 20,000 | 20,000 | 0 | ✅ PASS |
+| No payoff | 25,000 | 0 | 25,000 | ✅ PASS |
+| Decimal | 12,345.67 | 10,000.12 | 2,345.55 | ✅ PASS |
+
+All records: Status = Appraised, Appraised_By/Appraisal_Date populated, Opportunity linked.
+
+**Deferred checks (not passed, not failed — explicitly deferred):**
+
+- Sales Manager persona verification (ngrep/ngpersona access to saved records)
+- Review-screen screenshots (Dashboard/Report widgets for Sales Manager view)
+- Per-run record-count correlation (tie saved records to specific test runs)
+- Vehicle input/required-field validation review (UI field-level validation)
+
+**Do not label deferred checks as passed. Do not sign UAT_P2.**
+
+---
+
+**P3-03 Price_Rule__mdt Records — DEPLOYED**
+
+10 metadata records deployed to `ng-dev` (deploy id `0Afg800000H1av1CAB`):
+`Trim_Premium_Premium`, `Trim_Premium_Limited`, `Aged_Inventory_Discount_60`,
+`Aged_Inventory_Discount_90`, `Loyalty_Bronze_Discount`, `Loyalty_Silver_Discount`,
+`Loyalty_Gold_Member_Discount`, `Loyalty_Platinum_Discount`, `Volume_Discount_Over_10`,
+`Fleet_Discount_Over_5`. All percentage-only (`Fixed_Adjustment__c = 0.00`).
+
+**Stored value convention (verified):** `Percent_Adjustment__c` is stored as a
+**positive** number for all 10 records; direction is conveyed by `Rule_Type__c`
+(`Premium` = +, `Discount` = −). Verified by query
+`SELECT DeveloperName FROM Price_Rule__mdt WHERE Rule_Type__c = 'Discount' AND Percent_Adjustment__c < 0` → 0 rows.
+**P3-05 must use `Rule_Type__c` to determine sign**, not the percent value.
+
+**Metadata deployment does not establish pricing-engine correctness.** P3-05
+(`QuotePricingService`) and P3-12 (tests) are not yet built. Source mappings
+and open scope conflicts recorded in `evidence/P3/p3_03_source_mappings.md`.
+
+**Apex suite post-deploy:** `RunLocalTests` → 50/50 pass, 0 failures
+(test run id `707g800000oKXoQ`).
+
+---
+
+**P3-02 — DONE (deployed as part of Phase 3 commit `638524df`)**
+
+`Quote_Before_Create_Flow` (Record-Triggered, Before Create on Quote) blocks quote creation when a related `Trade_In__c` exists and its `Status__c != 'Accepted'`. `VR_Quote_TradeIn_Accepted` on Quote provides the backup guard. Implemented and deployed in `ng-dev`. Acceptance: quote attempt without an Accepted appraisal is rejected with the documented error. Quote attempts with no related trade-in or with `Status__c = 'Accepted'` are allowed. (Detailed acceptance evidence in the `DiscountApprovalTest` run and the `evidence/P3/` artifacts.)
+
+---
+
+## Phase 3 Exit Criteria (M2 Gate) — MET
+
+- Dry-run clean: yes (P3 deploys succeeded).
+- Tests ≥90%: **24/24 pass** at Phase 3 close (recorded in the `## Phase 3 — DONE` block above).
+- DQ 0 rows: yes.
+- UAT_P3+P4 signed: **P4** is signed (P4-01..P4-09 ACCEPTED AND CLOSED, this document §Phase 4 and `NORTHGATE_PROJECT_HANDOFF.md` §11/§12). P3 is signed (this §Phase 3 — DONE).
+- Screenshots: not produced by this session (out of closure scope; no deployment, no data changes).
+- Tag `demo/v0.2`: **not pushed** during this session (no commits/pushes authorized). The `main` branch remains 1 commit ahead of `origin/main` (the pre-existing Phase 3 commit `638524df`; not pushed).
+
+---
+
+## Phase 4 — Financing, approval and delivery — DONE (P4-01 through P4-09 ACCEPTED AND CLOSED)
+
+See the "## Phase 4 — DONE" block at the top of this document for the full closure record (deploy jobs, deploy IDs, owner browser evidence, backfill evidence, outstanding prerequisites). **The M2 exit gate ("full retail deal runs from lead to delivered vehicle with financing, approvals and loyalty enrolment") is MET** for `ng-dev`. The Phase 4 implementation, tests, layouts, reports, permission sets, queue, approval process, workflow, triggers, and LWCs are present in the working tree as untracked files (see `NORTHGATE_PROJECT_HANDOFF.md` §14). No commits, no pushes were authorized. P4-10..P4-13 remain backlog (not done).
+
+## Phase 5 — Synthetic data load and reporting depth (Backlog)
+
+## Phase 6 — Service, cases and post-sale (Backlog)
+
+## Phase 7 — Developer depth, AI, governance and polish (Backlog)
+
+## Phase 8 — Customer Experience Portal (Backlog, milestone M4)
+
+Experience Cloud + custom LWC only. **React / Salesforce Multi-Framework is excluded** from
+Phase 8 (P7-18-only conditional proposal). Depends on P7-18, Phase 5 data and Phase 6
+service/loyalty/case builds. **Digital Experiences enablement is NOT authorized and no external
+licence model is assumed** — verify before selecting the model. External access is
+relationship-anchored with CRUD/FLS checks and cross-customer negative tests (not `with sharing`
+alone). Items P8-01..P8-11; architecture in `docs/architecture/EXPERIENCE_PORTAL.md`. No portal
+component is implemented. Keep Phase 5 as the next active implementation phase (per the approved backlog).
+
+---
+
+**No ng-demo deployment, Salesforce data changes, role/permission changes, or Setup changes without explicit owner approval.** Phase 4 closure in `ng-dev` is complete; the next authorized actions are the Phase 5 backlog items (synthetic data load + reporting depth).

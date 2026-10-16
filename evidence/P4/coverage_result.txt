@@ -1,0 +1,67 @@
+=== Test Results
+TEST NAME                                                                                       OUTCOME  MESSAGE  RUNTIME (MS)
+──────────────────────────────────────────────────────────────────────────────────────────────  ───────  ───────  ────────────
+PaymentCalculatorServiceTest.highRate_matchesAmortizationSchedule                               Pass              48          
+PaymentCalculatorServiceTest.invalidInputs_throwInsteadOfZeroPayment                            Pass              18          
+PaymentCalculatorServiceTest.midRate_matchesAmortizationSchedule                                Pass              20          
+PaymentCalculatorServiceTest.standardRate_matchesAmortizationSchedule                           Pass              22          
+PaymentCalculatorServiceTest.zeroPercent_dividesPrincipalEvenly                                 Pass              20          
+DeliveryCompletionGuardTest.completedWithAllFourChecklist_succeeds                              Pass              902         
+DeliveryCompletionGuardTest.completedWithIncompleteChecklist_isBlockedByValidationRule          Pass              333         
+DeliveryCompletionGuardTest.transitioningToCompletedWithoutChecklist_isBlockedByValidationRule  Pass              361         
+LoyaltyEnrolmentServiceTest.enrolOnDelivery_createsMemberWithDefaults                           Pass              1402        
+LoyaltyEnrolmentServiceTest.enrolOnDelivery_isIdempotent_secondCallReturnsExisting              Pass              623         
+LoyaltyEnrolmentServiceTest.enrolOnDelivery_nullBuyer_returnsNullAndDoesNotInsert               Pass              36          
+LoyaltyEnrolmentServiceTest.generateMemberNumber_producesNGPrefix                               Pass              6           
+DeliveryCloseServiceTest.buyerAddedAfterCompletion_enrolsOnLateAssignment                       Pass              1488        
+DeliveryCloseServiceTest.buyerReplacement_doesNotAutoEnrolNewBuyer                              Pass              734         
+DeliveryCloseServiceTest.completedDeliveryWithBuyerAtCompletion_enrols                          Pass              579         
+DeliveryCloseServiceTest.completingDelivery_enrolsBuyerInLoyalty                                Pass              620         
+DeliveryCloseServiceTest.completingDelivery_incrementsContactLifetimeVehicles                   Pass              611         
+DeliveryCloseServiceTest.completingDelivery_isIdempotent                                        Pass              676         
+DeliveryCloseServiceTest.completingDelivery_setsOppClosedWonAndDeliveryCompletedFlag            Pass              638         
+DeliveryCloseServiceTest.nonCompletedUpdate_doesNotCloseOpp                                     Pass              460         
+DeliveryCloseServiceTest.repeatedUpdatesAfterCompletion_doNotDuplicateEnrolment                 Pass              669         
+DeliveryCompletionGuardTest.checklistCompleteFormula_isTrueWhenAllFour                          Pass              1054        
+
+
+=== Apex Code Coverage by Class
+CLASSES                   PERCENT  UNCOVERED LINES  
+────────────────────────  ───────  ─────────────────
+VinValidator              100%                      
+VehicleTrigger            83%      5                
+VehicleReservationGuard   33%      4,10,11,12,13,...
+OpportunityStageStamp     92%      4                
+OpportunityTrigger        75%      4                
+VehicleCounters           18%      6,7,8,10,11,...  
+VehicleCounterTrigger     71%      4,13,14,19       
+PaymentCalculatorService  100%                      
+LoyaltyEnrolmentService   100%                      
+DeliveryCloseService      96%      7,19,67          
+DeliveryTrigger           80%      4                
+
+
+=== Test Setup Time by Test Class for Run 707g800000pERTF
+TEST SETUP METHOD NAME             SETUP TIME
+─────────────────────────────────  ──────────
+LoyaltyEnrolmentServiceTest.setup  2570      
+DeliveryCloseServiceTest.setup     2623      
+DeliveryCompletionGuardTest.setup  242772    
+
+
+=== Test Summary
+NAME                 VALUE                     
+───────────────────  ──────────────────────────
+Outcome              Passed                    
+Tests Ran            25                        
+Pass Rate            100%                      
+Fail Rate            0%                        
+Skip Rate            0%                        
+Test Run Id          707g800000pERTF           
+Test Setup Time      247965 ms                 
+Test Execution Time  11320 ms                  
+Test Total Time      259285 ms                 
+Org Id               00Dg800000LxahhEAB        
+Username             arjun.ngdev@northgate.demo
+Org Wide Coverage    32%                       
+

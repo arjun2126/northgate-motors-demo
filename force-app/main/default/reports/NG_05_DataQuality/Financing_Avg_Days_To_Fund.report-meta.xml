@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Average</aggregateTypes>
+        <field>Financing__c$Days_To_Fund__c</field>
+    </columns>
+    <description>P4-10: Average days from Application_Date__c to Funded_Date__c for Financing__c records in Funded status. Uses the Days_To_Fund__c formula field. Records missing either date yield null and are excluded from the average. Pairs to DM_DealDesk.</description>
+    <filter>
+        <criteriaItems>
+            <column>Financing__c$Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Funded</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Financing__c$Status__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Financing Avg Days To Fund</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>FinancingList__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Financing__c$Application_Date__c</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

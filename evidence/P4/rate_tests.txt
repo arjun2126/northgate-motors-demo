@@ -1,0 +1,20 @@
+P4-04 RateTableService — validation evidence (ng-dev)
+Date: 2026-10-14. Deploy job: 0Afg800000HPAATCA5 (Succeeded).
+Test class: RateTableServiceTest — 5/5 PASS, 0 fail (RunSpecifiedTests).
+
+Coverage: all 30 tier/term combinations resolve exact approved rates;
+inactive-row filter proven via A_36_INACTIVE decoy; unknown tier, unsupported
+term, and null inputs throw; LTV gate passes at exactly the limit and throws
+above it, on null, and on negative; manual path passes valid rate+reason and
+throws on blank reason, null rate, and rates outside 0-25%.
+Duplicate-active-match branch: code-reviewed only (unique DeveloperNames make
+a live duplicate unreachable without violating D2).
+
+Org verification: 30 active Rate_Table__mdt rows (corners A_36=4.49,
+A_96=6.99, Sub_Prime_36=16.49, Sub_Prime_96=18.99) + 1 inactive support row.
+First-attempt failure (fixed in scope): missing MasterLabel (max 40 chars);
+labels shortened, illustrative-rate disclaimer kept in class header.
+
+Remaining P4-02 dependency: authoritative LTV calculation and vehicle
+valuation source. The service gates caller-supplied LTV percent values only
+and performs no vehicle valuation.

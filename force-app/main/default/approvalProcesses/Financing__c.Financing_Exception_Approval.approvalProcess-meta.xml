@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>true</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Opportunity__c</field>
+        <field>Applicant__c</field>
+        <field>Amount_Financed__c</field>
+        <field>Credit_Tier__c</field>
+        <field>Annual_Rate__c</field>
+        <field>Rate_Source__c</field>
+        <field>Exception_Reason__c</field>
+        <field>Status__c</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>Q_Finance_Approvals</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <entryCriteria>
+            <booleanFilter>1 OR 2</booleanFilter>
+            <criteriaItems>
+                <field>Financing__c.Rate_Source__c</field>
+                <operation>equals</operation>
+                <value>Manual_Exception</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Financing__c.Credit_Tier__c</field>
+                <operation>equals</operation>
+                <value>Sub_Prime</value>
+            </criteriaItems>
+        </entryCriteria>
+        <ifCriteriaNotMet>ApproveRecord</ifCriteriaNotMet>
+        <label>Finance Manager Exception Approval</label>
+        <name>finance_manager_exception_approval</name>
+    </approvalStep>
+    <description>P4-05: routes Financing__c sub-prime tier or manual-exception rate requests to the Finance Manager via Q_Finance_Approvals (queue role members = Finance_Manager). Final action flips Finance_Exception_Approved__c and stamps Decision_Date__c. Lessons from Opportunity_Discount_Approval applied: entry criteria capture both exception triggers, and ifCriteriaNotMet is ApproveRecord so a sub-prime financing that doesn&apos;t match the step still final-approves (the gate is the entry, not the step).</description>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Financing__c.Rate_Source__c</field>
+            <operation>equals</operation>
+            <value>Manual_Exception</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Financing__c.Credit_Tier__c</field>
+            <operation>equals</operation>
+            <value>Sub_Prime</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>Financing_Decision_Date_Today</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Financing_Exception_Approved</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>Financing_Exception_Rejected</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <label>Financing Exception Approval</label>
+    <processOrder>1</processOrder>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

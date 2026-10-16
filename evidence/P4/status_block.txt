@@ -1,0 +1,19 @@
+P4-03 FinancingStatusService — validation evidence (ng-dev)
+Date: 2026-10-14. Deploy job: 0Afg800000HPct7CAD (Succeeded).
+Test class: FinancingStatusServiceTest — 18/18 PASS, 0 fail (RunSpecifiedTests).
+
+Covered: blank insert defaults Draft + null Previous; Draft initial stamp;
+non-Draft initial blocked (Submitted/Conditional/Approved/Declined/Funded);
+full lifecycle Draft->Submitted->Conditional->Approved->Funded with
+Previous_Status__c chain; Declined->Cancelled; every forbidden cell blocked
+with transition message; Funded + Cancelled terminal (exit blocked);
+same-status preserves and anti-spoofs Previous_Status__c from Trigger.oldMap;
+Funded-insert blocked; legal Funded path satisfies
+VR_Financing_FundedRequiresApproved; Draft->Cancelled without term passes;
+non-Draft without term still blocked by VR; bulk insert + mixed bulk update
+(all-or-nothing rollback verified).
+
+First-attempt failures (all test-scaffolding, service correct throughout):
+reserved words as identifiers (list, from), fake lookup IDs, spec-contradicting
+direct-insert test (removed), invalid terms 61-63 (VR), wrong getNumDml
+expectation, skipped-hop paths. Fixed locally, green on retry.

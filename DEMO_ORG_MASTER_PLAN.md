@@ -210,7 +210,7 @@ This is the honesty section. Do not claim a feature exists in the free org unles
 | Lightning Knowledge (~10 articles) | Service answers and recall knowledge (backlog P6-15) |
 | Entitlements + Milestones | Case SLA clocks (backlog P6-14) |
 | Omni-Channel + Service Console | Routing + console demo (backlog P6-16) |
-| Experience Cloud + 5 External Identity licences | One customer site with 1–2 external users (backlog P7-18) |
+| Experience Cloud + 5 External Identity licences | One customer site with 1–2 external users (backlog P7-18). *React (Salesforce Multi-Framework) under evaluation for P7-18 only — conditional proposal, fallback authoritative: `docs/architecture/MF_REACT_P7-18.md`*. **Phase 8 (M4)** builds the full Customer Experience Portal on this surface (Experience Cloud + LWC only; `docs/architecture/EXPERIENCE_PORTAL.md`) — subject to licence verification and owner authorization (Digital Experiences not enabled yet). |
 | Territory Management (Enterprise) | Rooftop territory design *(verify availability in Setup → Territory Management)* |
 | Developer Edition org itself, My Domain, source tracking | Permanent-org mechanics |
 
@@ -750,6 +750,7 @@ blocks). Full detail in `DEMO_ORG_BACKLOG.md`.
 | **M1 — Foundation** | P0, P1, P2 | Permanent org configured + secure data model + first vertical slice: web lead → qualify → test drive → opportunity, with reports and a passing test suite |
 | **M2 — Core lifecycle** | P3, P4 | Complete lead-to-sale: trade-in → quote → discount approval → financing → delivery, with sales dashboards and synthetic data loaded |
 | **M3 — Post-sale + advanced** | P5, P6, P7 | Service, cases, entitlements, knowledge, loyalty, LWC, events, verified Agentforce/Data Cloud builds, an Experience site, full governance and demo scripts |
+| **M4 — Customer experience** | P8 | Customer-facing self-service portal (Experience Cloud + custom LWC): dashboard, My Vehicles, service history, appointment request, loyalty, case tracking — the customer sees only their own data. Gated on licence verification; labelled SIMULATION fallback if licensing is unavailable |
 
 Each milestone ends with: deploy clean, tests ≥90%, zero data-quality rows, regression green,
 UAT signed, screenshots filed, tag applied.

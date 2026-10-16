@@ -1,0 +1,57 @@
+P4-13 Test Coverage Gate — Evidence
+==================================
+
+Target: ≥90% coverage across calculator, delivery, and enrolment implementations (per
+DEMO_ORG_BACKLOG.md P4-13 acceptance criteria).
+
+Test run: 707g800000pERTF
+Org: ng-dev (00Dg800000LxahhEAB)
+Date: 2026-10-16
+Command:
+  sf apex run test --target-org ng-dev --code-coverage --result-format human \
+    --class-names PaymentCalculatorServiceTest,DeliveryCloseServiceTest,DeliveryCompletionGuardTest,LoyaltyEnrolmentServiceTest
+
+Test execution summary:
+  Tests Ran:   25
+  Pass Rate:  100%
+  Fail Rate:  0%
+  Skip Rate:  0%
+
+Per-class coverage (Apex Code Coverage by Class, Tooling output):
+  CLASS                          PERCENT   UNCOVERED LINES
+  -----------------------------  --------  ---------------------------------
+  PaymentCalculatorService       100%      (none)
+  DeliveryCloseService           96%       7, 19, 67  (defensive branches: empty/zero guard, identical re-process guard, null-status guard)
+  LoyaltyEnrolmentService        100%      (none)
+  DeliveryTrigger (supporting)   80%       4           (Automation_Settings__c.Bypass_Triggers__c early-return guard)
+
+Backlog P4-13 gate result (calculator, delivery, enrolment):
+  PaymentCalculatorService:   100%  >= 90%  PASS
+  DeliveryCloseService:        96%  >= 90%  PASS  (delivery close + lifetime + loyalty enrolment)
+  LoyaltyEnrolmentService:    100%  >= 90%  PASS
+
+The P4-13 acceptance criterion is MET. The three target implementations each
+exceed the 90% threshold. The DeliveryTrigger supporting mechanism at 80% is
+documented; the missing line is the Automation_Settings__c bypass guard which
+is exercised by the AutomationSettings__c default null path in the existing
+test classes (all four DeliveryCloseServiceTest and DeliveryCompletionGuardTest
+tests run the trigger end-to-end and the bypass code path is unreachable when
+the custom setting is absent).
+
+Org-wide coverage (all 17 classes that ran): 32% — this is a low org-wide
+number because many org classes (VehicleCounters 18%, VehicleReservationGuard
+33%, OpportunityTrigger 75%, VehicleTrigger 83%) are not in the P4-13 target
+set. The P4-13 gate is scoped to calculator, delivery, and enrolment — all
+three meet the threshold.
+
+Test-run class list (production classes NOT included in the run, per the
+P4-13 instruction to "use test classes only in the test-run class list, not
+production classes"):
+  - PaymentCalculatorServiceTest
+  - DeliveryCloseServiceTest
+  - DeliveryCompletionGuardTest
+  - LoyaltyEnrolmentServiceTest
+
+Test-run ID for reproduction: 707g800000pERTF
+Command for reproduction:
+  sf apex get test -i 707g800000pERTF -o ng-dev --code-coverage --result-format human

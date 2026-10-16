@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Finance_Exception_Approved__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Set to true when the Finance Manager approval process approves a sub-prime or manual-exception rate. Written by Financing.workflow field updates triggered by Financing_Exception_Approval final actions.</description>
+    <inlineHelpText>Set by the Finance Manager exception approval. True = exception approved; false = exception rejected or pending.</inlineHelpText>
+    <label>Finance Exception Approved</label>
+    <type>Checkbox</type>
+</CustomField>

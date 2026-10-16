@@ -160,8 +160,10 @@ green → UAT_P2 signed → screenshots in `evidence/P2_CoreLifecycle/` → tag 
 | P4-12 | Seam note for finance/billing | `docs/architecture/SIMULATION_FINANCE.md` labels what a paid billing product would add | P4-05 | Doc exists → `docs/architecture/SIMULATION_FINANCE.md` | ARCH, DOC |
 | P4-13 | Tests | ≥90% across calculator, delivery, enrolment | P4-01, P4-07, P4-08 | Test gate output → `evidence/P4/tests.txt` | APEX, TEST |
 
+**Status (Phase 4 closure — 2026-10-16):** **P4-01..P4-09 DONE** (accepted and closed). Evidence recorded in `NORTHGATE_PROJECT_HANDOFF.md` §11 and §12. Deploy jobs in `ng-dev` only: P4-01 (`0Afg800000HLNvtCAH`, 5/5), P4-03 (`0Afg800000HPct7CAD`, 18/18), P4-04 (`0Afg800000HPAATCA5`, 5/5), P4-02 + applicant fix (`0Afg800000HTcCzCAL` + `0Afg800000HTGlyCAH` + `0Afg800000HT52YCAT`, 20/20 then 16/16; browser-verified by owner — financing record `a03g800000rzfMHAAY`, Amount $30,340, Monthly $579.39, Total Interest $4,423.40), P4-05 field rename (`0Afg800000Hcdt4CAB`, 1/1), P4-05 Workflow + ApprovalProcess (`0Afg800000HdzWTCAZ`, 5/5, 156/156 tests, approval ACTIVE in `ng-dev`, owner browser-verified approval + workflow write-back), P4-08 late-Buyer fix (`0Afg800000HeoZ0CAJ`, 2/2, 160/160 tests), P4-08 one-time loyalty backfill (Loyalty Member `a04g8000002slf7AAA`, Member Number `NG-7904-0782`, Contact P1-14Test, Active/Bronze/0, single membership). **P4-10, P4-11, P4-12, P4-13** are NOT done (still backlog). The M2 exit gate ("full retail deal runs from lead to delivered vehicle with financing, approvals and loyalty enrolment") is **met** by P4-01..P4-09 in `ng-dev`. CP2 pricing and Phase 3 approvals remain unchanged and verified intact. The P4-04 LTV eligibility is still Draft-only (true LTV source and valuation tool remain a Phase 5+ decision).
+
 **Exit gate:** a full retail deal runs from lead to delivered vehicle with financing, approvals
-and loyalty enrolment.
+and loyalty enrolment. **GATE MET** (see closure record above).
 
 ---
 
@@ -254,6 +256,13 @@ seams documented.
 | P7-16 | **Data Cloud demo** | One ingestion (e.g. service-visit events) + identity-resolution demo in the single DE data space (10 GB, manual refresh) | P0-09 (verify), P6-05 | Data space shows resolved profiles → `evidence/P7/datacloud.png` | INTEG, ARCH, DOC |
 | P7-17 | Regression checklist automated | `scripts/test.sh`: deploy dry-run + Apex tests + `verify.sh` DQ gates — one command | P5-08, P0-04 | One command green from clean checkout → `evidence/P7/regression.txt` | DEVOPS, TEST |
 | P7-18 | **Experience Cloud site (real)** | Small customer site ("Northgate Owner Portal": service history, appointments) using 1–2 of the 5 External Identity licences | P0-08, P6-05 | Login as external user works → `evidence/P7/portal.png` | SECURITY, ARCH |
+> **P7-18 React evaluation (conditional — not approved):** Salesforce Multi-Framework React is
+> under evaluation for this item only; existing Experience Cloud/Lightning fallback remains
+> authoritative until eligibility, licensing, security, and cost are confirmed. Pre-adoption
+> conditions and status in `docs/architecture/MF_REACT_P7-18.md`.
+>
+> **Phase 8 (M4):** the full Customer Experience Portal extends this item — see
+> `# Phase 8 — Customer Experience Portal` below. P7-18 requirements are unchanged.
 | P7-19 | **Automotive Cloud concept mapping** | One-pager: which licensed Automotive Cloud objects/concepts our model maps to (documented only — never built) | P0-09 | `docs/architecture/AUTOMOTIVE_CLOUD_MAPPING.md` → doc exists | ARCH, DOC |
 | P7-20 | README rewrite | Repo README reflects the actual org: what exists, how to deploy, how to reset, two-org flow | P7-17 | README matches reality → doc review | DOC |
 | P7-21 | Full demo script pack | `evidence/DEMO_SCRIPTS/` for admin, developer, analyst, support, architect walkthroughs; **every script opens with an "Activate persona" step** (master plan §10) | All phases | Each script runs end to end → `evidence/DEMO_SCRIPTS/` | DOC |
@@ -273,6 +282,67 @@ run → tag `demo/v1.0`.
 
 ---
 
+# Phase 8 — Customer Experience Portal (Experience Cloud + LWC only)
+
+**Purpose:** extend the demo past post-sale into a real customer-facing self-service portal
+("Northgate Owner Portal", grown from P7-18). **Milestone M4.** Built with **Experience Cloud +
+custom LWC only** — Salesforce Multi-Framework / React is **explicitly excluded**
+(`docs/architecture/MF_REACT_P7-18.md` stays P7-18-only).
+
+**Hard pre-conditions (owner decisions D3–D5):** Digital Experiences enablement is **not
+authorized**; the external-user licence model is **not chosen** (verify first, never assume); the
+SIMULATION fallback is documented but **not implemented or activated** without approval. External
+access uses a **relationship-anchored** security model with CRUD/FLS checks and cross-customer
+negative tests — not `with sharing` alone (see `docs/architecture/EXPERIENCE_PORTAL.md`;
+DATA_MODEL §6.6).
+
+**Depends on:** P7-18 (seed), P5 (seed data), P6 (service/loyalty/cases), P1-11 (permission sets).
+**Preserves:** no existing Phase 0–7 item, ID, or acceptance criterion is changed.
+
+## Block A — Portal foundation
+
+Demoable outcome: *one external user logs in and sees only their own data.*
+
+| ID | Item | Acceptance criteria | Dependencies | Evidence | Tags |
+|---|---|---|---|---|---|
+| P8-01 | Experience Cloud site scaffold | Digital Experiences enabled **only after owner authorization** (logged in `metadata-log/`); site created; My Domain URL resolves; site metadata from source where deployable, otherwise click-steps + ledger | D4 owner authorization, P0-09 (V1) | site live → `evidence/P8/site_live.png` | ADMIN, DOC |
+| P8-02 | External access model | External user model selected **after licence verification** (`EXPERIENCE_PORTAL.md` V2–V5); relationship-anchored sharing (Sharing Set where supported, else Apex managed sharing); negative test: external user cannot read another Account's Case/Service_Visit/Vehicle/Loyalty | P8-01, P1-11 | `evidence/P8/ext_access_denied.png` | SECURITY |
+| P8-03 | Portal Apex controllers + tests | Controllers `with sharing` **and** relationship-filtered **and** CRUD/FLS-checked; bulk-safe; tests include `System.runAs` cross-customer negative tests (per object) | P8-02 | `evidence/P8/portal_tests.txt` | APEX, TEST |
+
+## Block B — Customer self-service components
+
+Demoable outcome: *customer completes a service request end-to-end.*
+
+| ID | Item | Acceptance criteria | Dependencies | Evidence | Tags |
+|---|---|---|---|---|---|
+| P8-04 | Portal dashboard home LWC | Login-state aware; authenticated widgets (next appointment, vehicle, points, open cases); no guest data exposure | P8-03 | `evidence/P8/dashboard.png` | LWC |
+| P8-05 | My Vehicles LWC | Owned vehicles list + detail; `Vehicle__c.Photo__c` renders; missing-image fallback; access only via filtered Apex (Public R/W object not directly granted) | P8-03, P7-22 | `evidence/P8/my_vehicles.png` | LWC |
+| P8-06 | Service history LWC | `Service_Visit__c` + linked Cases timeline, mileage over time | P8-03, P6-05 | `evidence/P8/service_history.png` | LWC |
+| P8-07 | Service appointment request LWC | LWC wizard (per `AUTOMATION_DIRECTION.md`, **not** Flow) creates `Service_Visit__c` via Apex; reuses P6-01 capacity guard; write isolation enforced | P8-03, P6-01 | `evidence/P8/appt_request.png` | LWC, APEX |
+| P8-08 | Case tracking LWC | List / create / view status; comment; owner routed per P6-02 (subject to V5) | P8-03, P6-02 | `evidence/P8/case_tracking.png` | LWC, APEX |
+| P8-09 | Loyalty & rewards LWC | Points balance, tier, `Loyalty_Transaction__c` history (read-only); access only via filtered Apex | P8-03, P6-06 | `evidence/P8/loyalty.png` | LWC |
+
+## Block C — Polish, evidence, governance
+
+Demoable outcome: *presentable, mobile-responsive, documented.*
+
+| ID | Item | Acceptance criteria | Dependencies | Evidence | Tags |
+|---|---|---|---|---|---|
+| P8-10 | Responsive polish + branding + accessibility | Mobile/desktop layouts; brand colours/logo only (no third-party assets); keyboard/focus/contrast pass | P8-04…P8-09 | `evidence/P8/responsive_*.png` | LWC, ADMIN |
+| P8-11 | Portal demo script + UAT + seam note | `evidence/DEMO_SCRIPTS/portal.md` opens with "Activate persona"; UAT steps; `docs/architecture/EXPERIENCE_PORTAL.md` states real vs simulated (incl. fallback) | Block B | doc diff + `evidence/P8/uat/` | DOC |
+
+**Fallback (documented, not implemented without approval):** if Experience Cloud or the
+external-user licence model is unavailable, the labelled **SIMULATION** path in
+`DEMO_ORG_MASTER_PLAN.md` §4.2 (permission-set Lightning app + self-service screen flow) applies.
+Portal LWCs P8-04..P8-09 can be re-hosted there.
+
+**Exit gate (M4):** external access model verified against measured licences; cross-customer
+negative tests pass for every exposed object; portal components render their own-account data only;
+responsive pass captured; seam note written; **or** the labelled SIMULATION fallback is
+demonstrated (owner D5) with the licensing gap documented. No build starts until D4 authorization.
+
+---
+
 ## Summary counts
 
 | Phase | Items | Purpose |
@@ -285,7 +355,8 @@ run → tag `demo/v1.0`.
 | P5 | 20 | Synthetic data (storage-budgeted) + reporting depth |
 | P6 | 17 | Service, cases, entitlements, Knowledge, loyalty |
 | P7 | 23 | Developer depth, Agentforce/Data Cloud, Experience, vehicle images, governance |
-| **Total** | **134** | |
+| P8 | 11 | Customer Experience Portal (Experience Cloud + LWC) — **M4** |
+| **Total** | **145** | |
 
 ## Explicitly out of scope
 

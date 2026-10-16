@@ -54,6 +54,30 @@ components; profiles carry only default app + tab visibility.
 - OWD: Account, Contact, Lead, Opportunity, Case = Private; Quote = ControlledByParent; Vehicle__c, Rooftop__c, Vehicle_Model__c = Public Read/Write; Financing__c, Service_Visit__c = Private; Loyalty_Member__c = Public Read/Write; Loyalty_Transaction__c = ControlledByParent (master-detail).
 - Sharing: Contact read-only from All Internal Users to Service Manager and Service Advisor + subordinates.
 
+## Phase 8 — external customer (portal) access model
+
+**Status:** required design, not yet built. External portal users hold **no role**, so
+role-based sharing does not apply. Access is **relationship-anchored** to the user's own
+Contact/Account — `with sharing` alone is **not** sufficient (owner decision D6). Full design:
+`docs/architecture/EXPERIENCE_PORTAL.md`; data-model requirement: `DEMO_ORG_DATA_MODEL.md` §6.6;
+licence model pending verification (no assumption that External Identity suffices).
+
+| Control | Requirement |
+|---|---|
+| Relationship | Each external user ↔ exactly one Contact/Account; every query filtered by that relationship |
+| Sharing | Sharing Set where it supports the Account→object relationship; otherwise Apex managed sharing (`__Share`) — **do not assume Sharing Sets cover every custom object** |
+| CRUD/FLS | Enforced in Apex (`Security.stripInaccessible` / `WITH SECURITY_ENFORCED` + CRUD checks) before query/DML |
+| Sensitive fields | `Vehicle__c.Invoice_Cost__c`, `Financing__c.Annual_Rate__c`, `Trade_In__c.Appraisal_Amount__c` never exposed |
+| Public R/W objects | `Vehicle__c`, `Loyalty_Member__c` **not** granted directly to external users; surfaced only via filtered Apex |
+| Guest | Login-only portal; no unauthenticated customer data |
+| Negative tests | Cross-customer `System.runAs` tests per exposed object must pass (read isolation + write isolation) |
+
+**Permissions still to design (P8-02, after licence verification):** external profile,
+`PS_Portal_Customer` permission set, external-user licence assignment within the measured count,
+and the per-object sharing grants above. None of this exists yet.
+
+---
+
 ## Known gaps / pending
 
 - `ngpersona` created and `scripts/persona.sh` verified for manager and finance.

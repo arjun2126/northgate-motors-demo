@@ -1,0 +1,124 @@
+<template>
+    <lightning-card title="Finance Application" icon-name="standard:contract">
+        <div class="slds-p-horizontal_medium slds-p-vertical_small">
+            <template if:true={loading}>
+                <lightning-spinner alternative-text="Loading" size="small"></lightning-spinner>
+            </template>
+            <template if:true={error}>
+                <div class="slds-notify slds-notify_alert slds-theme_error slds-m-bottom_small" role="alert">
+                    <p>{error}</p>
+                </div>
+            </template>
+            <template if:true={data}>
+                <template if:true={showExistingDraftNotice}>
+                    <div class="slds-notify slds-notify_alert slds-theme_warning slds-m-bottom_small" role="status">
+                        <p>Editing existing Draft for this Opportunity. Status: <strong>{data.status}</strong>. LTV eligibility is not yet verified.</p>
+                    </div>
+                </template>
+                <template if:false={showExistingDraftNotice}>
+                    <div class="slds-notify slds-notify_alert slds-theme_warning slds-m-bottom_small" role="status">
+                        <p>New Draft application. LTV eligibility is not yet verified.</p>
+                    </div>
+                </template>
+                <template if:true={showTaxNotice}>
+                    <p class="slds-text-color_weak slds-m-bottom_small">Taxes and fees are not included in this estimate.</p>
+                </template>
+                <template if:true={blockReason}>
+                    <div class="slds-notify slds-notify_alert slds-theme_error slds-m-bottom_small" role="alert">
+                        <p>{blockReason}</p>
+                    </div>
+                </template>
+                <div class="slds-form slds-form_stacked">
+                    <lightning-combobox
+                        name="quote"
+                        label="Quote"
+                        placeholder="Select a Quote"
+                        value={quoteId}
+                        options={eligibleQuoteOptions}
+                        onchange={handleQuoteChange}
+                        required>
+                    </lightning-combobox>
+                    <lightning-input
+                        type="number"
+                        name="downPayment"
+                        label="Down Payment"
+                        value={downPayment}
+                        formatter="currency"
+                        step="0.01"
+                        onchange={handleDownPayment}>
+                    </lightning-input>
+                    <lightning-combobox
+                        name="tier"
+                        label="Credit Tier"
+                        value={creditTier}
+                        options={tierOptions}
+                        onchange={handleTierChange}>
+                    </lightning-combobox>
+                    <lightning-combobox
+                        name="term"
+                        label="Term (months)"
+                        value={termMonths}
+                        options={termOptions}
+                        onchange={handleTermChange}>
+                    </lightning-combobox>
+                    <lightning-radio-group
+                        name="rateSource"
+                        label="Rate Source (illustrative demo rates only)"
+                        options={rateSourceOptions}
+                        value={rateSource}
+                        type="radio"
+                        onchange={handleRateSourceChange}>
+                    </lightning-radio-group>
+                    <template if:true={canPickManualRate}>
+                        <lightning-input
+                            type="number"
+                            name="manualRate"
+                            label="Manual Annual Rate (%)"
+                            value={manualRate}
+                            step="0.001"
+                            onchange={handleManualRate}>
+                        </lightning-input>
+                        <lightning-textarea
+                            name="reason"
+                            label="Exception Reason (required)"
+                            value={exceptionReason}
+                            onchange={handleReason}>
+                        </lightning-textarea>
+                    </template>
+                    <lightning-record-picker
+                        label="Applicant Contact (defaults from Quote buyer)"
+                        placeholder="Search Contacts"
+                        object-api-name="Contact"
+                        value={applicantContactId}
+                        onchange={handleApplicant}>
+                    </lightning-record-picker>
+                    <template if:true={previewResult}>
+                        <div class="slds-box slds-m-top_small slds-m-bottom_small">
+                            <p>CP2-adjusted selling price: <lightning-formatted-number format-style="currency" currency-code="USD" value={previewResult.adjustedSubtotal}></lightning-formatted-number></p>
+                            <p>Accepted trade-in equity: <lightning-formatted-number format-style="currency" currency-code="USD" value={previewResult.tradeEquity}></lightning-formatted-number></p>
+                            <p>Amount Financed: <lightning-formatted-number format-style="currency" currency-code="USD" value={previewResult.amountFinanced}></lightning-formatted-number></p>
+                        </div>
+                        <div class="slds-box slds-m-bottom_small">
+                            <p>Est. Monthly Payment: <lightning-formatted-number format-style="currency" currency-code="USD" value={previewResult.monthlyPayment}></lightning-formatted-number></p>
+                            <p>Total Interest: <lightning-formatted-number format-style="currency" currency-code="USD" value={previewResult.totalInterest}></lightning-formatted-number></p>
+                        </div>
+                    </template>
+                    <template if:true={previewError}>
+                        <p class="slds-text-color_error">{previewError}</p>
+                    </template>
+                </div>
+                <div class="slds-m-top_medium">
+                    <lightning-button
+                        label="Save Draft"
+                        variant="brand"
+                        onclick={handleSave}
+                        disabled={saving}>
+                    </lightning-button>
+                </div>
+                <template if:true={savedFinancingId}>
+                    <p class="slds-m-top_small">Saved Financing: {savedFinancingId}</p>
+                </template>
+            </template>
+        </div>
+    </lightning-card>
+</template>

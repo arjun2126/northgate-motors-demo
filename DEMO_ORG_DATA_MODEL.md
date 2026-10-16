@@ -711,6 +711,30 @@ each with its own tab list and its own home page (backlog P1-07). Profiles are d
 retrieved with care (never hand-edited beyond these two settings) and any profile change is
 logged in `metadata-log/README.md`.
 
+### 6.6 External customer (portal) access — Phase 8 requirement
+
+External portal users (Phase 8 / M4, Experience Cloud) have **no role**, so the role hierarchy
+and role-based sharing rules above do **not** reach them. Their access must be
+**relationship-anchored** to their own Contact/Account and enforced explicitly — `with sharing`
+alone is not a customer-isolation boundary (owner decision D6). Requirements:
+
+1. **Relationship anchoring.** Every portal query filters by the running user's Contact/Account;
+   this relationship, not Apex sharing semantics, is the primary boundary.
+2. **Sharing model.** A Sharing Set is used only where it supports the Account→object
+   relationship; **do not assume it covers every custom object** (e.g. `Service_Visit__c` reached
+   via Contact). Unsatisfied cases use Apex managed sharing (`__Share`) or Apex-only exposure.
+3. **CRUD/FLS** enforced in Apex before query/DML.
+4. **Public Read/Write objects stay closed to external users.** `Vehicle__c` and `Loyalty_Member__c`
+   (§6.3) must **not** be directly granted to external users — they are surfaced only through
+   Apex filtered by the caller's relationship.
+5. **Sensitive fields** (`Vehicle__c.Invoice_Cost__c`, `Financing__c.Annual_Rate__c`,
+   `Trade_In__c.Appraisal_Amount__c`) are never exposed.
+6. **Cross-customer negative tests** per exposed object (read + write) are mandatory.
+
+Design lives in `docs/architecture/EXPERIENCE_PORTAL.md`; permission detail in
+`docs/security/PERMISSION_MATRIX.md`. The external-user licence model is **not yet chosen** —
+verify before build.
+
 ---
 
 ## 7. Opportunity stage model

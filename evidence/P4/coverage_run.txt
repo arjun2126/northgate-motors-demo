@@ -1,0 +1,3 @@
+Run "sf apex get test -i 707g800000pERTF -o arjun.ngdev@northgate.demo" to retrieve test results
+Run with --synchronous or increase --wait timeout to wait for results.
+Warning: The input format for array arguments has changed. Use this format: --array-flag value1 --array-flag value2 --array-flag value3

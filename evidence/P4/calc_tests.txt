@@ -1,0 +1,16 @@
+P4-01 PaymentCalculatorService — validation evidence (ng-dev)
+Date: 2026-10-14. Deploy job: 0Afg800000HLNvtCAH (Succeeded).
+Test class: PaymentCalculatorServiceTest — 5/5 PASS, 0 fail (RunSpecifiedTests).
+
+Formula: M = P*r*(1+r)^n / ((1+r)^n - 1), r = annualRate/1200.
+(1+r)^n via Decimal loop-multiplication (no Double); intermediates scale-28;
+final setScale(2, HALF_UP). 0% -> P/n. totalInterest = roundedM*n - P.
+Guards: null principal/rate/term, term<=0, negative principal/rate all throw
+IllegalArgumentException (no silent zero-payment loans).
+
+Verified values (independent python-decimal cross-check, HALF_UP):
+  30000 @ 0% x60    -> 500.00 / interest 0.00
+  30000 @ 6.49% x60 -> 586.84 / interest 5210.40
+  15000 @ 18.99% x36 -> 549.76 / interest 4791.36
+  25000 @ 3.9% x48  -> 563.36 / interest 2041.28
+All four match Apex results to the cent.

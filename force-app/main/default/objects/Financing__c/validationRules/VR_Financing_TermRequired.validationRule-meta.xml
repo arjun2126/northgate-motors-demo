@@ -2,7 +2,7 @@
 <ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>VR_Financing_TermRequired</fullName>
     <active>true</active>
-    <errorConditionFormula>AND(NOT($Permission.Bypass_Automation), NOT(ISPICKVAL(Status__c, &quot;Draft&quot;)), ISBLANK(Term_Months__c))</errorConditionFormula>
+    <errorConditionFormula>AND(NOT($Permission.Bypass_Automation), NOT(OR(ISPICKVAL(Status__c, &quot;Draft&quot;), ISPICKVAL(Status__c, &quot;Cancelled&quot;))), ISBLANK(Term_Months__c))</errorConditionFormula>
     <errorDisplayField>Term_Months__c</errorDisplayField>
-    <errorMessage>Term is required once the financing record leaves Draft status.</errorMessage>
+    <errorMessage>Term is required unless the financing record is Draft or Cancelled.</errorMessage>
 </ValidationRule>

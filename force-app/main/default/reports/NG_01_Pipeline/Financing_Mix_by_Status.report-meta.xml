@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Financing__c$Opportunity__c</field>
+    </columns>
+    <columns>
+        <field>Financing__c$Credit_Tier__c</field>
+    </columns>
+    <columns>
+        <field>Financing__c$Rate_Source__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Financing__c$Amount_Financed__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Financing__c$Monthly_Payment__c</field>
+    </columns>
+    <description>P4-09: Financing portfolio mix by Status (rows) and Credit Tier + Rate Source (columns). Funded-only filter applied so it shows the booked portfolio.</description>
+    <filter>
+        <criteriaItems>
+            <column>Financing__c$Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Funded</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Financing__c$Lender__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Financing Mix by Status</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>FinancingList__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Financing__c$Amount_Financed__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+</Report>
