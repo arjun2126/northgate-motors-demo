@@ -1,0 +1,70 @@
+{
+  "claim": "CONFIRMED",
+  "validationId": "0Afaj00000pPiV7CAK",
+  "checkOnly": true,
+  "status": "Succeeded",
+  "components": 34,
+  "componentErrors": 0,
+  "testsPassed": 43,
+  "testErrors": 0,
+  "coverage": [
+    {
+      "name": "OwnerPortalVehicleBroker",
+      "covered": 150,
+      "locations": 153,
+      "percent": 98.039
+    },
+    {
+      "name": "ServiceIntakeCaseService",
+      "covered": 33,
+      "locations": 33,
+      "percent": 100.0
+    },
+    {
+      "name": "OwnerPortalBatchBController",
+      "covered": 123,
+      "locations": 140,
+      "percent": 87.857
+    },
+    {
+      "name": "ContactVehicleRelationshipTrigger",
+      "covered": 5,
+      "locations": 5,
+      "percent": 100.0
+    },
+    {
+      "name": "ServiceVisitCapacityGuard",
+      "covered": 87,
+      "locations": 89,
+      "percent": 97.753
+    },
+    {
+      "name": "OwnerPortalOwnershipService",
+      "covered": 18,
+      "locations": 18,
+      "percent": 100.0
+    },
+    {
+      "name": "OwnerPortalShareReconciler",
+      "covered": 57,
+      "locations": 57,
+      "percent": 100.0
+    },
+    {
+      "name": "OwnerPortalOwnershipGuard",
+      "covered": 100,
+      "locations": 108,
+      "percent": 92.593
+    }
+  ],
+  "localUiTests": 25,
+  "localUiFailures": 0,
+  "validatedLedgerFilesUnchanged": 31,
+  "submittedSourceFiles": 55,
+  "externalVehicleCrudAdded": false,
+  "externalVisitCreateAdded": false,
+  "sharingOrPermissionAssignmentComponentsAdded": false,
+  "liveDeployment": false,
+  "gitCommandsRun": false,
+  "siteOrJobActivation": false
+}

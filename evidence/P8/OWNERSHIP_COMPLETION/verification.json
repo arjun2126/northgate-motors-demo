@@ -1,0 +1,65 @@
+{
+  "claim": "CONFIRMED",
+  "validationId": "0Afaj00000pPMPlCAO",
+  "checkOnly": true,
+  "status": "Failed",
+  "componentErrors": 0,
+  "testMethods": 6,
+  "testSuccesses": 1,
+  "testErrors": 5,
+  "metadataCorrectionResults": [
+    {
+      "changed": true,
+      "componentType": "CustomField",
+      "created": true,
+      "createdDate": "2026-10-27T15:51:38.000Z",
+      "deleted": false,
+      "fileName": "objects/Contact_Vehicle_Relationship__c.object",
+      "fullName": "Contact_Vehicle_Relationship__c.Verified_By__c",
+      "id": "00Naj00006ARUNxEAP",
+      "success": true
+    },
+    {
+      "changed": true,
+      "componentType": "SharingReason",
+      "created": true,
+      "createdDate": "2026-10-27T15:51:42.000Z",
+      "deleted": false,
+      "fileName": "objects/Contact_Vehicle_Relationship__c.object",
+      "fullName": "Contact_Vehicle_Relationship__c.Portal_Entitlement__c",
+      "id": "0A7aj000000MKmTCAW",
+      "success": true
+    },
+    {
+      "changed": true,
+      "componentType": "SharingReason",
+      "created": true,
+      "createdDate": "2026-10-27T15:51:42.000Z",
+      "deleted": false,
+      "fileName": "objects/Vehicle__c.object",
+      "fullName": "Vehicle__c.Portal_Entitlement__c",
+      "id": "0A7aj000000MKmUCAW",
+      "success": true
+    }
+  ],
+  "coverage": [
+    {
+      "name": "ContactVehicleRelationshipTrigger",
+      "locations": 5,
+      "uncovered": 5
+    },
+    {
+      "name": "OwnerPortalOwnershipGuard",
+      "locations": 107,
+      "uncovered": 98
+    }
+  ],
+  "notYetValidated": [
+    "OwnerPortalShareReconciler",
+    "OwnerPortalShareReconcilerTest",
+    "manifest/p8-ownership-reconciliation-local.xml"
+  ],
+  "p805Complete": false,
+  "p807Complete": false,
+  "scheduledJobsActivated": 0
+}

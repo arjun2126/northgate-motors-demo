@@ -1,0 +1,2148 @@
+
+ ─────────────── Deploying Metadata ───────────────
+
+
+ ◼ Preparing
+ ◼ Waiting for the org to respond
+ ◼ Deploying Metadata
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: ⠁
+ Elapsed Time: 0ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ⣾ Preparing 23ms
+ ◼ Waiting for the org to respond
+ ◼ Deploying Metadata
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: ⠁
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 29ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ⣾ Preparing 54ms
+ ◼ Waiting for the org to respond
+ ◼ Deploying Metadata
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: ⠁
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 61ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ⣽ Preparing 87ms
+ ◼ Waiting for the org to respond
+ ◼ Deploying Metadata
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: ⠁
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 93ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ⣽ Preparing 119ms
+ ◼ Waiting for the org to respond
+ ◼ Deploying Metadata
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: ⠂
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 125ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ⣽ Preparing 151ms
+ ◼ Waiting for the org to respond
+ ◼ Deploying Metadata
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: ⠂
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 158ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ⣻ Preparing 185ms
+ ◼ Waiting for the org to respond
+ ◼ Deploying Metadata
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: ⠂
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 190ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣾ Deploying Metadata 7ms
+   ▸ Components: ⠁
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 223ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣾ Deploying Metadata 39ms
+   ▸ Components: ⠁
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 256ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣾ Deploying Metadata 70ms
+   ▸ Components: ⠁
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 287ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣽ Deploying Metadata 103ms
+   ▸ Components: ⠂
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 320ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣽ Deploying Metadata 136ms
+   ▸ Components: ⠂
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 352ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣻ Deploying Metadata 169ms
+   ▸ Components: ⠂
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 386ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣻ Deploying Metadata 200ms
+   ▸ Components: ⠄
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 417ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣻ Deploying Metadata 233ms
+   ▸ Components: ⠄
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 449ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⢿ Deploying Metadata 265ms
+   ▸ Components: ⠄
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 482ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⢿ Deploying Metadata 297ms
+   ▸ Components: ⠄
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 513ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⡿ Deploying Metadata 329ms
+   ▸ Components: ⡀
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 546ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⡿ Deploying Metadata 361ms
+   ▸ Components: ⡀
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 577ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⡿ Deploying Metadata 393ms
+   ▸ Components: ⡀
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 611ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣟ Deploying Metadata 426ms
+   ▸ Components: ⢀
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 642ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣟ Deploying Metadata 458ms
+   ▸ Components: ⢀
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 674ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣯ Deploying Metadata 490ms
+   ▸ Components: ⢀
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 707ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣯ Deploying Metadata 522ms
+   ▸ Components: ⠠
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 738ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣯ Deploying Metadata 554ms
+   ▸ Components: ⠠
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 771ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣷ Deploying Metadata 586ms
+   ▸ Components: ⠠
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 803ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣷ Deploying Metadata 618ms
+   ▸ Components: ⠐
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 834ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣾ Deploying Metadata 649ms
+   ▸ Components: ⠐
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 866ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣾ Deploying Metadata 682ms
+   ▸ Components: ⠐
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 899ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣾ Deploying Metadata 714ms
+   ▸ Components: ⠈
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 931ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣽ Deploying Metadata 746ms
+   ▸ Components: ⠈
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 963ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣽ Deploying Metadata 778ms
+   ▸ Components: ⠈
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 994ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣻ Deploying Metadata 811ms
+   ▸ Components: ⠁
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.02s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣻ Deploying Metadata 843ms
+   ▸ Components: ⠁
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.06s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣻ Deploying Metadata 874ms
+   ▸ Components: ⠁
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.09s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⢿ Deploying Metadata 907ms
+   ▸ Components: ⠂
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.12s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⢿ Deploying Metadata 939ms
+   ▸ Components: ⠂
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.15s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⡿ Deploying Metadata 971ms
+   ▸ Components: ⠂
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.18s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⡿ Deploying Metadata 1.00s
+   ▸ Components: ⠄
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.22s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⡿ Deploying Metadata 1.03s
+   ▸ Components: ⠄
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.25s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣟ Deploying Metadata 1.06s
+   ▸ Components: ⠄
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.28s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣟ Deploying Metadata 1.10s
+   ▸ Components: ⠄
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.31s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣯ Deploying Metadata 1.13s
+   ▸ Components: ⡀
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.34s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣯ Deploying Metadata 1.16s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.38s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣯ Deploying Metadata 1.19s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.41s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣷ Deploying Metadata 1.22s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.44s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣷ Deploying Metadata 1.26s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.47s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣾ Deploying Metadata 1.29s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.50s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣾ Deploying Metadata 1.32s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.54s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣾ Deploying Metadata 1.35s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.57s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣽ Deploying Metadata 1.38s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.60s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣽ Deploying Metadata 1.42s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.63s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣻ Deploying Metadata 1.45s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.66s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣻ Deploying Metadata 1.48s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.70s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣻ Deploying Metadata 1.51s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.73s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⢿ Deploying Metadata 1.54s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.76s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⢿ Deploying Metadata 1.58s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.79s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⡿ Deploying Metadata 1.61s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.83s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⡿ Deploying Metadata 1.64s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.86s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⡿ Deploying Metadata 1.67s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.89s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣟ Deploying Metadata 1.70s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.92s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣟ Deploying Metadata 1.74s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.95s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣯ Deploying Metadata 1.77s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 1.98s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣯ Deploying Metadata 1.80s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.02s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣯ Deploying Metadata 1.83s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.05s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣷ Deploying Metadata 1.87s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.08s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣷ Deploying Metadata 1.90s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.11s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣾ Deploying Metadata 1.93s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.15s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣾ Deploying Metadata 1.96s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.18s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣾ Deploying Metadata 1.99s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.21s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣽ Deploying Metadata 2.02s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.24s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣽ Deploying Metadata 2.06s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.27s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣻ Deploying Metadata 2.09s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.31s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣻ Deploying Metadata 2.12s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.34s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣻ Deploying Metadata 2.16s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.37s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⢿ Deploying Metadata 2.19s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.40s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⢿ Deploying Metadata 2.22s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.44s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⡿ Deploying Metadata 2.25s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.47s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⡿ Deploying Metadata 2.28s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.50s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⡿ Deploying Metadata 2.32s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.53s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣟ Deploying Metadata 2.35s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.56s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣟ Deploying Metadata 2.38s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.60s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣯ Deploying Metadata 2.41s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.63s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣯ Deploying Metadata 2.44s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.66s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣯ Deploying Metadata 2.48s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.69s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣷ Deploying Metadata 2.51s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.73s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣷ Deploying Metadata 2.54s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.76s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣾ Deploying Metadata 2.57s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.79s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣾ Deploying Metadata 2.61s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.82s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣾ Deploying Metadata 2.64s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.86s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣽ Deploying Metadata 2.67s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.89s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣽ Deploying Metadata 2.70s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.92s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣻ Deploying Metadata 2.73s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.95s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣻ Deploying Metadata 2.77s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 2.99s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣻ Deploying Metadata 2.80s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 3.02s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⢿ Deploying Metadata 2.83s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 3.05s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⢿ Deploying Metadata 2.86s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 3.08s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⡿ Deploying Metadata 2.90s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 3.11s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⡿ Deploying Metadata 2.93s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 3.15s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⡿ Deploying Metadata 2.96s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 3.18s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣟ Deploying Metadata 2.99s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 3.21s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣟ Deploying Metadata 3.02s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 3.24s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣯ Deploying Metadata 3.06s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 3.27s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣯ Deploying Metadata 3.09s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 3.31s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣯ Deploying Metadata 3.12s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 3.34s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣷ Deploying Metadata 3.15s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 3.37s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣷ Deploying Metadata 3.19s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 3.40s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣾ Deploying Metadata 3.22s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 3.44s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣾ Deploying Metadata 3.25s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 3.47s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣾ Deploying Metadata 3.28s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 3.50s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣽ Deploying Metadata 3.31s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 3.53s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ⣽ Deploying Metadata 3.35s
+   ▸ Components: 0/4 (0%)
+ ◼ Running Tests
+ ◼ Updating Source Tracking
+ ◼ Done
+
+ Status: In Progress
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 3.56s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ─────────────── Deploying Metadata ───────────────
+
+ Deploying v68.0 metadata to arjun.ngdemo@northgate.demo using the v68.0 SOAP
+ API.
+
+ ✔ Preparing 209ms
+ ◯ Waiting for the org to respond - Skipped
+ ✔ Deploying Metadata 3.37s
+   ▸ Components: 4/4 (100%)
+ ◯ Running Tests - Skipped
+ ◯ Updating Source Tracking - Skipped
+ ✔ Done 0ms
+
+ Status: Succeeded
+ Deploy ID: 0Afaj00000oIT8PCAW
+ Target Org: arjun.ngdemo@northgate.demo
+ Elapsed Time: 3.59s
+
+
+Deployed Source
+┌─────────┬─────────────┬────────────────────┬────────────────────────────────────────────────────────────────────────────────────┐
+│ State   │ Name        │ Type               │ Path                                                                               │
+├─────────┼─────────────┼────────────────────┼────────────────────────────────────────────────────────────────────────────────────┤
+│ Created │ PSG_Finance │ PermissionSetGroup │ force-app/main/default/permissionsetgroups/PSG_Finance.permissionsetgroup-meta.xml │
+│ Created │ PSG_Manager │ PermissionSetGroup │ force-app/main/default/permissionsetgroups/PSG_Manager.permissionsetgroup-meta.xml │
+│ Created │ PSG_Rep     │ PermissionSetGroup │ force-app/main/default/permissionsetgroups/PSG_Rep.permissionsetgroup-meta.xml     │
+│ Created │ PSG_Service │ PermissionSetGroup │ force-app/main/default/permissionsetgroups/PSG_Service.permissionsetgroup-meta.xml │
+└─────────┴─────────────┴────────────────────┴────────────────────────────────────────────────────────────────────────────────────┘
+
+

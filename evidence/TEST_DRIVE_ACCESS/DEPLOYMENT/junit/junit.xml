@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+    <testsuite name="force.apex" timestamp="2026-10-21T23:29:34.984Z" hostname="https://orgfarm-25065ad46a-dev-ed.develop.my.salesforce.com" tests="14" failures="0"  errors="0"  time="13.99">
+        <properties>
+            <property name="commandTime" value="0.00 s"/>
+            <property name="failRate" value="0.00%"/>
+            <property name="failing" value="0"/>
+            <property name="hostname" value="https://orgfarm-25065ad46a-dev-ed.develop.my.salesforce.com"/>
+            <property name="orgId" value="00Daj00001Ae3iWEAR"/>
+            <property name="passRate" value="100%"/>
+            <property name="passing" value="14"/>
+            <property name="skipped" value="0"/>
+            <property name="testExecutionTime" value="13.99 s"/>
+            <property name="testStartTime" value="Wed Oct 21 2026 7:29:34 PM"/>
+            <property name="testTotalTime" value="13.99 s"/>
+            <property name="testsRan" value="14"/>
+            <property name="username" value="arjun.ngdemo@northgate.demo"/>
+        </properties>
+        <testcase name="adjacentDriveIsAllowed" classname="TestDriveBookingGuardTest" time="1.86">
+        </testcase>
+        <testcase name="cancelledDriveDoesNotBlock" classname="TestDriveBookingGuardTest" time="0.42">
+        </testcase>
+        <testcase name="overlappingDriveIsBlocked" classname="TestDriveBookingGuardTest" time="0.48">
+        </testcase>
+        <testcase name="confirmationLookupDoesNotUseUnsharedContacts" classname="TestDriveFollowUpTest" time="0.76">
+        </testcase>
+        <testcase name="insertCreatesTask" classname="TestDriveFollowUpTest" time="0.48">
+        </testcase>
+        <testcase name="internalElevationDoesNotAllowDirectTaskOrCounterWrites" classname="TestDriveFollowUpTest" time="0.45">
+        </testcase>
+        <testcase name="restrictedBookingCannotReferenceUnsharedContact" classname="TestDriveFollowUpTest" time="0.58">
+        </testcase>
+        <testcase name="restrictedBookingCreatesOwnedTaskAndKeepsEmailHidden" classname="TestDriveFollowUpTest" time="0.84">
+        </testcase>
+        <testcase name="restrictedBookingWithoutEmailSkipsConfirmation" classname="TestDriveFollowUpTest" time="0.61">
+        </testcase>
+        <testcase name="restrictedBookingsRejectOverlapAndAllowAdjacent" classname="TestDriveFollowUpTest" time="0.81">
+        </testcase>
+        <testcase name="restrictedCancellationReleasesSlotAndUpdatesCounter" classname="TestDriveFollowUpTest" time="1.25">
+        </testcase>
+        <testcase name="restrictedLifecycleCompletionMaintainsTasksAndCounters" classname="TestDriveFollowUpTest" time="0.77">
+        </testcase>
+        <testcase name="statusChangeCreatesAdditionalTask" classname="TestDriveFollowUpTest" time="0.47">
+        </testcase>
+        <testcase name="unauthorizedUserCannotCreateBookingOrSideEffects" classname="TestDriveFollowUpTest" time="0.41">
+        </testcase>
+    </testsuite>
+</testsuites>

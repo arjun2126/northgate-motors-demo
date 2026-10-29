@@ -1,0 +1,47 @@
+{
+  "validationJob": "0Afaj00000paNYbCAM",
+  "checkOnly": true,
+  "status": "Succeeded",
+  "componentsTotal": 1,
+  "componentsDeployed": 1,
+  "componentErrors": 0,
+  "testsRun": 0,
+  "component": [
+    {
+      "type": "PermissionSet",
+      "name": "PS_Owner_Portal_Dashboard_Runtime",
+      "success": true
+    }
+  ],
+  "candidateUnchanged": true,
+  "hashes": {
+    "force-app/main/default/permissionsets/PS_Owner_Portal_Dashboard_Runtime.permissionset-meta.xml": "2258a1441310eb5d3bdfc8c6361e0a7e28a926424b7111d4968400e8df446b29",
+    "manifest/uat-d06-loyalty-read.xml": "d12c800cc6096ccf40561c95243e53fc5f0760bbf100248ab548b8d9c4a47140"
+  },
+  "liveMatchesRecordedBaseline": true,
+  "additions": {
+    "objects": [
+      "Loyalty_Transaction__c:Read=true,Create/Edit/Delete/ViewAll/ModifyAll=false"
+    ],
+    "fields": [
+      "Loyalty_Transaction__c.Points__c:Read=true,Edit=false",
+      "Loyalty_Transaction__c.Type__c:Read=true,Edit=false"
+    ]
+  },
+  "removals": [],
+  "deploymentPerformed": false,
+  "assignmentPerformed": false,
+  "affectedExistingAssignees": 2,
+  "isolation": {
+    "transactionSharingModel": "ControlledByParent",
+    "transactionParent": "Loyalty_Member__c (MasterDetail)",
+    "memberExternalOwd": "Private",
+    "memberShareRows": 0,
+    "sharingSetsRetrieved": 0,
+    "portalUsersHaveViewAllData": false,
+    "portalUsersHaveModifyAllData": false,
+    "portalContactAccountsDistinct": true,
+    "portalContactsWithLoyaltyMember": 0
+  },
+  "browserAcceptance": "NOT PERFORMED; no browser session"
+}

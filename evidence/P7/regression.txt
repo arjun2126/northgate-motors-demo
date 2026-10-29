@@ -1,0 +1,20 @@
+P7-17 — LOCAL WRAPPER CHECKS ONLY; FULL NATIVE RELEASE GATE NOT RUN.
+CONFIRMED — raw local test output:
+{
+  "status": "PASS",
+  "checks": [
+    "safe explicit commands",
+    "ordered four-step gate",
+    "fail-fast at each step",
+    "wrong-org denial",
+    "non-check-only/incomplete rejection",
+    "DQ false remains failure",
+    "sensitive field removal"
+  ],
+  "salesforceCalls": 0,
+  "apexTestsRerun": 0
+}
+bash -n scripts/test.sh: exit 0, no output.
+bash scripts/test.sh --plan: mode=PLAN ONLY, orgCallsPerformed=0.
+Native one-component prompt check-only: 0Afaj00000p8MduCAE, 1/1, NoTestRun.
+The prior 235/235 Apex methods were not repeated. Strict DQ/clean-checkout acceptance is not passed.

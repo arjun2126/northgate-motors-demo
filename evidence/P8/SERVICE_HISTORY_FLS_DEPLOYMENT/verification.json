@@ -1,0 +1,66 @@
+{
+  "claim": "CONFIRMED",
+  "checks": {
+    "one_component_validation_22_tests_passed": "CONFIRMED",
+    "exact_one_permission_set_deployment": "CONFIRMED",
+    "exact_two_read_only_fls_additions": "CONFIRMED",
+    "permission_set_otherwise_unchanged": "CONFIRMED",
+    "runtime_objects_otherwise_unchanged": "CONFIRMED",
+    "runtime_setup_otherwise_unchanged": "CONFIRMED",
+    "assignments_otherwise_unchanged": "CONFIRMED",
+    "users_otherwise_unchanged": "CONFIRMED",
+    "members_otherwise_unchanged": "CONFIRMED",
+    "membership_criteria_otherwise_unchanged": "CONFIRMED",
+    "network_otherwise_unchanged": "CONFIRMED",
+    "booking_otherwise_unchanged": "CONFIRMED",
+    "case_otherwise_unchanged": "CONFIRMED",
+    "ledger_otherwise_unchanged": "CONFIRMED",
+    "scheduler_otherwise_unchanged": "CONFIRMED",
+    "A/native/Case": "CONFIRMED",
+    "A/native/Service_Visit__c": "CONFIRMED",
+    "A/native/Vehicle__c": "CONFIRMED",
+    "A/native/Vehicle_Model__c": "CONFIRMED",
+    "A/native/Contact_Vehicle_Relationship__c": "CONFIRMED",
+    "A/protected_record_isolation": "CONFIRMED",
+    "B/native/Case": "CONFIRMED",
+    "B/native/Service_Visit__c": "CONFIRMED",
+    "B/native/Vehicle__c": "CONFIRMED",
+    "B/native/Vehicle_Model__c": "CONFIRMED",
+    "B/native/Contact_Vehicle_Relationship__c": "CONFIRMED",
+    "B/protected_record_isolation": "CONFIRMED",
+    "both_existing_runtime_assignments_retained": "CONFIRMED",
+    "all_55_existing_development_hashes_unchanged": "CONFIRMED",
+    "submitted_candidate_hashes_unchanged": "CONFIRMED"
+  },
+  "validationId": "0Afaj00000pTnZRCA0",
+  "deploymentId": "0Afaj00000pSzJNCA0",
+  "localTestsPassed": 12,
+  "targetedApexTestsPassed": 22,
+  "permissionSetId": "0PSaj00000hHfZ7GAK",
+  "fieldDelta": {
+    "added": [
+      {
+        "Field": "Service_Visit__c.Mileage_At_Checkin__c",
+        "PermissionsRead": true,
+        "PermissionsEdit": false
+      },
+      {
+        "Field": "Service_Visit__c.Case__c",
+        "PermissionsRead": true,
+        "PermissionsEdit": false
+      }
+    ],
+    "removed": [],
+    "existingFieldPermissionsChanged": []
+  },
+  "assignmentsAdded": 0,
+  "browserRetest": "READY_NOT_PERFORMED",
+  "phase8Complete": false,
+  "limitations": [
+    "No authenticated Customer B history browser test was performed",
+    "Existing Apex tests use historical fixture permission sets, not this new minimal set combination",
+    "Protected-record checks cover 14 known records per actor, not exhaustive all-record coverage",
+    "Previously failing UserFieldAccess API was not retried; deployed FLS and assignment inheritance verified from live metadata",
+    "No full CP2/runtime regression; no Apex/LWC/profile/sharing or CP2 metadata deployed"
+  ]
+}

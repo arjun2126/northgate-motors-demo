@@ -1,0 +1,24 @@
+{
+  "compositeResponse": [
+    {"referenceId":"article01","httpStatusCode":201,"body":{"id":"ka0aj000003F63NAAS","success":true,"errors":[]}},
+    {"referenceId":"article02","httpStatusCode":201,"body":{"id":"ka0aj000003F63OAAS","success":true,"errors":[]}},
+    {"referenceId":"article03","httpStatusCode":201,"body":{"id":"ka0aj000003F63PAAS","success":true,"errors":[]}},
+    {"referenceId":"article04","httpStatusCode":201,"body":{"id":"ka0aj000003F63QAAS","success":true,"errors":[]}},
+    {"referenceId":"article05","httpStatusCode":201,"body":{"id":"ka0aj000003F63RAAS","success":true,"errors":[]}},
+    {"referenceId":"article06","httpStatusCode":201,"body":{"id":"ka0aj000003F63SAAS","success":true,"errors":[]}},
+    {"referenceId":"article07","httpStatusCode":201,"body":{"id":"ka0aj000003F63TAAS","success":true,"errors":[]}},
+    {"referenceId":"article08","httpStatusCode":201,"body":{"id":"ka0aj000003F63UAAS","success":true,"errors":[]}},
+    {"referenceId":"article09","httpStatusCode":201,"body":{"id":"ka0aj000003F63VAAS","success":true,"errors":[]}},
+    {"referenceId":"article10","httpStatusCode":201,"body":{"id":"ka0aj000003F63WAAS","success":true,"errors":[]}},
+    {"referenceId":"category01","httpStatusCode":201,"body":{"id":"02oaj000002mp2HAAQ","success":true,"errors":[]}},
+    {"referenceId":"category02","httpStatusCode":201,"body":{"id":"02oaj000002mp2IAAQ","success":true,"errors":[]}},
+    {"referenceId":"category03","httpStatusCode":201,"body":{"id":"02oaj000002mp2JAAQ","success":true,"errors":[]}},
+    {"referenceId":"category04","httpStatusCode":201,"body":{"id":"02oaj000002mp2KAAQ","success":true,"errors":[]}},
+    {"referenceId":"category05","httpStatusCode":201,"body":{"id":"02oaj000002mp2LAAQ","success":true,"errors":[]}},
+    {"referenceId":"category06","httpStatusCode":201,"body":{"id":"02oaj000002mp2MAAQ","success":true,"errors":[]}},
+    {"referenceId":"category07","httpStatusCode":201,"body":{"id":"02oaj000002mp2NAAQ","success":true,"errors":[]}},
+    {"referenceId":"category08","httpStatusCode":201,"body":{"id":"02oaj000002mp2OAAQ","success":true,"errors":[]}},
+    {"referenceId":"category09","httpStatusCode":201,"body":{"id":"02oaj000002mp2PAAQ","success":true,"errors":[]}},
+    {"referenceId":"category10","httpStatusCode":201,"body":{"id":"02oaj000002mp2QAAQ","success":true,"errors":[]}}
+  ]
+}

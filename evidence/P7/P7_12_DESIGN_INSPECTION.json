@@ -1,0 +1,1322 @@
+{
+  "observedAtUtc": "2026-10-26T02:59:21.449623+00:00",
+  "organization": [
+    {
+      "Id": "00Daj00001Ae3iWEAR"
+    }
+  ],
+  "activeUsers": [
+    {
+      "Id": "005aj00000fH2LxAAK",
+      "IsActive": true,
+      "UserType": "Standard",
+      "ProfileId": "00eaj00000T6Z8rAAF",
+      "Profile": {
+        "attributes": {
+          "type": "Profile",
+          "url": "/services/data/v68.0/sobjects/Profile/00eaj00000T6Z8rAAF"
+        },
+        "Name": "System Administrator",
+        "UserLicense": {
+          "attributes": {
+            "type": "UserLicense",
+            "url": "/services/data/v68.0/sobjects/UserLicense/100aj00003icW2QAAU"
+          },
+          "Name": "Salesforce"
+        }
+      },
+      "UserRoleId": null,
+      "UserRole": null
+    },
+    {
+      "Id": "005aj00000fH2NZAA0",
+      "IsActive": true,
+      "UserType": "Standard",
+      "ProfileId": "00eaj00000T6Z8sAAF",
+      "Profile": {
+        "attributes": {
+          "type": "Profile",
+          "url": "/services/data/v68.0/sobjects/Profile/00eaj00000T6Z8sAAF"
+        },
+        "Name": "Analytics Cloud Integration User",
+        "UserLicense": {
+          "attributes": {
+            "type": "UserLicense",
+            "url": "/services/data/v68.0/sobjects/UserLicense/100aj00003icW2RAAU"
+          },
+          "Name": "Analytics Cloud Integration User"
+        }
+      },
+      "UserRoleId": null,
+      "UserRole": null
+    },
+    {
+      "Id": "005aj00000fH2NaAAK",
+      "IsActive": true,
+      "UserType": "AutomatedProcess",
+      "ProfileId": "00eaj00000T6Z8tAAF",
+      "Profile": null,
+      "UserRoleId": null,
+      "UserRole": null
+    },
+    {
+      "Id": "005aj00000fH2NcAAK",
+      "IsActive": true,
+      "UserType": "CloudIntegrationUser",
+      "ProfileId": "00eaj00000T6Z8vAAF",
+      "Profile": null,
+      "UserRoleId": null,
+      "UserRole": null
+    },
+    {
+      "Id": "005aj00000fH2NdAAK",
+      "IsActive": true,
+      "UserType": "AutomatedProcess",
+      "ProfileId": "00eaj00000T6Z8tAAF",
+      "Profile": null,
+      "UserRoleId": null,
+      "UserRole": null
+    },
+    {
+      "Id": "005aj00000fH2NeAAK",
+      "IsActive": true,
+      "UserType": "CsnOnly",
+      "ProfileId": "00eaj00000T6Z8wAAF",
+      "Profile": {
+        "attributes": {
+          "type": "Profile",
+          "url": "/services/data/v68.0/sobjects/Profile/00eaj00000T6Z8wAAF"
+        },
+        "Name": "Chatter Free User",
+        "UserLicense": {
+          "attributes": {
+            "type": "UserLicense",
+            "url": "/services/data/v68.0/sobjects/UserLicense/100aj00003icW2VAAU"
+          },
+          "Name": "Chatter Free"
+        }
+      },
+      "UserRoleId": null,
+      "UserRole": null
+    },
+    {
+      "Id": "005aj00000fH2NfAAK",
+      "IsActive": true,
+      "UserType": "Standard",
+      "ProfileId": "00eaj00000T6Z8xAAF",
+      "Profile": {
+        "attributes": {
+          "type": "Profile",
+          "url": "/services/data/v68.0/sobjects/Profile/00eaj00000T6Z8xAAF"
+        },
+        "Name": "Analytics Cloud Security User",
+        "UserLicense": {
+          "attributes": {
+            "type": "UserLicense",
+            "url": "/services/data/v68.0/sobjects/UserLicense/100aj00003icW2RAAU"
+          },
+          "Name": "Analytics Cloud Integration User"
+        }
+      },
+      "UserRoleId": null,
+      "UserRole": null
+    },
+    {
+      "Id": "005aj00000feqbNAAQ",
+      "IsActive": true,
+      "UserType": "Standard",
+      "ProfileId": "00eaj00000T6Z8rAAF",
+      "Profile": {
+        "attributes": {
+          "type": "Profile",
+          "url": "/services/data/v68.0/sobjects/Profile/00eaj00000T6Z8rAAF"
+        },
+        "Name": "System Administrator",
+        "UserLicense": {
+          "attributes": {
+            "type": "UserLicense",
+            "url": "/services/data/v68.0/sobjects/UserLicense/100aj00003icW2QAAU"
+          },
+          "Name": "Salesforce"
+        }
+      },
+      "UserRoleId": null,
+      "UserRole": null
+    },
+    {
+      "Id": "005aj00000gBoPVAA0",
+      "IsActive": true,
+      "UserType": "Standard",
+      "ProfileId": "00eaj00000T6Z8rAAF",
+      "Profile": {
+        "attributes": {
+          "type": "Profile",
+          "url": "/services/data/v68.0/sobjects/Profile/00eaj00000T6Z8rAAF"
+        },
+        "Name": "System Administrator",
+        "UserLicense": {
+          "attributes": {
+            "type": "UserLicense",
+            "url": "/services/data/v68.0/sobjects/UserLicense/100aj00003icW2QAAU"
+          },
+          "Name": "Salesforce"
+        }
+      },
+      "UserRoleId": null,
+      "UserRole": null
+    },
+    {
+      "Id": "005aj00000gE0b3AAC",
+      "IsActive": true,
+      "UserType": "Standard",
+      "ProfileId": "00eaj00000TnZaFAAV",
+      "Profile": {
+        "attributes": {
+          "type": "Profile",
+          "url": "/services/data/v68.0/sobjects/Profile/00eaj00000TnZaFAAV"
+        },
+        "Name": "NG_Sales",
+        "UserLicense": {
+          "attributes": {
+            "type": "UserLicense",
+            "url": "/services/data/v68.0/sobjects/UserLicense/100aj00003icW2QAAU"
+          },
+          "Name": "Salesforce"
+        }
+      },
+      "UserRoleId": "00Eaj00000QCxlLEAT",
+      "UserRole": {
+        "attributes": {
+          "type": "UserRole",
+          "url": "/services/data/v68.0/sobjects/UserRole/00Eaj00000QCxlLEAT"
+        },
+        "DeveloperName": "VP_Sales"
+      }
+    }
+  ],
+  "roles": [
+    {
+      "Id": "00Eaj00000PlON3EAN",
+      "DeveloperName": "CEO",
+      "ParentRoleId": null
+    },
+    {
+      "Id": "00Eaj00000PlONAEA3",
+      "DeveloperName": "CFO",
+      "ParentRoleId": "00Eaj00000PlON3EAN"
+    },
+    {
+      "Id": "00Eaj00000PlONDEA3",
+      "DeveloperName": "ChannelSalesTeam",
+      "ParentRoleId": "00Eaj00000PlON9EAN"
+    },
+    {
+      "Id": "00Eaj00000PlONKEA3",
+      "DeveloperName": "COO",
+      "ParentRoleId": "00Eaj00000PlON3EAN"
+    },
+    {
+      "Id": "00Eaj00000PlONHEA3",
+      "DeveloperName": "CustomerSupportInternational",
+      "ParentRoleId": "00Eaj00000PlON8EAN"
+    },
+    {
+      "Id": "00Eaj00000PlONCEA3",
+      "DeveloperName": "CustomerSupportNorthAmerica",
+      "ParentRoleId": "00Eaj00000PlON8EAN"
+    },
+    {
+      "Id": "00Eaj00000PlON9EAN",
+      "DeveloperName": "DirectorChannelSales",
+      "ParentRoleId": "00Eaj00000PlON5EAN"
+    },
+    {
+      "Id": "00Eaj00000PlON6EAN",
+      "DeveloperName": "DirectorDirectSales",
+      "ParentRoleId": "00Eaj00000PlON5EAN"
+    },
+    {
+      "Id": "00Eaj00000PlONGEA3",
+      "DeveloperName": "EasternSalesTeam",
+      "ParentRoleId": "00Eaj00000PlON6EAN"
+    },
+    {
+      "Id": "00Eaj00000QC9uzEAD",
+      "DeveloperName": "Finance_Manager",
+      "ParentRoleId": "00Eaj00000PlON3EAN"
+    },
+    {
+      "Id": "00Eaj00000PlONFEA3",
+      "DeveloperName": "InstallationRepairServices",
+      "ParentRoleId": "00Eaj00000PlON8EAN"
+    },
+    {
+      "Id": "00Eaj00000QCxlMEAT",
+      "DeveloperName": "Inventory_Coordinator",
+      "ParentRoleId": "00Eaj00000QCxlLEAT"
+    },
+    {
+      "Id": "00Eaj00000PlONEEA3",
+      "DeveloperName": "MarketingTeam",
+      "ParentRoleId": "00Eaj00000PlON7EAN"
+    },
+    {
+      "Id": "00Eaj00000QCxlNEAT",
+      "DeveloperName": "Sales_Manager_Airport",
+      "ParentRoleId": "00Eaj00000QCxlLEAT"
+    },
+    {
+      "Id": "00Eaj00000QCxlOEAT",
+      "DeveloperName": "Sales_Manager_Downtown",
+      "ParentRoleId": "00Eaj00000QCxlLEAT"
+    },
+    {
+      "Id": "00Eaj00000QCxlPEAT",
+      "DeveloperName": "Sales_Manager_North",
+      "ParentRoleId": "00Eaj00000QCxlLEAT"
+    },
+    {
+      "Id": "00Eaj00000QCxlQEAT",
+      "DeveloperName": "Sales_Rep",
+      "ParentRoleId": "00Eaj00000QCxlOEAT"
+    },
+    {
+      "Id": "00Eaj00000QCxlREAT",
+      "DeveloperName": "Service_Advisor",
+      "ParentRoleId": "00Eaj00000QCxlJEAT"
+    },
+    {
+      "Id": "00Eaj00000QCxlJEAT",
+      "DeveloperName": "Service_Manager",
+      "ParentRoleId": "00Eaj00000PlON3EAN"
+    },
+    {
+      "Id": "00Eaj00000QCxlKEAT",
+      "DeveloperName": "Service_Technician",
+      "ParentRoleId": "00Eaj00000QCxlJEAT"
+    },
+    {
+      "Id": "00Eaj00000PlON8EAN",
+      "DeveloperName": "SVPCustomerServiceSupport",
+      "ParentRoleId": "00Eaj00000PlON3EAN"
+    },
+    {
+      "Id": "00Eaj00000PlONJEA3",
+      "DeveloperName": "SVPHumanResources",
+      "ParentRoleId": "00Eaj00000PlON3EAN"
+    },
+    {
+      "Id": "00Eaj00000PlON4EAN",
+      "DeveloperName": "SVPSalesMarketing",
+      "ParentRoleId": "00Eaj00000PlON3EAN"
+    },
+    {
+      "Id": "00Eaj00000PlONIEA3",
+      "DeveloperName": "VPInternationalSales",
+      "ParentRoleId": "00Eaj00000PlON4EAN"
+    },
+    {
+      "Id": "00Eaj00000PlON7EAN",
+      "DeveloperName": "VPMarketing",
+      "ParentRoleId": "00Eaj00000PlON4EAN"
+    },
+    {
+      "Id": "00Eaj00000PlON5EAN",
+      "DeveloperName": "VPNorthAmericanSales",
+      "ParentRoleId": "00Eaj00000PlON4EAN"
+    },
+    {
+      "Id": "00Eaj00000QCxlLEAT",
+      "DeveloperName": "VP_Sales",
+      "ParentRoleId": "00Eaj00000PlON3EAN"
+    },
+    {
+      "Id": "00Eaj00000PlONBEA3",
+      "DeveloperName": "WesternSalesTeam",
+      "ParentRoleId": "00Eaj00000PlON6EAN"
+    }
+  ],
+  "staffResponsibilities": [
+    {
+      "Id": "a09aj00000heDgvAAE",
+      "Rooftop__c": "a07aj00001MCKYtAAP",
+      "Role__c": "Sales_Rep",
+      "User__c": null,
+      "Is_Persona_Login__c": true,
+      "Is_Active__c": true
+    },
+    {
+      "Id": "a09aj00000heDgwAAE",
+      "Rooftop__c": "a07aj00001MCKYuAAP",
+      "Role__c": "Sales_Rep",
+      "User__c": null,
+      "Is_Persona_Login__c": true,
+      "Is_Active__c": true
+    },
+    {
+      "Id": "a09aj00000heDgxAAE",
+      "Rooftop__c": "a07aj00001MCKYvAAP",
+      "Role__c": "Sales_Rep",
+      "User__c": null,
+      "Is_Persona_Login__c": true,
+      "Is_Active__c": true
+    },
+    {
+      "Id": "a09aj00000heDgyAAE",
+      "Rooftop__c": "a07aj00001MCKYwAAP",
+      "Role__c": "Sales_Rep",
+      "User__c": null,
+      "Is_Persona_Login__c": true,
+      "Is_Active__c": true
+    },
+    {
+      "Id": "a09aj00000heDgzAAE",
+      "Rooftop__c": "a07aj00001MCKYtAAP",
+      "Role__c": "Sales_Manager",
+      "User__c": null,
+      "Is_Persona_Login__c": true,
+      "Is_Active__c": true
+    },
+    {
+      "Id": "a09aj00000heDh0AAE",
+      "Rooftop__c": "a07aj00001MCKYuAAP",
+      "Role__c": "Finance",
+      "User__c": null,
+      "Is_Persona_Login__c": true,
+      "Is_Active__c": true
+    },
+    {
+      "Id": "a09aj00000heDh1AAE",
+      "Rooftop__c": "a07aj00001MCKYvAAP",
+      "Role__c": "Service_Advisor",
+      "User__c": null,
+      "Is_Persona_Login__c": true,
+      "Is_Active__c": true
+    },
+    {
+      "Id": "a09aj00000heDh2AAE",
+      "Rooftop__c": "a07aj00001MCKYwAAP",
+      "Role__c": "Service_Advisor",
+      "User__c": null,
+      "Is_Persona_Login__c": false,
+      "Is_Active__c": true
+    },
+    {
+      "Id": "a09aj00000heDh3AAE",
+      "Rooftop__c": "a07aj00001MCKYtAAP",
+      "Role__c": "Technician",
+      "User__c": null,
+      "Is_Persona_Login__c": false,
+      "Is_Active__c": true
+    },
+    {
+      "Id": "a09aj00000heDh4AAE",
+      "Rooftop__c": "a07aj00001MCKYuAAP",
+      "Role__c": "Technician",
+      "User__c": null,
+      "Is_Persona_Login__c": false,
+      "Is_Active__c": true
+    },
+    {
+      "Id": "a09aj00000heDh5AAE",
+      "Rooftop__c": "a07aj00001MCKYvAAP",
+      "Role__c": "Technician",
+      "User__c": null,
+      "Is_Persona_Login__c": false,
+      "Is_Active__c": true
+    },
+    {
+      "Id": "a09aj00000heDh6AAE",
+      "Rooftop__c": "a07aj00001MCKYwAAP",
+      "Role__c": "Technician",
+      "User__c": null,
+      "Is_Persona_Login__c": false,
+      "Is_Active__c": true
+    },
+    {
+      "Id": "a09aj00000heDh7AAE",
+      "Rooftop__c": "a07aj00001MCKYtAAP",
+      "Role__c": "Inventory",
+      "User__c": null,
+      "Is_Persona_Login__c": false,
+      "Is_Active__c": true
+    },
+    {
+      "Id": "a09aj00000heDh8AAE",
+      "Rooftop__c": "a07aj00001MCKYuAAP",
+      "Role__c": "Inventory",
+      "User__c": null,
+      "Is_Persona_Login__c": false,
+      "Is_Active__c": true
+    }
+  ],
+  "rooftops": [
+    {
+      "Id": "a07aj00001MCKYvAAP",
+      "Name": "Northgate Airport",
+      "General_Manager__c": null
+    },
+    {
+      "Id": "a07aj00001MCKYtAAP",
+      "Name": "Northgate Downtown",
+      "General_Manager__c": null
+    },
+    {
+      "Id": "a07aj00001MCKYuAAP",
+      "Name": "Northgate North",
+      "General_Manager__c": null
+    },
+    {
+      "Id": "a07aj00001MCKYwAAP",
+      "Name": "Northgate Service Centre",
+      "General_Manager__c": null
+    }
+  ],
+  "permissionAssignments": [
+    {
+      "AssigneeId": "005aj00000fH2LxAAK",
+      "PermissionSetId": "0PSaj00000eqBtDGAU",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000eqBtDGAU"
+        },
+        "Name": "Developer_Edition"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000fH2LxAAK",
+      "PermissionSetId": "0PSaj00000eq3jSGAQ",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000eq3jSGAQ"
+        },
+        "Name": "Experience_Profile_Manager"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000fH2NcAAK",
+      "PermissionSetId": "0PSaj00000eq3ijGAA",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000eq3ijGAA"
+        },
+        "Name": "sfdc_scrt2"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000fH2NeAAK",
+      "PermissionSetId": "0PSaj00000eq3jMGAQ",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000eq3jMGAQ"
+        },
+        "Name": "X00e1a000000MWaTAAW"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000fH2NZAA0",
+      "PermissionSetId": "0PSaj00000eq3jQGAQ",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000eq3jQGAQ"
+        },
+        "Name": "X00e1a000000N1wLAAS"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000fH2NfAAK",
+      "PermissionSetId": "0PSaj00000eq3jPGAQ",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000eq3jPGAQ"
+        },
+        "Name": "X00e1a000000N1wKAAS"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000fH2LxAAK",
+      "PermissionSetId": "0PSaj00000eq3ikGAA",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000eq3ikGAA"
+        },
+        "Name": "X00ex00000018ozh_128_09_04_12_1"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000fH2LxAAK",
+      "PermissionSetId": "0PSaj00000eq3jTGAQ",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000eq3jTGAQ"
+        },
+        "Name": "GenieAdmin"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000feqbNAAQ",
+      "PermissionSetId": "0PSaj00000eq3ikGAA",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000eq3ikGAA"
+        },
+        "Name": "X00ex00000018ozh_128_09_04_12_1"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000feqbNAAQ",
+      "PermissionSetId": "0PSaj00000eq3k8GAA",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000eq3k8GAA"
+        },
+        "Name": "AgentforceServiceAgentBuilder"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000feqbNAAQ",
+      "PermissionSetId": "0PSaj00000eq3k0GAA",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000eq3k0GAA"
+        },
+        "Name": "EinsteinGPTPromptTemplateManager"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000feqbNAAQ",
+      "PermissionSetId": "0PSaj00000eq3kiGAA",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000eq3kiGAA"
+        },
+        "Name": "ServiceUserPsl"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000feqbNAAQ",
+      "PermissionSetId": "0PSaj00000eq3jTGAQ",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000eq3jTGAQ"
+        },
+        "Name": "GenieAdmin"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000feqbNAAQ",
+      "PermissionSetId": "0PSaj00000eq3jyGAA",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000eq3jyGAA"
+        },
+        "Name": "CopilotSalesforceAdmin"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000fH2NcAAK",
+      "PermissionSetId": "0PSaj00000fW9dYGAS",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000fW9dYGAS"
+        },
+        "Name": "sfdc_platformmetabolism_slagent"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000gBoPVAA0",
+      "PermissionSetId": "0PSaj00000eq3ikGAA",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000eq3ikGAA"
+        },
+        "Name": "X00ex00000018ozh_128_09_04_12_1"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000feqbNAAQ",
+      "PermissionSetId": "0PSaj00000gDl7OGAS",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000gDl7OGAS"
+        },
+        "Name": "PS_Demo_Admin"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000gE0b3AAC",
+      "PermissionSetId": "0PSaj00000gE0RPGA0",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000gE0RPGA0"
+        },
+        "Name": "X00eaj00000TnZaFAAV"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000feqbNAAQ",
+      "PermissionSetId": "0PSaj00000gKc49GAC",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000gKc49GAC"
+        },
+        "Name": "NG_Lightning_Experience_Access"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000fH2NeAAK",
+      "PermissionSetId": "0PSaj00000gKc49GAC",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000gKc49GAC"
+        },
+        "Name": "NG_Lightning_Experience_Access"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000gBoPVAA0",
+      "PermissionSetId": "0PSaj00000gKc49GAC",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000gKc49GAC"
+        },
+        "Name": "NG_Lightning_Experience_Access"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000gE0b3AAC",
+      "PermissionSetId": "0PSaj00000gKc49GAC",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000gKc49GAC"
+        },
+        "Name": "NG_Lightning_Experience_Access"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000fH2LxAAK",
+      "PermissionSetId": "0PSaj00000gKc49GAC",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000gKc49GAC"
+        },
+        "Name": "NG_Lightning_Experience_Access"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000fH2NcAAK",
+      "PermissionSetId": "0PSaj00000gQ0p1GAC",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000gQ0p1GAC"
+        },
+        "Name": "sfdc_fieldservice"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000feqbNAAQ",
+      "PermissionSetId": "0PSaj00000gV45ZGAS",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000gV45ZGAS"
+        },
+        "Name": "PS_Case_Data_Quality_Fields"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000gE0b3AAC",
+      "PermissionSetId": "0PSaj00000gYHsgGAG",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000gYHsgGAG"
+        },
+        "Name": "PS_Quote_Workflows"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000gE0b3AAC",
+      "PermissionSetId": "0PSaj00000gSDlMGAW",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000gSDlMGAW"
+        },
+        "Name": "PS_Test_Drive_Booking"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000gE0b3AAC",
+      "PermissionSetId": "0PSaj00000gUOW9GAO",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000gUOW9GAO"
+        },
+        "Name": "PS_Management_Reports"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000gE0b3AAC",
+      "PermissionSetId": "0PSaj00000gmhQfGAI",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000gmhQfGAI"
+        },
+        "Name": "PS_VP_Executive_Reporting"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000feqbNAAQ",
+      "PermissionSetId": "0PSaj00000guo3ZGAQ",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000guo3ZGAQ"
+        },
+        "Name": "PS_Knowledge_Draft_Author"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    },
+    {
+      "AssigneeId": "005aj00000feqbNAAQ",
+      "PermissionSetId": "0PSaj00000guotBGAQ",
+      "PermissionSet": {
+        "attributes": {
+          "type": "PermissionSet",
+          "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000guotBGAQ"
+        },
+        "Name": "PS_Phase6_Report_Field_Read"
+      },
+      "PermissionSetGroupId": null,
+      "PermissionSetGroup": null
+    }
+  ],
+  "nativeDescribe": {
+    "Territory2": {
+      "name": "Territory2",
+      "createable": true,
+      "updateable": true,
+      "deletable": true,
+      "queryable": true,
+      "fields": [
+        {
+          "name": "AccountAccessLevel",
+          "type": "picklist",
+          "createable": true,
+          "updateable": true,
+          "nillable": false,
+          "referenceTo": [],
+          "picklistValues": [
+            {
+              "active": true,
+              "defaultValue": false,
+              "label": "Read Only",
+              "validFor": null,
+              "value": "Read"
+            },
+            {
+              "active": true,
+              "defaultValue": false,
+              "label": "Read/Write",
+              "validFor": null,
+              "value": "Edit"
+            },
+            {
+              "active": true,
+              "defaultValue": false,
+              "label": "Owner",
+              "validFor": null,
+              "value": "All"
+            }
+          ]
+        },
+        {
+          "name": "OpportunityAccessLevel",
+          "type": "picklist",
+          "createable": true,
+          "updateable": true,
+          "nillable": false,
+          "referenceTo": [],
+          "picklistValues": [
+            {
+              "active": true,
+              "defaultValue": false,
+              "label": "Private",
+              "validFor": null,
+              "value": "None"
+            },
+            {
+              "active": true,
+              "defaultValue": false,
+              "label": "Read Only",
+              "validFor": null,
+              "value": "Read"
+            },
+            {
+              "active": true,
+              "defaultValue": false,
+              "label": "Read/Write",
+              "validFor": null,
+              "value": "Edit"
+            }
+          ]
+        },
+        {
+          "name": "CaseAccessLevel",
+          "type": "picklist",
+          "createable": true,
+          "updateable": true,
+          "nillable": false,
+          "referenceTo": [],
+          "picklistValues": [
+            {
+              "active": true,
+              "defaultValue": false,
+              "label": "Private",
+              "validFor": null,
+              "value": "None"
+            },
+            {
+              "active": true,
+              "defaultValue": false,
+              "label": "Read Only",
+              "validFor": null,
+              "value": "Read"
+            },
+            {
+              "active": true,
+              "defaultValue": false,
+              "label": "Read/Write",
+              "validFor": null,
+              "value": "Edit"
+            }
+          ]
+        },
+        {
+          "name": "ContactAccessLevel",
+          "type": "picklist",
+          "createable": true,
+          "updateable": true,
+          "nillable": false,
+          "referenceTo": [],
+          "picklistValues": [
+            {
+              "active": true,
+              "defaultValue": false,
+              "label": "Private",
+              "validFor": null,
+              "value": "None"
+            },
+            {
+              "active": true,
+              "defaultValue": false,
+              "label": "Read Only",
+              "validFor": null,
+              "value": "Read"
+            },
+            {
+              "active": true,
+              "defaultValue": false,
+              "label": "Read/Write",
+              "validFor": null,
+              "value": "Edit"
+            }
+          ]
+        }
+      ]
+    },
+    "Territory2Model": {
+      "name": "Territory2Model",
+      "createable": true,
+      "updateable": true,
+      "deletable": true,
+      "queryable": true,
+      "fields": [
+        {
+          "name": "State",
+          "type": "picklist",
+          "createable": false,
+          "updateable": true,
+          "nillable": true,
+          "referenceTo": [],
+          "picklistValues": [
+            {
+              "active": true,
+              "defaultValue": true,
+              "label": "Planning",
+              "validFor": null,
+              "value": "Planning"
+            },
+            {
+              "active": true,
+              "defaultValue": false,
+              "label": "Activating",
+              "validFor": null,
+              "value": "Activating"
+            },
+            {
+              "active": true,
+              "defaultValue": false,
+              "label": "Activation Failed",
+              "validFor": null,
+              "value": "ActivationFailed"
+            },
+            {
+              "active": true,
+              "defaultValue": false,
+              "label": "Active",
+              "validFor": null,
+              "value": "Active"
+            },
+            {
+              "active": true,
+              "defaultValue": false,
+              "label": "Archiving",
+              "validFor": null,
+              "value": "Archiving"
+            },
+            {
+              "active": true,
+              "defaultValue": false,
+              "label": "Archiving Failed",
+              "validFor": null,
+              "value": "ArchivingFailed"
+            },
+            {
+              "active": true,
+              "defaultValue": false,
+              "label": "Archived",
+              "validFor": null,
+              "value": "Archived"
+            },
+            {
+              "active": true,
+              "defaultValue": false,
+              "label": "Deleting",
+              "validFor": null,
+              "value": "Deleting"
+            },
+            {
+              "active": true,
+              "defaultValue": false,
+              "label": "Deletion Failed",
+              "validFor": null,
+              "value": "DeletionFailed"
+            },
+            {
+              "active": true,
+              "defaultValue": false,
+              "label": "Cloning",
+              "validFor": null,
+              "value": "Cloning"
+            },
+            {
+              "active": true,
+              "defaultValue": false,
+              "label": "Cloning Failed",
+              "validFor": null,
+              "value": "CloningFailed"
+            }
+          ]
+        }
+      ]
+    },
+    "ObjectTerritory2Association": {
+      "name": "ObjectTerritory2Association",
+      "createable": true,
+      "updateable": false,
+      "deletable": true,
+      "queryable": true,
+      "fields": [
+        {
+          "name": "ObjectId",
+          "type": "reference",
+          "createable": true,
+          "updateable": false,
+          "nillable": false,
+          "referenceTo": [
+            "Account",
+            "Lead"
+          ],
+          "picklistValues": []
+        },
+        {
+          "name": "Territory2Id",
+          "type": "reference",
+          "createable": true,
+          "updateable": false,
+          "nillable": false,
+          "referenceTo": [
+            "Territory2"
+          ],
+          "picklistValues": []
+        },
+        {
+          "name": "AssociationCause",
+          "type": "picklist",
+          "createable": true,
+          "updateable": false,
+          "nillable": false,
+          "referenceTo": [],
+          "picklistValues": [
+            {
+              "active": true,
+              "defaultValue": false,
+              "label": "Territory Assignment Rule",
+              "validFor": null,
+              "value": "Territory2AssignmentRule"
+            },
+            {
+              "active": true,
+              "defaultValue": false,
+              "label": "Territory Manual",
+              "validFor": null,
+              "value": "Territory2Manual"
+            }
+          ]
+        }
+      ]
+    },
+    "UserTerritory2Association": {
+      "name": "UserTerritory2Association",
+      "createable": true,
+      "updateable": true,
+      "deletable": true,
+      "queryable": true,
+      "fields": [
+        {
+          "name": "UserId",
+          "type": "reference",
+          "createable": true,
+          "updateable": false,
+          "nillable": false,
+          "referenceTo": [
+            "User"
+          ],
+          "picklistValues": []
+        },
+        {
+          "name": "Territory2Id",
+          "type": "reference",
+          "createable": true,
+          "updateable": false,
+          "nillable": false,
+          "referenceTo": [
+            "Territory2"
+          ],
+          "picklistValues": []
+        },
+        {
+          "name": "RoleInTerritory2",
+          "type": "picklist",
+          "createable": true,
+          "updateable": true,
+          "nillable": true,
+          "referenceTo": [],
+          "picklistValues": []
+        }
+      ]
+    },
+    "Account": {
+      "name": "Account",
+      "createable": true,
+      "updateable": true,
+      "deletable": true,
+      "queryable": true,
+      "fields": [
+        {
+          "name": "Preferred_Rooftop__c",
+          "type": "reference",
+          "createable": true,
+          "updateable": true,
+          "nillable": true,
+          "referenceTo": [
+            "Rooftop__c"
+          ],
+          "picklistValues": []
+        }
+      ]
+    }
+  },
+  "liveSharingModels": [
+    {
+      "attributes": {
+        "type": "EntityDefinition",
+        "url": "/services/data/v68.0/tooling/sobjects/EntityDefinition/Account"
+      },
+      "QualifiedApiName": "Account",
+      "InternalSharingModel": "Private",
+      "ExternalSharingModel": "Private"
+    },
+    {
+      "attributes": {
+        "type": "EntityDefinition",
+        "url": "/services/data/v68.0/tooling/sobjects/EntityDefinition/Case"
+      },
+      "QualifiedApiName": "Case",
+      "InternalSharingModel": "Private",
+      "ExternalSharingModel": "Private"
+    },
+    {
+      "attributes": {
+        "type": "EntityDefinition",
+        "url": "/services/data/v68.0/tooling/sobjects/EntityDefinition/Contact"
+      },
+      "QualifiedApiName": "Contact",
+      "InternalSharingModel": "Private",
+      "ExternalSharingModel": "Private"
+    },
+    {
+      "attributes": {
+        "type": "EntityDefinition",
+        "url": "/services/data/v68.0/tooling/sobjects/EntityDefinition/Opportunity"
+      },
+      "QualifiedApiName": "Opportunity",
+      "InternalSharingModel": "Private",
+      "ExternalSharingModel": "Private"
+    }
+  ],
+  "metadataReferences": {
+    "jsforceWsdlSchema": {
+      "url": "https://raw.githubusercontent.com/jsforce/jsforce/main/src/api/metadata/schema.ts",
+      "sha256": "67e8db26f7514ddb1443fb1a9ed4fdf8388a17ddeb3c9f7c5d9a01f52cbd68f4",
+      "definitions": {
+        "Territory2": "  Territory2: {\n    type: 'Territory2',\n    props: {\n      accountAccessLevel: '?string',\n      caseAccessLevel: '?string',\n      contactAccessLevel: '?string',\n      customFields: ['FieldValue'],\n      description: '?string',\n      name: 'string',\n      opportunityAccessLevel: '?string',\n      parentTerritory: '?string',\n      ruleAssociations: ['Territory2RuleAssociation'],\n      territory2Type: 'string',\n    },\n    extends: 'Metadata',\n  },",
+        "Territory2Model": "  Territory2Model: {\n    type: 'Territory2Model',\n    props: {\n      customFields: ['FieldValue'],\n      description: '?string',\n      name: 'string',\n    },\n    extends: 'Metadata',\n  },",
+        "Territory2Type": "  Territory2Type: {\n    type: 'Territory2Type',\n    props: {\n      description: '?string',\n      name: 'string',\n      priority: 'number',\n    },\n    extends: 'Metadata',\n  },",
+        "Territory2Rule": "  Territory2Rule: {\n    type: 'Territory2Rule',\n    props: {\n      active: 'boolean',\n      booleanFilter: '?string',\n      name: 'string',\n      objectType: 'string',\n      ruleItems: ['Territory2RuleItem'],\n    },\n    extends: 'Metadata',\n  },",
+        "Territory2Settings": "  Territory2Settings: {\n    type: 'Territory2Settings',\n    props: {\n      defaultAccountAccessLevel: '?string',\n      defaultCaseAccessLevel: '?string',\n      defaultContactAccessLevel: '?string',\n      defaultOpportunityAccessLevel: '?string',\n      enableTerritoryManagement2: '?boolean',\n      opportunityFilterSettings: '?Territory2SettingsOpportunityFilter',\n    },\n    extends: 'Metadata',\n  },"
+      },
+      "authority": "WSDL-derived client schema; not live deployment acceptance"
+    },
+    "salesforceSourceRegistry": {
+      "url": "https://raw.githubusercontent.com/forcedotcom/source-deploy-retrieve/main/src/registry/metadataRegistry.json",
+      "sha256": "c870dd0adc0a156d11b50eb80c2af38922a7458c38e752625c56784ea0f001d7",
+      "types": {
+        "territory2": {
+          "directoryName": "territories",
+          "folderType": "territory2model",
+          "id": "territory2",
+          "inFolder": false,
+          "name": "Territory2",
+          "suffix": "territory2"
+        },
+        "territory2model": {
+          "directoryName": "territory2Models",
+          "folderType": "territory2model",
+          "id": "territory2model",
+          "inFolder": false,
+          "name": "Territory2Model",
+          "suffix": "territory2Model"
+        },
+        "territory2type": {
+          "directoryName": "territory2Types",
+          "id": "territory2type",
+          "inFolder": false,
+          "name": "Territory2Type",
+          "suffix": "territory2Type"
+        },
+        "territory2rule": {
+          "directoryName": "rules",
+          "folderType": "territory2model",
+          "id": "territory2rule",
+          "inFolder": false,
+          "name": "Territory2Rule",
+          "suffix": "territory2Rule"
+        }
+      }
+    }
+  },
+  "mutationsPerformed": 0,
+  "limits": [
+    "No personal display names, usernames or email addresses collected.",
+    "Read/describe capability is not an executed assignment or actual-persona access check.",
+    "No native lookup assignment-rule eligibility is inferred from SOQL filterability."
+  ]
+}

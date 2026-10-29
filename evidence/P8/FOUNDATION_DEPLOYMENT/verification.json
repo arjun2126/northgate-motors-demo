@@ -1,0 +1,742 @@
+{
+  "existingStateComparisons": {
+    "assignments": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 32,
+      "existingRowsAfter": 32
+    },
+    "data_Account": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 157,
+      "existingRowsAfter": 157
+    },
+    "data_Asset": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 0,
+      "existingRowsAfter": 0
+    },
+    "data_Case": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 76,
+      "existingRowsAfter": 76
+    },
+    "data_CaseComment": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 0,
+      "existingRowsAfter": 0
+    },
+    "data_Contact": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 231,
+      "existingRowsAfter": 231
+    },
+    "data_Delivery__c": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 13,
+      "existingRowsAfter": 13
+    },
+    "data_Financing__c": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 61,
+      "existingRowsAfter": 61
+    },
+    "data_Loyalty_Member__c": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 72,
+      "existingRowsAfter": 72
+    },
+    "data_Loyalty_Transaction__c": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 110,
+      "existingRowsAfter": 110
+    },
+    "data_Opportunity": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 105,
+      "existingRowsAfter": 105
+    },
+    "data_PricebookEntry": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 60,
+      "existingRowsAfter": 60
+    },
+    "data_Product2": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 60,
+      "existingRowsAfter": 60
+    },
+    "data_Quote": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 65,
+      "existingRowsAfter": 65
+    },
+    "data_QuoteLineItem": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 85,
+      "existingRowsAfter": 85
+    },
+    "data_Service_Visit__c": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 148,
+      "existingRowsAfter": 148
+    },
+    "data_Test_Drive__c": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 74,
+      "existingRowsAfter": 74
+    },
+    "data_Vehicle__c": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 120,
+      "existingRowsAfter": 120
+    },
+    "external_owd": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 9,
+      "existingRowsAfter": 9
+    },
+    "field_permissions": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 28506,
+      "existingRowsAfter": 28506
+    },
+    "network_groups": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 1,
+      "existingRowsAfter": 1
+    },
+    "network_members": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 3,
+      "existingRowsAfter": 3
+    },
+    "networks": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 1,
+      "existingRowsAfter": 1
+    },
+    "object_permissions": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 13639,
+      "existingRowsAfter": 13639
+    },
+    "permission_sets": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "profiles": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 50,
+      "existingRowsAfter": 50
+    },
+    "setup_access": {
+      "claim": "REFUTED",
+      "existingRowsBefore": 1808,
+      "existingRowsAfter": 1810
+    },
+    "system_permissions_0": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_100": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_125": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_150": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_175": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_200": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_225": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_25": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_250": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_275": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_300": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_325": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_350": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_375": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_400": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_425": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_450": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_475": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_50": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_500": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_525": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_550": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_575": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_600": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_625": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_650": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_675": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_700": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "system_permissions_75": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 246,
+      "existingRowsAfter": 246
+    },
+    "users": {
+      "claim": "CONFIRMED",
+      "existingRowsBefore": 11,
+      "existingRowsAfter": 11
+    }
+  },
+  "newSets": [
+    {
+      "Id": "0PSaj00000h8ikhGAA",
+      "Name": "X00eaj00000UBi7iAAD",
+      "ProfileId": "00eaj00000UBi7iAAD",
+      "IsOwnedByProfile": true
+    },
+    {
+      "Id": "0PSaj00000h8ikiGAA",
+      "Name": "PS_Owner_Portal_Foundation",
+      "ProfileId": null,
+      "IsOwnedByProfile": false
+    }
+  ],
+  "newProfileObjectPermissions": [
+    {
+      "Id": "110aj0000YCJZJbAQP",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "Account",
+      "PermissionsRead": true,
+      "PermissionsCreate": false,
+      "PermissionsEdit": false,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZJeAQP",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "Address",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZJfAQP",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "Asset",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZJvAQP",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "Case",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZJwAQP",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "Contact",
+      "PermissionsRead": true,
+      "PermissionsCreate": false,
+      "PermissionsEdit": false,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZJxAQP",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "Contract",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": true,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZK1AQP",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "Document",
+      "PermissionsRead": true,
+      "PermissionsCreate": false,
+      "PermissionsEdit": false,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZK9AQP",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "Entitlement",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZKAAQ5",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "EntitlementContact",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": true,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZKEAQ5",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "Idea",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": false,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZKGAQ5",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "Individual",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZKLAQ5",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "Location",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZKaAQP",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "MaintenancePlan",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZKiAQP",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "Order",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": true,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZKlAQP",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "Pricebook2",
+      "PermissionsRead": true,
+      "PermissionsCreate": false,
+      "PermissionsEdit": false,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZKmAQP",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "Product2",
+      "PermissionsRead": true,
+      "PermissionsCreate": false,
+      "PermissionsEdit": false,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZKnAQP",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "ProductCatalog",
+      "PermissionsRead": true,
+      "PermissionsCreate": false,
+      "PermissionsEdit": false,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZKoAQP",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "ProductCategory",
+      "PermissionsRead": true,
+      "PermissionsCreate": false,
+      "PermissionsEdit": false,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZKpAQP",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "ProductItem",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZKqAQP",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "ProductRequest",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZKrAQP",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "ProductTransfer",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZKvAQP",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "ReturnOrder",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZKwAQP",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "Seller",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZKxAQP",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "ServiceAppointment",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZKyAQP",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "ServiceContract",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZKzAQP",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "ServiceCrew",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZL0AQP",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "ServiceResource",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZL2AQP",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "Shipment",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCJZL5AQP",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "Solution",
+      "PermissionsRead": true,
+      "PermissionsCreate": false,
+      "PermissionsEdit": false,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCPF0OAQX",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "TimeSheet",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCPF0QAQX",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "UserExternalCredential",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": true,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCPF0RAQX",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "WorkCapacityLimit",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCPF0SAQX",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "WorkOrder",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCPF0TAQX",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "WorkType",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "Id": "110aj0000YCPF0UAQX",
+      "ParentId": "0PSaj00000h8ikhGAA",
+      "SobjectType": "WorkTypeGroup",
+      "PermissionsRead": true,
+      "PermissionsCreate": true,
+      "PermissionsEdit": true,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    }
+  ],
+  "newProfileEnabledSystemPermissions": [
+    "PermissionsAccessOrchestrationObjects",
+    "PermissionsActivitiesAccess",
+    "PermissionsAddDirectMessageMembers",
+    "PermissionsAllowUniversalSearch",
+    "PermissionsApexRestServices",
+    "PermissionsAssignTopics",
+    "PermissionsChatterOwnGroups",
+    "PermissionsContentWorkspaces",
+    "PermissionsCreateTopics",
+    "PermissionsEditTask",
+    "PermissionsEditTopics",
+    "PermissionsEmailAdministration",
+    "PermissionsEmailTemplateManagement",
+    "PermissionsEnableCommunityAppLauncher",
+    "PermissionsEnableNotifications",
+    "PermissionsFieldServiceAccess",
+    "PermissionsRemoveDirectMessageMembers",
+    "PermissionsRunFlow",
+    "PermissionsRunGlobalOptimization",
+    "PermissionsRunInDayOptimization",
+    "PermissionsSelectFilesFromSalesforce",
+    "PermissionsSetAdvancedOptimizationFilters",
+    "PermissionsShareFilesWithNetworks",
+    "PermissionsShowCompanyNameAsUserBadge",
+    "PermissionsUseWebLink",
+    "PermissionsWorkDotComUserPerm"
+  ],
+  "newProfileLeastPrivilege": "REFUTED",
+  "newProfileAssignedUsers": 0,
+  "newFoundationAssignments": 0,
+  "liveApexParity": {
+    "OwnerPortalFoundationController": {
+      "Id": "01paj00000c8EO6AAM",
+      "matchesIgnoringOnlyFinalNewline": true
+    },
+    "OwnerPortalFoundationControllerTest": {
+      "Id": "01paj00000c8EO7AAM",
+      "matchesIgnoringOnlyFinalNewline": true
+    }
+  },
+  "network": [
+    {
+      "Id": "0DBaj000006bf3xGAA",
+      "Name": "Northgate Owner Portal",
+      "UrlPathPrefix": "owners",
+      "Status": "UnderConstruction",
+      "FirstActivationDate": null,
+      "SelfRegProfileId": null,
+      "OptionsSelfRegistrationEnabled": false
+    }
+  ]
+}

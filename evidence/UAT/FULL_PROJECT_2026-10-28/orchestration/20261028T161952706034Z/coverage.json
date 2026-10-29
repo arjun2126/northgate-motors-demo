@@ -1,0 +1,730 @@
+[
+  {
+    "feature": "P1-01\u201306 objects/fields/relationships/picklists/record types/layouts",
+    "existingStatusAndScope": "NOT TESTED as a complete live inventory",
+    "remainingAcceptance": "Correct required fields and layouts; no hidden finance leakage",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P1-07\u201312 apps/roles/OWD/queues/sets/groups",
+    "existingStatusAndScope": "NOT TESTED as complete persona UAT",
+    "remainingAcceptance": "Each actual persona sees its intended app/scope only",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P1-13\u201314 bypass/sharing",
+    "existingStatusAndScope": "NOT TESTED live; historical evidence retained",
+    "remainingAcceptance": "Bypass remains restricted; no unintended customer scope",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P1-15 users/licenses",
+    "existingStatusAndScope": "BLOCKED for missing operational-persona readiness; license inventory PASS",
+    "remainingAcceptance": "Four of four Salesforce licenses used; no admin reclamation or persona reassignment",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P1-16\u201319 rules/duplicates/metadata/security matrix",
+    "existingStatusAndScope": "NOT TESTED in full; individual suite checks not a complete matrix",
+    "remainingAcceptance": "Every original rule/negative FLS and matrix row needs evidence",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P1-20 VIN validation",
+    "existingStatusAndScope": "PASS, VinValidatorTest 5 returned methods",
+    "remainingAcceptance": "UI validation errors still need screenshots",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P1-21 persona switch",
+    "existingStatusAndScope": "NOT TESTED; prohibited in this read-only task",
+    "remainingAcceptance": "Separate approval for any role/group swap",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P1-22 CI client/release authentication",
+    "existingStatusAndScope": "NOT TESTED; historical only",
+    "remainingAcceptance": "Owner-controlled credentials and actual CI evidence",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P2-01 routing",
+    "existingStatusAndScope": "PASS automated: routing/enrichment/round-robin",
+    "remainingAcceptance": "Actual Lead intake UI NOT TESTED",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P2-02 conversion",
+    "existingStatusAndScope": "PASS automated: LeadConvertGuardTest 2",
+    "remainingAcceptance": "Account/Contact/Opp creation and seed-tag hygiene UI NOT TESTED",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P2-03\u201304 Test Drive/conflict",
+    "existingStatusAndScope": "PASS automated: booking guard 9; picker mocks",
+    "remainingAcceptance": "Free slot and overlap rejection UI NOT TESTED",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P2-05 stage stamps",
+    "existingStatusAndScope": "PASS automated: 3; eight live stages inventoried",
+    "remainingAcceptance": "Connected stage progression UI NOT TESTED",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P2-06 reservations",
+    "existingStatusAndScope": "PASS automated: guard 2",
+    "remainingAcceptance": "Competing reservations/live UI NOT TESTED",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P2-07 Tasks",
+    "existingStatusAndScope": "NOT TESTED live; 10 follow-up methods pass but companion email method FAIL",
+    "remainingAcceptance": "Correct owner/due date; do not infer complete flow acceptance",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P2-08 confirmation email",
+    "existingStatusAndScope": "FAIL automated restricted-email assertion",
+    "remainingAcceptance": "Exact error D04; delivery remains NOT TESTED",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P2-09\u201311 reports/sales dashboard",
+    "existingStatusAndScope": "NOT TESTED as actual readers",
+    "remainingAcceptance": "Report totals/drill-through and differing rep/manager scope",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P2-12 counters",
+    "existingStatusAndScope": "PASS automated reconciliation/trigger checks",
+    "remainingAcceptance": "No live maintenance/enqueue; operational UI NOT TESTED",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P2-13 suite/bulk gate",
+    "existingStatusAndScope": "FAIL for complete slice (email assertion); P2BulkTest 2 pass",
+    "remainingAcceptance": "No >=90% coverage claim from this run",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P2-14\u201315 slice UAT/demo",
+    "existingStatusAndScope": "NOT TESTED current end-to-end",
+    "remainingAcceptance": "Current persona-first script, no historical ng-dev instructions",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P3-01 appraisal/equity",
+    "existingStatusAndScope": "PASS automated: TradeIn_Calc_EquityTest 4",
+    "remainingAcceptance": "Appraisal wizard UI NOT TESTED",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P3-02 appraisal-before-quote",
+    "existingStatusAndScope": "PASS automated: trade-in guard 7/enforcement 6",
+    "remainingAcceptance": "Rejected unaccepted appraisal UI NOT TESTED",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P3-03 price rules",
+    "existingStatusAndScope": "PASS current inventory: ten active",
+    "remainingAcceptance": "Preserve rules and actual winner/precedence semantics",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P3-04\u201305 builder/pricing",
+    "existingStatusAndScope": "PASS automated: builder 14/pricing 23; CP2 saved-data checkpoint PASS",
+    "remainingAcceptance": "Fresh UI save/pricing NOT TESTED; one-quote guard preserved",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P3-06 approval routing",
+    "existingStatusAndScope": "PASS automated: DiscountApprovalTest 6; both definitions Active",
+    "remainingAcceptance": "<=5 no approval, >5\u201310 manager, >10 VP; live cross-persona routing NOT TESTED",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P3-07 Quote Summary/PDF",
+    "existingStatusAndScope": "PASS automated summary 11; browser/print NOT TESTED",
+    "remainingAcceptance": "Correct lines, signed net discount/premium, totals and printable output",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P3-08\u201310 validity/reports/Quote Health",
+    "existingStatusAndScope": "NOT TESTED current UI",
+    "remainingAcceptance": "Expiry filter and source/report/tile reconciliation",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P3-11 simulation seam",
+    "existingStatusAndScope": "NOT TESTED current document acceptance; historical delivered",
+    "remainingAcceptance": "Custom CPQ simulation, not licensed CPQ",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P3-12 pricing tests",
+    "existingStatusAndScope": "PASS methods; coverage percentage NOT TESTED",
+    "remainingAcceptance": "No current >=90% coverage certification",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P3-DEF-01 quote overwrite",
+    "existingStatusAndScope": "PASS historical repair retained; builder tests pass now",
+    "remainingAcceptance": "Do not reopen or save another quote on the historical record",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P4-01 calculator",
+    "existingStatusAndScope": "PASS automated 5",
+    "remainingAcceptance": "Cent-accurate payment at 0%, normal/high rates",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P4-02 application",
+    "existingStatusAndScope": "PASS automated 23; 4 launch-context mocks",
+    "remainingAcceptance": "Existing applicant/quote/amount UI NOT TESTED current",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P4-03 lifecycle",
+    "existingStatusAndScope": "PASS automated 18",
+    "remainingAcceptance": "Invalid funded transition UI NOT TESTED",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P4-04 rates",
+    "existingStatusAndScope": "PASS automated 5",
+    "remainingAcceptance": "Table/manual exception source preserved",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P4-05 finance approval",
+    "existingStatusAndScope": "PASS automated 8; definition Active",
+    "remainingAcceptance": "Actual Finance identity/routing browser gate BLOCKED",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P4-06\u201308 delivery/Closed Won/enrollment",
+    "existingStatusAndScope": "PASS automated guards 4/close 9/enrollment 4",
+    "remainingAcceptance": "Connected completion/enrollment UI NOT TESTED; no reenrollment/backfill",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P4-09\u201310 reports/deal desk",
+    "existingStatusAndScope": "NOT TESTED source-to-browser reconciliation",
+    "remainingAcceptance": "Dashboard presence alone is insufficient",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P4-11 finance FLS",
+    "existingStatusAndScope": "PASS automated 2",
+    "remainingAcceptance": "Actual Sales session negative-field screenshot NOT TESTED",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P4-12 finance seam",
+    "existingStatusAndScope": "NOT TESTED current doc acceptance; historical delivered",
+    "remainingAcceptance": "Simulation limitation retained",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P4-13 coverage gate",
+    "existingStatusAndScope": "NOT TESTED >=90%; relevant methods PASS",
+    "remainingAcceptance": "Coverage run not requested/retried after failures",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P5-01\u201302 generator/loader repeatability",
+    "existingStatusAndScope": "NOT TESTED current; historical exceptions retained",
+    "remainingAcceptance": "Do not regenerate or reload missing seed assets",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P5-03\u201307 volume/integrity/ledger/BAD/legacy",
+    "existingStatusAndScope": "BLOCKED complete evidence; accepted exceptions retained",
+    "remainingAcceptance": "Canonical files, exact storage and historical provenance required",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P5-08 release DQ",
+    "existingStatusAndScope": "BLOCKED missing CSV; eight independent probes PASS",
+    "remainingAcceptance": "Full strict gate remains unmet",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P5-09\u201316 findings/reports/dashboards/report types",
+    "existingStatusAndScope": "NOT TESTED actual readers/current parity",
+    "remainingAcceptance": "Time-dependent counts must not be forced to original fixture targets",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P5-17\u201319 reset/snapshot/burst",
+    "existingStatusAndScope": "NOT TESTED current; destructive rehearsals BLOCKED",
+    "remainingAcceptance": "Separate exact-record destructive authorization; never run here",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P5-20 data-plan status",
+    "existingStatusAndScope": "PASS historical acceptance documentation read",
+    "remainingAcceptance": "Does not certify current counts or exact storage",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P6-01 capacity",
+    "existingStatusAndScope": "PASS automated 15",
+    "remainingAcceptance": "Multi-session contention/live capacity UI NOT TESTED",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P6-02 intake Case",
+    "existingStatusAndScope": "PASS automated 2; B existing link PASS current inventory/owner",
+    "remainingAcceptance": "No new booking required",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P6-03 escalation",
+    "existingStatusAndScope": "PASS automated 7; live native timer NOT TESTED",
+    "remainingAcceptance": "Four-hour event/notification/history evidence pending",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P6-04\u201305 Case/Vehicle history",
+    "existingStatusAndScope": "PASS automated 2/3; owner portal history PASS",
+    "remainingAcceptance": "Internal placement/mileage rendering NOT TESTED",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P6-06\u201308 accrual/tier/redemption/expiry",
+    "existingStatusAndScope": "PASS automated; live processing BLOCKED by inactive program/operational approval",
+    "remainingAcceptance": "Preserve historical balances; no jobs/activation",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P6-09 service/loyalty dashboards",
+    "existingStatusAndScope": "BLOCKED reporting-access test fixtures; browser NOT TESTED",
+    "remainingAcceptance": "D03 lock error is not proof of report access denial",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P6-10 loyalty seam",
+    "existingStatusAndScope": "NOT TESTED current document acceptance; historical delivered",
+    "remainingAcceptance": "Inactive/custom engine and provenance limits retained",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P6-11 repeat-purchase signal",
+    "existingStatusAndScope": "PASS automated 1; current report UI NOT TESTED",
+    "remainingAcceptance": "Completed service plus explicit buyer/open Opportunity, not inferred chronology",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P6-12 consent/nurture",
+    "existingStatusAndScope": "PASS automated consent 5/audience 3; live positive flow NOT TESTED",
+    "remainingAcceptance": "Exact tuple, opt-out/deny precedence; no real sender/journeys",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P6-13 nurture seam",
+    "existingStatusAndScope": "NOT TESTED current document acceptance; historical delivered",
+    "remainingAcceptance": "No licensed Marketing Cloud claim",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P6-14 SLA/milestones",
+    "existingStatusAndScope": "PASS automated 4; live enrollment/clocks BLOCKED",
+    "remainingAcceptance": "4/48 business hours, not elapsed hours; activation approval needed",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P6-15 Knowledge",
+    "existingStatusAndScope": "BLOCKED published/search/Case use; ten Drafts PASS inventory",
+    "remainingAcceptance": "Do not publish/attach or replay import",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P6-16 dual-role consoles",
+    "existingStatusAndScope": "NOT TESTED; actual operational identities BLOCKED",
+    "remainingAcceptance": "Correct app access and navigation as actual persona",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P6-17 tests/coverage",
+    "existingStatusAndScope": "BLOCKED complete gate; reporting test setup FAIL",
+    "remainingAcceptance": "Historical 181/181 and 34/34 remain historical",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P7-01 gallery",
+    "existingStatusAndScope": "PASS backend 5/state mocks; browser NOT TESTED",
+    "remainingAcceptance": "Photos/filtering/permission errors; reservation write separately gated",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P7-02 calculator widget",
+    "existingStatusAndScope": "PASS automated 2/state mocks; placement NOT TESTED",
+    "remainingAcceptance": "Correct payment/equity; existing services reused",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P7-03 VIN transport",
+    "existingStatusAndScope": "PASS mocked decoder 2; live transport BLOCKED",
+    "remainingAcceptance": "Endpoint/credential/principal acceptance, no real decoder claim",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P7-04 API contract",
+    "existingStatusAndScope": "NOT TESTED current acceptance; historical delivered",
+    "remainingAcceptance": "Contract/error/auth/no-write seams stay explicit",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P7-05 reservation events",
+    "existingStatusAndScope": "PASS automated 2; multi-session UI NOT TESTED",
+    "remainingAcceptance": "Delivery/refresh/reconnect acceptance needs controlled later write",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P7-06 CDC/Pub-Sub seam",
+    "existingStatusAndScope": "NOT TESTED current acceptance; documentation only",
+    "remainingAcceptance": "No external subscriber/CDC guarantee",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P7-07 handlers/bulk/bypass",
+    "existingStatusAndScope": "PASS architecture methods 8; full regression FAIL elsewhere",
+    "remainingAcceptance": "Do not alter established trigger structure",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P7-08 reconciliation",
+    "existingStatusAndScope": "PASS automated 4; live execution NOT TESTED",
+    "remainingAcceptance": "No live enqueue, repair or schedule",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P7-09\u201310 governance/debt",
+    "existingStatusAndScope": "PASS historical documents reviewed",
+    "remainingAcceptance": "Existing exceptions remain in this register by reference",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P7-11 permission audit",
+    "existingStatusAndScope": "NOT TESTED actual report/browser",
+    "remainingAcceptance": "No unused-permission or revocation inference",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P7-12 territories",
+    "existingStatusAndScope": "BLOCKED operational assignment/activation; Planning model PASS inventory",
+    "remainingAcceptance": "No identity/association/activation changes",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P7-13\u201314 strategy/seams",
+    "existingStatusAndScope": "NOT TESTED current document acceptance; historical delivered",
+    "remainingAcceptance": "No architecture redesign or new licensed products",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P7-15 Agentforce/prompt",
+    "existingStatusAndScope": "BLOCKED per retained capability/activation gates",
+    "remainingAcceptance": "Draft prompt is not a running agent; no activation",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P7-16 Data Cloud",
+    "existingStatusAndScope": "BLOCKED per retained feature/space/ingestion gates",
+    "remainingAcceptance": "No enabling/ingestion/identity experiment",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P7-17 regression/release",
+    "existingStatusAndScope": "FAIL Apex; BLOCKED strict DQ/clean release",
+    "remainingAcceptance": "No dry-run/deployment wrapper or Git actions executed",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P7-18 portal capability",
+    "existingStatusAndScope": "PASS owner login/live inventory (supersedes old disabled-site status)",
+    "remainingAcceptance": "Detailed acceptance governed by P8 rows",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P7-19 Automotive mapping",
+    "existingStatusAndScope": "NOT TESTED current acceptance; documentation-only scope",
+    "remainingAcceptance": "No Automotive Cloud build",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P7-20\u201321 README/demo pack",
+    "existingStatusAndScope": "NOT TESTED full five-persona live walkthrough",
+    "remainingAcceptance": "No clean-release or demo sign-off claim",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P7-22 photos",
+    "existingStatusAndScope": "NOT TESTED browser/visual; historical resource validation retained",
+    "remainingAcceptance": "Appropriate licensed stock likeness, not exact OEM identity",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P7-23 photo header",
+    "existingStatusAndScope": "PASS six state mocks; placement/mobile/browser NOT TESTED",
+    "remainingAcceptance": "With/without-photo fallback and label review",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P8-01 site",
+    "existingStatusAndScope": "PASS current Live inventory and owner authentication",
+    "remainingAcceptance": "No reactivation/publication needed",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P8-02 access/isolation",
+    "existingStatusAndScope": "BLOCKED complete certification by new negative-test failures",
+    "remainingAcceptance": "Prior sampled A/B denials retained as historical, not withdrawn or treated as exhaustive",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P8-03 controller tests",
+    "existingStatusAndScope": "FAIL current full suite; comments/loyalty known defects",
+    "remainingAcceptance": "Exact failures below; no speculative permissions",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P8-04 dashboard",
+    "existingStatusAndScope": "PASS owner-confirmed; state mocks PASS",
+    "remainingAcceptance": "New desktop/mobile visual review NOT TESTED",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P8-05 vehicles",
+    "existingStatusAndScope": "PASS owner-confirmed; broker tests partly FAIL; UI review NOT TESTED",
+    "remainingAcceptance": "Labels/photos/fallback and ownership negative cases still gates",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P8-06 service history",
+    "existingStatusAndScope": "PASS owner-confirmed and current existing Visit/Case inventory",
+    "remainingAcceptance": "Requested October 29 Visit/Case 00001102; do not reopen repair",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P8-07 booking",
+    "existingStatusAndScope": "PASS owner-confirmed positive workflow; FAIL current negative automated assertion",
+    "remainingAcceptance": "Both results retained; no further booking submissions",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P8-08 Case tracking/status",
+    "existingStatusAndScope": "PASS owner-confirmed My Cases",
+    "remainingAcceptance": "Keep Case native writes denied; separate native creation is intentionally unavailable",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P8-08 published comments",
+    "existingStatusAndScope": "FAIL owner observation; backend cause BLOCKED",
+    "remainingAcceptance": "Capture existing failed action response; no duplicate retries",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P8-09 loyalty",
+    "existingStatusAndScope": "FAIL confirmed transaction Read/FLS defect; fix deferred",
+    "remainingAcceptance": "Legitimate no-membership empty state; no fabricated records",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P8-10 responsive/branding/accessibility",
+    "existingStatusAndScope": "NOT TESTED actual browser; static/state mocks PASS",
+    "remainingAcceptance": "Mobile/desktop, keyboard/focus, labels/photos/contrast",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  },
+  {
+    "feature": "P8-11 demo/UAT/seam",
+    "existingStatusAndScope": "NOT TESTED full walkthrough/sign-off",
+    "remainingAcceptance": "This checklist is preparation, not acceptance",
+    "automation": "Reuse scoped receipts; no automatic acceptance upgrade",
+    "browserAssisted": "Read-only actual-persona inspection where applicable",
+    "ownerOnly": "Mutations, credentials, activation and final acceptance where applicable"
+  }
+]

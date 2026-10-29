@@ -1,0 +1,14 @@
+{
+  "PricebookEntry": {
+    "name": "HardDeletePermissionError",
+    "message": "You must have the \"Bulk API Hard Delete\" system permission to use the --hard-delete flag. This permission is disabled by default and can be enabled only by a system administrator.",
+    "exitCode": 1,
+    "context": "Delete",
+    "stack": "HardDeletePermissionError: You must have the \"Bulk API Hard Delete\" system permission to use the --hard-delete flag. This permission is disabled by default and can be enabled only by a system administrator.\n    at SfCommandError.from (file:///Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/node_modules/@salesforce/sf-plugins-core/lib/SfCommandError.js:48:16)\n    at Delete.catch (file:///Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/node_modules/@salesforce/sf-plugins-core/lib/sfCommand.js:333:47)\n    at Delete._run (/Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/node_modules/@oclif/core/lib/command.js:187:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async Config.runCommand (/Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/node_modules/@oclif/core/lib/config/config.js:392:25)\n    at async run (/Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/node_modules/@oclif/core/lib/main.js:95:16)\n    at async file:///Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/bin/run.js:15:1",
+    "cause": "undefined",
+    "warnings": [],
+    "code": "HardDeletePermissionError",
+    "status": 1,
+    "commandName": "Delete"
+  }
+}

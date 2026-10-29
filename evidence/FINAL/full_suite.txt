@@ -1,0 +1,256 @@
+Test result files written to evidence/FINAL/full_suite
+=== Test Results
+TEST NAME                                                                                          OUTCOME  MESSAGE  RUNTIME (MS)
+─────────────────────────────────────────────────────────────────────────────────────────────────  ───────  ───────  ────────────
+DeliveryCompletionGuardTest.checklistCompleteFormula_isTrueWhenAllFour                             Pass              627         
+DeliveryCompletionGuardTest.completedWithAllFourChecklist_succeeds                                 Pass              761         
+DeliveryCompletionGuardTest.completedWithIncompleteChecklist_isBlockedByValidationRule             Pass              379         
+DeliveryCompletionGuardTest.transitioningToCompletedWithoutChecklist_isBlockedByValidationRule     Pass              437         
+QuoteSummaryControllerTest.getSummary_readsGrandTotalField                                         Pass              2266        
+QuoteSummaryControllerTest.getSummary_returnsQuoteLinesAndStamps                                   Pass              2902        
+QuoteSummaryControllerTest.getSummary_separatesAdjustedFromStandard                                Pass              1621        
+OpportunityStageStampTest.insertStampsChangeTime                                                   Pass              333         
+OpportunityStageStampTest.nonStageEditLeavesStampAlone                                             Pass              288         
+OpportunityStageStampTest.stageChangeUpdatesPreviousAndTimestamp                                   Pass              260         
+FinancingStatusServiceTest.allValidSequences_completeLifecycle                                     Pass              1040        
+FinancingStatusServiceTest.blankStatusOnInsert_defaultsToDraft                                     Pass              463         
+FinancingStatusServiceTest.bulkInsert_appliesMatrixToEachRecord                                    Pass              1264        
+FinancingStatusServiceTest.bulkUpdate_succeedsOrFailsAsAWhole                                      Pass              649         
+FinancingStatusServiceTest.declinedFollowedByCancel_landsCancelled                                 Pass              462         
+FinancingStatusServiceTest.draftCancelWithoutTerm_worksThroughBothRules                            Pass              368         
+FinancingStatusServiceTest.forbiddenTransitions_coverEachCell                                      Pass              8685        
+FinancingStatusServiceTest.fundedAndCancelled_areTerminal                                          Pass              955         
+FinancingStatusServiceTest.fundedInsertIsBlocked_atAnyPath                                         Pass              248         
+FinancingStatusServiceTest.fundedPath_satisfiesFundedRequiresApprovedVR                            Pass              489         
+FinancingStatusServiceTest.initialStatusDraft_stampsNullPrevious                                   Pass              317         
+FinancingStatusServiceTest.initialStatusNonDraft_blockedExceptDraft                                Pass              1208        
+FinancingStatusServiceTest.nonDraftWithoutTerm_isStillBlocked                                      Pass              20189       
+FinancingStatusServiceTest.previousStatusSpoofing_isOverwrittenOnInsert                            Pass              438         
+FinancingStatusServiceTest.previousStatusSpoofing_isOverwrittenOnUpdate                            Pass              406         
+FinancingStatusServiceTest.sameStatusUpdate_cannotSpoofPreviousStatus                              Pass              429         
+FinancingStatusServiceTest.sameStatusUpdate_preservesPreviousStatus                                Pass              458         
+FinancingStatusServiceTest.skippingIntermediateStatuses_isBlocked                                  Pass              369         
+TradeIn_Calc_EquityTest.equityNegative                                                             Pass              49          
+TradeIn_Calc_EquityTest.equityNulls                                                                Pass              18          
+TradeIn_Calc_EquityTest.equityPositive                                                             Pass              17          
+TradeIn_Calc_EquityTest.equityZeroPayoff                                                           Pass              11          
+LeadRoutingHandlerTest.firstLeadGetsRepSecondGetsQueue                                             Pass              1122        
+LeadRoutingHandlerTest.fsaPrefixClassifier                                                         Pass              4           
+LeadRoutingHandlerTest.lanesAreRooftopScoped                                                       Pass              518         
+LeadRoutingHandlerTest.leadWithNoRooftopIsLeftAlone                                                Pass              81          
+LeadRoutingHandlerTest.unmatchedFsaIsMarkedUnrouted                                                Pass              171         
+LeadRoutingHandlerTest.unmatchedThenMatchedInSameRooftopLeavesMatchedAtR1                          Pass              264         
+QuoteTriggerEnforcementTest.bulk_mixed_200                                                         Pass              27          
+QuoteTriggerEnforcementTest.bypass_enabled_allows_all                                              Pass              379         
+QuoteTriggerEnforcementTest.noTradeInRequired_allowed                                              Pass              121         
+QuoteTriggerEnforcementTest.tradeInRequired_accepted_allowed                                       Pass              139         
+QuoteTriggerEnforcementTest.tradeInRequired_appraisedOnly_blocked                                  Pass              272         
+QuoteTriggerEnforcementTest.tradeInRequired_noChild_blocked                                        Pass              138         
+QuoteBuilderControllerTest.createQuote_buyerMismatch_noLoyalty                                     Pass              1193        
+QuoteBuilderControllerTest.createQuote_crossCategoryNoVehicle_keepsListAndStoresBothLines          Pass              701         
+QuoteBuilderControllerTest.createQuote_emptyLines_throws                                           Pass              149         
+QuoteBuilderControllerTest.createQuote_happyPath_writesEngineAndStamps                             Pass              810         
+QuoteBuilderControllerTest.createQuote_noRules_keepsListAndNotRequired                             Pass              552         
+QuoteBuilderControllerTest.createQuote_savesUnderSalesPersonaAccess                                Pass              1125        
+QuoteBuilderControllerTest.getBuyerContacts_loadsUnderSalesPersonaAccess                           Pass              714         
+QuoteBuilderControllerTest.getBuyerContacts_returnsAccountContacts                                 Pass              344         
+QuoteBuilderControllerTest.getCatalog_loadsUnderSalesPersonaAccess                                 Pass              249         
+QuoteBuilderControllerTest.getCatalog_returnsOnlyRequestedCategory                                 Pass              248         
+QuoteBuilderControllerTest.submitForApproval_above10ResolvesVpApprover                             Pass              912         
+QuoteBuilderControllerTest.submitForApproval_belowThreshold_rejectedWithoutApprovalCall            Pass              432         
+DeliveryCloseServiceTest.buyerAddedAfterCompletion_enrolsOnLateAssignment                          Pass              1464        
+DeliveryCloseServiceTest.buyerReplacement_doesNotAutoEnrolNewBuyer                                 Pass              1373        
+DeliveryCloseServiceTest.completedDeliveryWithBuyerAtCompletion_enrols                             Pass              2058        
+DeliveryCloseServiceTest.completingDelivery_enrolsBuyerInLoyalty                                   Pass              1155        
+DeliveryCloseServiceTest.completingDelivery_incrementsContactLifetimeVehicles                      Pass              1159        
+DeliveryCloseServiceTest.completingDelivery_isIdempotent                                           Pass              1447        
+DeliveryCloseServiceTest.completingDelivery_setsOppClosedWonAndDeliveryCompletedFlag               Pass              1188        
+DeliveryCloseServiceTest.nonCompletedUpdate_doesNotCloseOpp                                        Pass              805         
+DeliveryCloseServiceTest.repeatedUpdatesAfterCompletion_doNotDuplicateEnrolment                    Pass              1377        
+DiscountApprovalTest.above10_skipsManager_routesToVP_andApproves                                   Pass              2364        
+DiscountApprovalTest.above5_routesToRooftopManager_andApproves                                     Pass              547         
+DiscountApprovalTest.livePersona_controllerDerivesVpFor12                                          Pass              450         
+DiscountApprovalTest.livePersona_rep12_vpApprovesWithWriteBack                                     Pass              588         
+DiscountApprovalTest.managerSubmit_above10_doesNotSelfApprove                                      Pass              349         
+DiscountApprovalTest.rejection_captured_onOpportunity                                              Pass              531         
+LeadConvertGuardTest.seedTagClearedOnConvertedRecords                                              Pass              1795        
+LeadConvertGuardTest.unselectedAccountIsBlocked                                                    Pass              733         
+RateTableServiceTest.allThirtyCombinations_resolveExactRates                                       Pass              212         
+RateTableServiceTest.inactiveRow_isIgnored                                                         Pass              17          
+RateTableServiceTest.ltvLimit_enforcedAtBoundary                                                   Pass              28          
+RateTableServiceTest.manualException_validatesRateAndReason                                        Pass              11          
+RateTableServiceTest.missingCombination_throws                                                     Pass              10          
+QuotePricingServiceTest.age60_boundary_applies60only                                               Pass              1131        
+QuotePricingServiceTest.age90_boundary_applies90only                                               Pass              677         
+QuotePricingServiceTest.ageBelow60_noDiscount                                                      Pass              737         
+QuotePricingServiceTest.basisNotIdentified_reportsBlocker                                          Pass              753         
+QuotePricingServiceTest.bulk200Lines_stillWorks                                                    Pass              1962        
+QuotePricingServiceTest.fullStack_appliesAllWinners_inApprovedOrder                                Pass              1334        
+QuotePricingServiceTest.inactiveRule_skipped                                                       Pass              1678        
+QuotePricingServiceTest.loyalty_bronze_applies                                                     Pass              863         
+QuotePricingServiceTest.loyalty_buyerMismatchedAccount_noDiscount                                  Pass              709         
+QuotePricingServiceTest.loyalty_noBuyer_noDiscount                                                 Pass              738         
+QuotePricingServiceTest.malformedNegativePercent_surfaces                                          Pass              732         
+QuotePricingServiceTest.malformedNullPercent_surfaces                                              Pass              839         
+QuotePricingServiceTest.malformedNullValue_surfaces                                                Pass              766         
+QuotePricingServiceTest.modelNameMissing_noBlocker_noVehicleRules                                  Pass              702         
+QuotePricingServiceTest.noRulesQualify_returnsUnchanged                                            Pass              734         
+QuotePricingServiceTest.nonNumericValue_throws                                                     Pass              777         
+QuotePricingServiceTest.nullQuote_throws                                                           Pass              81          
+QuotePricingServiceTest.premiumOnly_negativeNetDocumented                                          Pass              747         
+QuotePricingServiceTest.rounding2dp_applied                                                        Pass              901         
+QuotePricingServiceTest.trimMismatch_noPremium_noOtherRules                                        Pass              885         
+QuotePricingServiceTest.volume12_picksOver10NotFleet                                               Pass              720         
+QuotePricingServiceTest.volume4_noDiscount                                                         Pass              725         
+QuotePricingServiceTest.zeroPricedLines_zeroFloor                                                  Pass              747         
+LoyaltyEnrolmentServiceTest.enrolOnDelivery_createsMemberWithDefaults                              Pass              853         
+LoyaltyEnrolmentServiceTest.enrolOnDelivery_isIdempotent_secondCallReturnsExisting                 Pass              556         
+LoyaltyEnrolmentServiceTest.enrolOnDelivery_nullBuyer_returnsNullAndDoesNotInsert                  Pass              29          
+LoyaltyEnrolmentServiceTest.generateMemberNumber_producesNGPrefix                                  Pass              4           
+P2BulkTest.contactsAndAccountsBulk                                                                 Pass              1090        
+P2BulkTest.twoHundredVehiclesInsertAndValidate                                                     Pass              2751        
+PaymentCalculatorServiceTest.highRate_matchesAmortizationSchedule                                  Pass              57          
+PaymentCalculatorServiceTest.invalidInputs_throwInsteadOfZeroPayment                               Pass              15          
+PaymentCalculatorServiceTest.midRate_matchesAmortizationSchedule                                   Pass              12          
+PaymentCalculatorServiceTest.standardRate_matchesAmortizationSchedule                              Pass              12          
+PaymentCalculatorServiceTest.zeroPercent_dividesPrincipalEvenly                                    Pass              10          
+DebugTest4.testReproduceGetBuyerContacts                                                           Pass              884         
+QuoteTradeInGuardTest.guard_bypassEnabled_allowed                                                  Pass              209         
+QuoteTradeInGuardTest.guard_false_appraisedChild_allowed                                           Pass              89          
+QuoteTradeInGuardTest.guard_false_noChild_allowed                                                  Pass              47          
+QuoteTradeInGuardTest.guard_true_acceptedPlusAppraised_allowed                                     Pass              111         
+QuoteTradeInGuardTest.guard_true_accepted_allowed                                                  Pass              83          
+QuoteTradeInGuardTest.guard_true_appraisedOnly_blocked                                             Pass              186         
+QuoteTradeInGuardTest.guard_true_noChild_blocked                                                   Pass              114         
+DebugTest2.testOpportunityQueries                                                                  Pass              411         
+FinancingApprovalTest.approve_writesExceptionApprovedAndDecisionDate                               Pass              1479        
+FinancingApprovalTest.reject_writesExceptionApprovedFalse                                          Pass              1036        
+FinancingApprovalTest.requiresApproval_manualException_isTrue                                      Pass              401         
+FinancingApprovalTest.requiresApproval_rateTablePrimeTier_isFalse                                  Pass              282         
+FinancingApprovalTest.requiresApproval_subPrime_isTrue                                             Pass              419         
+FinancingApprovalTest.submit_createsPendingProcessInstanceWithQueueActor                           Pass              902         
+FinancingApprovalTest.submit_isIdempotent_secondCallReportsAlreadySubmitted                        Pass              861         
+FinancingApprovalTest.submit_rateTablePrime_rejectsWithNoSubmission                                Pass              597         
+LeadRoundRobinTest.cyclesOwnersWithinSamePrefix                                                    Pass              19          
+VinValidatorTest.invalidCharFails                                                                  Pass              37          
+VinValidatorTest.invalidCheckDigitFails                                                            Pass              15          
+VinValidatorTest.nullAndShortFail                                                                  Pass              10          
+VinValidatorTest.triggerSetsIsVinValid                                                             Pass              252         
+VinValidatorTest.validVinPasses                                                                    Pass              10          
+TestDriveFollowUpTest.insertCreatesTask                                                            Pass              627         
+TestDriveFollowUpTest.statusChangeCreatesAdditionalTask                                            Pass              310         
+TestDriveBookingGuardTest.adjacentDriveIsAllowed                                                   Pass              1410        
+TestDriveBookingGuardTest.cancelledDriveDoesNotBlock                                               Pass              484         
+TestDriveBookingGuardTest.overlappingDriveIsBlocked                                                Pass              439         
+VehicleReservationGuardTest.reservingSetsStatusAndTimestamp                                        Pass              535         
+VehicleReservationGuardTest.secondReservationIsBlocked                                             Pass              449         
+LeadEnrichRooftopServiceTest.blankPostalCodeIsUntouched                                            Pass              19          
+LeadEnrichRooftopServiceTest.bulkScopeResolvedPerLead                                              Pass              82          
+LeadEnrichRooftopServiceTest.bypassOffEnriches                                                     Pass              86          
+LeadEnrichRooftopServiceTest.bypassSettingSkipsEnrichment                                          Pass              51          
+LeadEnrichRooftopServiceTest.matchedRouteWithMissingRooftopSetsUnrouted                            Pass              42          
+LeadEnrichRooftopServiceTest.prefixL4HRoutesToMappedRooftop                                        Pass              35          
+LeadEnrichRooftopServiceTest.prefixMRoutesToMappedRooftop                                          Pass              32          
+LeadEnrichRooftopServiceTest.unmatchedPrefixSetsUnroutedWithoutOwner                               Pass              17          
+DebugTest.testAccountIdAccess                                                                      Pass              618         
+DebugTest3.testComplexOpportunityQuery                                                             Pass              486         
+FinancingFlsEnforcementTest.salesRep_cannotReadFinancing_AnnualRate_viaUserModeSoql                Pass              690         
+FinancingFlsEnforcementTest.salesRep_cannotReadFinancing_FinanceExceptionApproved_viaUserModeSoql  Pass              511         
+DebugTest5.testReproduceFailure                                                                    Pass              1080        
+FinanceApplicationControllerTest.applicantRequired_whenNoApplicantAndQuoteBuyerNull_isRejected     Pass              641         
+FinanceApplicationControllerTest.crossOpportunityQuote_isRejected                                  Pass              624         
+FinanceApplicationControllerTest.downPaymentExceedingAdjusted_isRejected                           Pass              538         
+FinanceApplicationControllerTest.draftCreate_derivesAmountFromQuoteMinusDownMinusTrade             Pass              808         
+FinanceApplicationControllerTest.draftUpdate_preservesRecord                                       Pass              889         
+FinanceApplicationControllerTest.existingDraftPreventsNewDraft                                     Pass              864         
+FinanceApplicationControllerTest.manualExceptionWithoutReason_isRejected                           Pass              556         
+FinanceApplicationControllerTest.manualException_stampsReasonAndRate                               Pass              719         
+FinanceApplicationControllerTest.multipleAcceptedTradeIns_isAmbiguous                              Pass              660         
+FinanceApplicationControllerTest.multipleDrafts_surfacesAmbiguityAndBlocksNew                      Pass              980         
+FinanceApplicationControllerTest.negativePrincipal_isRejected                                      Pass              582         
+FinanceApplicationControllerTest.negativeTradeEquity_increasesFinancing                            Pass              711         
+FinanceApplicationControllerTest.nonDraftUpdate_isRejected                                         Pass              949         
+FinanceApplicationControllerTest.preview_newApplication_returnsSelectedQuoteFigures                Pass              546         
+FinanceApplicationControllerTest.preview_signedTradeEquity_includedInFinancing                     Pass              603         
+FinanceApplicationControllerTest.zeroAcceptedTradeIns_zerosEquity                                  Pass              665         
+
+
+=== Apex Code Coverage by Class
+CLASSES                       PERCENT  UNCOVERED LINES      
+────────────────────────────  ───────  ─────────────────────
+LeadRoundRobinRequest         0%                            
+QuoteTradeInGuard             83%      4,16,38,39,40        
+VinValidator                  100%                          
+OpportunityStageStamp         92%      4                    
+QuoteSummaryController        100%                          
+LeadRoutingHandler            76%      37,38,39,41,42,...   
+LoyaltyEnrolmentService       100%                          
+PaymentCalculatorService      100%                          
+FinancingApprovalService      84%      21,22,32,33,56,...   
+TestDriveFollowUp             70%      4,16,23,29,36,...    
+LeadRoundRobin                100%                          
+DeliveryCloseService          96%      7,19,67              
+RateTableService              91%      34,35,39,40          
+TestDriveCounters             88%      4,13,22              
+LeadRoundRobinResponse        0%                            
+QuoteBuilderController        83%      71,87,102,129,141,...
+VehicleReservationGuard       87%      4,13                 
+QuotePricingService           92%      86,89,92,95,127,...  
+TradeIn_Calc_Equity           50%      8,9,12,15            
+FinancingStatusService        85%      18,40,41,52,53,...   
+VehicleCounters               18%      6,7,8,10,11,...      
+FinanceApplicationController  84%      72,91,115,120,121,...
+LeadEnrichRooftopService      79%      12,31,46,64,65,...   
+TestDriveBookingGuard         82%      6,19,43,44,45,...    
+VehicleTrigger                83%      5                    
+DeliveryTrigger               80%      4                    
+OpportunityTrigger            100%                          
+TestDriveTrigger              75%      4                    
+VehicleCounterTrigger         86%      4,19                 
+LeadAfterConvertSeedBlock     96%      4                    
+FinancingTrigger              75%      4                    
+LeadRoutingTrigger            80%      4                    
+TestDriveFollowupTrigger      88%      4                    
+QuoteTrigger                  100%                          
+LeadBeforeConvertGuard        70%      4,9,13               
+
+
+=== Test Setup Time by Test Class for Run 707aj00001MTeI1
+TEST SETUP METHOD NAME                  SETUP TIME
+──────────────────────────────────────  ──────────
+DeliveryCompletionGuardTest.setup       1019      
+QuoteSummaryControllerTest.setup        166       
+QuoteTriggerEnforcementTest.setup       31015     
+QuoteBuilderControllerTest.setup        36479     
+DeliveryCloseServiceTest.setup          36485     
+DiscountApprovalTest.setup              37355     
+QuotePricingServiceTest.setup           115       
+LoyaltyEnrolmentServiceTest.setup       43382     
+DebugTest4.setup                        35027     
+QuoteTradeInGuardTest.setup             45493     
+DebugTest2.setup                        39193     
+FinancingApprovalTest.setup             25303     
+LeadEnrichRooftopServiceTest.setup      184       
+DebugTest.setup                         1153      
+DebugTest3.setup                        911       
+FinancingFlsEnforcementTest.setup       1451      
+DebugTest5.setup                        1336      
+FinanceApplicationControllerTest.setup  1235      
+
+
+=== Test Summary
+NAME                 VALUE                      
+───────────────────  ───────────────────────────
+Outcome              Passed                     
+Tests Ran            189                        
+Pass Rate            100%                       
+Fail Rate            0%                         
+Skip Rate            0%                         
+Test Run Id          707aj00001MTeI1            
+Test Setup Time      337302 ms                  
+Test Execution Time  131851 ms                  
+Test Total Time      469153 ms                  
+Org Id               00Daj00001Ae3iWEAR         
+Username             arjun.ngdemo@northgate.demo
+Org Wide Coverage    85%                        
+

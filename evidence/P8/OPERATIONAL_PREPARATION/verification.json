@@ -1,0 +1,73 @@
+{
+  "claim": "CONFIRMED",
+  "orgId": "00Daj00001Ae3iWEAR",
+  "network": [
+    {
+      "Id": "0DBaj000006bf3xGAA",
+      "Name": "Northgate Owner Portal",
+      "UrlPathPrefix": "owners",
+      "Status": "UnderConstruction",
+      "FirstActivationDate": null,
+      "SelfRegProfileId": null,
+      "OptionsSelfRegistrationEnabled": false,
+      "OptionsAllowInternalUserLogin": false,
+      "OptionsGuestMemberVisibility": false,
+      "OptionsInvitationsEnabled": false
+    }
+  ],
+  "guest": {
+    "profilePermissionSetId": "0PSaj00000h7bZyGAI",
+    "objectGrants": 0,
+    "apexClassGrants": 0,
+    "enabledSystemPermissions": [],
+    "assignments": [
+      {
+        "Id": "0Paaj000017y1vyCAA",
+        "PermissionSetId": "0PSaj00000h7bZyGAI",
+        "PermissionSetGroupId": null
+      }
+    ]
+  },
+  "hardenedProfile": {
+    "profilePermissionSetId": "0PSaj00000h8ikhGAA",
+    "denials": {
+      "objects": 33,
+      "fields": 483,
+      "system": 23
+    },
+    "violations": {
+      "objects": [],
+      "fields": [],
+      "system": []
+    },
+    "enabledSystemPermissions": [
+      "PermissionsEnableNotifications"
+    ],
+    "caseGrantRow": null,
+    "users": 0
+  },
+  "liveApexMatchesLocal": {
+    "OwnerPortalBatchBController": true,
+    "OwnerPortalFoundationController": true
+  },
+  "localBatchCStillMatchesValidatedHashes": true,
+  "lwcCount": 6,
+  "configurationMatchesSavedAfterSnapshot": {
+    "navigationMenus/SFDC_Default_Navigation_Northgate_Owner_Portal.navigationMenu-meta.xml": true,
+    "sites/Northgate_Owner_Portal.site-meta.xml": true,
+    "networks/Northgate Owner Portal.network-meta.xml": true
+  },
+  "fixtureDeliveryIds": [],
+  "fixtureRows": {
+    "visits": 0,
+    "cases": 0,
+    "loyalty": 0
+  },
+  "liveBuilderVisualInspection": "BLOCKED: no Browser MCP connection",
+  "anonymousHttpCheck": "BLOCKED: CERTIFICATE_VERIFY_FAILED; no TLS bypass",
+  "actualPersonaUat": "NOT RUN",
+  "testsRerun": false,
+  "checkOnlyNeeded": false,
+  "forceAppChanges": false,
+  "siteBinaryInvestigationReopened": false
+}

@@ -1,0 +1,14 @@
+{
+  "checks": {
+    "existing_permissions_exactly_preserved": "CONFIRMED",
+    "only_added_grant_is_subject_read_only": "CONFIRMED",
+    "manifest_byte_unchanged": "CONFIRMED",
+    "converted_permission_matches_source": "CONFIRMED",
+    "converted_manifest_exactly_one_permission_set": "CONFIRMED",
+    "case_native_create_edit_delete_remain_false": "CONFIRMED"
+  },
+  "salesforce_validation": "NOT RUN",
+  "deployment": "NOT RUN",
+  "authenticated_isolation_retest": "NOT RUN",
+  "scope": "One additional field Read only; no sharing or Contact-filter change"
+}

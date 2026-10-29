@@ -1,0 +1,43 @@
+{
+  "claim": "CONFIRMED",
+  "validationId": "0Afaj00000pNyKhCAK",
+  "checkOnly": true,
+  "status": "Succeeded",
+  "components": 24,
+  "componentErrors": 0,
+  "testsPassed": 11,
+  "testErrors": 0,
+  "coverage": [
+    {
+      "name": "ContactVehicleRelationshipTrigger",
+      "covered": 5,
+      "locations": 5,
+      "percent": 100.0
+    },
+    {
+      "name": "OwnerPortalShareReconciler",
+      "covered": 57,
+      "locations": 57,
+      "percent": 100.0
+    },
+    {
+      "name": "OwnerPortalOwnershipGuard",
+      "covered": 100,
+      "locations": 108,
+      "percent": 92.593
+    },
+    {
+      "name": "OwnerPortalOwnershipService",
+      "covered": 18,
+      "locations": 18,
+      "percent": 100.0
+    }
+  ],
+  "customerVehiclePermissionAdded": false,
+  "existingBatchCSourceUnchanged": true,
+  "p805Complete": false,
+  "p807Complete": false,
+  "deploymentOccurred": false,
+  "jobsActivated": 0,
+  "sourceFiles": 31
+}

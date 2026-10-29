@@ -1,0 +1,219 @@
+{
+  "deploymentId": "0Afaj00000pIP10CAG",
+  "objectDenials": {
+    "intended": 33,
+    "effective": 33,
+    "violations": []
+  },
+  "fieldDenials": {
+    "intended": 483,
+    "effective": 483,
+    "violations": []
+  },
+  "systemDenials": {
+    "intended": 23,
+    "effective": 23,
+    "violations": []
+  },
+  "emailFlags": {
+    "PermissionsEmailAdministration": false,
+    "PermissionsEmailTemplateManagement": false,
+    "PermissionsEnableNotifications": true
+  },
+  "caseGrantRow": null,
+  "remainingObjectGrants": [
+    {
+      "SobjectType": "Account",
+      "PermissionsRead": true,
+      "PermissionsCreate": false,
+      "PermissionsEdit": false,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    },
+    {
+      "SobjectType": "Contact",
+      "PermissionsRead": true,
+      "PermissionsCreate": false,
+      "PermissionsEdit": false,
+      "PermissionsDelete": false,
+      "PermissionsViewAllRecords": false,
+      "PermissionsModifyAllRecords": false
+    }
+  ],
+  "preservation": {
+    "sharing_Vehicle__Share": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 0,
+      "rowsAfter": 0
+    },
+    "data_Case": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 76,
+      "rowsAfter": 76
+    },
+    "sharing_Loyalty_Member__Share": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 0,
+      "rowsAfter": 0
+    },
+    "sharing_Service_Visit__Share": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 148,
+      "rowsAfter": 148
+    },
+    "data_Delivery__c": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 13,
+      "rowsAfter": 13
+    },
+    "data_Financing__c": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 61,
+      "rowsAfter": 61
+    },
+    "data_Product2": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 60,
+      "rowsAfter": 60
+    },
+    "data_Vehicle__c": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 120,
+      "rowsAfter": 120
+    },
+    "users": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 11,
+      "rowsAfter": 11
+    },
+    "sharing_ContactShare": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 232,
+      "rowsAfter": 232
+    },
+    "data_PricebookEntry": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 60,
+      "rowsAfter": 60
+    },
+    "data_Contact": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 231,
+      "rowsAfter": 231
+    },
+    "data_Test_Drive__c": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 74,
+      "rowsAfter": 74
+    },
+    "data_Loyalty_Member__c": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 72,
+      "rowsAfter": 72
+    },
+    "sharing_Delivery__Share": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 0,
+      "rowsAfter": 0
+    },
+    "data_Quote": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 65,
+      "rowsAfter": 65
+    },
+    "sharing_AccountShare": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 261,
+      "rowsAfter": 261
+    },
+    "data_Account": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 157,
+      "rowsAfter": 157
+    },
+    "data_Asset": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 0,
+      "rowsAfter": 0
+    },
+    "data_Loyalty_Transaction__c": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 110,
+      "rowsAfter": 110
+    },
+    "data_Service_Visit__c": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 148,
+      "rowsAfter": 148
+    },
+    "data_QuoteLineItem": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 85,
+      "rowsAfter": 85
+    },
+    "sharing_CaseShare": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 76,
+      "rowsAfter": 76
+    },
+    "data_Opportunity": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 105,
+      "rowsAfter": 105
+    },
+    "data_CaseComment": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 0,
+      "rowsAfter": 0
+    },
+    "profile_users": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 0,
+      "rowsAfter": 0
+    },
+    "assignments": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 32,
+      "rowsAfter": 32
+    },
+    "network": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 1,
+      "rowsAfter": 1
+    },
+    "network_groups": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 1,
+      "rowsAfter": 1
+    },
+    "network_members": {
+      "claim": "CONFIRMED",
+      "rowsBefore": 3,
+      "rowsAfter": 3
+    }
+  },
+  "liveSourceMatchesValidated": {
+    "classes/OwnerPortalBatchBController.cls": true,
+    "classes/OwnerPortalBatchBControllerTest.cls": true,
+    "lwc/ownerPortalLoyalty/ownerPortalLoyalty.html": true,
+    "lwc/ownerPortalLoyalty/ownerPortalLoyalty.js": true,
+    "lwc/ownerPortalAppointment/ownerPortalAppointment.html": true,
+    "lwc/ownerPortalAppointment/ownerPortalAppointment.js": true,
+    "lwc/ownerPortalVehicles/ownerPortalVehicles.js": true,
+    "lwc/ownerPortalVehicles/ownerPortalVehicles.html": true,
+    "lwc/ownerPortalHistory/ownerPortalHistory.html": true,
+    "lwc/ownerPortalHistory/ownerPortalHistory.js": true,
+    "lwc/ownerPortalHome/ownerPortalHome.html": true,
+    "lwc/ownerPortalHome/ownerPortalHome.js": true,
+    "lwc/ownerPortalCases/ownerPortalCases.js": true,
+    "lwc/ownerPortalCases/ownerPortalCases.html": true
+  },
+  "network": [
+    {
+      "Id": "0DBaj000006bf3xGAA",
+      "Status": "UnderConstruction",
+      "FirstActivationDate": null
+    }
+  ]
+}

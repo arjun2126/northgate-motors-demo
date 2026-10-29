@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>68.0</apiVersion>
+    <decisions>
+        <name>Slot_Available</name>
+        <label>Slot available?</label>
+        <locationX>176</locationX><locationY>440</locationY>
+        <defaultConnector><targetReference>Create_Booking</targetReference></defaultConnector>
+        <defaultConnectorLabel>Available</defaultConnectorLabel>
+        <rules>
+            <name>Overlap</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Existing_Booking.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue><booleanValue>false</booleanValue></rightValue>
+            </conditions>
+            <connector><targetReference>Conflict</targetReference></connector>
+            <label>Already booked</label>
+        </rules>
+    </decisions>
+    <description>Books a Test Drive in user context. Checks overlap before save; existing TestDriveBookingGuard remains the before-save protection.</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>Booking_End</name><dataType>DateTime</dataType>
+        <expression>{!Start_Time} + ({!Duration} / 1440)</expression>
+    </formulas>
+    <interviewLabel>Book Test Drive {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Book Test Drive</label>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Create_Booking</name><label>Create booking</label>
+        <locationX>176</locationX><locationY>560</locationY>
+        <connector><targetReference>Confirmation</targetReference></connector>
+        <faultConnector><targetReference>Save_Error</targetReference></faultConnector>
+        <inputAssignments><field>Contact__c</field><value><elementReference>Contact_Lookup.recordId</elementReference></value></inputAssignments>
+        <inputAssignments><field>Vehicle__c</field><value><elementReference>Vehicle_Lookup.recordId</elementReference></value></inputAssignments>
+        <inputAssignments><field>Scheduled_Start__c</field><value><elementReference>Start_Time</elementReference></value></inputAssignments>
+        <inputAssignments><field>Duration_Minutes__c</field><value><elementReference>Duration</elementReference></value></inputAssignments>
+        <inputAssignments><field>Status__c</field><value><stringValue>Scheduled</stringValue></value></inputAssignments>
+        <object>Test_Drive__c</object><storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Existing_Booking</name><label>Find overlapping booking</label>
+        <locationX>176</locationX><locationY>320</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector><targetReference>Slot_Available</targetReference></connector>
+        <faultConnector><targetReference>Save_Error</targetReference></faultConnector>
+        <filterLogic>1 AND 2 AND 3 AND (4 OR 5)</filterLogic>
+        <filters><field>Vehicle__c</field><operator>EqualTo</operator><value><elementReference>Vehicle_Lookup.recordId</elementReference></value></filters>
+        <filters><field>Scheduled_Start__c</field><operator>LessThan</operator><value><elementReference>Booking_End</elementReference></value></filters>
+        <filters><field>Scheduled_End__c</field><operator>GreaterThan</operator><value><elementReference>Start_Time</elementReference></value></filters>
+        <filters><field>Status__c</field><operator>EqualTo</operator><value><stringValue>Requested</stringValue></value></filters>
+        <filters><field>Status__c</field><operator>EqualTo</operator><value><stringValue>Scheduled</stringValue></value></filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly><object>Test_Drive__c</object><storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <screens>
+        <name>Booking_Details</name><label>Book a Test Drive</label>
+        <locationX>176</locationX><locationY>200</locationY>
+        <allowBack>true</allowBack><allowFinish>true</allowFinish><allowPause>false</allowPause>
+        <connector><targetReference>Existing_Booking</targetReference></connector>
+        <fields>
+            <name>Booking_Introduction</name>
+            <fieldText>&lt;p&gt;Select a vehicle and customer, then choose an appointment. &lt;strong&gt;Book Test Drive&lt;/strong&gt; checks availability before saving your booking.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Booking_Section</name>
+            <fieldType>RegionContainer</fieldType>
+            <fields>
+                <name>Selection_Column</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Selection_Guidance</name>
+                    <fieldText>&lt;h3&gt;&lt;strong&gt;Vehicle and customer&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;Search by Vehicle Name and Contact name. Select a suggestion in each lookup; typing text alone does not select a record. Only Contacts you can access are shown.&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>Vehicle_Lookup</name><extensionName>flowruntime:lookup</extensionName><fieldType>ComponentInstance</fieldType>
+                    <inputParameters><name>objectApiName</name><value><stringValue>Test_Drive__c</stringValue></value></inputParameters>
+                    <inputParameters><name>fieldApiName</name><value><stringValue>Vehicle__c</stringValue></value></inputParameters>
+                    <inputParameters><name>label</name><value><stringValue>Vehicle</stringValue></value></inputParameters>
+                    <inputParameters><name>required</name><value><booleanValue>true</booleanValue></value></inputParameters>
+                    <isRequired>true</isRequired><storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <fields>
+                    <name>Contact_Lookup</name><extensionName>flowruntime:lookup</extensionName><fieldType>ComponentInstance</fieldType>
+                    <inputParameters><name>objectApiName</name><value><stringValue>Test_Drive__c</stringValue></value></inputParameters>
+                    <inputParameters><name>fieldApiName</name><value><stringValue>Contact__c</stringValue></value></inputParameters>
+                    <inputParameters><name>label</name><value><stringValue>Contact</stringValue></value></inputParameters>
+                    <inputParameters><name>required</name><value><booleanValue>true</booleanValue></value></inputParameters>
+                    <isRequired>true</isRequired><storeOutputAutomatically>true</storeOutputAutomatically>
+                </fields>
+                <inputParameters><name>width</name><value><stringValue>6</stringValue></value></inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <fields>
+                <name>Schedule_Column</name>
+                <fieldType>Region</fieldType>
+                <fields>
+                    <name>Schedule_Guidance</name>
+                    <fieldText>&lt;h3&gt;&lt;strong&gt;Schedule&lt;/strong&gt;&lt;/h3&gt;&lt;p&gt;Choose a future date and time in your Salesforce time zone. Duration must be 1–180 minutes; the default is 45 minutes.&lt;/p&gt;</fieldText>
+                    <fieldType>DisplayText</fieldType>
+                </fields>
+                <fields>
+                    <name>Start_Time</name><dataType>DateTime</dataType><fieldText>Start date and time</fieldText><fieldType>InputField</fieldType><isRequired>true</isRequired>
+                    <validationRule><errorMessage>Choose a future start time.</errorMessage><formulaExpression>{!Start_Time} &gt; {!$Flow.CurrentDateTime}</formulaExpression></validationRule>
+                </fields>
+                <fields>
+                    <name>Duration</name><dataType>Number</dataType><defaultValue><numberValue>45.0</numberValue></defaultValue>
+                    <fieldText>Duration in minutes</fieldText><fieldType>InputField</fieldType><isRequired>true</isRequired><scale>0</scale>
+                    <validationRule><errorMessage>Enter a duration from 1 to 180 minutes.</errorMessage><formulaExpression>AND({!Duration} &gt; 0, {!Duration} &lt;= 180)</formulaExpression></validationRule>
+                </fields>
+                <inputParameters><name>width</name><value><stringValue>6</stringValue></value></inputParameters>
+                <isRequired>false</isRequired>
+            </fields>
+            <isRequired>false</isRequired>
+            <regionContainerType>SectionWithoutHeader</regionContainerType>
+        </fields>
+        <nextOrFinishButtonLabel>Book Test Drive</nextOrFinishButtonLabel>
+        <showFooter>true</showFooter><showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Conflict</name><label>Time slot unavailable</label><locationX>400</locationX><locationY>560</locationY>
+        <allowBack>true</allowBack><allowFinish>true</allowFinish><allowPause>false</allowPause>
+        <fields><name>Conflict_Message</name><fieldText>That vehicle is already booked for the selected time. Go back and choose a different time or vehicle.</fieldText><fieldType>DisplayText</fieldType></fields>
+        <showFooter>true</showFooter><showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Save_Error</name><label>Booking could not be saved</label><locationX>600</locationX><locationY>560</locationY>
+        <allowBack>true</allowBack><allowFinish>true</allowFinish><allowPause>false</allowPause>
+        <fields><name>Error_Message</name><fieldText>{!$Flow.FaultMessage}</fieldText><fieldType>DisplayText</fieldType></fields>
+        <showFooter>true</showFooter><showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>Confirmation</name><label>Test Drive booked</label><locationX>176</locationX><locationY>680</locationY>
+        <allowBack>false</allowBack><allowFinish>true</allowFinish><allowPause>false</allowPause>
+        <fields><name>Confirmation_Message</name><fieldText>Your Test Drive is booked. Booking ID: {!Create_Booking}</fieldText><fieldType>DisplayText</fieldType></fields>
+        <showFooter>true</showFooter><showHeader>true</showHeader>
+    </screens>
+    <start><locationX>50</locationX><locationY>0</locationY><connector><targetReference>Booking_Details</targetReference></connector></start>
+    <status>Active</status>
+</Flow>

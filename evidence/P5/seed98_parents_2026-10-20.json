@@ -1,0 +1,57 @@
+{
+  "orgId": "00Daj00001Ae3iWEAR",
+  "observedAt": "2026-10-20T17:40:46.382229+00:00",
+  "ownerApproved": false,
+  "mappingReady": true,
+  "parents": {
+    "SEED-98-VIN-001": {
+      "Opportunity__c": "006aj00000fUIsjAAG",
+      "Contact__c": "003aj00002W3EfhAAF",
+      "opportunitySeed": "SEED-09-001",
+      "contactSeed": "SEED-07-001",
+      "accountId": "001aj000045ZScRAAW",
+      "stage": "Prospecting"
+    },
+    "SEED-98-VIN-002": {
+      "Opportunity__c": "006aj00000fUIskAAG",
+      "Contact__c": "003aj00002W3EfkAAF",
+      "opportunitySeed": "SEED-09-002",
+      "contactSeed": "SEED-07-004",
+      "accountId": "001aj000045ZScSAAW",
+      "stage": "Prospecting"
+    },
+    "SEED-98-VIN-003": {
+      "Opportunity__c": "006aj00000fUIslAAG",
+      "Contact__c": "003aj00002W3EfmAAF",
+      "opportunitySeed": "SEED-09-003",
+      "contactSeed": "SEED-07-006",
+      "accountId": "001aj000045ZScTAAW",
+      "stage": "Prospecting"
+    },
+    "SEED-98-VIN-004": {
+      "Opportunity__c": "006aj00000fUIsmAAG",
+      "Contact__c": "003aj00002W3EfpAAF",
+      "opportunitySeed": "SEED-09-004",
+      "contactSeed": "SEED-07-009",
+      "accountId": "001aj000045ZScUAAW",
+      "stage": "Prospecting"
+    },
+    "SEED-98-VIN-005": {
+      "Opportunity__c": "006aj00000fUIsnAAG",
+      "Contact__c": "003aj00002W3EfqAAF",
+      "opportunitySeed": "SEED-09-005",
+      "contactSeed": "SEED-07-010",
+      "accountId": "001aj000045ZScVAAW",
+      "stage": "Prospecting"
+    },
+    "SEED-98-VIN-006": {
+      "Opportunity__c": "006aj00000fUIsoAAG",
+      "Contact__c": "003aj00002W3EfrAAF",
+      "opportunitySeed": "SEED-09-006",
+      "contactSeed": "SEED-07-011",
+      "accountId": "001aj000045ZScWAAW",
+      "stage": "Prospecting"
+    }
+  },
+  "impact": "New Requested Trade-Ins affect future quote eligibility; approve exact links before insertion."
+}

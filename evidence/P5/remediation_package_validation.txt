@@ -1,0 +1,56 @@
+0Afaj00000oHjojCAC... Succeeded
+
+Deploy Info
+┌──────────────────────────┬──────────────────────────┐
+│ Key                      │ Value                    │
+├──────────────────────────┼──────────────────────────┤
+│ checkOnly                │ true                     │
+│ completedDate            │ 2026-10-19T12:52:17.000Z │
+│ createdBy                │ 005aj00000feqbN          │
+│ createdByName            │ Arjun Subramanya         │
+│ createdDate              │ 2026-10-19T12:50:02.000Z │
+│ done                     │ true                     │
+│ id                       │ 0Afaj00000oHjojCAC       │
+│ ignoreWarnings           │ false                    │
+│ lastModifiedDate         │ 2026-10-19T12:52:17.000Z │
+│ numberComponentErrors    │ 0                        │
+│ numberComponentsDeployed │ 19                       │
+│ numberComponentsTotal    │ 19                       │
+│ numberFiles              │ 29                       │
+│ numberTestErrors         │ 0                        │
+│ numberTestsCompleted     │ 56                       │
+│ numberTestsTotal         │ 56                       │
+│ rollbackOnError          │ true                     │
+│ runTestsEnabled          │ true                     │
+│ startDate                │ 2026-10-19T12:50:08.000Z │
+│ status                   │ Succeeded                │
+│ success                  │ true                     │
+│ zipSize                  │ 153739                   │
+└──────────────────────────┴──────────────────────────┘
+
+
+Deploy Options
+┌──────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ Key              │ Value                                                                                                                                               │
+├──────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ dry-run          │ true                                                                                                                                                │
+│ ignore-conflicts │ false                                                                                                                                               │
+│ ignore-errors    │ false                                                                                                                                               │
+│ ignore-warnings  │ false                                                                                                                                               │
+│ manifest         │ /Users/arjunsubramanya/.sf/manifestCache/0Afaj00000oHjojCAC.xml                                                                                     │
+│ target-org       │ arjun.ngdemo@northgate.demo                                                                                                                         │
+│ tests            │ DiscountApprovalTest,FinancingStatusServiceTest,LeadRoutingHandlerTest,QuoteBuilderControllerTest,QuoteTradeInGuardTest,QuoteTriggerEnforcementTest │
+│ test-level       │ RunSpecifiedTests                                                                                                                                   │
+│ api              │ SOAP                                                                                                                                                │
+│ wait             │ 60 minutes                                                                                                                                          │
+│ isMdapi          │ false                                                                                                                                               │
+│ status           │ Succeeded                                                                                                                                           │
+│ job-id           │ 0Afaj00000oHjojCAC                                                                                                                                  │
+└──────────────────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+Test Results Summary
+Passing: 56
+Failing: 0
+Total: 56
+Time: 121111

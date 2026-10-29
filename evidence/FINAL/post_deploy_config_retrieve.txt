@@ -1,0 +1,6 @@
+Error (2): The following errors occurred:
+  --manifest=manifest/queue-memberships.xml cannot also be provided when using --metadata
+  --metadata=PermissionSetGroup:PSG_Rep,PermissionSetGroup:PSG_Manager,PermissionSetGroup:PSG_Finance,PermissionSetGroup:PSG_Service cannot also be provided when using --manifest
+See more help with --help
+
+

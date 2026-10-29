@@ -1,0 +1,208 @@
+{
+  "retrieveId": "09Saj00000mqJ7lEAE",
+  "applicationDefinitionsRead": 37,
+  "vehicleAndApplicationAssignmentSha256": "5aea945dbb16ed50f3c69d20d32aeb0d6a561939b7f5e90f1bac2743ef9d727d",
+  "settingsSha256": {
+    "EinsteinGpt": "ed1f9f1363d3bdd6af0b03963b8ff32b45c5b52adce72b0e468cdd869c6b0bfd",
+    "EinsteinCopilot": "cd72c99d4903660a467a3e1b2daf6d94ee301ba2b7eb56c45addde731dd97ba9",
+    "Communities": "cc613a657daa02fadf56f00a58552ff74f687b7a52e194e630f1f2baa65952a2",
+    "AgentPlatform": "f594b72c23c280cc962118cc3a963857c4bbf250eb6f5eb8105dfbb0b7c6b036",
+    "CustomerDataPlatform": "66bb41683e194c5e9b697ed9183d2c4475c65f5828c6c8036098f22994cf4728",
+    "Bot": "53f1088a3797fa82547dc4e09a3d7da6e8d4920b54f7be73ed55fa06cc369855"
+  },
+  "securityFingerprints": {
+    "permissionAssignments": {
+      "rows": 31,
+      "sha256": "3fb600076d925f51601885a6d2d0b43c63f93c3e9e2dc4f430318874d1dc77b2"
+    },
+    "groupMembers": {
+      "rows": 23,
+      "sha256": "9b55b6d092f53fea914608b2b0208f04415c621a8a2a599f49535948d4c2a229"
+    },
+    "objectPermissions": {
+      "rows": 13370,
+      "sha256": "00cd9a2dc62201981f07bd073d7a41ea1fbfc2463629c689c34fe57e0e4bff72"
+    },
+    "fieldPermissions": {
+      "rows": 26333,
+      "sha256": "8724c85b469897f4faaadf094fa396a4d7bf7634431e8a1d3450a49beb0f1805"
+    },
+    "userRoleProfileState": {
+      "rows": 10,
+      "sha256": "ab710d05ca3dd0b728637efc2d2886d317294240c5a8febce3239183196f5e49"
+    }
+  },
+  "businessRecordFingerprints": {
+    "Account": {
+      "rows": 155,
+      "idModificationSha256": "460a5f64d7088afb16ea408a99177a4c3f6361aa7333c2dd158e2618630fab3a"
+    },
+    "Contact": {
+      "rows": 229,
+      "idModificationSha256": "fce7871a3912080d941a891d3db15bb6f6062970081393ad97972c46033452c7"
+    },
+    "Lead": {
+      "rows": 130,
+      "idModificationSha256": "7946fb36fe3c944957bef3ca4da97395788aa56777484d1cb232e92f4f0ddfc6"
+    },
+    "Opportunity": {
+      "rows": 105,
+      "idModificationSha256": "e0c1a5d4aee184d1c08558c0452f466c15223dce136aa11fba0d457cc6204daf"
+    },
+    "Quote": {
+      "rows": 65,
+      "idModificationSha256": "cde8f89f64069fe6d9fd41b36883f9b315ad12c68ad7e8d4345a9c7a32cbdabd"
+    },
+    "QuoteLineItem": {
+      "rows": 85,
+      "idModificationSha256": "853ebf05bf7d4c89f2852f2e74e3a8773d333abdefc77d719f9468f5949eb245"
+    },
+    "Product2": {
+      "rows": 60,
+      "idModificationSha256": "2e8a66db3344b752061ff1ffb77c11173aca8dfe64ce7df2ac30b93c62169188"
+    },
+    "PricebookEntry": {
+      "rows": 60,
+      "idModificationSha256": "3596d51cbd42dc7c9224d1cc66ec32c1b7176df708d1cbfcbf30c65f5a3772db"
+    },
+    "Vehicle__c": {
+      "rows": 120,
+      "idModificationSha256": "8f50bd1f47dcbcba4ce665db1bcc59e3d7e6963c4763dc488f4d440032d2744f"
+    },
+    "Vehicle_Model__c": {
+      "rows": 30,
+      "idModificationSha256": "1d1a29c47e2288c3844fed7550a319c7769bfae142781b11f7656f509a642069"
+    },
+    "Rooftop__c": {
+      "rows": 4,
+      "idModificationSha256": "542dd6b809cb40a39b19e4f2c6fa405297bfd3fc7bcd4aaa6e262726bc6c04ec"
+    },
+    "Staff__c": {
+      "rows": 14,
+      "idModificationSha256": "c736d8c1800c9f9d30a82b942bd27a027c50d15f037039bace1259974fa4c126"
+    },
+    "Trade_In__c": {
+      "rows": 52,
+      "idModificationSha256": "b622434ebbbed799ce050a23960adfec3788e06d0aec52d8ac7d37bbe8f9266a"
+    },
+    "Financing__c": {
+      "rows": 61,
+      "idModificationSha256": "e4b8c67a266526195691ca3b85d4b5cdff99301ced85d443700d6cb6afda51d6"
+    },
+    "Delivery__c": {
+      "rows": 13,
+      "idModificationSha256": "1ccc2602cee6aee73eeed2aaf56728cdf7fead80f5e0db40325896e9b3c30082"
+    },
+    "Test_Drive__c": {
+      "rows": 74,
+      "idModificationSha256": "47638833a01bb630b6861aad58ed73dc978703ea0b4f9aaeacc263af5ce975f2"
+    },
+    "Case": {
+      "rows": 76,
+      "idModificationSha256": "25b4f34f83ff3526a4b3282e49b7735bd02992f0bb5f4047204e05dabd4dd1af"
+    },
+    "Service_Visit__c": {
+      "rows": 148,
+      "idModificationSha256": "34664cebecb5273ad46a5acf9f2091a7c1b2867828c5a471be503002520f9a91"
+    },
+    "Campaign": {
+      "rows": 5,
+      "idModificationSha256": "60da1814f85f6204e70ca8b234c014dd7d6ec7689e642069c8bb43179f904ed3"
+    },
+    "CampaignMember": {
+      "rows": 60,
+      "idModificationSha256": "5c48273f5ab6cc9b6ef0ac73b6d3c8c7a51c8dc9b6131a06bef39a40a74dad87"
+    },
+    "Loyalty_Member__c": {
+      "rows": 72,
+      "idModificationSha256": "d88e1cb6a4dd982026ae1f46a7f65bc65e8440122ba32bef46020d8ddeacdfc9"
+    },
+    "Loyalty_Transaction__c": {
+      "rows": 110,
+      "idModificationSha256": "2ff1ff3abf250f19f09eb8b2e8adc8cea405b4f0718e6399950d04db71f6de0f"
+    },
+    "Consent__c": {
+      "rows": 90,
+      "idModificationSha256": "1e5d177ddedefa234e92db8790aac9b54ad7c92e3e335a42e87c36220e200199"
+    },
+    "Task": {
+      "rows": 245,
+      "idModificationSha256": "2ca10763e091b017514a42c5990c0ceace47a440704d5588d293b81e9134b021"
+    },
+    "Event": {
+      "rows": 50,
+      "idModificationSha256": "806d27273f64f5ae27010e184790c04d191a5ffc8474119503a0162de5638768"
+    },
+    "Data_Load_Batch__c": {
+      "rows": 20,
+      "idModificationSha256": "e17f19e8cc37f24bf831be60f73510ddf82c6ed8d125d64e210c2b28444c871e"
+    },
+    "Knowledge__kav": {
+      "rows": 10,
+      "idModificationSha256": "e42c2bbe28f1aa0a060d58bf79b63912d4e825386a4b116e25c9305c85780139"
+    }
+  },
+  "triggerFingerprints": {
+    "CampaignConsentTrigger": {
+      "status": "Active",
+      "sha256": "b04f96a1a5f8b451a92b1c8d902e1a5fd835ee6a3972fcc0c6443542f21d9087"
+    },
+    "CampaignMemberConsentTrigger": {
+      "status": "Active",
+      "sha256": "d24e349936795e6d7d1a2d4da609be2066b4f445f9bc97060b883429411d9cc8"
+    },
+    "CaseMilestoneTrigger": {
+      "status": "Active",
+      "sha256": "1fdbddda544e8107613567a25cefd649499065e87341514900d8d369a06b232a"
+    },
+    "ConsentTrigger": {
+      "status": "Active",
+      "sha256": "70de970cd4e71b5e6fe611916d3dbcb9fe070c7ce6d17e00e7473935ee16a800"
+    },
+    "ContactConsentTrigger": {
+      "status": "Active",
+      "sha256": "d7032442b20fd2b20ac28214840bb9b605ce84d91390e7e22f644b8e34e2e27d"
+    },
+    "DeliveryTrigger": {
+      "status": "Active",
+      "sha256": "8009776acd6986d4f8390fee3af4eb041091542b2518d891384936694434354e"
+    },
+    "FinancingTrigger": {
+      "status": "Active",
+      "sha256": "8e5b315cf7f9d3743e17b5a92e7ab6f4d941e94dc6027d607cc55787a2ad011f"
+    },
+    "LeadRoutingTrigger": {
+      "status": "Active",
+      "sha256": "68ae01ef56702d50f5b2c0b51c9c62179a361b32d81b548020006025115a6857"
+    },
+    "LoyaltyMemberTrigger": {
+      "status": "Active",
+      "sha256": "2e0128c4267a17ca5e2c4a2fc1b72fbebdb51900173a6109f9018da861b55423"
+    },
+    "LoyaltyTransactionTrigger": {
+      "status": "Active",
+      "sha256": "a5d3e495356845242c15b54a402ab5b08a223e55101d3d34c8bcc95accbb9f3c"
+    },
+    "OpportunityTrigger": {
+      "status": "Active",
+      "sha256": "70aed4545cbe14de0c75356cbf21dd6c0511db225328db92bebf1f44b2ce0957"
+    },
+    "QuoteTrigger": {
+      "status": "Active",
+      "sha256": "207607e4378e2ebddb9a6d6d064c32dca99f8f6020eb6b02c5e8212c9dc10045"
+    },
+    "ServiceVisitTrigger": {
+      "status": "Active",
+      "sha256": "bcd17a1473e5a2425eae3c31ca53164cafa3abd202aa40b143e9b89da6a058df"
+    },
+    "TestDriveTrigger": {
+      "status": "Active",
+      "sha256": "7444606b23a9f732b2ffbd841d4ed817957a14a6ff4b78c77eda3cce5324b783"
+    },
+    "VehicleTrigger": {
+      "status": "Active",
+      "sha256": "12fbba263f50b56a3149c642c2fc393edaf01f485e08e02fb7e56070141e05ea"
+    }
+  },
+  "limits": "Business fingerprint covers IDs/LastModifiedDate of visible non-deleted rows, not a full field/history or background-event audit."
+}

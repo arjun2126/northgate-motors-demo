@@ -1,0 +1,21 @@
+{
+  "observedAtUtc": "2026-10-26T14:17:13.997989+00:00",
+  "branch": "main",
+  "head": "0423863794b70bb13c3c59128f7b57a0313aa0f4",
+  "upstream": "origin/main",
+  "cachedAheadBehind": [
+    "0",
+    "0"
+  ],
+  "remoteName": "origin",
+  "remoteMainQuery": "git ls-remote origin refs/heads/main",
+  "remoteQuerySucceeded": true,
+  "remoteMain": "0423863794b70bb13c3c59128f7b57a0313aa0f4",
+  "headMatchesLiveRemoteMain": true,
+  "trackedChanges": 72,
+  "trackedDeletions": 8,
+  "untrackedFiles": 3062,
+  "stagedEntries": 0,
+  "cleanWorkingTree": false,
+  "fetchStageCommitPushPerformed": false
+}

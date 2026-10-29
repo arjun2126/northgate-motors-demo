@@ -1,0 +1,126 @@
+{
+  "claim": "CONFIRMED",
+  "deployment": {
+    "id": "0Afaj00000pPottCAC",
+    "status": "Succeeded",
+    "checkOnly": false,
+    "numberComponentsDeployed": 34,
+    "numberComponentsTotal": 34,
+    "numberComponentErrors": 0,
+    "numberTestsTotal": 0
+  },
+  "reusedValidationId": "0Afaj00000pPiV7CAK",
+  "reusedApexTests": 43,
+  "reusedBrokerCoverage": 98.039,
+  "reusedLocalUiTests": 25,
+  "checks": {
+    "preservation/sharing_Vehicle__Share": "CONFIRMED",
+    "preservation/data_Case": "CONFIRMED",
+    "preservation/sharing_Loyalty_Member__Share": "CONFIRMED",
+    "preservation/sharing_Service_Visit__Share": "CONFIRMED",
+    "preservation/summary": "CONFIRMED",
+    "preservation/data_Delivery__c": "CONFIRMED",
+    "preservation/data_Financing__c": "CONFIRMED",
+    "preservation/data_Product2": "CONFIRMED",
+    "preservation/data_Vehicle__c": "CONFIRMED",
+    "preservation/users": "CONFIRMED",
+    "preservation/sharing_ContactShare": "CONFIRMED",
+    "preservation/data_PricebookEntry": "CONFIRMED",
+    "preservation/data_Contact": "CONFIRMED",
+    "preservation/data_Test_Drive__c": "CONFIRMED",
+    "preservation/data_Loyalty_Member__c": "CONFIRMED",
+    "preservation/sharing_Delivery__Share": "CONFIRMED",
+    "preservation/data_Quote": "CONFIRMED",
+    "preservation/sharing_AccountShare": "CONFIRMED",
+    "preservation/data_Account": "CONFIRMED",
+    "preservation/data_Asset": "CONFIRMED",
+    "preservation/data_Loyalty_Transaction__c": "CONFIRMED",
+    "preservation/data_Service_Visit__c": "CONFIRMED",
+    "preservation/data_QuoteLineItem": "CONFIRMED",
+    "preservation/sharing_CaseShare": "CONFIRMED",
+    "preservation/data_Opportunity": "CONFIRMED",
+    "preservation/data_CaseComment": "CONFIRMED",
+    "portal_profile/assignments": "CONFIRMED",
+    "portal_profile/network_groups": "CONFIRMED",
+    "portal_profile/profile_set": "CONFIRMED",
+    "portal_profile/network_members": "CONFIRMED",
+    "portal_profile/identity": "CONFIRMED",
+    "portal_profile/system_permissions": "CONFIRMED",
+    "portal_profile/object_permissions": "CONFIRMED",
+    "portal_profile/profile_users": "CONFIRMED",
+    "portal_profile/batch_b_permission_set": "CONFIRMED",
+    "portal_profile/network": "CONFIRMED",
+    "portal_profile/field_permissions": "CONFIRMED",
+    "portal_profile/batch_b_classes": "CONFIRMED",
+    "portal_profile/profile": "CONFIRMED",
+    "portal_profile/setup_access": "CONFIRMED",
+    "page_navigation_site_xml_unchanged": "CONFIRMED",
+    "all_existing_control_rows_unchanged": "CONFIRMED",
+    "no_guest_or_portal_vehicle_model_ledger_crud": "CONFIRMED",
+    "new_reviewer_unassigned": "CONFIRMED",
+    "scheduler_configuration_unchanged": "CONFIRMED",
+    "new_ledger_empty": "CONFIRMED",
+    "new_ledger_shares_empty": "CONFIRMED",
+    "portal_unpublished": "CONFIRMED",
+    "no_customer_users": "CONFIRMED",
+    "source_unchanged": "CONFIRMED",
+    "exact_34_component_transaction": "CONFIRMED"
+  },
+  "retrievedSourceFiles": 54,
+  "pageSiteXmlFilesUnchanged": 64,
+  "nativeCustomerGrants": [
+    {
+      "permissionSetId": "0PSaj00000h7bZyGAI",
+      "name": "X00eaj00000UB3CcAAL",
+      "nativeVehicleModelLedgerGrants": []
+    },
+    {
+      "permissionSetId": "0PSaj00000h8ikhGAA",
+      "name": "X00eaj00000UBi7iAAD",
+      "nativeVehicleModelLedgerGrants": []
+    },
+    {
+      "permissionSetId": "0PSaj00000h8ikiGAA",
+      "name": "PS_Owner_Portal_Foundation",
+      "nativeVehicleModelLedgerGrants": []
+    },
+    {
+      "permissionSetId": "0PSaj00000hABxVGAW",
+      "name": "PS_Owner_Portal_Batch_B",
+      "nativeVehicleModelLedgerGrants": []
+    }
+  ],
+  "network": [
+    {
+      "Id": "0DBaj000006bf3xGAA",
+      "Name": "Northgate Owner Portal",
+      "Status": "UnderConstruction",
+      "FirstActivationDate": null,
+      "SelfRegProfileId": null,
+      "OptionsSelfRegistrationEnabled": false,
+      "OptionsAllowInternalUserLogin": false,
+      "OptionsGuestMemberVisibility": false,
+      "OptionsInvitationsEnabled": false
+    }
+  ],
+  "newInternalReviewerPermissionSet": "0PSaj00000hErrhGAC",
+  "platformGeneratedAdditions": {
+    "permission_sets": 1,
+    "object_permissions": 3,
+    "field_permissions": 6,
+    "setup_access": 9,
+    "assignments": 0,
+    "guest_assignments": 0,
+    "profiles": 0,
+    "scheduler": 0,
+    "network": 0
+  },
+  "skipped": [
+    "No successful tests rerun; Quick Deploy reused validated tests",
+    "No real customer login/browser/accessibility/operational acceptance",
+    "No fresh full CP2/runtime regression; source scope and business fingerprints checked",
+    "Loyalty_Transaction__Share unavailable: parent-controlled",
+    "No SiteDotCom binary re-investigation",
+    "No Git commands or scheduler activation"
+  ]
+}

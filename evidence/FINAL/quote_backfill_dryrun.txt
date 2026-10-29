@@ -1,0 +1,284 @@
+Compiled successfully.
+Executed successfully.
+
+68.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO
+Execute Anonymous: // Northgate Motors - Quote pricing backfill DRY RUN (read-only).
+Execute Anonymous: //
+Execute Anonymous: // Re-evaluates the CP2 pricing engine for every Quote and reports what a
+Execute Anonymous: // backfill would change. This script performs NO DML.
+Execute Anonymous: //
+Execute Anonymous: // Policy encoded here:
+Execute Anonymous: //   - Terminal statuses (Accepted, Rejected, Denied) are historical snapshots
+Execute Anonymous: //     and are never proposed for update.
+Execute Anonymous: //   - Open statuses (Draft, Presented) are eligible for backfill only when
+Execute Anonymous: //     CP2 returns a deterministic result (no blocker).
+Execute Anonymous: //   - Quotes whose CP2 result carries a blocker are reported as needing a
+Execute Anonymous: //     data fix, not a pricing backfill.
+Execute Anonymous: //
+Execute Anonymous: // Run: sf apex run --target-org ng-demo --file scripts/quote_pricing_backfill_dryrun.apex
+Execute Anonymous: 
+Execute Anonymous: Set<String> HISTORICAL = new Set<String>{'Accepted', 'Rejected', 'Denied'};
+Execute Anonymous: 
+Execute Anonymous: List<Quote> quotes = [
+Execute Anonymous:     SELECT Id, Name, Status, Subtotal, Adjusted_Subtotal__c, Rule_Applied_Count__c,
+Execute Anonymous:         Buyer_Contact__c, OpportunityId,
+Execute Anonymous:         Opportunity.AccountId,
+Execute Anonymous:         Opportunity.Vehicle__c,
+Execute Anonymous:         Opportunity.Vehicle__r.Vehicle_Model__r.Name,
+Execute Anonymous:         Opportunity.Vehicle__r.Vehicle_Model__r.Trim__c,
+Execute Anonymous:         Opportunity.Vehicle__r.Inventory_Age_Days__c
+Execute Anonymous:     FROM Quote
+Execute Anonymous:     ORDER BY Name
+Execute Anonymous: ];
+Execute Anonymous: 
+Execute Anonymous: Map<Id, List<QuoteLineItem>> linesByQuote = new Map<Id, List<QuoteLineItem>>();
+Execute Anonymous: for (QuoteLineItem line : [
+Execute Anonymous:     SELECT Id, QuoteId, UnitPrice, Quantity,
+Execute Anonymous:         PricebookEntry.Product2.Name, PricebookEntry.Product2.Category__c
+Execute Anonymous:     FROM QuoteLineItem
+Execute Anonymous: ]) {
+Execute Anonymous:     if (!linesByQuote.containsKey(line.QuoteId)) {
+Execute Anonymous:         linesByQuote.put(line.QuoteId, new List<QuoteLineItem>());
+Execute Anonymous:     }
+Execute Anonymous:     linesByQuote.get(line.QuoteId).add(line);
+Execute Anonymous: }
+Execute Anonymous: 
+Execute Anonymous: List<Price_Rule__mdt> rules = [
+Execute Anonymous:     SELECT DeveloperName, Rule_Type__c, Attribute__c, Operator__c, Value__c,
+Execute Anonymous:         Percent_Adjustment__c, Priority__c, Is_Active__c
+Execute Anonymous:     FROM Price_Rule__mdt
+Execute Anonymous: ];
+Execute Anonymous: 
+Execute Anonymous: // Buyer context cache: quote Id -> BuyerContext (only quotes with a buyer are queried).
+Execute Anonymous: Map<Id, QuotePricingService.BuyerContext> buyerByQuote = new Map<Id, QuotePricingService.BuyerContext>();
+Execute Anonymous: for (Quote q : quotes) {
+Execute Anonymous:     if (q.Buyer_Contact__c == null) {
+Execute Anonymous:         continue;
+Execute Anonymous:     }
+Execute Anonymous:     QuotePricingService.BuyerContext buyer = new QuotePricingService.BuyerContext();
+Execute Anonymous:     Contact buyerContact = [
+Execute Anonymous:         SELECT Id, AccountId FROM Contact WHERE Id = :q.Buyer_Contact__c LIMIT 1
+Execute Anonymous:     ];
+Execute Anonymous:     if (buyerContact.AccountId == q.Opportunity.AccountId) {
+Execute Anonymous:         List<Loyalty_Member__c> members = [
+Execute Anonymous:             SELECT Tier__c, Member_Number__c, Tier_Evaluated_On__c
+Execute Anonymous:             FROM Loyalty_Member__c
+Execute Anonymous:             WHERE Contact__c = :q.Buyer_Contact__c AND Status__c = 'Active'
+Execute Anonymous:         ];
+Execute Anonymous:         String tier = bestTier(members);
+Execute Anonymous:         if (tier != null) {
+Execute Anonymous:             buyer.tier = tier;
+Execute Anonymous:             buyer.associated = true;
+Execute Anonymous:         }
+Execute Anonymous:     }
+Execute Anonymous:     buyerByQuote.put(q.Id, buyer);
+Execute Anonymous: }
+Execute Anonymous: 
+Execute Anonymous: Integer nullAdjusted = 0;
+Execute Anonymous: Integer openCount = 0;
+Execute Anonymous: Integer terminalCount = 0;
+Execute Anonymous: Integer blockerCount = 0;
+Execute Anonymous: Integer eligibleBackfill = 0;
+Execute Anonymous: Integer frozenHistorical = 0;
+Execute Anonymous: Integer blockedNeedsDataFix = 0;
+Execute Anonymous: Integer unchangedOpen = 0;
+Execute Anonymous: 
+Execute Anonymous: System.debug('DRYRUN_HEADER|quote|status|historical|subtotal|calc_adjusted|rules|basis|blocker|eligible|action');
+Execute Anonymous: 
+Execute Anonymous: for (Quote q : quotes) {
+Execute Anonymous:     QuotePricingService.VehicleContext vehicle = new QuotePricingService.VehicleContext();
+Execute Anonymous:     vehicle.hasVehicle = q.Opportunity.Vehicle__c != null;
+Execute Anonymous:     vehicle.modelName = q.Opportunity.Vehicle__r.Vehicle_Model__r.Name;
+Execute Anonymous:     vehicle.trim = q.Opportunity.Vehicle__r.Vehicle_Model__r.Trim__c;
+Execute Anonymous:     vehicle.ageDays = q.Opportunity.Vehicle__r.Inventory_Age_Days__c;
+Execute Anonymous: 
+Execute Anonymous:     QuotePricingService.BuyerContext buyer = buyerByQuote.containsKey(q.Id)
+Execute Anonymous:         ? buyerByQuote.get(q.Id)
+Execute Anonymous:         : new QuotePricingService.BuyerContext();
+Execute Anonymous: 
+Execute Anonymous:     List<QuoteLineItem> lines = linesByQuote.containsKey(q.Id)
+Execute Anonymous:         ? linesByQuote.get(q.Id)
+Execute Anonymous:         : new List<QuoteLineItem>();
+Execute Anonymous: 
+Execute Anonymous:     QuotePricingService.QuotePricingResult result =
+Execute Anonymous:         QuotePricingService.evaluate(q, lines, rules, vehicle, buyer);
+Execute Anonymous: 
+Execute Anonymous:     Boolean historical = HISTORICAL.contains(q.Status);
+Execute Anonymous:     if (historical) {
+Execute Anonymous:         terminalCount++;
+Execute Anonymous:     } else {
+Execute Anonymous:         openCount++;
+Execute Anonymous:     }
+Execute Anonymous:     if (q.Adjusted_Subtotal__c == null) {
+Execute Anonymous:         nullAdjusted++;
+Execute Anonymous:     }
+Execute Anonymous: 
+Execute Anonymous:     String action = 'NO_OP';
+Execute Anonymous:     Boolean eligible = false;
+Execute Anonymous:     if (result.blockerMessage != null) {
+Execute Anonymous:         blockerCount++;
+Execute Anonymous:         action = 'DATA_FIX_REQUIRED';
+Execute Anonymous:         if (!historical) {
+Execute Anonymous:             blockedNeedsDataFix++;
+Execute Anonymous:         }
+Execute Anonymous:     } else if (historical) {
+Execute Anonymous:         action = 'FROZEN_HISTORICAL';
+Execute Anonymous:         frozenHistorical++;
+Execute Anonymous:     } else if (q.Adjusted_Subtotal__c == null) {
+Execute Anonymous:         eligible = true;
+Execute Anonymous:         eligibleBackfill++;
+Execute Anonymous:         action = 'BACKFILL_OPEN';
+Execute Anonymous:     } else if (q.Adjusted_Subtotal__c != result.adjustedSubtotal) {
+Execute Anonymous:         eligible = true;
+Execute Anonymous:         eligibleBackfill++;
+Execute Anonymous:         action = 'BACKFILL_OPEN';
+Execute Anonymous:     } else {
+Execute Anonymous:         unchangedOpen++;
+Execute Anonymous:     }
+Execute Anonymous: 
+Execute Anonymous:     System.debug('DRYRUN|' + q.Name
+Execute Anonymous:         + '|' + q.Status
+Execute Anonymous:         + '|' + historical
+Execute Anonymous:         + '|' + q.Subtotal
+Execute Anonymous:         + '|' + result.adjustedSubtotal
+Execute Anonymous:         + '|' + result.rulesApplied
+Execute Anonymous:         + '|' + result.vehicleBasisIdentified
+Execute Anonymous:         + '|' + (result.blockerMessage == null ? '' : result.blockerMessage)
+Execute Anonymous:         + '|' + eligible
+Execute Anonymous:         + '|' + action);
+Execute Anonymous: }
+Execute Anonymous: 
+Execute Anonymous: System.debug('DRYRUN_SUMMARY|total=' + quotes.size()
+Execute Anonymous:     + '; null_adjusted=' + nullAdjusted
+Execute Anonymous:     + '; open=' + openCount
+Execute Anonymous:     + '; terminal=' + terminalCount
+Execute Anonymous:     + '; blockers=' + blockerCount
+Execute Anonymous:     + '; eligible_backfill=' + eligibleBackfill
+Execute Anonymous:     + '; frozen_historical=' + frozenHistorical
+Execute Anonymous:     + '; blocked_needs_data_fix=' + blockedNeedsDataFix
+Execute Anonymous:     + '; unchanged_open=' + unchangedOpen);
+Execute Anonymous: 
+Execute Anonymous: // Mirrors QuoteBuilderController.deterministicTier so the dry run matches the builder.
+Execute Anonymous: Integer rank(String tier) {
+Execute Anonymous:     if (tier == 'Platinum') return 4;
+Execute Anonymous:     if (tier == 'Gold') return 3;
+Execute Anonymous:     if (tier == 'Silver') return 2;
+Execute Anonymous:     if (tier == 'Bronze') return 1;
+Execute Anonymous:     return 0;
+Execute Anonymous: }
+Execute Anonymous: 
+Execute Anonymous: String bestTier(List<Loyalty_Member__c> memberships) {
+Execute Anonymous:     Loyalty_Member__c best;
+Execute Anonymous:     Integer bestRank = 0;
+Execute Anonymous:     String bestNumber = '~~~~~~~~~~';
+Execute Anonymous:     Date bestDate = Date.valueOf('1900-01-01');
+Execute Anonymous:     for (Loyalty_Member__c m : memberships) {
+Execute Anonymous:         if (m.Tier__c == null) continue;
+Execute Anonymous:         Integer r = rank(m.Tier__c);
+Execute Anonymous:         String n = m.Member_Number__c == null ? '~~~~~~~~~~' : m.Member_Number__c;
+Execute Anonymous:         Date d = m.Tier_Evaluated_On__c == null ? Date.valueOf('1900-01-01') : m.Tier_Evaluated_On__c;
+Execute Anonymous:         Boolean better = false;
+Execute Anonymous:         if (best == null) {
+Execute Anonymous:             better = true;
+Execute Anonymous:         } else if (r != bestRank) {
+Execute Anonymous:             better = r > bestRank;
+Execute Anonymous:         } else if (n != bestNumber) {
+Execute Anonymous:             better = n.compareTo(bestNumber) < 0;
+Execute Anonymous:         } else if (d != bestDate) {
+Execute Anonymous:             better = d > bestDate;
+Execute Anonymous:         }
+Execute Anonymous:         if (better) {
+Execute Anonymous:             best = m;
+Execute Anonymous:             bestRank = r;
+Execute Anonymous:             bestNumber = n;
+Execute Anonymous:             bestDate = d;
+Execute Anonymous:         }
+Execute Anonymous:     }
+Execute Anonymous:     return best == null ? null : best.Tier__c;
+Execute Anonymous: }
+10:03:19.92 (92063976)|USER_INFO|[EXTERNAL]|005aj00000feqbN|arjun.ngdemo@northgate.demo|(GMT-04:00) Eastern Daylight Time (America/Toronto)|GMT-04:00
+10:03:19.92 (92095066)|EXECUTION_STARTED
+10:03:19.92 (92118056)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+10:03:19.92 (208055203)|USER_DEBUG|[82]|DEBUG|DRYRUN_HEADER&#124;quote&#124;status&#124;historical&#124;subtotal&#124;calc_adjusted&#124;rules&#124;basis&#124;blocker&#124;eligible&#124;action
+10:03:19.92 (210913635)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0001 – Lopes Household – Opportunity 11&#124;Accepted&#124;true&#124;121565.00&#124;121565.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (211331190)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0002 – Richardson Household – Opportunity 12&#124;Draft&#124;false&#124;109325.00&#124;109325.00&#124;0&#124;false&#124;&#124;true&#124;BACKFILL_OPEN
+10:03:19.92 (211675274)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0003 – Turner Household – Opportunity 13&#124;Presented&#124;false&#124;84752.00&#124;84752.00&#124;0&#124;false&#124;&#124;true&#124;BACKFILL_OPEN
+10:03:19.92 (212039928)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0004 – Campbell Household – Opportunity 14&#124;Denied&#124;true&#124;37185.00&#124;37185.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (212362722)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0005 – Achebe Household – Opportunity 15&#124;Presented&#124;false&#124;49746.00&#124;49746.00&#124;0&#124;false&#124;&#124;true&#124;BACKFILL_OPEN
+10:03:19.92 (212691716)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0006 – Almeida Household – Opportunity 16&#124;Rejected&#124;true&#124;96459.00&#124;96459.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (212989049)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0007 – Reyes Household – Opportunity 17&#124;Accepted&#124;true&#124;125292.00&#124;125292.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (213296052)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0008 – Long Household – Opportunity 18&#124;Accepted&#124;true&#124;124671.00&#124;124671.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (213612276)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0009 – Brown Household – Opportunity 19&#124;Rejected&#124;true&#124;90543.00&#124;90543.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (213928570)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0010 – Gray Household – Opportunity 20&#124;Draft&#124;false&#124;78380.00&#124;78380.00&#124;0&#124;false&#124;&#124;true&#124;BACKFILL_OPEN
+10:03:19.92 (214225063)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0011 – Hill Household – Opportunity 21&#124;Denied&#124;true&#124;57762.00&#124;57762.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (214525847)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0012 – Lopez Household – Opportunity 22&#124;Rejected&#124;true&#124;64877.00&#124;64877.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (214826760)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0013 – Wright Household – Opportunity 23&#124;Denied&#124;true&#124;33507.00&#124;33507.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (215131813)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0014 – Cardoso Household – Opportunity 24&#124;Presented&#124;false&#124;76064.00&#124;76064.00&#124;0&#124;false&#124;&#124;true&#124;BACKFILL_OPEN
+10:03:19.92 (215438797)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0015 – Gray Household – Opportunity 25&#124;Presented&#124;false&#124;63236.00&#124;63236.00&#124;0&#124;false&#124;&#124;true&#124;BACKFILL_OPEN
+10:03:19.92 (215731910)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0016 – Martinez Household – Opportunity 26&#124;Rejected&#124;true&#124;95954.00&#124;95954.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (216020484)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0017 – King Household – Opportunity 27&#124;Accepted&#124;true&#124;32882.00&#124;32882.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (216391798)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0018 – Adams Household – Opportunity 28&#124;Accepted&#124;true&#124;123723.00&#124;123723.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (216692891)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0019 – King Household – Opportunity 29&#124;Rejected&#124;true&#124;67428.00&#124;67428.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (216989454)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0020 – Davis Household – Opportunity 30&#124;Accepted&#124;true&#124;110138.00&#124;110138.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (217263998)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0021 – Clark Household – Opportunity 31&#124;Draft&#124;false&#124;80538.00&#124;80538.00&#124;0&#124;false&#124;&#124;true&#124;BACKFILL_OPEN
+10:03:19.92 (217537561)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0022 – Wright Household – Opportunity 32&#124;Denied&#124;true&#124;71922.00&#124;71922.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (217817454)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0023 – Silva Household – Opportunity 33&#124;Rejected&#124;true&#124;35749.00&#124;35749.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (218095257)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0024 – Reed Household – Opportunity 34&#124;Accepted&#124;true&#124;66550.00&#124;66550.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (218375990)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0025 – Murphy Household – Opportunity 35&#124;Presented&#124;false&#124;86227.00&#124;86227.00&#124;0&#124;false&#124;&#124;true&#124;BACKFILL_OPEN
+10:03:19.92 (218643863)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0026 – Martinez Household – Opportunity 36&#124;Presented&#124;false&#124;85462.00&#124;85462.00&#124;0&#124;false&#124;&#124;true&#124;BACKFILL_OPEN
+10:03:19.92 (218910286)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0027 – Achebe Household – Opportunity 37&#124;Rejected&#124;true&#124;77907.00&#124;77907.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (219169469)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0028 – James Household – Opportunity 38&#124;Draft&#124;false&#124;35796.00&#124;35796.00&#124;0&#124;false&#124;&#124;true&#124;BACKFILL_OPEN
+10:03:19.92 (219428302)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0029 – Gomes Household – Opportunity 39&#124;Rejected&#124;true&#124;38258.00&#124;38258.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (219713505)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0030 – Ferreira Household – Opportunity 40&#124;Denied&#124;true&#124;40376.00&#124;40376.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (219969878)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0031 – Moore Household – Opportunity 41&#124;Rejected&#124;true&#124;51664.00&#124;51664.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (220226391)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0032 – Perez Household – Opportunity 42&#124;Draft&#124;false&#124;41067.00&#124;41067.00&#124;0&#124;false&#124;&#124;true&#124;BACKFILL_OPEN
+10:03:19.92 (220486654)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0033 – Adams Household – Opportunity 43&#124;Accepted&#124;true&#124;36158.00&#124;36158.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (220746767)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0034 – Pereira Household – Opportunity 44&#124;Denied&#124;true&#124;80198.00&#124;80198.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (221002780)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0035 – Santos Household – Opportunity 45&#124;Draft&#124;false&#124;78919.00&#124;78919.00&#124;0&#124;false&#124;&#124;true&#124;BACKFILL_OPEN
+10:03:19.92 (221260173)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0036 – Ward Household – Opportunity 46&#124;Draft&#124;false&#124;62050.00&#124;62050.00&#124;0&#124;false&#124;&#124;true&#124;BACKFILL_OPEN
+10:03:19.92 (221514915)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0037 – Hall Household – Opportunity 47&#124;Draft&#124;false&#124;39779.00&#124;39779.00&#124;0&#124;false&#124;&#124;true&#124;BACKFILL_OPEN
+10:03:19.92 (221771138)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0038 – Gonzalez Household – Opportunity 48&#124;Denied&#124;true&#124;58336.00&#124;58336.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (222027381)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0039 – Pinto Household – Opportunity 49&#124;Denied&#124;true&#124;41399.00&#124;41399.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (222306984)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0040 – Zimmerman Household – Opportunity 50&#124;Accepted&#124;true&#124;54277.00&#124;54277.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (222563067)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0041 – Clark Household – Opportunity 51&#124;Accepted&#124;true&#124;75674.00&#124;75674.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (222823380)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0042 – Cook Household – Opportunity 52&#124;Presented&#124;false&#124;35845.00&#124;35845.00&#124;0&#124;false&#124;&#124;true&#124;BACKFILL_OPEN
+10:03:19.92 (223085203)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0043 – Ferreira Household – Opportunity 53&#124;Accepted&#124;true&#124;45512.00&#124;45512.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (223366696)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0044 – Wood Household – Opportunity 54&#124;Rejected&#124;true&#124;40717.00&#124;40717.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (223645109)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0045 – Cook Household – Opportunity 55&#124;Denied&#124;true&#124;77622.00&#124;77622.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (223907032)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0046 – Thomas Household – Opportunity 56&#124;Accepted&#124;true&#124;72136.00&#124;72136.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (224175595)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0047 – Gomez Household – Opportunity 57&#124;Accepted&#124;true&#124;38031.00&#124;38031.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (224445358)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0048 – Moore Household – Opportunity 58&#124;Presented&#124;false&#124;39586.00&#124;39586.00&#124;0&#124;false&#124;&#124;true&#124;BACKFILL_OPEN
+10:03:19.92 (224702331)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0049 – Coleman Household – Opportunity 59&#124;Accepted&#124;true&#124;39054.00&#124;39054.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (224990535)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0050 – Barnes Household – Opportunity 60&#124;Rejected&#124;true&#124;89857.00&#124;89857.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (225254718)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0051 – Collins Household – Opportunity 61&#124;Denied&#124;true&#124;66956.00&#124;66956.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (225516710)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0052 – Martinez Household – Opportunity 62&#124;Denied&#124;true&#124;67153.00&#124;67153.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (225773703)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0053 – Vieira Household – Opportunity 63&#124;Draft&#124;false&#124;44827.00&#124;44827.00&#124;0&#124;false&#124;&#124;true&#124;BACKFILL_OPEN
+10:03:19.92 (226057467)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0054 – Santos Household – Opportunity 64&#124;Draft&#124;false&#124;26838.00&#124;26838.00&#124;0&#124;false&#124;&#124;true&#124;BACKFILL_OPEN
+10:03:19.92 (226393570)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0055 – Taylor Household – Opportunity 65&#124;Rejected&#124;true&#124;18918.00&#124;18918.00&#124;0&#124;false&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (226838925)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0056 – White Household – Purchase 66&#124;Accepted&#124;true&#124;47984.00&#124;47984.00&#124;0&#124;false&#124;QuoteLineItem lines cannot identify a unique primary-vehicle pricing basis for Opportunity.Vehicle__c. Matched Vehicle_Trim lines: 0.&#124;false&#124;DATA_FIX_REQUIRED
+10:03:19.92 (227059388)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0057 – Silva Household – Purchase 67&#124;Accepted&#124;true&#124;50305.00&#124;50305.00&#124;0&#124;false&#124;QuoteLineItem lines cannot identify a unique primary-vehicle pricing basis for Opportunity.Vehicle__c. Matched Vehicle_Trim lines: 0.&#124;false&#124;DATA_FIX_REQUIRED
+10:03:19.92 (228166031)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0058 – Nguyen Household – Purchase 68&#124;Accepted&#124;true&#124;55829.00&#124;49827.38&#124;2&#124;true&#124;&#124;false&#124;FROZEN_HISTORICAL
+10:03:19.92 (228396933)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0059 – Jackson Household – Purchase 69&#124;Accepted&#124;true&#124;28883.00&#124;28883.00&#124;0&#124;false&#124;QuoteLineItem lines cannot identify a unique primary-vehicle pricing basis for Opportunity.Vehicle__c. Matched Vehicle_Trim lines: 0.&#124;false&#124;DATA_FIX_REQUIRED
+10:03:19.92 (228611876)|USER_DEBUG|[135]|DEBUG|DRYRUN&#124;Q-0060 – Powell Household – Purchase 70&#124;Accepted&#124;true&#124;39055.00&#124;39055.00&#124;0&#124;false&#124;QuoteLineItem lines cannot identify a unique primary-vehicle pricing basis for Opportunity.Vehicle__c. Matched Vehicle_Trim lines: 0.&#124;false&#124;DATA_FIX_REQUIRED
+10:03:19.92 (228678796)|USER_DEBUG|[147]|DEBUG|DRYRUN_SUMMARY&#124;total=60; null_adjusted=60; open=18; terminal=42; blockers=4; eligible_backfill=18; frozen_historical=38; blocked_needs_data_fix=0; unchanged_open=0
+10:03:19.228 (228777718)|CUMULATIVE_LIMIT_USAGE
+10:03:19.228 (228777718)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 150 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 10000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+10:03:19.228 (228777718)|CUMULATIVE_LIMIT_USAGE_END
+
+10:03:19.92 (228852328)|CODE_UNIT_FINISHED|execute_anonymous_apex
+10:03:19.92 (228865009)|EXECUTION_FINISHED
+

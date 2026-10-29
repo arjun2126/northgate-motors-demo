@@ -1,0 +1,16 @@
+{
+  "validationJob": "0Afaj00000paL8bCAE",
+  "checkOnly": true,
+  "status": "Succeeded",
+  "components": 1,
+  "errors": 0,
+  "testsRun": 0,
+  "requiredInputsPreserved": true,
+  "sourceHashes": {
+    "force-app/main/default/permissionsets/PS_Executive_Service_Field_Read.permissionset-meta.xml": "d88bf0aa6bd4397dca7ac52dd66f19d5b392e7fbfe2055e804aa64c1b5d3b844",
+    "manifest/uat-executive-field-read.xml": "31af36f307e21e8c33ebe78ec20719afe8ffb5b92dcf5add6b8b521bc2ba0265"
+  },
+  "deploymentPerformed": false,
+  "assignmentPerformed": false,
+  "recommendation": "Ready for exact one-component deployment approval; assignment only to confirmed intended internal reader after separate approval; visual fix not yet verified"
+}

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "verifiedArticles": 10,
+  "verifiedCategorySelections": 10,
+  "exactTitleSummaryLanguageMatches": 10,
+  "htmlContentMatches": 10,
+  "draftInternalOnly": 10,
+  "onlineOrArchivedMatchingVersions": 0,
+  "articles": [
+    {"versionId":"ka0aj000003F63NAAS","masterId":"kA0aj000002gHTBCA2","urlName":"prepare-for-service-appointment","category":"Service"},
+    {"versionId":"ka0aj000003F63OAAS","masterId":"kA0aj000002gHTCCA2","urlName":"service-estimates-and-approvals","category":"Service"},
+    {"versionId":"ka0aj000003F63PAAS","masterId":"kA0aj000002gHT8CAM","urlName":"seasonal-tire-service","category":"Service"},
+    {"versionId":"ka0aj000003F63QAAS","masterId":"kA0aj000002gHTACA2","urlName":"respond-to-recall-notice","category":"Safety"},
+    {"versionId":"ka0aj000003F63RAAS","masterId":"kA0aj000002gHTDCA2","urlName":"prepare-for-test-drive","category":"Buying"},
+    {"versionId":"ka0aj000003F63SAAS","masterId":"kA0aj000002gHTFCA2","urlName":"understand-vehicle-quote","category":"Buying"},
+    {"versionId":"ka0aj000003F63TAAS","masterId":"kA0aj000002gHT9CAM","urlName":"understand-financing-estimates","category":"Financing"},
+    {"versionId":"ka0aj000003F63UAAS","masterId":"kA0aj000002gHTECA2","urlName":"prepare-for-vehicle-delivery","category":"Ownership"},
+    {"versionId":"ka0aj000003F63VAAS","masterId":"kA0aj000002gHTGCA2","urlName":"understand-demo-loyalty-points","category":"Ownership"},
+    {"versionId":"ka0aj000003F63WAAS","masterId":"kA0aj000002gHT7CAM","urlName":"manage-contact-preferences","category":"Ownership"}
+  ]
+}

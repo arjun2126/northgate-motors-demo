@@ -1,0 +1,20 @@
+{
+  "status": 0,
+  "result": {
+    "id": "0Afaj00000p8MduCAE",
+    "status": "Succeeded",
+    "checkOnly": true,
+    "completedDate": "2026-10-26T03:58:20.000Z",
+    "numberComponentsDeployed": 1,
+    "numberComponentsTotal": 1,
+    "numberComponentErrors": 0,
+    "numberTestsCompleted": 0,
+    "numberTestsTotal": 0,
+    "numberTestErrors": 0,
+    "details": {
+      "componentSuccesses": [{"componentType":"GenAiPromptTemplate","fullName":"NG_Case_Triage","success":true}],
+      "componentFailures": []
+    }
+  },
+  "warnings": []
+}

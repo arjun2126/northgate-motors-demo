@@ -1,0 +1,103 @@
+# Post-deploy data and metadata preservation checks (read-only)
+## Record counts
+SELECT COUNT(Id) c FROM Financing__c
+62
+SELECT COUNT(Id) c FROM Delivery__c
+12
+SELECT COUNT(Id) c FROM Loyalty_Member__c
+70
+SELECT COUNT(Id) c FROM Quote
+60
+SELECT COUNT(Id) c FROM Opportunity
+131
+## Active approval processes
+{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "ProcessDefinition",
+          "url": "/services/data/v68.0/sobjects/ProcessDefinition/04aaj000003QUWzAAO"
+        },
+        "DeveloperName": "Financing_Exception_Approval",
+        "State": "Active"
+      },
+      {
+        "attributes": {
+          "type": "ProcessDefinition",
+          "url": "/services/data/v68.0/sobjects/ProcessDefinition/04aaj000003QUX0AAO"
+        },
+        "DeveloperName": "Opportunity_Discount_Approval",
+        "State": "Active"
+      },
+      {
+        "attributes": {
+          "type": "ProcessDefinition",
+          "url": "/services/data/v68.0/sobjects/ProcessDefinition/04aaj000003QUX1AAO"
+        },
+        "DeveloperName": "VP_Discount_Approval",
+        "State": "Active"
+      }
+    ],
+    "totalSize": 3,
+    "done": true
+  },
+  "warnings": []
+}
+## Lightning page last-modified timestamps (deploy at 2026-10-19T13:22Z)
+{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "FlexiPage",
+          "url": "/services/data/v68.0/tooling/sobjects/FlexiPage/0M0aj00000IUPg9CAH"
+        },
+        "DeveloperName": "Delivery_Record_Page",
+        "MasterLabel": "Delivery Record Page",
+        "LastModifiedDate": "2026-10-17T04:09:57.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "FlexiPage",
+          "url": "/services/data/v68.0/tooling/sobjects/FlexiPage/0M0aj00000IUPgACAX"
+        },
+        "DeveloperName": "Financing_Record_Page",
+        "MasterLabel": "Financing Record Page",
+        "LastModifiedDate": "2026-10-18T03:20:32.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "FlexiPage",
+          "url": "/services/data/v68.0/tooling/sobjects/FlexiPage/0M0aj00000IUPgBCAX"
+        },
+        "DeveloperName": "Loyalty_Member_Record_Page",
+        "MasterLabel": "Loyalty Member Record Page",
+        "LastModifiedDate": "2026-10-17T04:09:57.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "FlexiPage",
+          "url": "/services/data/v68.0/tooling/sobjects/FlexiPage/0M0aj00000IUPgCCAX"
+        },
+        "DeveloperName": "NG_Opportunity_Quote_Builder",
+        "MasterLabel": "NG Opportunity Quote Builder",
+        "LastModifiedDate": "2026-10-19T02:23:44.000+0000"
+      },
+      {
+        "attributes": {
+          "type": "FlexiPage",
+          "url": "/services/data/v68.0/tooling/sobjects/FlexiPage/0M0aj00000IUPgDCAX"
+        },
+        "DeveloperName": "NG_Quote_Summary",
+        "MasterLabel": "NG Quote Summary",
+        "LastModifiedDate": "2026-10-17T04:09:58.000+0000"
+      }
+    ],
+    "totalSize": 5,
+    "done": true
+  },
+  "warnings": []
+}

@@ -1,0 +1,320 @@
+{
+  "summary": {
+    "failRate": "3%",
+    "failing": 10,
+    "hostname": "https://orgfarm-25065ad46a-dev-ed.develop.my.salesforce.com",
+    "orgId": "00Daj00001Ae3iWEAR",
+    "outcome": "Failed",
+    "passRate": "97%",
+    "passing": 360,
+    "skipped": 0,
+    "testRunId": "707aj00001OOD4U",
+    "testStartTime": "2026-10-28T03:05:09.000Z",
+    "testsRan": 370,
+    "userId": "005aj00000feqbNAAQ",
+    "username": "arjun.ngdemo@northgate.demo",
+    "commandTime": "278 ms",
+    "testExecutionTime": "363431 ms",
+    "testTotalTime": "477970 ms"
+  },
+  "perClassReturnedMethodRows": {
+    "DeliveryCloseServiceTest": {
+      "Pass": 9
+    },
+    "LoyaltyAccrualBatchTest": {
+      "Pass": 1
+    },
+    "OwnerPortalFoundationControllerTest": {
+      "Pass": 5,
+      "Fail": 2
+    },
+    "LeadEnrichRooftopServiceTest": {
+      "Pass": 8
+    },
+    "QuotePricingServiceTest": {
+      "Pass": 23
+    },
+    "SiteLoginControllerTest": {
+      "Pass": 1
+    },
+    "LeadRoutingHandlerTest": {
+      "Pass": 6
+    },
+    "OwnerPortalVehicleBrokerTest": {
+      "Fail": 1,
+      "Pass": 5
+    },
+    "DebugTest2": {
+      "Pass": 1
+    },
+    "ServiceVisitCapacityGuardTest": {
+      "Pass": 15
+    },
+    "LoyaltyTierEvalBatchTest": {
+      "Pass": 3
+    },
+    "OpportunityStageStampTest": {
+      "Pass": 3
+    },
+    "FinanceApplicationControllerTest": {
+      "Pass": 23
+    },
+    "CommunitiesSelfRegConfirmControllerTest": {
+      "Pass": 1
+    },
+    "ConsentGateServiceTest": {
+      "Pass": 5
+    },
+    "FinancingStatusServiceTest": {
+      "Pass": 18
+    },
+    "Batch3ReportingAccessTest": {
+      "Fail": 2
+    },
+    "CaseMilestoneServiceTest": {
+      "Pass": 4
+    },
+    "VehicleReservationGuardTest": {
+      "Pass": 2
+    },
+    "InventoryGalleryControllerTest": {
+      "Pass": 5
+    },
+    "DiscountApprovalTest": {
+      "Pass": 6
+    },
+    "MyProfilePageControllerTest": {
+      "Pass": 1
+    },
+    "QuoteSummaryControllerTest": {
+      "Pass": 11
+    },
+    "CommunitiesLandingControllerTest": {
+      "Pass": 1
+    },
+    "CaseEscalationStampBatchTest": {
+      "Pass": 7
+    },
+    "LoyaltyLedgerServiceTest": {
+      "Pass": 4
+    },
+    "CommunitiesSelfRegControllerTest": {
+      "Pass": 1
+    },
+    "CaseServiceHistoryControllerTest": {
+      "Pass": 2
+    },
+    "RedemptionServiceTest": {
+      "Pass": 3
+    },
+    "MicrobatchSelfRegControllerTest": {
+      "Pass": 1
+    },
+    "OwnerPortalBatchBControllerTest": {
+      "Pass": 8,
+      "Fail": 1
+    },
+    "FinancingFlsEnforcementTest": {
+      "Pass": 2
+    },
+    "DebugTest5": {
+      "Pass": 1
+    },
+    "P2BulkTest": {
+      "Pass": 2
+    },
+    "LeadConvertGuardTest": {
+      "Pass": 2
+    },
+    "Loyalty_ExpiryBatchTest": {
+      "Pass": 2
+    },
+    "NurtureAudienceServiceTest": {
+      "Pass": 3
+    },
+    "TestDriveFollowUpTest": {
+      "Pass": 10,
+      "Fail": 1
+    },
+    "LoyaltyEnrolmentServiceTest": {
+      "Pass": 4
+    },
+    "QuoteTriggerEnforcementTest": {
+      "Pass": 6
+    },
+    "ExecutiveServiceMetricsPublisherTest": {
+      "Pass": 7
+    },
+    "InventoryReconciliationJobTest": {
+      "Pass": 4
+    },
+    "RateTableServiceTest": {
+      "Pass": 5
+    },
+    "FinancingApprovalTest": {
+      "Pass": 8
+    },
+    "QuoteTradeInGuardTest": {
+      "Pass": 7
+    },
+    "OwnerPortalOwnershipTest": {
+      "Fail": 1,
+      "Pass": 8
+    },
+    "LeadRoundRobinTest": {
+      "Pass": 1
+    },
+    "VinValidatorTest": {
+      "Pass": 5
+    },
+    "ServiceIntakeCaseServiceTest": {
+      "Pass": 2
+    },
+    "ForgotPasswordControllerTest": {
+      "Pass": 1
+    },
+    "OpportunityCalculatorControllerTest": {
+      "Pass": 2
+    },
+    "OwnerPortalShareReconcilerTest": {
+      "Pass": 1,
+      "Fail": 1
+    },
+    "PaymentCalculatorServiceTest": {
+      "Pass": 5
+    },
+    "TestDriveBookingGuardTest": {
+      "Pass": 9
+    },
+    "DebugTest": {
+      "Pass": 1
+    },
+    "VehicleServiceHistoryControllerTest": {
+      "Pass": 3
+    },
+    "DeliveryCompletionGuardTest": {
+      "Pass": 4
+    },
+    "RepeatPurchaseSignalServiceTest": {
+      "Pass": 1
+    },
+    "DebugTest3": {
+      "Pass": 1
+    },
+    "P7TriggerArchitectureTest": {
+      "Pass": 8
+    },
+    "QuoteBuilderControllerTest": {
+      "Pass": 14
+    },
+    "ChangePasswordControllerTest": {
+      "Pass": 1
+    },
+    "LoyaltyAccrualServiceTest": {
+      "Pass": 5
+    },
+    "TradeIn_Calc_EquityTest": {
+      "Pass": 4
+    },
+    "CommunitiesLoginControllerTest": {
+      "Pass": 1
+    },
+    "VinDecoderServiceTest": {
+      "Pass": 2
+    },
+    "SiteRegisterControllerTest": {
+      "Pass": 1
+    },
+    "VehicleReservationEventPublisherTest": {
+      "Pass": 2
+    },
+    "DebugTest4": {
+      "Pass": 1
+    }
+  },
+  "returnedTestRows": 338,
+  "returnedFailureRows": 9,
+  "failures": [
+    {
+      "FullName": "OwnerPortalFoundationControllerTest.permittedCustomersReadOnlyTheirOwnContactInUserMode",
+      "Message": "System.DmlException: Insert failed. First exception on row 0; first error: UNABLE_TO_LOCK_ROW, unable to obtain exclusive access to this record or 1 records: 0D1aj000002LZpdCAG: []",
+      "StackTrace": "Class.OwnerPortalFoundationControllerTest.isolatedCustomers: line 14, column 1\nClass.OwnerPortalFoundationControllerTest.permittedCustomersReadOnlyTheirOwnContactInUserMode: line 51, column 1",
+      "Id": "07Maj000008nUQEEA2",
+      "AsyncApexJobId": "707aj00001OOD4UAAX"
+    },
+    {
+      "FullName": "OwnerPortalFoundationControllerTest.realPlusUserWithoutPermissionOrSiteFailsClosed",
+      "Message": "System.DmlException: Insert failed. First exception on row 0; first error: UNABLE_TO_LOCK_ROW, unable to obtain exclusive access to this record or 1 records: 0D1aj000002LZpdCAG: []",
+      "StackTrace": "Class.OwnerPortalFoundationControllerTest.realPlusUserWithoutPermissionOrSiteFailsClosed: line 108, column 1",
+      "Id": "07Maj000008nUQFEA2",
+      "AsyncApexJobId": "707aj00001OOD4UAAX"
+    },
+    {
+      "FullName": "OwnerPortalVehicleBrokerTest.bookingIsIdempotentAndReusesCapacityAndIntake",
+      "Message": "System.AssertException: Assertion Failed: Unauthorized request accepted",
+      "StackTrace": "Class.OwnerPortalVehicleBrokerTest.cannotBook: line 73, column 1\nClass.OwnerPortalVehicleBrokerTest.bookingIsIdempotentAndReusesCapacityAndIntake: line 143, column 1",
+      "Id": "07Maj000008nUYEEA2",
+      "AsyncApexJobId": "707aj00001OOD4UAAX"
+    },
+    {
+      "FullName": "Batch3ReportingAccessTest.liabilityUsesStoredBalanceAndDoesNotReconstructHistoricalLedger",
+      "Message": "System.DmlException: Insert failed. First exception on row 0; first error: UNABLE_TO_LOCK_ROW, unable to obtain exclusive access to this record or 1 records: 0D1aj000002LZpdCAG: []",
+      "StackTrace": "Class.Batch3ReportingAccessTest.actors: line 4, column 1",
+      "Id": "07Maj000008nUmkEAE",
+      "AsyncApexJobId": "707aj00001OOD4UAAX"
+    },
+    {
+      "FullName": "Batch3ReportingAccessTest.viewerScopedServiceReadDiffersBetweenAdvisorAndManager",
+      "Message": "System.DmlException: Insert failed. First exception on row 0; first error: UNABLE_TO_LOCK_ROW, unable to obtain exclusive access to this record or 1 records: 0D1aj000002LZpdCAG: []",
+      "StackTrace": "Class.Batch3ReportingAccessTest.actors: line 4, column 1",
+      "Id": "07Maj000008nUmlEAE",
+      "AsyncApexJobId": "707aj00001OOD4UAAX"
+    },
+    {
+      "FullName": "OwnerPortalBatchBControllerTest.contactScopeCannotBeSubstitutedAndEmptyIsSafe",
+      "Message": "System.DmlException: Insert failed. First exception on row 0; first error: UNABLE_TO_LOCK_ROW, unable to obtain exclusive access to this record or 1 records: 0D1aj000002LZpdCAG: []",
+      "StackTrace": "Class.OwnerPortalBatchBControllerTest.customers: line 6, column 1\nClass.OwnerPortalBatchBControllerTest.contactScopeCannotBeSubstitutedAndEmptyIsSafe: line 48, column 1",
+      "Id": "07Maj000008nV9MEAU",
+      "AsyncApexJobId": "707aj00001OOD4UAAX"
+    },
+    {
+      "FullName": "TestDriveFollowUpTest.restrictedBookingCreatesOwnedTaskAndKeepsEmailHidden",
+      "Message": "System.AssertException: Assertion Failed: Single Email permission denial occurs before an email invocation is counted: Expected: 0, Actual: 1",
+      "StackTrace": "Class.TestDriveFollowUpTest.restrictedBookingCreatesOwnedTaskAndKeepsEmailHidden: line 140, column 1",
+      "Id": "07Maj000008nVJ4EAM",
+      "AsyncApexJobId": "707aj00001OOD4UAAX"
+    },
+    {
+      "FullName": "OwnerPortalOwnershipTest.bulkPendingDoesNotGrantOwnershipAndUnapprovedInternalCannotReview",
+      "Message": "System.AssertException: Assertion Failed: Expected: false, Actual: true",
+      "StackTrace": "Class.OwnerPortalOwnershipTest.bulkPendingDoesNotGrantOwnershipAndUnapprovedInternalCannotReview: line 199, column 1",
+      "Id": "07Maj000008nVVuEAM",
+      "AsyncApexJobId": "707aj00001OOD4UAAX"
+    },
+    {
+      "FullName": "OwnerPortalShareReconcilerTest.unapprovedInternalCannotStartMaintenanceOrScheduleWork",
+      "Message": "System.AssertException: Assertion Failed",
+      "StackTrace": "Class.OwnerPortalShareReconcilerTest.unapprovedInternalCannotStartMaintenanceOrScheduleWork: line 24, column 1",
+      "Id": "07Maj000008nVfaEAE",
+      "AsyncApexJobId": "707aj00001OOD4UAAX"
+    }
+  ],
+  "countLimitation": "Raw CLI summary reports 370 tests, 360 passing, 10 failing; detailed tests array contains 338 rows and nine Fail rows. Both retained verbatim; not reconciled or rerun.",
+  "localUI": {
+    "tests": 48,
+    "pass": 48,
+    "fail": 0,
+    "scope": "Mocked component state/static tests, not authenticated browser UAT"
+  },
+  "strictDQ": {
+    "status": "BLOCKED",
+    "error": "FileNotFoundError: [Errno 2] No such file or directory: data/csv/01-rooftops.csv",
+    "fullGatePassed": false
+  },
+  "independentDQProbes": {
+    "zeroCountProbesPassed": 7,
+    "duplicateVinGroups": 0,
+    "fullGatePassed": false
+  },
+  "changes": "Documentation and evidence only; no implementation/configuration/permission/record changes. Apex test temporary fixtures roll back; test-result records are produced by Salesforce."
+}

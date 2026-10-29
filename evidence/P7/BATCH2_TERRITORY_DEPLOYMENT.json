@@ -1,0 +1,159 @@
+{
+  "status": 0,
+  "result": {
+    "checkOnly": false,
+    "completedDate": "2026-10-26T03:33:49.000Z",
+    "createdBy": "005aj00000feqbN",
+    "createdDate": "2026-10-26T03:33:47.000Z",
+    "details": {
+      "componentSuccesses": [
+        {
+          "changed": true,
+          "componentType": "Territory2Type",
+          "created": true,
+          "createdDate": "2026-10-26T03:33:48.000Z",
+          "deleted": false,
+          "fileName": "territory2Types/NG_Rooftop.territory2Type",
+          "fullName": "NG_Rooftop",
+          "id": "0M5aj000000AsyPCAS",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "Territory2Model",
+          "created": true,
+          "createdDate": "2026-10-26T03:33:48.000Z",
+          "deleted": false,
+          "fileName": "territory2Models/NG_Rooftops/NG_Rooftops.territory2Model",
+          "fullName": "NG_Rooftops",
+          "id": "0MAaj0000017bLdGAI",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "Territory2",
+          "created": true,
+          "createdDate": "2026-10-26T03:33:48.000Z",
+          "deleted": false,
+          "fileName": "territory2Models/NG_Rooftops/territories/Airport.territory2",
+          "fullName": "NG_Rooftops.Airport",
+          "id": "0MIaj000000u1z7GAA",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "Territory2",
+          "created": true,
+          "createdDate": "2026-10-26T03:33:48.000Z",
+          "deleted": false,
+          "fileName": "territory2Models/NG_Rooftops/territories/Downtown.territory2",
+          "fullName": "NG_Rooftops.Downtown",
+          "id": "0MIaj000000u1z8GAA",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "Territory2",
+          "created": true,
+          "createdDate": "2026-10-26T03:33:48.000Z",
+          "deleted": false,
+          "fileName": "territory2Models/NG_Rooftops/territories/North.territory2",
+          "fullName": "NG_Rooftops.North",
+          "id": "0MIaj000000u1z9GAA",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "Territory2",
+          "created": true,
+          "createdDate": "2026-10-26T03:33:48.000Z",
+          "deleted": false,
+          "fileName": "territory2Models/NG_Rooftops/territories/Service_Centre.territory2",
+          "fullName": "NG_Rooftops.Service_Centre",
+          "id": "0MIaj000000u1zAGAQ",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "",
+          "created": false,
+          "createdDate": "2026-10-26T03:33:48.000Z",
+          "deleted": false,
+          "fileName": "package.xml",
+          "fullName": "package.xml",
+          "success": true
+        }
+      ],
+      "runTestResult": {
+        "numFailures": 0,
+        "numTestsRun": 0,
+        "totalTime": 0,
+        "codeCoverage": [],
+        "codeCoverageWarnings": [],
+        "failures": [],
+        "flowCoverage": [],
+        "flowCoverageWarnings": [],
+        "successes": []
+      },
+      "componentFailures": []
+    },
+    "done": true,
+    "id": "0Afaj00000p8GtRCAU",
+    "ignoreWarnings": false,
+    "lastModifiedDate": "2026-10-26T03:33:49.000Z",
+    "numberComponentErrors": 0,
+    "numberComponentsDeployed": 6,
+    "numberComponentsTotal": 6,
+    "numberFiles": "11",
+    "numberTestErrors": 0,
+    "numberTestsCompleted": 0,
+    "numberTestsTotal": 0,
+    "rollbackOnError": true,
+    "runTestsEnabled": false,
+    "startDate": "2026-10-26T03:33:47.000Z",
+    "status": "Succeeded",
+    "success": true,
+    "zipSize": 3438,
+    "files": [
+      {
+        "fullName": "NG_Rooftops.Airport",
+        "type": "Territory2",
+        "state": "Created",
+        "filePath": "force-app/main/default/territory2Models/NG_Rooftops/territories/Airport.territory2-meta.xml"
+      },
+      {
+        "fullName": "NG_Rooftops.Downtown",
+        "type": "Territory2",
+        "state": "Created",
+        "filePath": "force-app/main/default/territory2Models/NG_Rooftops/territories/Downtown.territory2-meta.xml"
+      },
+      {
+        "fullName": "NG_Rooftops.North",
+        "type": "Territory2",
+        "state": "Created",
+        "filePath": "force-app/main/default/territory2Models/NG_Rooftops/territories/North.territory2-meta.xml"
+      },
+      {
+        "fullName": "NG_Rooftops.Service_Centre",
+        "type": "Territory2",
+        "state": "Created",
+        "filePath": "force-app/main/default/territory2Models/NG_Rooftops/territories/Service_Centre.territory2-meta.xml"
+      },
+      {
+        "fullName": "NG_Rooftops",
+        "type": "Territory2Model",
+        "state": "Created",
+        "filePath": "force-app/main/default/territory2Models/NG_Rooftops/NG_Rooftops.territory2Model-meta.xml"
+      },
+      {
+        "fullName": "NG_Rooftop",
+        "type": "Territory2Type",
+        "state": "Created",
+        "filePath": "force-app/main/default/territory2Types/NG_Rooftop.territory2Type-meta.xml"
+      }
+    ],
+    "zipFileCount": 7,
+    "deployUrl": "https://orgfarm-25065ad46a-dev-ed.develop.my.salesforce.com/lightning/setup/DeployStatus/page?address=%2Fchangemgmt%2FmonitorDeploymentsDetails.apexp%3FasyncId%3D0Afaj00000p8GtRCAU%26retURL%3D%252Fchangemgmt%252FmonitorDeployment.apexp"
+  },
+  "warnings": []
+}

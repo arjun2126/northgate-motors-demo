@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "scope": "Historical receipt collection/consistency only",
+  "receipts": [
+    {
+      "path": "evidence/UAT/FULL_PROJECT_2026-10-28/execution_summary.json",
+      "sha256": "2e2b8fe285943611752291cb9b737e1d02592331324a345d5b03693ce06a12bb"
+    },
+    {
+      "path": "evidence/UAT/FULL_PROJECT_2026-10-28/raw/apex-test-run.json",
+      "sha256": "e144bfebdad971f144a240a816fb54aa842558639c97a9fc55e77dfe30e00c8c"
+    },
+    {
+      "path": "evidence/UAT/FULL_PROJECT_2026-10-28/triage/results.json",
+      "sha256": "97f1d3a6b354df9a730c6ba84bd10598253754531d26a581f2754ecffeb6cd39"
+    },
+    {
+      "path": "evidence/UAT/FULL_PROJECT_2026-10-28/triage/reconciliation.json",
+      "sha256": "f95e8061f94d2b4def370c9f486da80534ba97729690371c0d03b83c86dd7444"
+    },
+    {
+      "path": "evidence/UAT/FULL_PROJECT_2026-10-28/raw/local-ui-tests.tap",
+      "sha256": "dfadf62707c354520debf4700178424057e1ca25597f268d480d02c86a27f963"
+    },
+    {
+      "path": "evidence/UAT/FULL_PROJECT_2026-10-28/raw/cp2_quote.json",
+      "sha256": "4c6393b925593a6109f5126773be56a1670d7cd0006d29157dfad98f29f69aed"
+    },
+    {
+      "path": "evidence/UAT/FULL_PROJECT_2026-10-28/raw/network.json",
+      "sha256": "0cbfeb9ab8d3e66af056af1e5be66d1c51df75a8dea0dd6b38ada8164ce20e1e"
+    },
+    {
+      "path": "evidence/UAT/FULL_PROJECT_2026-10-28/raw/source_parity.json",
+      "sha256": "fac5a233c8317193ef28544c916ca6bbb7717baa1e525550f44f7e17c227d676"
+    }
+  ],
+  "historicalApex": {
+    "failRate": "3%",
+    "failing": 10,
+    "hostname": "https://orgfarm-25065ad46a-dev-ed.develop.my.salesforce.com",
+    "orgId": "00Daj00001Ae3iWEAR",
+    "outcome": "Failed",
+    "passRate": "97%",
+    "passing": 360,
+    "skipped": 0,
+    "testRunId": "707aj00001OOD4U",
+    "testStartTime": "2026-10-28T03:05:09.000Z",
+    "testsRan": 370,
+    "userId": "005aj00000feqbNAAQ",
+    "username": "arjun.ngdemo@northgate.demo",
+    "commandTime": "278 ms",
+    "testExecutionTime": "363431 ms",
+    "testTotalTime": "477970 ms"
+  },
+  "historicalUatStatus": "FAIL",
+  "openDefects": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05",
+    "D06",
+    "D07",
+    "D08",
+    "D09",
+    "D10",
+    "D11",
+    "D12",
+    "D13",
+    "D14"
+  ],
+  "limits": "Not a new test run, current source parity, browser PASS or phase acceptance",
+  "batch": "reuse",
+  "collectedAt": "20261028T161952706034Z",
+  "target": "ng-demo",
+  "salesforceWrites": 0,
+  "apexTestsRerun": 0
+}

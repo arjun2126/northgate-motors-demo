@@ -1,0 +1,17 @@
+# Product2 / PricebookEntry verification (read-only, 2026-10-19)
+## Product2 with '(Trim)' suffix
+with_suffix 0
+## Product2 Family='Vehicles'
+vehicle_products 30
+## Active standard PricebookEntry for Family='Vehicles'
+active_vehicle_pbe 30
+## Zero-price active vehicle PBE
+zero_price_vehicle_pbe 0
+## Quotes
+quotes 60 adjusted_nonnull 0
+## Product names vs Vehicle_Model names
+product_names 30 model_names 30 products_missing_model 0 models_missing_product 0
+examples_missing_model []
+examples_missing_product []
+## Active standard PricebookEntry with Product2.Category__c='Vehicle_Trim'
+30

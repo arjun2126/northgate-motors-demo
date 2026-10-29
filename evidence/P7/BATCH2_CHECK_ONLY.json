@@ -1,0 +1,3227 @@
+{
+  "status": 0,
+  "result": {
+    "checkOnly": true,
+    "completedDate": "2026-10-26T00:18:31.000Z",
+    "createdBy": "005aj00000feqbN",
+    "createdDate": "2026-10-26T00:14:56.000Z",
+    "details": {
+      "componentSuccesses": [
+        {
+          "changed": false,
+          "componentType": "ApexTrigger",
+          "created": false,
+          "createdDate": "2026-10-26T00:14:57.000Z",
+          "deleted": true,
+          "fileName": "triggers/TestDriveFollowupTrigger.trigger",
+          "fullName": "TestDriveFollowupTrigger",
+          "id": "01qaj00000AfYJQAA3",
+          "success": true
+        },
+        {
+          "changed": false,
+          "componentType": "ApexTrigger",
+          "created": false,
+          "createdDate": "2026-10-26T00:14:57.000Z",
+          "deleted": true,
+          "fileName": "triggers/VehicleCounterTrigger.trigger",
+          "fullName": "VehicleCounterTrigger",
+          "id": "01qaj00000AfYJSAA3",
+          "success": true
+        },
+        {
+          "changed": false,
+          "componentType": "ApexTrigger",
+          "created": false,
+          "createdDate": "2026-10-26T00:14:57.000Z",
+          "deleted": true,
+          "fileName": "triggers/LeadAfterConvertSeedBlock.trigger",
+          "fullName": "LeadAfterConvertSeedBlock",
+          "id": "01qaj00000AfYJLAA3",
+          "success": true
+        },
+        {
+          "changed": false,
+          "componentType": "ApexTrigger",
+          "created": false,
+          "createdDate": "2026-10-26T00:14:57.000Z",
+          "deleted": true,
+          "fileName": "triggers/LeadBeforeConvertGuard.trigger",
+          "fullName": "LeadBeforeConvertGuard",
+          "id": "01qaj00000AfYJMAA3",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "ApexClass",
+          "created": true,
+          "createdDate": "2026-10-26T00:14:58.000Z",
+          "deleted": false,
+          "fileName": "classes/InventoryReconciliationJob.cls",
+          "fullName": "InventoryReconciliationJob",
+          "id": "01paj00000c0OSfAAM",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "ApexClass",
+          "created": true,
+          "createdDate": "2026-10-26T00:14:58.000Z",
+          "deleted": false,
+          "fileName": "classes/InventoryReconciliationJobTest.cls",
+          "fullName": "InventoryReconciliationJobTest",
+          "id": "01paj00000c0OSgAAM",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "ApexClass",
+          "created": false,
+          "createdDate": "2026-10-26T00:14:58.000Z",
+          "deleted": false,
+          "fileName": "classes/LeadRoutingHandler.cls",
+          "fullName": "LeadRoutingHandler",
+          "id": "01paj00000bRxBrAAK",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "ApexClass",
+          "created": true,
+          "createdDate": "2026-10-26T00:14:58.000Z",
+          "deleted": false,
+          "fileName": "classes/LeadTriggerHandler.cls",
+          "fullName": "LeadTriggerHandler",
+          "id": "01paj00000c0OShAAM",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "ApexClass",
+          "created": true,
+          "createdDate": "2026-10-26T00:14:58.000Z",
+          "deleted": false,
+          "fileName": "classes/P7TriggerArchitectureTest.cls",
+          "fullName": "P7TriggerArchitectureTest",
+          "id": "01paj00000c0OSiAAM",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "ApexClass",
+          "created": true,
+          "createdDate": "2026-10-26T00:14:58.000Z",
+          "deleted": false,
+          "fileName": "classes/TestDriveTriggerHandler.cls",
+          "fullName": "TestDriveTriggerHandler",
+          "id": "01paj00000c0OSjAAM",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "ApexClass",
+          "created": true,
+          "createdDate": "2026-10-26T00:14:58.000Z",
+          "deleted": false,
+          "fileName": "classes/VehicleTriggerHandler.cls",
+          "fullName": "VehicleTriggerHandler",
+          "id": "01paj00000c0OSkAAM",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "ApexTrigger",
+          "created": false,
+          "createdDate": "2026-10-26T00:14:59.000Z",
+          "deleted": false,
+          "fileName": "triggers/LeadRoutingTrigger.trigger",
+          "fullName": "LeadRoutingTrigger",
+          "id": "01qaj00000AfYJNAA3",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "ApexTrigger",
+          "created": false,
+          "createdDate": "2026-10-26T00:14:59.000Z",
+          "deleted": false,
+          "fileName": "triggers/TestDriveTrigger.trigger",
+          "fullName": "TestDriveTrigger",
+          "id": "01qaj00000AfYJRAA3",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "ApexTrigger",
+          "created": false,
+          "createdDate": "2026-10-26T00:14:59.000Z",
+          "deleted": false,
+          "fileName": "triggers/VehicleTrigger.trigger",
+          "fullName": "VehicleTrigger",
+          "id": "01qaj00000AfYJTAA3",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "",
+          "created": false,
+          "createdDate": "2026-10-26T00:14:59.000Z",
+          "deleted": false,
+          "fileName": "package.xml",
+          "fullName": "package.xml",
+          "success": true
+        }
+      ],
+      "runTestResult": {
+        "codeCoverage": [
+          {
+            "id": "01qaj00000AfYJNAA3",
+            "locationsCovered": {
+              "column": "0",
+              "line": "2",
+              "numExecutions": "0",
+              "time": "-1.0"
+            },
+            "name": "LeadRoutingTrigger",
+            "namespace": null,
+            "numLocations": 1,
+            "numLocationsNotCovered": 0,
+            "type": "Trigger",
+            "dmlInfo": [],
+            "locationsNotCovered": [],
+            "methodInfo": [],
+            "soqlInfo": [],
+            "soslInfo": []
+          },
+          {
+            "id": "01paj00000c0OSfAAM",
+            "locationsCovered": [
+              {
+                "column": "0",
+                "line": "4",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "5",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "6",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "7",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "9",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "10",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "11",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "14",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "17",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "18",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "19",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "20",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "21",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "24",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "27",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "28",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "29",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "30",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "31",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "32",
+                "numExecutions": "0",
+                "time": "-1.0"
+              }
+            ],
+            "name": "InventoryReconciliationJob",
+            "namespace": null,
+            "numLocations": 20,
+            "numLocationsNotCovered": 0,
+            "type": "Class",
+            "dmlInfo": [],
+            "locationsNotCovered": [],
+            "methodInfo": [],
+            "soqlInfo": [],
+            "soslInfo": []
+          },
+          {
+            "id": "01paj00000c0OSjAAM",
+            "locationsCovered": [
+              {
+                "column": "0",
+                "line": "2",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "3",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "4",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "6",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "7",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "8",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "9",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "10",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "12",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "13",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "14",
+                "numExecutions": "0",
+                "time": "-1.0"
+              }
+            ],
+            "name": "TestDriveTriggerHandler",
+            "namespace": null,
+            "numLocations": 11,
+            "numLocationsNotCovered": 0,
+            "type": "Class",
+            "dmlInfo": [],
+            "locationsNotCovered": [],
+            "methodInfo": [],
+            "soqlInfo": [],
+            "soslInfo": []
+          },
+          {
+            "id": "01paj00000bRxBrAAK",
+            "locationsCovered": [
+              {
+                "column": "0",
+                "line": "2",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "3",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "4",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "5",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "6",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "12",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "13",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "14",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "15",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "16",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "19",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "21",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "22",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "23",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "24",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "26",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "27",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "29",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "32",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "33",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "34",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "35",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "37",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "38",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "41",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "42",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "44",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "47",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "50",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "52",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "55",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "56",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "58",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "61",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "62",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "63",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "65",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "66",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "69",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "70",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "72",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "73",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "75",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "78",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "79",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "80",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "82",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "85",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "86",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "87",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "88",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "91",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "92",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "94",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "95",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "96",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "98",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "99",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "100",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "101",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "102",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "103",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "104",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "107",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "110",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "111",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "114",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "115",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "116",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "119",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "120",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "124",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "125",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "126",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "127",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "129",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "130",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "131",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "132",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "133",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "136",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "137",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "138",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "140",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "141",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "143",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "144",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "145",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "147",
+                "numExecutions": "0",
+                "time": "-1.0"
+              }
+            ],
+            "locationsNotCovered": [
+              {
+                "column": 0,
+                "line": 39,
+                "numExecutions": 0,
+                "time": -1
+              },
+              {
+                "column": 0,
+                "line": 48,
+                "numExecutions": 0,
+                "time": -1
+              },
+              {
+                "column": 0,
+                "line": 67,
+                "numExecutions": 0,
+                "time": -1
+              },
+              {
+                "column": 0,
+                "line": 83,
+                "numExecutions": 0,
+                "time": -1
+              },
+              {
+                "column": 0,
+                "line": 108,
+                "numExecutions": 0,
+                "time": -1
+              },
+              {
+                "column": 0,
+                "line": 112,
+                "numExecutions": 0,
+                "time": -1
+              },
+              {
+                "column": 0,
+                "line": 117,
+                "numExecutions": 0,
+                "time": -1
+              },
+              {
+                "column": 0,
+                "line": 134,
+                "numExecutions": 0,
+                "time": -1
+              }
+            ],
+            "name": "LeadRoutingHandler",
+            "namespace": null,
+            "numLocations": 97,
+            "numLocationsNotCovered": 8,
+            "type": "Class",
+            "dmlInfo": [],
+            "methodInfo": [],
+            "soqlInfo": [],
+            "soslInfo": []
+          },
+          {
+            "id": "01qaj00000AfYJTAA3",
+            "locationsCovered": {
+              "column": "0",
+              "line": "2",
+              "numExecutions": "0",
+              "time": "-1.0"
+            },
+            "name": "VehicleTrigger",
+            "namespace": null,
+            "numLocations": 1,
+            "numLocationsNotCovered": 0,
+            "type": "Trigger",
+            "dmlInfo": [],
+            "locationsNotCovered": [],
+            "methodInfo": [],
+            "soqlInfo": [],
+            "soslInfo": []
+          },
+          {
+            "id": "01qaj00000AfYJRAA3",
+            "locationsCovered": {
+              "column": "0",
+              "line": "2",
+              "numExecutions": "0",
+              "time": "-1.0"
+            },
+            "name": "TestDriveTrigger",
+            "namespace": null,
+            "numLocations": 1,
+            "numLocationsNotCovered": 0,
+            "type": "Trigger",
+            "dmlInfo": [],
+            "locationsNotCovered": [],
+            "methodInfo": [],
+            "soqlInfo": [],
+            "soslInfo": []
+          },
+          {
+            "id": "01paj00000c0OShAAM",
+            "locationsCovered": [
+              {
+                "column": "0",
+                "line": "2",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "3",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "4",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "5",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "6",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "7",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "8",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "10",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "11",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "15",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "16",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "17",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "18",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "19",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "20",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "25",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "26",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "27",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "28",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "29",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "30",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "31",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "32",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "33",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "34",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "36",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "38",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "39",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "40",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "41",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "42",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "43",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "44",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "45",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "46",
+                "numExecutions": "0",
+                "time": "-1.0"
+              }
+            ],
+            "name": "LeadTriggerHandler",
+            "namespace": null,
+            "numLocations": 35,
+            "numLocationsNotCovered": 0,
+            "type": "Class",
+            "dmlInfo": [],
+            "locationsNotCovered": [],
+            "methodInfo": [],
+            "soqlInfo": [],
+            "soslInfo": []
+          },
+          {
+            "id": "01paj00000c0OSkAAM",
+            "locationsCovered": [
+              {
+                "column": "0",
+                "line": "2",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "3",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "4",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "5",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "7",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "8",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "9",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "11",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "12",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "14",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "15",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "16",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "17",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "18",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "20",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "21",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "23",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "24",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "25",
+                "numExecutions": "0",
+                "time": "-1.0"
+              },
+              {
+                "column": "0",
+                "line": "26",
+                "numExecutions": "0",
+                "time": "-1.0"
+              }
+            ],
+            "name": "VehicleTriggerHandler",
+            "namespace": null,
+            "numLocations": 20,
+            "numLocationsNotCovered": 0,
+            "type": "Class",
+            "dmlInfo": [],
+            "locationsNotCovered": [],
+            "methodInfo": [],
+            "soqlInfo": [],
+            "soslInfo": []
+          }
+        ],
+        "flowCoverage": [
+          {
+            "elementsNotCovered": [
+              "mark_unrouted_2",
+              "get_rooftop",
+              "has_route",
+              "apply_route",
+              "get_route",
+              "rooftop_exists",
+              "mark_unrouted"
+            ],
+            "flowId": "301aj000045NFnp",
+            "flowName": "Lead_Enrich_Rooftop",
+            "flowNamespace": null,
+            "numElements": 8,
+            "numElementsNotCovered": 7,
+            "processType": "AutoLaunchedFlow"
+          }
+        ],
+        "numFailures": 0,
+        "numTestsRun": 235,
+        "successes": [
+          {
+            "id": "01paj00000bxV0sAAE",
+            "methodName": "bulkCompletionDoesNotInventFirstResponseOnClosure",
+            "name": "CaseMilestoneServiceTest",
+            "namespace": null,
+            "time": 10545
+          },
+          {
+            "id": "01paj00000bxV0sAAE",
+            "methodName": "deniedAdvisorCannotForgeResponseOrReadHiddenCases",
+            "name": "CaseMilestoneServiceTest",
+            "namespace": null,
+            "time": 663
+          },
+          {
+            "id": "01paj00000bxV0sAAE",
+            "methodName": "nativeTimersAndAdvisorCompletionAreIdempotent",
+            "name": "CaseMilestoneServiceTest",
+            "namespace": null,
+            "time": 1145
+          },
+          {
+            "id": "01paj00000bxV0sAAE",
+            "methodName": "unentitledBypassAndInvalidEvidenceRemainIsolated",
+            "name": "CaseMilestoneServiceTest",
+            "namespace": null,
+            "time": 648
+          },
+          {
+            "id": "01paj00000bxG1sAAE",
+            "methodName": "bulkPartialSaveAdmitsOnlyMatchingGrantsAndRetriesSafely",
+            "name": "ConsentGateServiceTest",
+            "namespace": null,
+            "time": 3511
+          },
+          {
+            "id": "01paj00000bxG1sAAE",
+            "methodName": "emailOptOutAndConsentReparentRefreshBothContacts",
+            "name": "ConsentGateServiceTest",
+            "namespace": null,
+            "time": 824
+          },
+          {
+            "id": "01paj00000bxG1sAAE",
+            "methodName": "revocationDeletionUndeleteAndPolicyChangesSuppressWithoutDeletingHistory",
+            "name": "ConsentGateServiceTest",
+            "namespace": null,
+            "time": 1310
+          },
+          {
+            "id": "01paj00000bxG1sAAE",
+            "methodName": "unmanagedCampaignsRemainLegacyAndInvalidPolicyFailsClosed",
+            "name": "ConsentGateServiceTest",
+            "namespace": null,
+            "time": 621
+          },
+          {
+            "id": "01paj00000bxG1sAAE",
+            "methodName": "wrongTupleFutureMissingAndDenyRowsDoNotGrantConsent",
+            "name": "ConsentGateServiceTest",
+            "namespace": null,
+            "time": 1153
+          },
+          {
+            "id": "01paj00000bRxBaAAK",
+            "methodName": "buyerAddedAfterCompletion_enrolsOnLateAssignment",
+            "name": "DeliveryCloseServiceTest",
+            "namespace": null,
+            "time": 880
+          },
+          {
+            "id": "01paj00000bRxBaAAK",
+            "methodName": "buyerReplacement_doesNotAutoEnrolNewBuyer",
+            "name": "DeliveryCloseServiceTest",
+            "namespace": null,
+            "time": 915
+          },
+          {
+            "id": "01paj00000bRxBaAAK",
+            "methodName": "completedDeliveryWithBuyerAtCompletion_enrols",
+            "name": "DeliveryCloseServiceTest",
+            "namespace": null,
+            "time": 715
+          },
+          {
+            "id": "01paj00000bRxBaAAK",
+            "methodName": "completingDelivery_enrolsBuyerInLoyalty",
+            "name": "DeliveryCloseServiceTest",
+            "namespace": null,
+            "time": 906
+          },
+          {
+            "id": "01paj00000bRxBaAAK",
+            "methodName": "completingDelivery_incrementsContactLifetimeVehicles",
+            "name": "DeliveryCloseServiceTest",
+            "namespace": null,
+            "time": 882
+          },
+          {
+            "id": "01paj00000bRxBaAAK",
+            "methodName": "completingDelivery_isIdempotent",
+            "name": "DeliveryCloseServiceTest",
+            "namespace": null,
+            "time": 1028
+          },
+          {
+            "id": "01paj00000bRxBaAAK",
+            "methodName": "completingDelivery_setsOppClosedWonAndDeliveryCompletedFlag",
+            "name": "DeliveryCloseServiceTest",
+            "namespace": null,
+            "time": 936
+          },
+          {
+            "id": "01paj00000bRxBaAAK",
+            "methodName": "nonCompletedUpdate_doesNotCloseOpp",
+            "name": "DeliveryCloseServiceTest",
+            "namespace": null,
+            "time": 704
+          },
+          {
+            "id": "01paj00000bRxBaAAK",
+            "methodName": "repeatedUpdatesAfterCompletion_doNotDuplicateEnrolment",
+            "name": "DeliveryCloseServiceTest",
+            "namespace": null,
+            "time": 1166
+          },
+          {
+            "id": "01paj00000bRxBbAAK",
+            "methodName": "checklistCompleteFormula_isTrueWhenAllFour",
+            "name": "DeliveryCompletionGuardTest",
+            "namespace": null,
+            "time": 669
+          },
+          {
+            "id": "01paj00000bRxBbAAK",
+            "methodName": "completedWithAllFourChecklist_succeeds",
+            "name": "DeliveryCompletionGuardTest",
+            "namespace": null,
+            "time": 693
+          },
+          {
+            "id": "01paj00000bRxBbAAK",
+            "methodName": "completedWithIncompleteChecklist_isBlockedByValidationRule",
+            "name": "DeliveryCompletionGuardTest",
+            "namespace": null,
+            "time": 459
+          },
+          {
+            "id": "01paj00000bRxBbAAK",
+            "methodName": "transitioningToCompletedWithoutChecklist_isBlockedByValidationRule",
+            "name": "DeliveryCompletionGuardTest",
+            "namespace": null,
+            "time": 554
+          },
+          {
+            "id": "01paj00000bRxBcAAK",
+            "methodName": "above10_skipsManager_routesToVP_andApproves",
+            "name": "DiscountApprovalTest",
+            "namespace": null,
+            "time": 2068
+          },
+          {
+            "id": "01paj00000bRxBcAAK",
+            "methodName": "above5_routesToRooftopManager_andApproves",
+            "name": "DiscountApprovalTest",
+            "namespace": null,
+            "time": 1848
+          },
+          {
+            "id": "01paj00000bRxBcAAK",
+            "methodName": "livePersona_controllerDerivesVpFor12",
+            "name": "DiscountApprovalTest",
+            "namespace": null,
+            "time": 1203
+          },
+          {
+            "id": "01paj00000bRxBcAAK",
+            "methodName": "livePersona_rep12_vpApprovesWithWriteBack",
+            "name": "DiscountApprovalTest",
+            "namespace": null,
+            "time": 1414
+          },
+          {
+            "id": "01paj00000bRxBcAAK",
+            "methodName": "managerSubmit_above10_doesNotSelfApprove",
+            "name": "DiscountApprovalTest",
+            "namespace": null,
+            "time": 1116
+          },
+          {
+            "id": "01paj00000bRxBcAAK",
+            "methodName": "rejection_captured_onOpportunity",
+            "name": "DiscountApprovalTest",
+            "namespace": null,
+            "time": 1724
+          },
+          {
+            "id": "01paj00000bRxBeAAK",
+            "methodName": "applicantRequired_whenNoApplicantAndQuoteBuyerNull_isRejected",
+            "name": "FinanceApplicationControllerTest",
+            "namespace": null,
+            "time": 457
+          },
+          {
+            "id": "01paj00000bRxBeAAK",
+            "methodName": "crossOpportunityQuote_isRejected",
+            "name": "FinanceApplicationControllerTest",
+            "namespace": null,
+            "time": 509
+          },
+          {
+            "id": "01paj00000bRxBeAAK",
+            "methodName": "downPaymentExceedingAdjusted_isRejected",
+            "name": "FinanceApplicationControllerTest",
+            "namespace": null,
+            "time": 498
+          },
+          {
+            "id": "01paj00000bRxBeAAK",
+            "methodName": "draftCreate_derivesAmountFromQuoteMinusDownMinusTrade",
+            "name": "FinanceApplicationControllerTest",
+            "namespace": null,
+            "time": 666
+          },
+          {
+            "id": "01paj00000bRxBeAAK",
+            "methodName": "draftUpdate_preservesRecord",
+            "name": "FinanceApplicationControllerTest",
+            "namespace": null,
+            "time": 1232
+          },
+          {
+            "id": "01paj00000bRxBeAAK",
+            "methodName": "existingDraftPreventsNewDraft",
+            "name": "FinanceApplicationControllerTest",
+            "namespace": null,
+            "time": 946
+          },
+          {
+            "id": "01paj00000bRxBeAAK",
+            "methodName": "financingLaunchPreservesAmbiguousDraftSelection",
+            "name": "FinanceApplicationControllerTest",
+            "namespace": null,
+            "time": 772
+          },
+          {
+            "id": "01paj00000bRxBeAAK",
+            "methodName": "financingLaunchRejectsMissingObjectAccess",
+            "name": "FinanceApplicationControllerTest",
+            "namespace": null,
+            "time": 1339
+          },
+          {
+            "id": "01paj00000bRxBeAAK",
+            "methodName": "financingLaunchRejectsUnsharedOpportunityEvenWithVisibleFinancing",
+            "name": "FinanceApplicationControllerTest",
+            "namespace": null,
+            "time": 499
+          },
+          {
+            "id": "01paj00000bRxBeAAK",
+            "methodName": "financingLaunchRejectsUnsharedRecordEvenWithVisibleOpportunity",
+            "name": "FinanceApplicationControllerTest",
+            "namespace": null,
+            "time": 461
+          },
+          {
+            "id": "01paj00000bRxBeAAK",
+            "methodName": "launchContextsResolveSameOpportunityAndDraft",
+            "name": "FinanceApplicationControllerTest",
+            "namespace": null,
+            "time": 563
+          },
+          {
+            "id": "01paj00000bRxBeAAK",
+            "methodName": "launchRejectsMissingAndUnsupportedContexts",
+            "name": "FinanceApplicationControllerTest",
+            "namespace": null,
+            "time": 562
+          },
+          {
+            "id": "01paj00000bRxBeAAK",
+            "methodName": "manualExceptionWithoutReason_isRejected",
+            "name": "FinanceApplicationControllerTest",
+            "namespace": null,
+            "time": 458
+          },
+          {
+            "id": "01paj00000bRxBeAAK",
+            "methodName": "manualException_stampsReasonAndRate",
+            "name": "FinanceApplicationControllerTest",
+            "namespace": null,
+            "time": 560
+          },
+          {
+            "id": "01paj00000bRxBeAAK",
+            "methodName": "multipleAcceptedTradeIns_isAmbiguous",
+            "name": "FinanceApplicationControllerTest",
+            "namespace": null,
+            "time": 473
+          },
+          {
+            "id": "01paj00000bRxBeAAK",
+            "methodName": "multipleDrafts_surfacesAmbiguityAndBlocksNew",
+            "name": "FinanceApplicationControllerTest",
+            "namespace": null,
+            "time": 853
+          },
+          {
+            "id": "01paj00000bRxBeAAK",
+            "methodName": "negativePrincipal_isRejected",
+            "name": "FinanceApplicationControllerTest",
+            "namespace": null,
+            "time": 466
+          },
+          {
+            "id": "01paj00000bRxBeAAK",
+            "methodName": "negativeTradeEquity_increasesFinancing",
+            "name": "FinanceApplicationControllerTest",
+            "namespace": null,
+            "time": 523
+          },
+          {
+            "id": "01paj00000bRxBeAAK",
+            "methodName": "nonDraftUpdate_isRejected",
+            "name": "FinanceApplicationControllerTest",
+            "namespace": null,
+            "time": 774
+          },
+          {
+            "id": "01paj00000bRxBeAAK",
+            "methodName": "opportunityLaunchWithoutDraftKeepsNewMode",
+            "name": "FinanceApplicationControllerTest",
+            "namespace": null,
+            "time": 428
+          },
+          {
+            "id": "01paj00000bRxBeAAK",
+            "methodName": "preview_newApplication_returnsSelectedQuoteFigures",
+            "name": "FinanceApplicationControllerTest",
+            "namespace": null,
+            "time": 433
+          },
+          {
+            "id": "01paj00000bRxBeAAK",
+            "methodName": "preview_signedTradeEquity_includedInFinancing",
+            "name": "FinanceApplicationControllerTest",
+            "namespace": null,
+            "time": 449
+          },
+          {
+            "id": "01paj00000bRxBeAAK",
+            "methodName": "zeroAcceptedTradeIns_zerosEquity",
+            "name": "FinanceApplicationControllerTest",
+            "namespace": null,
+            "time": 660
+          },
+          {
+            "id": "01paj00000bRxBgAAK",
+            "methodName": "approve_writesExceptionApprovedAndDecisionDate",
+            "name": "FinancingApprovalTest",
+            "namespace": null,
+            "time": 815
+          },
+          {
+            "id": "01paj00000bRxBgAAK",
+            "methodName": "reject_writesExceptionApprovedFalse",
+            "name": "FinancingApprovalTest",
+            "namespace": null,
+            "time": 974
+          },
+          {
+            "id": "01paj00000bRxBgAAK",
+            "methodName": "requiresApproval_manualException_isTrue",
+            "name": "FinancingApprovalTest",
+            "namespace": null,
+            "time": 216
+          },
+          {
+            "id": "01paj00000bRxBgAAK",
+            "methodName": "requiresApproval_rateTablePrimeTier_isFalse",
+            "name": "FinancingApprovalTest",
+            "namespace": null,
+            "time": 203
+          },
+          {
+            "id": "01paj00000bRxBgAAK",
+            "methodName": "requiresApproval_subPrime_isTrue",
+            "name": "FinancingApprovalTest",
+            "namespace": null,
+            "time": 232
+          },
+          {
+            "id": "01paj00000bRxBgAAK",
+            "methodName": "submit_createsPendingProcessInstanceWithQueueActor",
+            "name": "FinancingApprovalTest",
+            "namespace": null,
+            "time": 703
+          },
+          {
+            "id": "01paj00000bRxBgAAK",
+            "methodName": "submit_isIdempotent_secondCallReportsAlreadySubmitted",
+            "name": "FinancingApprovalTest",
+            "namespace": null,
+            "time": 700
+          },
+          {
+            "id": "01paj00000bRxBgAAK",
+            "methodName": "submit_rateTablePrime_rejectsWithNoSubmission",
+            "name": "FinancingApprovalTest",
+            "namespace": null,
+            "time": 421
+          },
+          {
+            "id": "01paj00000bRxBhAAK",
+            "methodName": "salesRep_cannotReadFinancing_AnnualRate_viaUserModeSoql",
+            "name": "FinancingFlsEnforcementTest",
+            "namespace": null,
+            "time": 445
+          },
+          {
+            "id": "01paj00000bRxBhAAK",
+            "methodName": "salesRep_cannotReadFinancing_FinanceExceptionApproved_viaUserModeSoql",
+            "name": "FinancingFlsEnforcementTest",
+            "namespace": null,
+            "time": 574
+          },
+          {
+            "id": "01paj00000bRxBjAAK",
+            "methodName": "allValidSequences_completeLifecycle",
+            "name": "FinancingStatusServiceTest",
+            "namespace": null,
+            "time": 382
+          },
+          {
+            "id": "01paj00000bRxBjAAK",
+            "methodName": "blankStatusOnInsert_defaultsToDraft",
+            "name": "FinancingStatusServiceTest",
+            "namespace": null,
+            "time": 256
+          },
+          {
+            "id": "01paj00000bRxBjAAK",
+            "methodName": "bulkInsert_appliesMatrixToEachRecord",
+            "name": "FinancingStatusServiceTest",
+            "namespace": null,
+            "time": 686
+          },
+          {
+            "id": "01paj00000bRxBjAAK",
+            "methodName": "bulkUpdate_succeedsOrFailsAsAWhole",
+            "name": "FinancingStatusServiceTest",
+            "namespace": null,
+            "time": 526
+          },
+          {
+            "id": "01paj00000bRxBjAAK",
+            "methodName": "declinedFollowedByCancel_landsCancelled",
+            "name": "FinancingStatusServiceTest",
+            "namespace": null,
+            "time": 329
+          },
+          {
+            "id": "01paj00000bRxBjAAK",
+            "methodName": "draftCancelWithoutTerm_worksThroughBothRules",
+            "name": "FinancingStatusServiceTest",
+            "namespace": null,
+            "time": 283
+          },
+          {
+            "id": "01paj00000bRxBjAAK",
+            "methodName": "forbiddenTransitions_coverEachCell",
+            "name": "FinancingStatusServiceTest",
+            "namespace": null,
+            "time": 5810
+          },
+          {
+            "id": "01paj00000bRxBjAAK",
+            "methodName": "fundedAndCancelled_areTerminal",
+            "name": "FinancingStatusServiceTest",
+            "namespace": null,
+            "time": 715
+          },
+          {
+            "id": "01paj00000bRxBjAAK",
+            "methodName": "fundedInsertIsBlocked_atAnyPath",
+            "name": "FinancingStatusServiceTest",
+            "namespace": null,
+            "time": 307
+          },
+          {
+            "id": "01paj00000bRxBjAAK",
+            "methodName": "fundedPath_satisfiesFundedRequiresApprovedVR",
+            "name": "FinancingStatusServiceTest",
+            "namespace": null,
+            "time": 320
+          },
+          {
+            "id": "01paj00000bRxBjAAK",
+            "methodName": "initialStatusDraft_stampsNullPrevious",
+            "name": "FinancingStatusServiceTest",
+            "namespace": null,
+            "time": 269
+          },
+          {
+            "id": "01paj00000bRxBjAAK",
+            "methodName": "initialStatusNonDraft_blockedExceptDraft",
+            "name": "FinancingStatusServiceTest",
+            "namespace": null,
+            "time": 1176
+          },
+          {
+            "id": "01paj00000bRxBjAAK",
+            "methodName": "nonDraftWithoutTerm_isStillBlocked",
+            "name": "FinancingStatusServiceTest",
+            "namespace": null,
+            "time": 1323
+          },
+          {
+            "id": "01paj00000bRxBjAAK",
+            "methodName": "previousStatusSpoofing_isOverwrittenOnInsert",
+            "name": "FinancingStatusServiceTest",
+            "namespace": null,
+            "time": 279
+          },
+          {
+            "id": "01paj00000bRxBjAAK",
+            "methodName": "previousStatusSpoofing_isOverwrittenOnUpdate",
+            "name": "FinancingStatusServiceTest",
+            "namespace": null,
+            "time": 286
+          },
+          {
+            "id": "01paj00000bRxBjAAK",
+            "methodName": "sameStatusUpdate_cannotSpoofPreviousStatus",
+            "name": "FinancingStatusServiceTest",
+            "namespace": null,
+            "time": 303
+          },
+          {
+            "id": "01paj00000bRxBjAAK",
+            "methodName": "sameStatusUpdate_preservesPreviousStatus",
+            "name": "FinancingStatusServiceTest",
+            "namespace": null,
+            "time": 318
+          },
+          {
+            "id": "01paj00000bRxBjAAK",
+            "methodName": "skippingIntermediateStatuses_isBlocked",
+            "name": "FinancingStatusServiceTest",
+            "namespace": null,
+            "time": 308
+          },
+          {
+            "id": "01paj00000c0HxSAAU",
+            "methodName": "deniedHiddenSoldAndBypassNeverMutateInventory",
+            "name": "InventoryGalleryControllerTest",
+            "namespace": null,
+            "time": 1071
+          },
+          {
+            "id": "01paj00000c0HxSAAU",
+            "methodName": "filtersAndPagesPreserveReadBoundary",
+            "name": "InventoryGalleryControllerTest",
+            "namespace": null,
+            "time": 486
+          },
+          {
+            "id": "01paj00000c0HxSAAU",
+            "methodName": "legacyAuthorizedWriterDoesNotRequireNewEventPermission",
+            "name": "InventoryGalleryControllerTest",
+            "namespace": null,
+            "time": 502
+          },
+          {
+            "id": "01paj00000c0HxSAAU",
+            "methodName": "permissionGatedReadOnlySalesActorReservesAndCannotRepeat",
+            "name": "InventoryGalleryControllerTest",
+            "namespace": null,
+            "time": 524
+          },
+          {
+            "id": "01paj00000c0HxSAAU",
+            "methodName": "unsafePhotoPathIsNotRenderedAndCursorTypesAreChecked",
+            "name": "InventoryGalleryControllerTest",
+            "namespace": null,
+            "time": 300
+          },
+          {
+            "id": "01paj00000c0OSgAAM",
+            "methodName": "emptiedRooftopResetsToZero",
+            "name": "InventoryReconciliationJobTest",
+            "namespace": null,
+            "time": 426
+          },
+          {
+            "id": "01paj00000c0OSgAAM",
+            "methodName": "invalidScopesFailBeforeEnqueue",
+            "name": "InventoryReconciliationJobTest",
+            "namespace": null,
+            "time": 61
+          },
+          {
+            "id": "01paj00000c0OSgAAM",
+            "methodName": "stopTestReconcilesScopedMovesDeletesUndeletesAndIsIdempotent",
+            "name": "InventoryReconciliationJobTest",
+            "namespace": null,
+            "time": 1723
+          },
+          {
+            "id": "01paj00000c0OSgAAM",
+            "methodName": "unauthorizedPersonaCannotConstructOrEnqueueMaintenance",
+            "name": "InventoryReconciliationJobTest",
+            "namespace": null,
+            "time": 220
+          },
+          {
+            "id": "01paj00000bRxBkAAK",
+            "methodName": "seedTagClearedOnConvertedRecords",
+            "name": "LeadConvertGuardTest",
+            "namespace": null,
+            "time": 773
+          },
+          {
+            "id": "01paj00000bRxBkAAK",
+            "methodName": "unselectedAccountIsBlocked",
+            "name": "LeadConvertGuardTest",
+            "namespace": null,
+            "time": 690
+          },
+          {
+            "id": "01paj00000bRxBmAAK",
+            "methodName": "blankPostalCodeIsUntouched",
+            "name": "LeadEnrichRooftopServiceTest",
+            "namespace": null,
+            "time": 26
+          },
+          {
+            "id": "01paj00000bRxBmAAK",
+            "methodName": "bulkScopeResolvedPerLead",
+            "name": "LeadEnrichRooftopServiceTest",
+            "namespace": null,
+            "time": 105
+          },
+          {
+            "id": "01paj00000bRxBmAAK",
+            "methodName": "bypassOffEnriches",
+            "name": "LeadEnrichRooftopServiceTest",
+            "namespace": null,
+            "time": 163
+          },
+          {
+            "id": "01paj00000bRxBmAAK",
+            "methodName": "bypassSettingSkipsEnrichment",
+            "name": "LeadEnrichRooftopServiceTest",
+            "namespace": null,
+            "time": 140
+          },
+          {
+            "id": "01paj00000bRxBmAAK",
+            "methodName": "matchedRouteWithMissingRooftopSetsUnrouted",
+            "name": "LeadEnrichRooftopServiceTest",
+            "namespace": null,
+            "time": 92
+          },
+          {
+            "id": "01paj00000bRxBmAAK",
+            "methodName": "prefixL4HRoutesToMappedRooftop",
+            "name": "LeadEnrichRooftopServiceTest",
+            "namespace": null,
+            "time": 78
+          },
+          {
+            "id": "01paj00000bRxBmAAK",
+            "methodName": "prefixMRoutesToMappedRooftop",
+            "name": "LeadEnrichRooftopServiceTest",
+            "namespace": null,
+            "time": 75
+          },
+          {
+            "id": "01paj00000bRxBmAAK",
+            "methodName": "unmatchedPrefixSetsUnroutedWithoutOwner",
+            "name": "LeadEnrichRooftopServiceTest",
+            "namespace": null,
+            "time": 69
+          },
+          {
+            "id": "01paj00000bRxBqAAK",
+            "methodName": "cyclesOwnersWithinSamePrefix",
+            "name": "LeadRoundRobinTest",
+            "namespace": null,
+            "time": 72
+          },
+          {
+            "id": "01paj00000bRxBsAAK",
+            "methodName": "firstLeadGetsRepSecondGetsQueue",
+            "name": "LeadRoutingHandlerTest",
+            "namespace": null,
+            "time": 641
+          },
+          {
+            "id": "01paj00000bRxBsAAK",
+            "methodName": "fsaPrefixClassifier",
+            "name": "LeadRoutingHandlerTest",
+            "namespace": null,
+            "time": 70
+          },
+          {
+            "id": "01paj00000bRxBsAAK",
+            "methodName": "lanesAreRooftopScoped",
+            "name": "LeadRoutingHandlerTest",
+            "namespace": null,
+            "time": 536
+          },
+          {
+            "id": "01paj00000bRxBsAAK",
+            "methodName": "leadWithNoRooftopIsLeftAlone",
+            "name": "LeadRoutingHandlerTest",
+            "namespace": null,
+            "time": 142
+          },
+          {
+            "id": "01paj00000bRxBsAAK",
+            "methodName": "unmatchedFsaIsMarkedUnrouted",
+            "name": "LeadRoutingHandlerTest",
+            "namespace": null,
+            "time": 212
+          },
+          {
+            "id": "01paj00000bRxBsAAK",
+            "methodName": "unmatchedThenMatchedInSameRooftopLeavesMatchedAtR1",
+            "name": "LeadRoutingHandlerTest",
+            "namespace": null,
+            "time": 289
+          },
+          {
+            "id": "01paj00000bwIs8AAE",
+            "methodName": "accruesTwoHundredSourcesInBulk",
+            "name": "LoyaltyAccrualServiceTest",
+            "namespace": null,
+            "time": 1510
+          },
+          {
+            "id": "01paj00000bwIs8AAE",
+            "methodName": "excludesPreRolloutWarrantyUncompletedAndMissingMembership",
+            "name": "LoyaltyAccrualServiceTest",
+            "namespace": null,
+            "time": 532
+          },
+          {
+            "id": "01paj00000bwIs8AAE",
+            "methodName": "roundsAndReplaysWithoutRepricingPostedEvents",
+            "name": "LoyaltyAccrualServiceTest",
+            "namespace": null,
+            "time": 398
+          },
+          {
+            "id": "01paj00000bwIs8AAE",
+            "methodName": "vehicleSaleUsesOpportunityKeyNotDeliveryKey",
+            "name": "LoyaltyAccrualServiceTest",
+            "namespace": null,
+            "time": 711
+          },
+          {
+            "id": "01paj00000bwIs8AAE",
+            "methodName": "zeroNegativeAndDisabledConfigurationFailSafely",
+            "name": "LoyaltyAccrualServiceTest",
+            "namespace": null,
+            "time": 351
+          },
+          {
+            "id": "01paj00000c0HxUAAU",
+            "methodName": "deniedRecordAndInvalidMoneyAreRejected",
+            "name": "OpportunityCalculatorControllerTest",
+            "namespace": null,
+            "time": 257
+          },
+          {
+            "id": "01paj00000c0HxUAAU",
+            "methodName": "negativeEquityZeroRateAndConfiguredRatesReuseAcceptedMathWithoutWrites",
+            "name": "OpportunityCalculatorControllerTest",
+            "namespace": null,
+            "time": 530
+          },
+          {
+            "id": "01paj00000bRxBwAAK",
+            "methodName": "insertStampsChangeTime",
+            "name": "OpportunityStageStampTest",
+            "namespace": null,
+            "time": 132
+          },
+          {
+            "id": "01paj00000bRxBwAAK",
+            "methodName": "nonStageEditLeavesStampAlone",
+            "name": "OpportunityStageStampTest",
+            "namespace": null,
+            "time": 141
+          },
+          {
+            "id": "01paj00000bRxBwAAK",
+            "methodName": "stageChangeUpdatesPreviousAndTimestamp",
+            "name": "OpportunityStageStampTest",
+            "namespace": null,
+            "time": 142
+          },
+          {
+            "id": "01paj00000c0OSiAAM",
+            "methodName": "bulkDriveLifecycleHasNoDuplicateFollowups",
+            "name": "P7TriggerArchitectureTest",
+            "namespace": null,
+            "time": 3399
+          },
+          {
+            "id": "01paj00000c0OSiAAM",
+            "methodName": "bulkVehiclePartialReservationAndLaterTransition",
+            "name": "P7TriggerArchitectureTest",
+            "namespace": null,
+            "time": 2567
+          },
+          {
+            "id": "01paj00000c0OSiAAM",
+            "methodName": "convertedSeedCleanupIsBulkAndTransitionOnly",
+            "name": "P7TriggerArchitectureTest",
+            "namespace": null,
+            "time": 7133
+          },
+          {
+            "id": "01paj00000c0OSiAAM",
+            "methodName": "hierarchyBypassPreservesDistinctValidationContracts",
+            "name": "P7TriggerArchitectureTest",
+            "namespace": null,
+            "time": 770
+          },
+          {
+            "id": "01paj00000c0OSiAAM",
+            "methodName": "missingConvertedAccountRetainsGuard",
+            "name": "P7TriggerArchitectureTest",
+            "namespace": null,
+            "time": 64
+          },
+          {
+            "id": "01paj00000c0OSiAAM",
+            "methodName": "partialDriveSaveDoesNotSuppressValidFollowup",
+            "name": "P7TriggerArchitectureTest",
+            "namespace": null,
+            "time": 597
+          },
+          {
+            "id": "01paj00000c0OSiAAM",
+            "methodName": "partialLeadInsertRetainsRoutingAndAllowsReentry",
+            "name": "P7TriggerArchitectureTest",
+            "namespace": null,
+            "time": 7318
+          },
+          {
+            "id": "01paj00000c0OSiAAM",
+            "methodName": "unconfiguredLaneHandles200AndLaterSaves",
+            "name": "P7TriggerArchitectureTest",
+            "namespace": null,
+            "time": 6484
+          },
+          {
+            "id": "01paj00000bRxC0AAK",
+            "methodName": "highRate_matchesAmortizationSchedule",
+            "name": "PaymentCalculatorServiceTest",
+            "namespace": null,
+            "time": 70
+          },
+          {
+            "id": "01paj00000bRxC0AAK",
+            "methodName": "invalidInputs_throwInsteadOfZeroPayment",
+            "name": "PaymentCalculatorServiceTest",
+            "namespace": null,
+            "time": 66
+          },
+          {
+            "id": "01paj00000bRxC0AAK",
+            "methodName": "midRate_matchesAmortizationSchedule",
+            "name": "PaymentCalculatorServiceTest",
+            "namespace": null,
+            "time": 61
+          },
+          {
+            "id": "01paj00000bRxC0AAK",
+            "methodName": "standardRate_matchesAmortizationSchedule",
+            "name": "PaymentCalculatorServiceTest",
+            "namespace": null,
+            "time": 57
+          },
+          {
+            "id": "01paj00000bRxC0AAK",
+            "methodName": "zeroPercent_dividesPrincipalEvenly",
+            "name": "PaymentCalculatorServiceTest",
+            "namespace": null,
+            "time": 63
+          },
+          {
+            "id": "01paj00000bRxC2AAK",
+            "methodName": "createQuote_blocker_doesNotStampOpportunity",
+            "name": "QuoteBuilderControllerTest",
+            "namespace": null,
+            "time": 724
+          },
+          {
+            "id": "01paj00000bRxC2AAK",
+            "methodName": "createQuote_buyerMismatch_noLoyalty",
+            "name": "QuoteBuilderControllerTest",
+            "namespace": null,
+            "time": 601
+          },
+          {
+            "id": "01paj00000bRxC2AAK",
+            "methodName": "createQuote_crossCategoryNoVehicle_keepsListAndStoresBothLines",
+            "name": "QuoteBuilderControllerTest",
+            "namespace": null,
+            "time": 810
+          },
+          {
+            "id": "01paj00000bRxC2AAK",
+            "methodName": "createQuote_emptyLines_throws",
+            "name": "QuoteBuilderControllerTest",
+            "namespace": null,
+            "time": 147
+          },
+          {
+            "id": "01paj00000bRxC2AAK",
+            "methodName": "createQuote_existingQuote_throwsAndLeavesApprovalUntouched",
+            "name": "QuoteBuilderControllerTest",
+            "namespace": null,
+            "time": 582
+          },
+          {
+            "id": "01paj00000bRxC2AAK",
+            "methodName": "createQuote_happyPath_writesEngineAndStamps",
+            "name": "QuoteBuilderControllerTest",
+            "namespace": null,
+            "time": 741
+          },
+          {
+            "id": "01paj00000bRxC2AAK",
+            "methodName": "createQuote_noRules_keepsListAndNotRequired",
+            "name": "QuoteBuilderControllerTest",
+            "namespace": null,
+            "time": 525
+          },
+          {
+            "id": "01paj00000bRxC2AAK",
+            "methodName": "createQuote_savesUnderSalesPersonaAccess",
+            "name": "QuoteBuilderControllerTest",
+            "namespace": null,
+            "time": 1014
+          },
+          {
+            "id": "01paj00000bRxC2AAK",
+            "methodName": "getBuyerContacts_loadsUnderSalesPersonaAccess",
+            "name": "QuoteBuilderControllerTest",
+            "namespace": null,
+            "time": 511
+          },
+          {
+            "id": "01paj00000bRxC2AAK",
+            "methodName": "getBuyerContacts_returnsAccountContacts",
+            "name": "QuoteBuilderControllerTest",
+            "namespace": null,
+            "time": 350
+          },
+          {
+            "id": "01paj00000bRxC2AAK",
+            "methodName": "getCatalog_loadsUnderSalesPersonaAccess",
+            "name": "QuoteBuilderControllerTest",
+            "namespace": null,
+            "time": 286
+          },
+          {
+            "id": "01paj00000bRxC2AAK",
+            "methodName": "getCatalog_returnsOnlyRequestedCategory",
+            "name": "QuoteBuilderControllerTest",
+            "namespace": null,
+            "time": 275
+          },
+          {
+            "id": "01paj00000bRxC2AAK",
+            "methodName": "submitForApproval_above10ResolvesVpApprover",
+            "name": "QuoteBuilderControllerTest",
+            "namespace": null,
+            "time": 885
+          },
+          {
+            "id": "01paj00000bRxC2AAK",
+            "methodName": "submitForApproval_belowThreshold_rejectedWithoutApprovalCall",
+            "name": "QuoteBuilderControllerTest",
+            "namespace": null,
+            "time": 579
+          },
+          {
+            "id": "01paj00000bRxC4AAK",
+            "methodName": "age60_boundary_applies60only",
+            "name": "QuotePricingServiceTest",
+            "namespace": null,
+            "time": 499
+          },
+          {
+            "id": "01paj00000bRxC4AAK",
+            "methodName": "age90_boundary_applies90only",
+            "name": "QuotePricingServiceTest",
+            "namespace": null,
+            "time": 514
+          },
+          {
+            "id": "01paj00000bRxC4AAK",
+            "methodName": "ageBelow60_noDiscount",
+            "name": "QuotePricingServiceTest",
+            "namespace": null,
+            "time": 470
+          },
+          {
+            "id": "01paj00000bRxC4AAK",
+            "methodName": "basisNotIdentified_reportsBlocker",
+            "name": "QuotePricingServiceTest",
+            "namespace": null,
+            "time": 482
+          },
+          {
+            "id": "01paj00000bRxC4AAK",
+            "methodName": "bulk200Lines_stillWorks",
+            "name": "QuotePricingServiceTest",
+            "namespace": null,
+            "time": 1328
+          },
+          {
+            "id": "01paj00000bRxC4AAK",
+            "methodName": "fullStack_appliesAllWinners_inApprovedOrder",
+            "name": "QuotePricingServiceTest",
+            "namespace": null,
+            "time": 719
+          },
+          {
+            "id": "01paj00000bRxC4AAK",
+            "methodName": "inactiveRule_skipped",
+            "name": "QuotePricingServiceTest",
+            "namespace": null,
+            "time": 431
+          },
+          {
+            "id": "01paj00000bRxC4AAK",
+            "methodName": "loyalty_bronze_applies",
+            "name": "QuotePricingServiceTest",
+            "namespace": null,
+            "time": 490
+          },
+          {
+            "id": "01paj00000bRxC4AAK",
+            "methodName": "loyalty_buyerMismatchedAccount_noDiscount",
+            "name": "QuotePricingServiceTest",
+            "namespace": null,
+            "time": 433
+          },
+          {
+            "id": "01paj00000bRxC4AAK",
+            "methodName": "loyalty_noBuyer_noDiscount",
+            "name": "QuotePricingServiceTest",
+            "namespace": null,
+            "time": 437
+          },
+          {
+            "id": "01paj00000bRxC4AAK",
+            "methodName": "malformedNegativePercent_surfaces",
+            "name": "QuotePricingServiceTest",
+            "namespace": null,
+            "time": 440
+          },
+          {
+            "id": "01paj00000bRxC4AAK",
+            "methodName": "malformedNullPercent_surfaces",
+            "name": "QuotePricingServiceTest",
+            "namespace": null,
+            "time": 482
+          },
+          {
+            "id": "01paj00000bRxC4AAK",
+            "methodName": "malformedNullValue_surfaces",
+            "name": "QuotePricingServiceTest",
+            "namespace": null,
+            "time": 467
+          },
+          {
+            "id": "01paj00000bRxC4AAK",
+            "methodName": "modelNameMissing_noBlocker_noVehicleRules",
+            "name": "QuotePricingServiceTest",
+            "namespace": null,
+            "time": 424
+          },
+          {
+            "id": "01paj00000bRxC4AAK",
+            "methodName": "noRulesQualify_returnsUnchanged",
+            "name": "QuotePricingServiceTest",
+            "namespace": null,
+            "time": 576
+          },
+          {
+            "id": "01paj00000bRxC4AAK",
+            "methodName": "nonNumericValue_throws",
+            "name": "QuotePricingServiceTest",
+            "namespace": null,
+            "time": 417
+          },
+          {
+            "id": "01paj00000bRxC4AAK",
+            "methodName": "nullQuote_throws",
+            "name": "QuotePricingServiceTest",
+            "namespace": null,
+            "time": 75
+          },
+          {
+            "id": "01paj00000bRxC4AAK",
+            "methodName": "premiumOnly_negativeNetDocumented",
+            "name": "QuotePricingServiceTest",
+            "namespace": null,
+            "time": 431
+          },
+          {
+            "id": "01paj00000bRxC4AAK",
+            "methodName": "rounding2dp_applied",
+            "name": "QuotePricingServiceTest",
+            "namespace": null,
+            "time": 524
+          },
+          {
+            "id": "01paj00000bRxC4AAK",
+            "methodName": "trimMismatch_noPremium_noOtherRules",
+            "name": "QuotePricingServiceTest",
+            "namespace": null,
+            "time": 456
+          },
+          {
+            "id": "01paj00000bRxC4AAK",
+            "methodName": "volume12_picksOver10NotFleet",
+            "name": "QuotePricingServiceTest",
+            "namespace": null,
+            "time": 506
+          },
+          {
+            "id": "01paj00000bRxC4AAK",
+            "methodName": "volume4_noDiscount",
+            "name": "QuotePricingServiceTest",
+            "namespace": null,
+            "time": 446
+          },
+          {
+            "id": "01paj00000bRxC4AAK",
+            "methodName": "zeroPricedLines_zeroFloor",
+            "name": "QuotePricingServiceTest",
+            "namespace": null,
+            "time": 441
+          },
+          {
+            "id": "01paj00000bRxC6AAK",
+            "methodName": "getSummary_adminPreservesStoredNullPricingFields",
+            "name": "QuoteSummaryControllerTest",
+            "namespace": null,
+            "time": 762
+          },
+          {
+            "id": "01paj00000bRxC6AAK",
+            "methodName": "getSummary_preservesExistingSalesRepAccess",
+            "name": "QuoteSummaryControllerTest",
+            "namespace": null,
+            "time": 614
+          },
+          {
+            "id": "01paj00000bRxC6AAK",
+            "methodName": "getSummary_readsGrandTotalField",
+            "name": "QuoteSummaryControllerTest",
+            "namespace": null,
+            "time": 421
+          },
+          {
+            "id": "01paj00000bRxC6AAK",
+            "methodName": "getSummary_rejectsMissingOpportunityFieldRead",
+            "name": "QuoteSummaryControllerTest",
+            "namespace": null,
+            "time": 554
+          },
+          {
+            "id": "01paj00000bRxC6AAK",
+            "methodName": "getSummary_rejectsMissingProductRelationshipFieldRead",
+            "name": "QuoteSummaryControllerTest",
+            "namespace": null,
+            "time": 587
+          },
+          {
+            "id": "01paj00000bRxC6AAK",
+            "methodName": "getSummary_rejectsMissingQuoteFieldRead",
+            "name": "QuoteSummaryControllerTest",
+            "namespace": null,
+            "time": 587
+          },
+          {
+            "id": "01paj00000bRxC6AAK",
+            "methodName": "getSummary_rejectsMissingQuoteObjectRead",
+            "name": "QuoteSummaryControllerTest",
+            "namespace": null,
+            "time": 592
+          },
+          {
+            "id": "01paj00000bRxC6AAK",
+            "methodName": "getSummary_rejectsUnsharedQuote",
+            "name": "QuoteSummaryControllerTest",
+            "namespace": null,
+            "time": 552
+          },
+          {
+            "id": "01paj00000bRxC6AAK",
+            "methodName": "getSummary_returnsQuoteLinesAndStamps",
+            "name": "QuoteSummaryControllerTest",
+            "namespace": null,
+            "time": 711
+          },
+          {
+            "id": "01paj00000bRxC6AAK",
+            "methodName": "getSummary_separatesAdjustedFromStandard",
+            "name": "QuoteSummaryControllerTest",
+            "namespace": null,
+            "time": 480
+          },
+          {
+            "id": "01paj00000bRxC6AAK",
+            "methodName": "quoteWorkflow_permissionsAndFullStackPricing",
+            "name": "QuoteSummaryControllerTest",
+            "namespace": null,
+            "time": 1155
+          },
+          {
+            "id": "01paj00000bRxC8AAK",
+            "methodName": "guard_bypassEnabled_allowed",
+            "name": "QuoteTradeInGuardTest",
+            "namespace": null,
+            "time": 124
+          },
+          {
+            "id": "01paj00000bRxC8AAK",
+            "methodName": "guard_false_appraisedChild_allowed",
+            "name": "QuoteTradeInGuardTest",
+            "namespace": null,
+            "time": 137
+          },
+          {
+            "id": "01paj00000bRxC8AAK",
+            "methodName": "guard_false_noChild_allowed",
+            "name": "QuoteTradeInGuardTest",
+            "namespace": null,
+            "time": 106
+          },
+          {
+            "id": "01paj00000bRxC8AAK",
+            "methodName": "guard_true_acceptedPlusAppraised_allowed",
+            "name": "QuoteTradeInGuardTest",
+            "namespace": null,
+            "time": 156
+          },
+          {
+            "id": "01paj00000bRxC8AAK",
+            "methodName": "guard_true_accepted_allowed",
+            "name": "QuoteTradeInGuardTest",
+            "namespace": null,
+            "time": 139
+          },
+          {
+            "id": "01paj00000bRxC8AAK",
+            "methodName": "guard_true_appraisedOnly_blocked",
+            "name": "QuoteTradeInGuardTest",
+            "namespace": null,
+            "time": 306
+          },
+          {
+            "id": "01paj00000bRxC8AAK",
+            "methodName": "guard_true_noChild_blocked",
+            "name": "QuoteTradeInGuardTest",
+            "namespace": null,
+            "time": 224
+          },
+          {
+            "id": "01paj00000bRxC9AAK",
+            "methodName": "bulk_mixed_200",
+            "name": "QuoteTriggerEnforcementTest",
+            "namespace": null,
+            "time": 28
+          },
+          {
+            "id": "01paj00000bRxC9AAK",
+            "methodName": "bypass_enabled_allows_all",
+            "name": "QuoteTriggerEnforcementTest",
+            "namespace": null,
+            "time": 308
+          },
+          {
+            "id": "01paj00000bRxC9AAK",
+            "methodName": "noTradeInRequired_allowed",
+            "name": "QuoteTriggerEnforcementTest",
+            "namespace": null,
+            "time": 162
+          },
+          {
+            "id": "01paj00000bRxC9AAK",
+            "methodName": "tradeInRequired_accepted_allowed",
+            "name": "QuoteTriggerEnforcementTest",
+            "namespace": null,
+            "time": 189
+          },
+          {
+            "id": "01paj00000bRxC9AAK",
+            "methodName": "tradeInRequired_appraisedOnly_blocked",
+            "name": "QuoteTriggerEnforcementTest",
+            "namespace": null,
+            "time": 332
+          },
+          {
+            "id": "01paj00000bRxC9AAK",
+            "methodName": "tradeInRequired_noChild_blocked",
+            "name": "QuoteTriggerEnforcementTest",
+            "namespace": null,
+            "time": 267
+          },
+          {
+            "id": "01paj00000bwIsHAAU",
+            "methodName": "deniedActorCannotUseElevatedWriterAndLegacyBalanceCannotBeSpent",
+            "name": "RedemptionServiceTest",
+            "namespace": null,
+            "time": 380
+          },
+          {
+            "id": "01paj00000bwIsHAAU",
+            "methodName": "invalidPointsAndFailedMemberWriteRollBackLotsAndDebits",
+            "name": "RedemptionServiceTest",
+            "namespace": null,
+            "time": 550
+          },
+          {
+            "id": "01paj00000bwIsHAAU",
+            "methodName": "operatorRedeemsOnceAndRejectsOverdraftOrChangedReplay",
+            "name": "RedemptionServiceTest",
+            "namespace": null,
+            "time": 737
+          },
+          {
+            "id": "01paj00000bvWxCAAU",
+            "methodName": "consumingVisitGetsServiceCaseAndQueueOwner",
+            "name": "ServiceIntakeCaseServiceTest",
+            "namespace": null,
+            "time": 505
+          },
+          {
+            "id": "01paj00000bvWxCAAU",
+            "methodName": "prelinkedAndTerminalVisitsDoNotCreateCases",
+            "name": "ServiceIntakeCaseServiceTest",
+            "namespace": null,
+            "time": 552
+          },
+          {
+            "id": "01paj00000bvWxEAAU",
+            "methodName": "cancellationReopeningSwapReleaseFirst",
+            "name": "ServiceVisitCapacityGuardTest",
+            "namespace": null,
+            "time": 465
+          },
+          {
+            "id": "01paj00000bvWxEAAU",
+            "methodName": "cancellationReopeningSwapReservationFirst",
+            "name": "ServiceVisitCapacityGuardTest",
+            "namespace": null,
+            "time": 418
+          },
+          {
+            "id": "01paj00000bvWxEAAU",
+            "methodName": "competingNewVisitsAreBothRejectedWithoutCreatingCases",
+            "name": "ServiceVisitCapacityGuardTest",
+            "namespace": null,
+            "time": 435
+          },
+          {
+            "id": "01paj00000bvWxEAAU",
+            "methodName": "competingReopeningsRejectAllInEitherOrder",
+            "name": "ServiceVisitCapacityGuardTest",
+            "namespace": null,
+            "time": 593
+          },
+          {
+            "id": "01paj00000bvWxEAAU",
+            "methodName": "failedReleaseCannotAuthorizeReservationForwardOrder",
+            "name": "ServiceVisitCapacityGuardTest",
+            "namespace": null,
+            "time": 1726
+          },
+          {
+            "id": "01paj00000bvWxEAAU",
+            "methodName": "failedReleaseCannotAuthorizeReservationReverseOrder",
+            "name": "ServiceVisitCapacityGuardTest",
+            "namespace": null,
+            "time": 1503
+          },
+          {
+            "id": "01paj00000bvWxEAAU",
+            "methodName": "invalidDestinationRetainsSourceAndNeutralEditsIgnoreCapacityDrift",
+            "name": "ServiceVisitCapacityGuardTest",
+            "namespace": null,
+            "time": 594
+          },
+          {
+            "id": "01paj00000bvWxEAAU",
+            "methodName": "rejectedMoveRetainsOldReservationForwardOrder",
+            "name": "ServiceVisitCapacityGuardTest",
+            "namespace": null,
+            "time": 715
+          },
+          {
+            "id": "01paj00000bvWxEAAU",
+            "methodName": "rejectedMoveRetainsOldReservationReverseOrder",
+            "name": "ServiceVisitCapacityGuardTest",
+            "namespace": null,
+            "time": 722
+          },
+          {
+            "id": "01paj00000bvWxEAAU",
+            "methodName": "rooftopAndDayMovesForwardOrder",
+            "name": "ServiceVisitCapacityGuardTest",
+            "namespace": null,
+            "time": 486
+          },
+          {
+            "id": "01paj00000bvWxEAAU",
+            "methodName": "rooftopAndDayMovesReverseOrder",
+            "name": "ServiceVisitCapacityGuardTest",
+            "namespace": null,
+            "time": 448
+          },
+          {
+            "id": "01paj00000bvWxEAAU",
+            "methodName": "runAsReadsConfiguredRooftopForScheduledReservation",
+            "name": "ServiceVisitCapacityGuardTest",
+            "namespace": null,
+            "time": 668
+          },
+          {
+            "id": "01paj00000bvWxEAAU",
+            "methodName": "simultaneousLifecycleReleasesAndReopeningsReachExactCapacity",
+            "name": "ServiceVisitCapacityGuardTest",
+            "namespace": null,
+            "time": 520
+          },
+          {
+            "id": "01paj00000bvWxEAAU",
+            "methodName": "terminalVisitReleasesCapacityAndNeutralUpdateDoesNotRecheck",
+            "name": "ServiceVisitCapacityGuardTest",
+            "namespace": null,
+            "time": 724
+          },
+          {
+            "id": "01paj00000bvWxEAAU",
+            "methodName": "torontoDayRemainsStableAcrossDstAndBulkInsert",
+            "name": "ServiceVisitCapacityGuardTest",
+            "namespace": null,
+            "time": 3374
+          },
+          {
+            "id": "01paj00000bRxCDAA0",
+            "methodName": "adjacentDriveIsAllowed",
+            "name": "TestDriveBookingGuardTest",
+            "namespace": null,
+            "time": 450
+          },
+          {
+            "id": "01paj00000bRxCDAA0",
+            "methodName": "cancelledDriveDoesNotBlock",
+            "name": "TestDriveBookingGuardTest",
+            "namespace": null,
+            "time": 436
+          },
+          {
+            "id": "01paj00000bRxCDAA0",
+            "methodName": "historicalEditsAndTerminalStatusChangesAreAllowed",
+            "name": "TestDriveBookingGuardTest",
+            "namespace": null,
+            "time": 337
+          },
+          {
+            "id": "01paj00000bRxCDAA0",
+            "methodName": "historicalReopeningAndRequestedToScheduledNeedFutureStart",
+            "name": "TestDriveBookingGuardTest",
+            "namespace": null,
+            "time": 314
+          },
+          {
+            "id": "01paj00000bRxCDAA0",
+            "methodName": "mixedBulkInsertAndCurrentTimeBoundary",
+            "name": "TestDriveBookingGuardTest",
+            "namespace": null,
+            "time": 518
+          },
+          {
+            "id": "01paj00000bRxCDAA0",
+            "methodName": "overlappingDriveIsBlocked",
+            "name": "TestDriveBookingGuardTest",
+            "namespace": null,
+            "time": 385
+          },
+          {
+            "id": "01paj00000bRxCDAA0",
+            "methodName": "personaCannotCreatePastDrivesInAnyStatus",
+            "name": "TestDriveBookingGuardTest",
+            "namespace": null,
+            "time": 483
+          },
+          {
+            "id": "01paj00000bRxCDAA0",
+            "methodName": "reschedulingRejectsPastAndPreservesFutureDuration",
+            "name": "TestDriveBookingGuardTest",
+            "namespace": null,
+            "time": 629
+          },
+          {
+            "id": "01paj00000bRxCDAA0",
+            "methodName": "triggerBypassDoesNotAllowPastScheduling",
+            "name": "TestDriveBookingGuardTest",
+            "namespace": null,
+            "time": 356
+          },
+          {
+            "id": "01paj00000bRxCGAA0",
+            "methodName": "confirmationLookupDoesNotUseUnsharedContacts",
+            "name": "TestDriveFollowUpTest",
+            "namespace": null,
+            "time": 628
+          },
+          {
+            "id": "01paj00000bRxCGAA0",
+            "methodName": "insertCreatesTask",
+            "name": "TestDriveFollowUpTest",
+            "namespace": null,
+            "time": 405
+          },
+          {
+            "id": "01paj00000bRxCGAA0",
+            "methodName": "internalElevationDoesNotAllowDirectTaskOrCounterWrites",
+            "name": "TestDriveFollowUpTest",
+            "namespace": null,
+            "time": 490
+          },
+          {
+            "id": "01paj00000bRxCGAA0",
+            "methodName": "restrictedBookingCannotReferenceUnsharedContact",
+            "name": "TestDriveFollowUpTest",
+            "namespace": null,
+            "time": 570
+          },
+          {
+            "id": "01paj00000bRxCGAA0",
+            "methodName": "restrictedBookingCreatesOwnedTaskAndKeepsEmailHidden",
+            "name": "TestDriveFollowUpTest",
+            "namespace": null,
+            "time": 1008
+          },
+          {
+            "id": "01paj00000bRxCGAA0",
+            "methodName": "restrictedBookingWithoutEmailSkipsConfirmation",
+            "name": "TestDriveFollowUpTest",
+            "namespace": null,
+            "time": 611
+          },
+          {
+            "id": "01paj00000bRxCGAA0",
+            "methodName": "restrictedBookingsRejectOverlapAndAllowAdjacent",
+            "name": "TestDriveFollowUpTest",
+            "namespace": null,
+            "time": 729
+          },
+          {
+            "id": "01paj00000bRxCGAA0",
+            "methodName": "restrictedCancellationReleasesSlotAndUpdatesCounter",
+            "name": "TestDriveFollowUpTest",
+            "namespace": null,
+            "time": 850
+          },
+          {
+            "id": "01paj00000bRxCGAA0",
+            "methodName": "restrictedLifecycleCompletionMaintainsTasksAndCounters",
+            "name": "TestDriveFollowUpTest",
+            "namespace": null,
+            "time": 576
+          },
+          {
+            "id": "01paj00000bRxCGAA0",
+            "methodName": "statusChangeCreatesAdditionalTask",
+            "name": "TestDriveFollowUpTest",
+            "namespace": null,
+            "time": 485
+          },
+          {
+            "id": "01paj00000bRxCGAA0",
+            "methodName": "unauthorizedUserCannotCreateBookingOrSideEffects",
+            "name": "TestDriveFollowUpTest",
+            "namespace": null,
+            "time": 372
+          },
+          {
+            "id": "01paj00000c0HxXAAU",
+            "methodName": "bulkReservationsCreateMinimalEventsAndNeutralUpdatesDoNot",
+            "name": "VehicleReservationEventPublisherTest",
+            "namespace": null,
+            "time": 2207
+          },
+          {
+            "id": "01paj00000c0HxXAAU",
+            "methodName": "failedEnqueueIsReportedWithoutInvalidatingReservation",
+            "name": "VehicleReservationEventPublisherTest",
+            "namespace": null,
+            "time": 63
+          },
+          {
+            "id": "01paj00000bRxCLAA0",
+            "methodName": "reservingSetsStatusAndTimestamp",
+            "name": "VehicleReservationGuardTest",
+            "namespace": null,
+            "time": 310
+          },
+          {
+            "id": "01paj00000bRxCLAA0",
+            "methodName": "secondReservationIsBlocked",
+            "name": "VehicleReservationGuardTest",
+            "namespace": null,
+            "time": 562
+          },
+          {
+            "id": "01paj00000c0HxZAAU",
+            "methodName": "malformedNonSuccessTimeoutAndWrongIdentityAreRejected",
+            "name": "VinDecoderServiceTest",
+            "namespace": null,
+            "time": 244
+          },
+          {
+            "id": "01paj00000c0HxZAAU",
+            "methodName": "simulationResponseIsPreviewOnly",
+            "name": "VinDecoderServiceTest",
+            "namespace": null,
+            "time": 137
+          }
+        ],
+        "totalTime": 210876,
+        "codeCoverageWarnings": [],
+        "failures": [],
+        "flowCoverageWarnings": []
+      },
+      "componentFailures": []
+    },
+    "done": true,
+    "id": "0Afaj00000p7GCLCA2",
+    "ignoreWarnings": false,
+    "lastModifiedDate": "2026-10-26T00:18:31.000Z",
+    "numberComponentErrors": 0,
+    "numberComponentsDeployed": 14,
+    "numberComponentsTotal": 14,
+    "numberFiles": "24",
+    "numberTestErrors": 0,
+    "numberTestsCompleted": 235,
+    "numberTestsTotal": 235,
+    "rollbackOnError": true,
+    "runTestsEnabled": true,
+    "startDate": "2026-10-26T00:14:56.000Z",
+    "status": "Succeeded",
+    "success": true,
+    "zipSize": 14139,
+    "files": [
+      {
+        "fullName": "InventoryReconciliationJob",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "force-app/main/default/classes/InventoryReconciliationJob.cls"
+      },
+      {
+        "fullName": "InventoryReconciliationJob",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "force-app/main/default/classes/InventoryReconciliationJob.cls-meta.xml"
+      },
+      {
+        "fullName": "InventoryReconciliationJobTest",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "force-app/main/default/classes/InventoryReconciliationJobTest.cls"
+      },
+      {
+        "fullName": "InventoryReconciliationJobTest",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "force-app/main/default/classes/InventoryReconciliationJobTest.cls-meta.xml"
+      },
+      {
+        "fullName": "LeadRoutingHandler",
+        "type": "ApexClass",
+        "state": "Changed",
+        "filePath": "force-app/main/default/classes/LeadRoutingHandler.cls"
+      },
+      {
+        "fullName": "LeadRoutingHandler",
+        "type": "ApexClass",
+        "state": "Changed",
+        "filePath": "force-app/main/default/classes/LeadRoutingHandler.cls-meta.xml"
+      },
+      {
+        "fullName": "LeadTriggerHandler",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "force-app/main/default/classes/LeadTriggerHandler.cls"
+      },
+      {
+        "fullName": "LeadTriggerHandler",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "force-app/main/default/classes/LeadTriggerHandler.cls-meta.xml"
+      },
+      {
+        "fullName": "P7TriggerArchitectureTest",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "force-app/main/default/classes/P7TriggerArchitectureTest.cls"
+      },
+      {
+        "fullName": "P7TriggerArchitectureTest",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "force-app/main/default/classes/P7TriggerArchitectureTest.cls-meta.xml"
+      },
+      {
+        "fullName": "TestDriveTriggerHandler",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "force-app/main/default/classes/TestDriveTriggerHandler.cls"
+      },
+      {
+        "fullName": "TestDriveTriggerHandler",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "force-app/main/default/classes/TestDriveTriggerHandler.cls-meta.xml"
+      },
+      {
+        "fullName": "VehicleTriggerHandler",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "force-app/main/default/classes/VehicleTriggerHandler.cls"
+      },
+      {
+        "fullName": "VehicleTriggerHandler",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "force-app/main/default/classes/VehicleTriggerHandler.cls-meta.xml"
+      },
+      {
+        "fullName": "LeadRoutingTrigger",
+        "type": "ApexTrigger",
+        "state": "Changed",
+        "filePath": "force-app/main/default/triggers/LeadRoutingTrigger.trigger"
+      },
+      {
+        "fullName": "LeadRoutingTrigger",
+        "type": "ApexTrigger",
+        "state": "Changed",
+        "filePath": "force-app/main/default/triggers/LeadRoutingTrigger.trigger-meta.xml"
+      },
+      {
+        "fullName": "TestDriveTrigger",
+        "type": "ApexTrigger",
+        "state": "Changed",
+        "filePath": "force-app/main/default/triggers/TestDriveTrigger.trigger"
+      },
+      {
+        "fullName": "TestDriveTrigger",
+        "type": "ApexTrigger",
+        "state": "Changed",
+        "filePath": "force-app/main/default/triggers/TestDriveTrigger.trigger-meta.xml"
+      },
+      {
+        "fullName": "VehicleTrigger",
+        "type": "ApexTrigger",
+        "state": "Changed",
+        "filePath": "force-app/main/default/triggers/VehicleTrigger.trigger"
+      },
+      {
+        "fullName": "VehicleTrigger",
+        "type": "ApexTrigger",
+        "state": "Changed",
+        "filePath": "force-app/main/default/triggers/VehicleTrigger.trigger-meta.xml"
+      }
+    ],
+    "zipFileCount": 22,
+    "deployUrl": "https://orgfarm-25065ad46a-dev-ed.develop.my.salesforce.com/lightning/setup/DeployStatus/page?address=%2Fchangemgmt%2FmonitorDeploymentsDetails.apexp%3FasyncId%3D0Afaj00000p7GCLCA2%26retURL%3D%252Fchangemgmt%252FmonitorDeployment.apexp"
+  },
+  "warnings": []
+}

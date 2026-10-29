@@ -1,0 +1,31 @@
+{
+  "status": 0,
+  "result": {
+    "id": "0Afaj00000p7zkYCAQ",
+    "status": "Succeeded",
+    "success": true,
+    "checkOnly": true,
+    "createdDate": "2026-10-26T03:24:08.000Z",
+    "completedDate": "2026-10-26T03:24:10.000Z",
+    "numberComponentsDeployed": 6,
+    "numberComponentsTotal": 6,
+    "numberComponentErrors": 0,
+    "numberTestsCompleted": 0,
+    "numberTestsTotal": 0,
+    "numberTestErrors": 0,
+    "runTestsEnabled": false,
+    "details": {
+      "componentSuccesses": [
+        {"componentType":"Territory2Type","fullName":"NG_Rooftop","success":true},
+        {"componentType":"Territory2Model","fullName":"NG_Rooftops","success":true},
+        {"componentType":"Territory2","fullName":"NG_Rooftops.Airport","success":true},
+        {"componentType":"Territory2","fullName":"NG_Rooftops.Downtown","success":true},
+        {"componentType":"Territory2","fullName":"NG_Rooftops.North","success":true},
+        {"componentType":"Territory2","fullName":"NG_Rooftops.Service_Centre","success":true}
+      ],
+      "componentFailures": [],
+      "runTestResult": {"numFailures":0,"numTestsRun":0,"codeCoverageWarnings":[],"failures":[]}
+    }
+  },
+  "warnings": []
+}

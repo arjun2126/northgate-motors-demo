@@ -1,0 +1,20 @@
+{
+  "sourceFilesVerified": 26,
+  "atomicFormat": "destructiveChangesPre.xml via --pre-destructive-changes",
+  "priorCombinedValidation": "0Afaj00000p7GCLCA2",
+  "combinedComponentChanges": 14,
+  "unrelatedTriggerHashes": {
+    "DeliveryTrigger": "8009776acd6986d4f8390fee3af4eb041091542b2518d891384936694434354e",
+    "FinancingTrigger": "8e5b315cf7f9d3743e17b5a92e7ab6f4d941e94dc6027d607cc55787a2ad011f",
+    "OpportunityTrigger": "70aed4545cbe14de0c75356cbf21dd6c0511db225328db92bebf1f44b2ce0957",
+    "QuoteTrigger": "207607e4378e2ebddb9a6d6d064c32dca99f8f6020eb6b02c5e8212c9dc10045",
+    "ServiceVisitTrigger": "bcd17a1473e5a2425eae3c31ca53164cafa3abd202aa40b143e9b89da6a058df",
+    "LoyaltyMemberTrigger": "2e0128c4267a17ca5e2c4a2fc1b72fbebdb51900173a6109f9018da861b55423",
+    "LoyaltyTransactionTrigger": "a5d3e495356845242c15b54a402ab5b08a223e55101d3d34c8bcc95accbb9f3c",
+    "CampaignConsentTrigger": "b04f96a1a5f8b451a92b1c8d902e1a5fd835ee6a3972fcc0c6443542f21d9087",
+    "CampaignMemberConsentTrigger": "d24e349936795e6d7d1a2d4da609be2066b4f445f9bc97060b883429411d9cc8",
+    "ConsentTrigger": "70de970cd4e71b5e6fe611916d3dbcb9fe070c7ce6d17e00e7473935ee16a800",
+    "ContactConsentTrigger": "d7032442b20fd2b20ac28214840bb9b605ce84d91390e7e22f644b8e34e2e27d",
+    "CaseMilestoneTrigger": "1fdbddda544e8107613567a25cefd649499065e87341514900d8d369a06b232a"
+  }
+}

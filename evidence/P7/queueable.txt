@@ -1,0 +1,31 @@
+CONFIRMED — raw check-only test successes from 0Afaj00000p7GCLCA2
+[
+  {
+    "id": "01paj00000c0OSgAAM",
+    "methodName": "emptiedRooftopResetsToZero",
+    "name": "InventoryReconciliationJobTest",
+    "namespace": null,
+    "time": 426
+  },
+  {
+    "id": "01paj00000c0OSgAAM",
+    "methodName": "invalidScopesFailBeforeEnqueue",
+    "name": "InventoryReconciliationJobTest",
+    "namespace": null,
+    "time": 61
+  },
+  {
+    "id": "01paj00000c0OSgAAM",
+    "methodName": "stopTestReconcilesScopedMovesDeletesUndeletesAndIsIdempotent",
+    "name": "InventoryReconciliationJobTest",
+    "namespace": null,
+    "time": 1723
+  },
+  {
+    "id": "01paj00000c0OSgAAM",
+    "methodName": "unauthorizedPersonaCannotConstructOrEnqueueMaintenance",
+    "name": "InventoryReconciliationJobTest",
+    "namespace": null,
+    "time": 220
+  }
+]

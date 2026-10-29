@@ -1,0 +1,331 @@
+{
+  "status": 0,
+  "result": {
+    "checkOnly": false,
+    "completedDate": "2026-10-26T03:33:42.000Z",
+    "createdBy": "005aj00000feqbN",
+    "createdDate": "2026-10-26T03:33:38.000Z",
+    "details": {
+      "componentSuccesses": [
+        {
+          "changed": false,
+          "componentType": "ApexTrigger",
+          "created": false,
+          "createdDate": "2026-10-26T03:33:39.000Z",
+          "deleted": true,
+          "fileName": "triggers/TestDriveFollowupTrigger.trigger",
+          "fullName": "TestDriveFollowupTrigger",
+          "id": "01qaj00000AfYJQAA3",
+          "success": true
+        },
+        {
+          "changed": false,
+          "componentType": "ApexTrigger",
+          "created": false,
+          "createdDate": "2026-10-26T03:33:39.000Z",
+          "deleted": true,
+          "fileName": "triggers/VehicleCounterTrigger.trigger",
+          "fullName": "VehicleCounterTrigger",
+          "id": "01qaj00000AfYJSAA3",
+          "success": true
+        },
+        {
+          "changed": false,
+          "componentType": "ApexTrigger",
+          "created": false,
+          "createdDate": "2026-10-26T03:33:39.000Z",
+          "deleted": true,
+          "fileName": "triggers/LeadAfterConvertSeedBlock.trigger",
+          "fullName": "LeadAfterConvertSeedBlock",
+          "id": "01qaj00000AfYJLAA3",
+          "success": true
+        },
+        {
+          "changed": false,
+          "componentType": "ApexTrigger",
+          "created": false,
+          "createdDate": "2026-10-26T03:33:39.000Z",
+          "deleted": true,
+          "fileName": "triggers/LeadBeforeConvertGuard.trigger",
+          "fullName": "LeadBeforeConvertGuard",
+          "id": "01qaj00000AfYJMAA3",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "ApexClass",
+          "created": true,
+          "createdDate": "2026-10-26T03:33:41.000Z",
+          "deleted": false,
+          "fileName": "classes/InventoryReconciliationJob.cls",
+          "fullName": "InventoryReconciliationJob",
+          "id": "01paj00000c11VdAAI",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "ApexClass",
+          "created": true,
+          "createdDate": "2026-10-26T03:33:41.000Z",
+          "deleted": false,
+          "fileName": "classes/InventoryReconciliationJobTest.cls",
+          "fullName": "InventoryReconciliationJobTest",
+          "id": "01paj00000c11VeAAI",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "ApexClass",
+          "created": false,
+          "createdDate": "2026-10-26T03:33:41.000Z",
+          "deleted": false,
+          "fileName": "classes/LeadRoutingHandler.cls",
+          "fullName": "LeadRoutingHandler",
+          "id": "01paj00000bRxBrAAK",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "ApexClass",
+          "created": true,
+          "createdDate": "2026-10-26T03:33:41.000Z",
+          "deleted": false,
+          "fileName": "classes/LeadTriggerHandler.cls",
+          "fullName": "LeadTriggerHandler",
+          "id": "01paj00000c11VfAAI",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "ApexClass",
+          "created": true,
+          "createdDate": "2026-10-26T03:33:41.000Z",
+          "deleted": false,
+          "fileName": "classes/P7TriggerArchitectureTest.cls",
+          "fullName": "P7TriggerArchitectureTest",
+          "id": "01paj00000c11VgAAI",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "ApexClass",
+          "created": true,
+          "createdDate": "2026-10-26T03:33:41.000Z",
+          "deleted": false,
+          "fileName": "classes/TestDriveTriggerHandler.cls",
+          "fullName": "TestDriveTriggerHandler",
+          "id": "01paj00000c11VhAAI",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "ApexClass",
+          "created": true,
+          "createdDate": "2026-10-26T03:33:41.000Z",
+          "deleted": false,
+          "fileName": "classes/VehicleTriggerHandler.cls",
+          "fullName": "VehicleTriggerHandler",
+          "id": "01paj00000c11ViAAI",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "ApexTrigger",
+          "created": false,
+          "createdDate": "2026-10-26T03:33:42.000Z",
+          "deleted": false,
+          "fileName": "triggers/LeadRoutingTrigger.trigger",
+          "fullName": "LeadRoutingTrigger",
+          "id": "01qaj00000AfYJNAA3",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "ApexTrigger",
+          "created": false,
+          "createdDate": "2026-10-26T03:33:42.000Z",
+          "deleted": false,
+          "fileName": "triggers/TestDriveTrigger.trigger",
+          "fullName": "TestDriveTrigger",
+          "id": "01qaj00000AfYJRAA3",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "ApexTrigger",
+          "created": false,
+          "createdDate": "2026-10-26T03:33:42.000Z",
+          "deleted": false,
+          "fileName": "triggers/VehicleTrigger.trigger",
+          "fullName": "VehicleTrigger",
+          "id": "01qaj00000AfYJTAA3",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "",
+          "created": false,
+          "createdDate": "2026-10-26T03:33:42.000Z",
+          "deleted": false,
+          "fileName": "package.xml",
+          "fullName": "package.xml",
+          "success": true
+        }
+      ],
+      "runTestResult": {
+        "numFailures": 0,
+        "numTestsRun": 0,
+        "totalTime": 0,
+        "codeCoverage": [],
+        "codeCoverageWarnings": [],
+        "failures": [],
+        "flowCoverage": [],
+        "flowCoverageWarnings": [],
+        "successes": []
+      },
+      "componentFailures": []
+    },
+    "done": true,
+    "id": "0Afaj00000p84KRCAY",
+    "ignoreWarnings": false,
+    "lastModifiedDate": "2026-10-26T03:33:42.000Z",
+    "numberComponentErrors": 0,
+    "numberComponentsDeployed": 14,
+    "numberComponentsTotal": 14,
+    "numberFiles": "24",
+    "numberTestErrors": 0,
+    "numberTestsCompleted": 0,
+    "numberTestsTotal": 0,
+    "rollbackOnError": true,
+    "runTestsEnabled": false,
+    "startDate": "2026-10-26T03:33:38.000Z",
+    "status": "Succeeded",
+    "success": true,
+    "zipSize": 14139,
+    "files": [
+      {
+        "fullName": "InventoryReconciliationJob",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "force-app/main/default/classes/InventoryReconciliationJob.cls"
+      },
+      {
+        "fullName": "InventoryReconciliationJob",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "force-app/main/default/classes/InventoryReconciliationJob.cls-meta.xml"
+      },
+      {
+        "fullName": "InventoryReconciliationJobTest",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "force-app/main/default/classes/InventoryReconciliationJobTest.cls"
+      },
+      {
+        "fullName": "InventoryReconciliationJobTest",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "force-app/main/default/classes/InventoryReconciliationJobTest.cls-meta.xml"
+      },
+      {
+        "fullName": "LeadRoutingHandler",
+        "type": "ApexClass",
+        "state": "Changed",
+        "filePath": "force-app/main/default/classes/LeadRoutingHandler.cls"
+      },
+      {
+        "fullName": "LeadRoutingHandler",
+        "type": "ApexClass",
+        "state": "Changed",
+        "filePath": "force-app/main/default/classes/LeadRoutingHandler.cls-meta.xml"
+      },
+      {
+        "fullName": "LeadTriggerHandler",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "force-app/main/default/classes/LeadTriggerHandler.cls"
+      },
+      {
+        "fullName": "LeadTriggerHandler",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "force-app/main/default/classes/LeadTriggerHandler.cls-meta.xml"
+      },
+      {
+        "fullName": "P7TriggerArchitectureTest",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "force-app/main/default/classes/P7TriggerArchitectureTest.cls"
+      },
+      {
+        "fullName": "P7TriggerArchitectureTest",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "force-app/main/default/classes/P7TriggerArchitectureTest.cls-meta.xml"
+      },
+      {
+        "fullName": "TestDriveTriggerHandler",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "force-app/main/default/classes/TestDriveTriggerHandler.cls"
+      },
+      {
+        "fullName": "TestDriveTriggerHandler",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "force-app/main/default/classes/TestDriveTriggerHandler.cls-meta.xml"
+      },
+      {
+        "fullName": "VehicleTriggerHandler",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "force-app/main/default/classes/VehicleTriggerHandler.cls"
+      },
+      {
+        "fullName": "VehicleTriggerHandler",
+        "type": "ApexClass",
+        "state": "Created",
+        "filePath": "force-app/main/default/classes/VehicleTriggerHandler.cls-meta.xml"
+      },
+      {
+        "fullName": "LeadRoutingTrigger",
+        "type": "ApexTrigger",
+        "state": "Changed",
+        "filePath": "force-app/main/default/triggers/LeadRoutingTrigger.trigger"
+      },
+      {
+        "fullName": "LeadRoutingTrigger",
+        "type": "ApexTrigger",
+        "state": "Changed",
+        "filePath": "force-app/main/default/triggers/LeadRoutingTrigger.trigger-meta.xml"
+      },
+      {
+        "fullName": "TestDriveTrigger",
+        "type": "ApexTrigger",
+        "state": "Changed",
+        "filePath": "force-app/main/default/triggers/TestDriveTrigger.trigger"
+      },
+      {
+        "fullName": "TestDriveTrigger",
+        "type": "ApexTrigger",
+        "state": "Changed",
+        "filePath": "force-app/main/default/triggers/TestDriveTrigger.trigger-meta.xml"
+      },
+      {
+        "fullName": "VehicleTrigger",
+        "type": "ApexTrigger",
+        "state": "Changed",
+        "filePath": "force-app/main/default/triggers/VehicleTrigger.trigger"
+      },
+      {
+        "fullName": "VehicleTrigger",
+        "type": "ApexTrigger",
+        "state": "Changed",
+        "filePath": "force-app/main/default/triggers/VehicleTrigger.trigger-meta.xml"
+      }
+    ],
+    "zipFileCount": 22,
+    "deployUrl": "https://orgfarm-25065ad46a-dev-ed.develop.my.salesforce.com/lightning/setup/DeployStatus/page?address=%2Fchangemgmt%2FmonitorDeploymentsDetails.apexp%3FasyncId%3D0Afaj00000p84KRCAY%26retURL%3D%252Fchangemgmt%252FmonitorDeployment.apexp"
+  },
+  "warnings": []
+}

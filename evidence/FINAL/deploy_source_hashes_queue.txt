@@ -1,0 +1,3 @@
+96f35422c63c768687f0c28bcfa46e31575bc83b383088b84fc03bca4857acf3  force-app/main/default/queues/Q_Finance_Approvals.queue-meta.xml
+994468d5720bf526a632eabe4bb430179da8b9cef9d7570e18bdc7fff562657b  force-app/main/default/queues/Q_Inbound_Leads.queue-meta.xml
+087ef99063465ab359d91279dc8515480418a98d4389d84937d4599e7a22d3af  force-app/main/default/queues/Q_Service_Intake.queue-meta.xml

@@ -1,0 +1,2613 @@
+
+ ────────────── Retrieving Metadata ──────────────
+
+
+ ◼ Preparing retrieve request
+ ◼ Sending request to org
+ ◼ Waiting for the org to respond
+ ◼ Done
+
+ Status: ⠁
+ Elapsed Time: 0ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ⣾ Sending request to org 22ms
+ ◼ Waiting for the org to respond
+ ◼ Done
+
+ Status: ⠁
+ Elapsed Time: 29ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ⣾ Sending request to org 55ms
+ ◼ Waiting for the org to respond
+ ◼ Done
+
+ Status: ⠁
+ Elapsed Time: 61ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ⣽ Sending request to org 87ms
+ ◼ Waiting for the org to respond
+ ◼ Done
+
+ Status: ⠁
+ Elapsed Time: 95ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ⣽ Sending request to org 120ms
+ ◼ Waiting for the org to respond
+ ◼ Done
+
+ Status: ⠂
+ Elapsed Time: 127ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 9ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 158ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 39ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 190ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 73ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 222ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣽ Waiting for the org to respond 104ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 254ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣽ Waiting for the org to respond 137ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 286ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣻ Waiting for the org to respond 168ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 318ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣻ Waiting for the org to respond 201ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 350ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣻ Waiting for the org to respond 232ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 382ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⢿ Waiting for the org to respond 264ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 415ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⢿ Waiting for the org to respond 298ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 446ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⡿ Waiting for the org to respond 329ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 479ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⡿ Waiting for the org to respond 361ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 511ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⡿ Waiting for the org to respond 394ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 542ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣟ Waiting for the org to respond 424ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 575ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣟ Waiting for the org to respond 458ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 607ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣯ Waiting for the org to respond 489ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 639ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣯ Waiting for the org to respond 522ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 670ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣯ Waiting for the org to respond 552ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 702ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣷ Waiting for the org to respond 585ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 735ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣷ Waiting for the org to respond 618ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 766ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 649ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 799ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 681ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 831ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 713ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 862ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣽ Waiting for the org to respond 745ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 895ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣽ Waiting for the org to respond 778ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 928ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣻ Waiting for the org to respond 811ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 961ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣻ Waiting for the org to respond 844ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 994ms
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣻ Waiting for the org to respond 877ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.02s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⢿ Waiting for the org to respond 910ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.05s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⢿ Waiting for the org to respond 941ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.09s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⡿ Waiting for the org to respond 974ms
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.12s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⡿ Waiting for the org to respond 1.00s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.15s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⡿ Waiting for the org to respond 1.03s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.18s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣟ Waiting for the org to respond 1.07s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.22s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣟ Waiting for the org to respond 1.10s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.25s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣯ Waiting for the org to respond 1.13s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.28s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣯ Waiting for the org to respond 1.16s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.31s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣯ Waiting for the org to respond 1.19s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.34s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣷ Waiting for the org to respond 1.23s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.38s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣷ Waiting for the org to respond 1.26s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.41s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 1.29s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.44s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 1.33s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.47s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 1.36s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.51s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣽ Waiting for the org to respond 1.39s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.54s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣽ Waiting for the org to respond 1.42s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.57s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣻ Waiting for the org to respond 1.45s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.60s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣻ Waiting for the org to respond 1.49s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.64s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣻ Waiting for the org to respond 1.52s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.67s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⢿ Waiting for the org to respond 1.55s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.70s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⢿ Waiting for the org to respond 1.58s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.73s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⡿ Waiting for the org to respond 1.62s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.76s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⡿ Waiting for the org to respond 1.65s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.80s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⡿ Waiting for the org to respond 1.68s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.83s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣟ Waiting for the org to respond 1.71s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.86s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣟ Waiting for the org to respond 1.74s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.89s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣯ Waiting for the org to respond 1.77s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.92s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣯ Waiting for the org to respond 1.81s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.96s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣯ Waiting for the org to respond 1.84s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 1.99s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣷ Waiting for the org to respond 1.87s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.02s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣷ Waiting for the org to respond 1.90s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.05s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 1.94s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.08s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 1.97s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.12s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 2.00s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.15s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣽ Waiting for the org to respond 2.03s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.18s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣽ Waiting for the org to respond 2.06s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.21s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣻ Waiting for the org to respond 2.10s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.24s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣻ Waiting for the org to respond 2.13s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.28s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣻ Waiting for the org to respond 2.16s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.31s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⢿ Waiting for the org to respond 2.19s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.34s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⢿ Waiting for the org to respond 2.22s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.37s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⡿ Waiting for the org to respond 2.25s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.40s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⡿ Waiting for the org to respond 2.29s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.44s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⡿ Waiting for the org to respond 2.32s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.47s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣟ Waiting for the org to respond 2.35s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.50s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣟ Waiting for the org to respond 2.38s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.53s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣯ Waiting for the org to respond 2.42s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.56s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣯ Waiting for the org to respond 2.45s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.60s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣯ Waiting for the org to respond 2.48s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.63s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣷ Waiting for the org to respond 2.51s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.66s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣷ Waiting for the org to respond 2.54s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.69s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 2.57s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.72s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 2.61s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.76s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 2.64s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.79s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣽ Waiting for the org to respond 2.67s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.82s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣽ Waiting for the org to respond 2.70s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.85s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣻ Waiting for the org to respond 2.73s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.88s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣻ Waiting for the org to respond 2.77s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.92s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣻ Waiting for the org to respond 2.80s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.95s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⢿ Waiting for the org to respond 2.83s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 2.98s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⢿ Waiting for the org to respond 2.86s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.01s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⡿ Waiting for the org to respond 2.90s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.04s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⡿ Waiting for the org to respond 2.93s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.08s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⡿ Waiting for the org to respond 2.96s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.11s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣟ Waiting for the org to respond 2.99s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.14s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣟ Waiting for the org to respond 3.02s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.17s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣯ Waiting for the org to respond 3.06s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.21s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣯ Waiting for the org to respond 3.09s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.24s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣯ Waiting for the org to respond 3.12s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.27s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣷ Waiting for the org to respond 3.15s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.30s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣷ Waiting for the org to respond 3.18s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.33s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 3.22s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.37s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 3.25s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.40s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 3.28s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.43s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣽ Waiting for the org to respond 3.31s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.46s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣽ Waiting for the org to respond 3.34s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.49s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣻ Waiting for the org to respond 3.38s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.53s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣻ Waiting for the org to respond 3.41s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.56s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣻ Waiting for the org to respond 3.44s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.59s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⢿ Waiting for the org to respond 3.47s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.62s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⢿ Waiting for the org to respond 3.51s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.66s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⡿ Waiting for the org to respond 3.54s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.69s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⡿ Waiting for the org to respond 3.57s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.72s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⡿ Waiting for the org to respond 3.60s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.75s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣟ Waiting for the org to respond 3.63s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.78s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣟ Waiting for the org to respond 3.67s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.82s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣯ Waiting for the org to respond 3.70s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.85s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣯ Waiting for the org to respond 3.73s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.88s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣯ Waiting for the org to respond 3.76s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.91s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣷ Waiting for the org to respond 3.79s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.94s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣷ Waiting for the org to respond 3.83s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 3.98s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 3.86s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.01s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 3.89s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.04s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 3.92s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.07s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣽ Waiting for the org to respond 3.96s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.11s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣽ Waiting for the org to respond 3.99s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.14s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣻ Waiting for the org to respond 4.02s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.17s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣻ Waiting for the org to respond 4.05s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.20s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣻ Waiting for the org to respond 4.08s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.23s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⢿ Waiting for the org to respond 4.12s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.27s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⢿ Waiting for the org to respond 4.15s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.30s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⡿ Waiting for the org to respond 4.18s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.33s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⡿ Waiting for the org to respond 4.21s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.36s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⡿ Waiting for the org to respond 4.24s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.39s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣟ Waiting for the org to respond 4.28s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.43s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣟ Waiting for the org to respond 4.31s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.46s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣯ Waiting for the org to respond 4.34s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.49s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣯ Waiting for the org to respond 4.37s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.52s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣯ Waiting for the org to respond 4.41s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.55s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣷ Waiting for the org to respond 4.44s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.59s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣷ Waiting for the org to respond 4.47s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.62s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 4.50s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.65s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 4.53s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.68s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 4.57s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.72s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣽ Waiting for the org to respond 4.60s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.75s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣽ Waiting for the org to respond 4.63s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.78s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣻ Waiting for the org to respond 4.66s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.81s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣻ Waiting for the org to respond 4.70s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.84s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⢿ Waiting for the org to respond 4.73s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.88s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⢿ Waiting for the org to respond 4.76s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.91s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⢿ Waiting for the org to respond 4.79s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.94s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⡿ Waiting for the org to respond 4.83s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 4.98s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⡿ Waiting for the org to respond 4.86s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.01s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣟ Waiting for the org to respond 4.89s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.04s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣟ Waiting for the org to respond 4.92s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.07s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣟ Waiting for the org to respond 4.95s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.10s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣯ Waiting for the org to respond 4.99s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.14s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣯ Waiting for the org to respond 5.02s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.17s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣷ Waiting for the org to respond 5.05s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.20s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣷ Waiting for the org to respond 5.08s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.23s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣷ Waiting for the org to respond 5.11s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.26s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 5.15s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.30s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣾ Waiting for the org to respond 5.18s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.33s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣽ Waiting for the org to respond 5.21s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.36s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣽ Waiting for the org to respond 5.24s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.39s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣽ Waiting for the org to respond 5.27s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.42s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣻ Waiting for the org to respond 5.31s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.46s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣻ Waiting for the org to respond 5.34s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.49s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⢿ Waiting for the org to respond 5.37s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.52s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⢿ Waiting for the org to respond 5.40s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.55s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⢿ Waiting for the org to respond 5.44s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.58s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⡿ Waiting for the org to respond 5.47s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.62s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⡿ Waiting for the org to respond 5.50s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.65s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣟ Waiting for the org to respond 5.53s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.68s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣟ Waiting for the org to respond 5.56s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.71s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣟ Waiting for the org to respond 5.60s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.75s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣯ Waiting for the org to respond 5.63s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.78s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣯ Waiting for the org to respond 5.66s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.81s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣷ Waiting for the org to respond 5.69s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.84s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣷ Waiting for the org to respond 5.72s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.87s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ⣷ Waiting for the org to respond 5.76s
+ ◼ Done
+
+ Status: Pending
+ Elapsed Time: 5.91s
+
+[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G
+ ────────────── Retrieving Metadata ──────────────
+
+ Retrieving v68.0 metadata from arjun.ngdemo@northgate.demo using the v68.0 SOAP
+  API
+
+ ✔ Preparing retrieve request 3ms
+ ✔ Sending request to org 144ms
+ ✔ Waiting for the org to respond 5.79s
+ ✔ Done 0ms
+
+ Status: Succeeded
+ Elapsed Time: 5.93s
+
+
+Retrieved Source
+┌─────────┬─────────────┬────────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ State   │ Name        │ Type               │ Path                                                                                                    │
+├─────────┼─────────────┼────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ Created │ PSG_Finance │ PermissionSetGroup │ verification/ng-demo-2026-10-19-post-config/permissionsetgroups/PSG_Finance.permissionsetgroup-meta.xml │
+│ Created │ PSG_Manager │ PermissionSetGroup │ verification/ng-demo-2026-10-19-post-config/permissionsetgroups/PSG_Manager.permissionsetgroup-meta.xml │
+│ Created │ PSG_Rep     │ PermissionSetGroup │ verification/ng-demo-2026-10-19-post-config/permissionsetgroups/PSG_Rep.permissionsetgroup-meta.xml     │
+│ Created │ PSG_Service │ PermissionSetGroup │ verification/ng-demo-2026-10-19-post-config/permissionsetgroups/PSG_Service.permissionsetgroup-meta.xml │
+└─────────┴─────────────┴────────────────────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+

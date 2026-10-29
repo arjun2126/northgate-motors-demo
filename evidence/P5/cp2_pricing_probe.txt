@@ -1,0 +1,11 @@
+# CP2 pricing probe (read-only, no DML)
+# Command: sf apex run --target-org ng-demo --file /tmp/cp2_probe.apex
+# Input: Product2 "Kestrel Sport 2023" (Category__c=Vehicle_Trim), PBE UnitPrice=50615,
+#        Quantity=1, VehicleContext(modelName="Kestrel Sport 2023", trim="Sport", ageDays=899),
+#        BuyerContext(associated=false), all active Price_Rule__mdt rules.
+08:46:27.91 (233414721)|USER_DEBUG|[20]|DEBUG|CP2_PROBE {"volumeVehicleQuantity":1,"vehicleListPrice":50615.00,"vehicleLineCount":1,"vehicleBasisIdentified":true,"vehicleAdjustedPrice":43022.75,"rulesApplied":1,"netDiscountPercent":15.00,"listSubtotal":50615.00,"buyerAssociated":false,"blockerMessage":null,"basisMatchCount":1,"appliedRules":[{"percent":15.00,"direction":"Discount","developerName":"Aged_Inventory_Discount_90","category":"Age_Days","base":50615.00,"adjustment":7592.25}],"adjustedSubtotal":43022.75}
+
+# Existing seeded Quote Q-0058 probe (read-only, no DML)
+# Vehicle: Cascadia Premium 2024, trim Premium, Acquisition_Date 2025-12-01 (age 322 days)
+# QLI: Cascadia Premium 2024, UnitPrice 55829, Quantity 1
+08:47:48.52 (122143248)|USER_DEBUG|[19]|DEBUG|CP2_PROBE_Q58 {"volumeVehicleQuantity":1.00,"vehicleListPrice":55829.00,"vehicleLineCount":1,"vehicleBasisIdentified":true,"vehicleAdjustedPrice":49827.38,"rulesApplied":2,"netDiscountPercent":10.75,"listSubtotal":55829.00,"buyerAssociated":false,"blockerMessage":null,"basisMatchCount":1,"appliedRules":[{"percent":15.00,"direction":"Discount","developerName":"Aged_Inventory_Discount_90","category":"Age_Days","base":55829.00,"adjustment":8374.35},{"percent":5.00,"direction":"Premium","developerName":"Trim_Premium_Premium","category":"Trim","base":47454.65,"adjustment":2372.73}],"adjustedSubtotal":49827.38}

@@ -1,0 +1,54 @@
+Northgate Motors configuration metadata deployment
+Date: 2026-10-19
+Org: ng-demo / 00Daj00001Ae3iWEAR
+User: arjun.ngdemo@northgate.demo
+
+Pre-deployment
+- Org ID confirmed: 00Daj00001Ae3iWEAR
+- PSG source hashes recorded: evidence/FINAL/deploy_source_hashes_psg.txt
+- Queue source hashes recorded: evidence/FINAL/deploy_source_hashes_queue.txt
+- Queue manifest members: Q_Finance_Approvals, Q_Inbound_Leads, Q_Service_Intake
+- Pre-deployment queue metadata preserved: rollback/ng-demo-2026-10-19-pre-config/
+- Pre-deployment queue hashes: rollback/ng-demo-2026-10-19-pre-config/SHA256SUMS
+- Pre-deployment PSG rows: 0
+
+Deployment 1 - Permission Set Groups
+- Deploy ID: 0Afaj00000oIT8PCAW
+- Status: Succeeded
+- Components: 4/4
+- Failures: 0
+- Created: PSG_Finance, PSG_Manager, PSG_Rep, PSG_Service
+
+Deployment 2 - Queue definitions
+- Deploy ID: 0Afaj00000oI4JjCAK
+- Status: Succeeded
+- Components: 3/3
+- Failures: 0
+- Changed: Q_Finance_Approvals, Q_Inbound_Leads, Q_Service_Intake
+
+Post-deployment verification
+- Live PSG composition:
+  PSG_Finance -> PS_Finance_Officer
+  PSG_Manager -> PS_Sales_Manager
+  PSG_Rep -> PS_Sales_Rep
+  PSG_Service -> PS_Service_Advisor
+- Live PSG status: Updated for all four
+- Queue role membership:
+  Q_Finance_Approvals -> Finance_Manager
+  Q_Inbound_Leads -> Sales_Rep
+  Q_Service_Intake -> Service_Advisor
+- Queue GroupMember rows: 3, each pointing to the matching role group
+- Pre/post queue properties unchanged: doesIncludeBosses, doesSendEmailToMembers, name,
+  queueSobject
+- Active approval processes: Financing Exception Approval, Opportunity Discount Approval,
+  VP Discount Approval
+- Financing Exception Approval still routes to Q_Finance_Approvals
+- PSG assignments: 0
+- ngpersona role unchanged: VP_Sales
+- PG_All_Sales members: 0
+- Q_VP_Sales_Approvals live rows: 0
+- Queue count: 3
+- Quotes: 60 total, 60 null Adjusted_Subtotal__c; status counts unchanged
+
+No persona.sh execution, user role/permission change, GroupMember creation by hand, Quote
+DML, commit, or push. No ng-dev access.

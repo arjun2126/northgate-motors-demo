@@ -1,0 +1,34 @@
+{
+  "targetOrg": "ng-demo",
+  "orgId": "00Daj00001Ae3iWEAR",
+  "userId": "005aj00000feqbNAAQ",
+  "username": "arjun.ngdemo@northgate.demo",
+  "permissionSet": "PS_Executive_Service_Field_Read",
+  "permissionSetId": "0PSaj00000hKcDFGA0",
+  "assignmentId": "0Paaj000018MIu2CAG",
+  "assignmentCreated": true,
+  "assignmentsForThisSet": 1,
+  "objectQueryable": true,
+  "effectiveFields": [
+    {
+      "field": "Executive_Service_Metrics__c.Overdue_Count__c",
+      "presentInAuthenticatedUserDescribe": true,
+      "createable": true,
+      "updateable": true
+    },
+    {
+      "field": "Executive_Service_Metrics__c.CSI_Score_Total__c",
+      "presentInAuthenticatedUserDescribe": true,
+      "createable": true,
+      "updateable": true
+    },
+    {
+      "field": "Executive_Service_Metrics__c.CSI_Response_Count__c",
+      "presentInAuthenticatedUserDescribe": true,
+      "createable": true,
+      "updateable": true
+    }
+  ],
+  "browserAcceptance": "PENDING owner verification",
+  "deploymentsPerformed": 0
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>PSG Service: wraps PS_Service_Advisor (DATA_MODEL 6.2). Assigned per persona.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>PSG Service</label>
+    <permissionSets>PS_Service_Advisor</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

@@ -1,0 +1,15 @@
+[
+  "sf",
+  "project",
+  "deploy",
+  "start",
+  "--target-org",
+  "ng-demo",
+  "--manifest",
+  "manifest/p7-batch3-check.xml",
+  "--test-level",
+  "NoTestRun",
+  "--wait",
+  "10",
+  "--json"
+]

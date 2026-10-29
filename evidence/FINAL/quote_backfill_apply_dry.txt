@@ -1,0 +1,224 @@
+Compiled successfully.
+Executed successfully.
+
+68.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO
+Execute Anonymous: // Northgate Motors - Quote pricing backfill APPLY (guarded).
+Execute Anonymous: //
+Execute Anonymous: // Re-evaluates CP2 for every Quote and backfills Adjusted_Subtotal__c plus
+Execute Anonymous: // Rule_Applied_Count__c for OPEN quotes (Draft, Presented) whose result is
+Execute Anonymous: // deterministic. Terminal quotes (Accepted, Rejected, Denied) are historical
+Execute Anonymous: // snapshots and are never updated.
+Execute Anonymous: //
+Execute Anonymous: // The script is idempotent: only quotes with a null Adjusted_Subtotal__c are
+Execute Anonymous: // selected for update, so a second run is a no-op.
+Execute Anonymous: //
+Execute Anonymous: // SAFETY: EXECUTE is false. Set it to true only after the dry run is approved.
+Execute Anonymous: // Run: sf apex run --target-org ng-demo --file scripts/quote_pricing_backfill_apply.apex
+Execute Anonymous: 
+Execute Anonymous: Boolean EXECUTE = false;
+Execute Anonymous: 
+Execute Anonymous: Set<String> HISTORICAL = new Set<String>{'Accepted', 'Rejected', 'Denied'};
+Execute Anonymous: 
+Execute Anonymous: List<Quote> quotes = [
+Execute Anonymous:     SELECT Id, Name, Status, Subtotal, Adjusted_Subtotal__c, Rule_Applied_Count__c,
+Execute Anonymous:         Buyer_Contact__c, OpportunityId,
+Execute Anonymous:         Opportunity.AccountId,
+Execute Anonymous:         Opportunity.Vehicle__c,
+Execute Anonymous:         Opportunity.Vehicle__r.Vehicle_Model__r.Name,
+Execute Anonymous:         Opportunity.Vehicle__r.Vehicle_Model__r.Trim__c,
+Execute Anonymous:         Opportunity.Vehicle__r.Inventory_Age_Days__c
+Execute Anonymous:     FROM Quote
+Execute Anonymous:     ORDER BY Name
+Execute Anonymous: ];
+Execute Anonymous: 
+Execute Anonymous: Map<Id, List<QuoteLineItem>> linesByQuote = new Map<Id, List<QuoteLineItem>>();
+Execute Anonymous: for (QuoteLineItem line : [
+Execute Anonymous:     SELECT Id, QuoteId, UnitPrice, Quantity,
+Execute Anonymous:         PricebookEntry.Product2.Name, PricebookEntry.Product2.Category__c
+Execute Anonymous:     FROM QuoteLineItem
+Execute Anonymous: ]) {
+Execute Anonymous:     if (!linesByQuote.containsKey(line.QuoteId)) {
+Execute Anonymous:         linesByQuote.put(line.QuoteId, new List<QuoteLineItem>());
+Execute Anonymous:     }
+Execute Anonymous:     linesByQuote.get(line.QuoteId).add(line);
+Execute Anonymous: }
+Execute Anonymous: 
+Execute Anonymous: List<Price_Rule__mdt> rules = [
+Execute Anonymous:     SELECT DeveloperName, Rule_Type__c, Attribute__c, Operator__c, Value__c,
+Execute Anonymous:         Percent_Adjustment__c, Priority__c, Is_Active__c
+Execute Anonymous:     FROM Price_Rule__mdt
+Execute Anonymous: ];
+Execute Anonymous: 
+Execute Anonymous: Map<Id, QuotePricingService.BuyerContext> buyerByQuote = new Map<Id, QuotePricingService.BuyerContext>();
+Execute Anonymous: for (Quote q : quotes) {
+Execute Anonymous:     if (q.Buyer_Contact__c == null) {
+Execute Anonymous:         continue;
+Execute Anonymous:     }
+Execute Anonymous:     QuotePricingService.BuyerContext buyer = new QuotePricingService.BuyerContext();
+Execute Anonymous:     Contact buyerContact = [
+Execute Anonymous:         SELECT Id, AccountId FROM Contact WHERE Id = :q.Buyer_Contact__c LIMIT 1
+Execute Anonymous:     ];
+Execute Anonymous:     if (buyerContact.AccountId == q.Opportunity.AccountId) {
+Execute Anonymous:         List<Loyalty_Member__c> members = [
+Execute Anonymous:             SELECT Tier__c, Member_Number__c, Tier_Evaluated_On__c
+Execute Anonymous:             FROM Loyalty_Member__c
+Execute Anonymous:             WHERE Contact__c = :q.Buyer_Contact__c AND Status__c = 'Active'
+Execute Anonymous:         ];
+Execute Anonymous:         String tier = bestTier(members);
+Execute Anonymous:         if (tier != null) {
+Execute Anonymous:             buyer.tier = tier;
+Execute Anonymous:             buyer.associated = true;
+Execute Anonymous:         }
+Execute Anonymous:     }
+Execute Anonymous:     buyerByQuote.put(q.Id, buyer);
+Execute Anonymous: }
+Execute Anonymous: 
+Execute Anonymous: List<Quote> updates = new List<Quote>();
+Execute Anonymous: Integer blocked = 0;
+Execute Anonymous: Integer frozen = 0;
+Execute Anonymous: 
+Execute Anonymous: for (Quote q : quotes) {
+Execute Anonymous:     if (q.Adjusted_Subtotal__c != null) {
+Execute Anonymous:         continue;
+Execute Anonymous:     }
+Execute Anonymous:     if (HISTORICAL.contains(q.Status)) {
+Execute Anonymous:         frozen++;
+Execute Anonymous:         continue;
+Execute Anonymous:     }
+Execute Anonymous: 
+Execute Anonymous:     QuotePricingService.VehicleContext vehicle = new QuotePricingService.VehicleContext();
+Execute Anonymous:     vehicle.hasVehicle = q.Opportunity.Vehicle__c != null;
+Execute Anonymous:     vehicle.modelName = q.Opportunity.Vehicle__r.Vehicle_Model__r.Name;
+Execute Anonymous:     vehicle.trim = q.Opportunity.Vehicle__r.Vehicle_Model__r.Trim__c;
+Execute Anonymous:     vehicle.ageDays = q.Opportunity.Vehicle__r.Inventory_Age_Days__c;
+Execute Anonymous: 
+Execute Anonymous:     QuotePricingService.BuyerContext buyer = buyerByQuote.containsKey(q.Id)
+Execute Anonymous:         ? buyerByQuote.get(q.Id)
+Execute Anonymous:         : new QuotePricingService.BuyerContext();
+Execute Anonymous: 
+Execute Anonymous:     List<QuoteLineItem> lines = linesByQuote.containsKey(q.Id)
+Execute Anonymous:         ? linesByQuote.get(q.Id)
+Execute Anonymous:         : new List<QuoteLineItem>();
+Execute Anonymous: 
+Execute Anonymous:     QuotePricingService.QuotePricingResult result =
+Execute Anonymous:         QuotePricingService.evaluate(q, lines, rules, vehicle, buyer);
+Execute Anonymous: 
+Execute Anonymous:     if (result.blockerMessage != null) {
+Execute Anonymous:         blocked++;
+Execute Anonymous:         System.debug('APPLY_BLOCKED|' + q.Name + '|' + result.blockerMessage);
+Execute Anonymous:         continue;
+Execute Anonymous:     }
+Execute Anonymous: 
+Execute Anonymous:     updates.add(new Quote(
+Execute Anonymous:         Id = q.Id,
+Execute Anonymous:         Adjusted_Subtotal__c = result.adjustedSubtotal,
+Execute Anonymous:         Rule_Applied_Count__c = result.rulesApplied
+Execute Anonymous:     ));
+Execute Anonymous:     System.debug('APPLY_CANDIDATE|' + q.Name + '|' + q.Status
+Execute Anonymous:         + '|' + result.adjustedSubtotal + '|' + result.rulesApplied);
+Execute Anonymous: }
+Execute Anonymous: 
+Execute Anonymous: System.debug('APPLY_SUMMARY|execute=' + EXECUTE
+Execute Anonymous:     + '; candidates=' + updates.size()
+Execute Anonymous:     + '; blocked=' + blocked
+Execute Anonymous:     + '; frozen_historical=' + frozen);
+Execute Anonymous: 
+Execute Anonymous: if (!EXECUTE) {
+Execute Anonymous:     System.debug('APPLY_DRY_ONLY|No DML performed. Set EXECUTE=true to apply.');
+Execute Anonymous: } else if (!updates.isEmpty()) {
+Execute Anonymous:     List<Database.SaveResult> results = Database.update(updates, false);
+Execute Anonymous:     Integer ok = 0;
+Execute Anonymous:     Integer failed = 0;
+Execute Anonymous:     for (Integer i = 0; i < results.size(); i++) {
+Execute Anonymous:         if (results[i].isSuccess()) {
+Execute Anonymous:             ok++;
+Execute Anonymous:         } else {
+Execute Anonymous:             failed++;
+Execute Anonymous:             System.debug('APPLY_FAILED|' + updates[i].Name + '|'
+Execute Anonymous:                 + results[i].getErrors()[0].getMessage());
+Execute Anonymous:         }
+Execute Anonymous:     }
+Execute Anonymous:     System.debug('APPLY_RESULT|updated=' + ok + '; failed=' + failed);
+Execute Anonymous: }
+Execute Anonymous: 
+Execute Anonymous: Integer rank(String tier) {
+Execute Anonymous:     if (tier == 'Platinum') return 4;
+Execute Anonymous:     if (tier == 'Gold') return 3;
+Execute Anonymous:     if (tier == 'Silver') return 2;
+Execute Anonymous:     if (tier == 'Bronze') return 1;
+Execute Anonymous:     return 0;
+Execute Anonymous: }
+Execute Anonymous: 
+Execute Anonymous: String bestTier(List<Loyalty_Member__c> memberships) {
+Execute Anonymous:     Loyalty_Member__c best;
+Execute Anonymous:     Integer bestRank = 0;
+Execute Anonymous:     String bestNumber = '~~~~~~~~~~';
+Execute Anonymous:     Date bestDate = Date.valueOf('1900-01-01');
+Execute Anonymous:     for (Loyalty_Member__c m : memberships) {
+Execute Anonymous:         if (m.Tier__c == null) continue;
+Execute Anonymous:         Integer r = rank(m.Tier__c);
+Execute Anonymous:         String n = m.Member_Number__c == null ? '~~~~~~~~~~' : m.Member_Number__c;
+Execute Anonymous:         Date d = m.Tier_Evaluated_On__c == null ? Date.valueOf('1900-01-01') : m.Tier_Evaluated_On__c;
+Execute Anonymous:         Boolean better = false;
+Execute Anonymous:         if (best == null) {
+Execute Anonymous:             better = true;
+Execute Anonymous:         } else if (r != bestRank) {
+Execute Anonymous:             better = r > bestRank;
+Execute Anonymous:         } else if (n != bestNumber) {
+Execute Anonymous:             better = n.compareTo(bestNumber) < 0;
+Execute Anonymous:         } else if (d != bestDate) {
+Execute Anonymous:             better = d > bestDate;
+Execute Anonymous:         }
+Execute Anonymous:         if (better) {
+Execute Anonymous:             best = m;
+Execute Anonymous:             bestRank = r;
+Execute Anonymous:             bestNumber = n;
+Execute Anonymous:             bestDate = d;
+Execute Anonymous:         }
+Execute Anonymous:     }
+Execute Anonymous:     return best == null ? null : best.Tier__c;
+Execute Anonymous: }
+10:14:31.86 (86958398)|USER_INFO|[EXTERNAL]|005aj00000feqbN|arjun.ngdemo@northgate.demo|(GMT-04:00) Eastern Daylight Time (America/Toronto)|GMT-04:00
+10:14:31.86 (87008349)|EXECUTION_STARTED
+10:14:31.86 (87028609)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+10:14:31.86 (188882770)|USER_DEBUG|[113]|DEBUG|APPLY_CANDIDATE&#124;Q-0002 – Richardson Household – Opportunity 12&#124;Draft&#124;109325.00&#124;0
+10:14:31.86 (189364426)|USER_DEBUG|[113]|DEBUG|APPLY_CANDIDATE&#124;Q-0003 – Turner Household – Opportunity 13&#124;Presented&#124;84752.00&#124;0
+10:14:31.86 (189764821)|USER_DEBUG|[113]|DEBUG|APPLY_CANDIDATE&#124;Q-0005 – Achebe Household – Opportunity 15&#124;Presented&#124;49746.00&#124;0
+10:14:31.86 (190141535)|USER_DEBUG|[113]|DEBUG|APPLY_CANDIDATE&#124;Q-0010 – Gray Household – Opportunity 20&#124;Draft&#124;78380.00&#124;0
+10:14:31.86 (190488940)|USER_DEBUG|[113]|DEBUG|APPLY_CANDIDATE&#124;Q-0014 – Cardoso Household – Opportunity 24&#124;Presented&#124;76064.00&#124;0
+10:14:31.86 (190854784)|USER_DEBUG|[113]|DEBUG|APPLY_CANDIDATE&#124;Q-0015 – Gray Household – Opportunity 25&#124;Presented&#124;63236.00&#124;0
+10:14:31.86 (191163948)|USER_DEBUG|[113]|DEBUG|APPLY_CANDIDATE&#124;Q-0021 – Clark Household – Opportunity 31&#124;Draft&#124;80538.00&#124;0
+10:14:31.86 (191485972)|USER_DEBUG|[113]|DEBUG|APPLY_CANDIDATE&#124;Q-0025 – Murphy Household – Opportunity 35&#124;Presented&#124;86227.00&#124;0
+10:14:31.86 (191780605)|USER_DEBUG|[113]|DEBUG|APPLY_CANDIDATE&#124;Q-0026 – Martinez Household – Opportunity 36&#124;Presented&#124;85462.00&#124;0
+10:14:31.86 (192069099)|USER_DEBUG|[113]|DEBUG|APPLY_CANDIDATE&#124;Q-0028 – James Household – Opportunity 38&#124;Draft&#124;35796.00&#124;0
+10:14:31.86 (192365033)|USER_DEBUG|[113]|DEBUG|APPLY_CANDIDATE&#124;Q-0032 – Perez Household – Opportunity 42&#124;Draft&#124;41067.00&#124;0
+10:14:31.86 (192679176)|USER_DEBUG|[113]|DEBUG|APPLY_CANDIDATE&#124;Q-0035 – Santos Household – Opportunity 45&#124;Draft&#124;78919.00&#124;0
+10:14:31.86 (193039001)|USER_DEBUG|[113]|DEBUG|APPLY_CANDIDATE&#124;Q-0036 – Ward Household – Opportunity 46&#124;Draft&#124;62050.00&#124;0
+10:14:31.86 (193333304)|USER_DEBUG|[113]|DEBUG|APPLY_CANDIDATE&#124;Q-0037 – Hall Household – Opportunity 47&#124;Draft&#124;39779.00&#124;0
+10:14:31.86 (193636918)|USER_DEBUG|[113]|DEBUG|APPLY_CANDIDATE&#124;Q-0042 – Cook Household – Opportunity 52&#124;Presented&#124;35845.00&#124;0
+10:14:31.86 (193953512)|USER_DEBUG|[113]|DEBUG|APPLY_CANDIDATE&#124;Q-0048 – Moore Household – Opportunity 58&#124;Presented&#124;39586.00&#124;0
+10:14:31.86 (194279956)|USER_DEBUG|[113]|DEBUG|APPLY_CANDIDATE&#124;Q-0053 – Vieira Household – Opportunity 63&#124;Draft&#124;44827.00&#124;0
+10:14:31.86 (194573079)|USER_DEBUG|[113]|DEBUG|APPLY_CANDIDATE&#124;Q-0054 – Santos Household – Opportunity 64&#124;Draft&#124;26838.00&#124;0
+10:14:31.86 (194795032)|USER_DEBUG|[117]|DEBUG|APPLY_SUMMARY&#124;execute=false; candidates=18; blocked=0; frozen_historical=42
+10:14:31.86 (194808122)|USER_DEBUG|[123]|DEBUG|APPLY_DRY_ONLY&#124;No DML performed. Set EXECUTE=true to apply.
+10:14:31.194 (194921324)|CUMULATIVE_LIMIT_USAGE
+10:14:31.194 (194921324)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 150 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 10000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+10:14:31.194 (194921324)|CUMULATIVE_LIMIT_USAGE_END
+
+10:14:31.86 (195022325)|CODE_UNIT_FINISHED|execute_anonymous_apex
+10:14:31.86 (195034895)|EXECUTION_FINISHED
+

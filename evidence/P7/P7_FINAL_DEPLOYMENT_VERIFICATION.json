@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "organization": [
+    {
+      "Id": "00Daj00001Ae3iWEAR",
+      "OrganizationType": "Developer Edition"
+    }
+  ],
+  "batch3Deployment": "0Afaj00000pCUHtCAO",
+  "batch4Deployment": "0Afaj00000pCURZCA4",
+  "readbackRetrieveId": "09Saj00000mqJ4XEAU",
+  "promptInactive": true,
+  "promptVersionStatuses": [
+    "Draft"
+  ],
+  "headerAndPageExist": true,
+  "unchangedComparisons": {
+    "vehicleAndApplicationAssignmentSha256": true,
+    "settingsSha256": true,
+    "securityFingerprints": true,
+    "businessRecordFingerprints": true,
+    "triggerFingerprints": true
+  },
+  "territoryModelState": "Planning",
+  "accountAssociations": 0,
+  "userMemberships": 0,
+  "newTestsRun": 0,
+  "phase8Implemented": false,
+  "pageActivatedOrAssigned": false
+}

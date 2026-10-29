@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "capturedAt": "2026-10-19T19:01:25Z",
+  "org": {
+    "alias": "ng-demo",
+    "id": "00Daj00001Ae3iWEAR"
+  },
+  "user": {
+    "username": "ngpersona.ngdemo@northgate.demo",
+    "id": "005aj00000gE0b3AAC",
+    "roleId": "00Eaj00000QCxlLEAT",
+    "roleDeveloperName": "VP_Sales",
+    "managerId": null,
+    "profileId": "00eaj00000TnZaFAAV",
+    "isActive": true
+  },
+  "personaAssignments": [],
+  "allPermissionSetGroupAssignments": []
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>PSG Finance: wraps PS_Finance_Officer (DATA_MODEL 6.2). Assigned per persona.</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>PSG Finance</label>
+    <permissionSets>PS_Finance_Officer</permissionSets>
+    <status>Updated</status>
+</PermissionSetGroup>

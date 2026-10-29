@@ -1,0 +1,134 @@
+{
+  "status": "PASS",
+  "id": "0Afaj00000p7GCLCA2",
+  "completedDate": "2026-10-26T00:18:31.000Z",
+  "checkOnly": true,
+  "componentChanges": 14,
+  "replacementComponents": 10,
+  "removedTriggersInValidationOnly": [
+    "LeadAfterConvertSeedBlock",
+    "LeadBeforeConvertGuard",
+    "TestDriveFollowupTrigger",
+    "VehicleCounterTrigger"
+  ],
+  "testsPassed": 235,
+  "testClasses": 33,
+  "newTestsPassed": 12,
+  "perClassTestsPassed": {
+    "CaseMilestoneServiceTest": 4,
+    "ConsentGateServiceTest": 5,
+    "DeliveryCloseServiceTest": 9,
+    "DeliveryCompletionGuardTest": 4,
+    "DiscountApprovalTest": 6,
+    "FinanceApplicationControllerTest": 23,
+    "FinancingApprovalTest": 8,
+    "FinancingFlsEnforcementTest": 2,
+    "FinancingStatusServiceTest": 18,
+    "InventoryGalleryControllerTest": 5,
+    "InventoryReconciliationJobTest": 4,
+    "LeadConvertGuardTest": 2,
+    "LeadEnrichRooftopServiceTest": 8,
+    "LeadRoundRobinTest": 1,
+    "LeadRoutingHandlerTest": 6,
+    "LoyaltyAccrualServiceTest": 5,
+    "OpportunityCalculatorControllerTest": 2,
+    "OpportunityStageStampTest": 3,
+    "P7TriggerArchitectureTest": 8,
+    "PaymentCalculatorServiceTest": 5,
+    "QuoteBuilderControllerTest": 14,
+    "QuotePricingServiceTest": 23,
+    "QuoteSummaryControllerTest": 11,
+    "QuoteTradeInGuardTest": 7,
+    "QuoteTriggerEnforcementTest": 6,
+    "RedemptionServiceTest": 3,
+    "ServiceIntakeCaseServiceTest": 2,
+    "ServiceVisitCapacityGuardTest": 15,
+    "TestDriveBookingGuardTest": 9,
+    "TestDriveFollowUpTest": 11,
+    "VehicleReservationEventPublisherTest": 2,
+    "VehicleReservationGuardTest": 2,
+    "VinDecoderServiceTest": 2
+  },
+  "coverage": [
+    {
+      "name": "LeadRoutingTrigger",
+      "covered": 1,
+      "total": 1
+    },
+    {
+      "name": "InventoryReconciliationJob",
+      "covered": 20,
+      "total": 20
+    },
+    {
+      "name": "TestDriveTriggerHandler",
+      "covered": 11,
+      "total": 11
+    },
+    {
+      "name": "LeadRoutingHandler",
+      "covered": 89,
+      "total": 97
+    },
+    {
+      "name": "VehicleTrigger",
+      "covered": 1,
+      "total": 1
+    },
+    {
+      "name": "TestDriveTrigger",
+      "covered": 1,
+      "total": 1
+    },
+    {
+      "name": "LeadTriggerHandler",
+      "covered": 35,
+      "total": 35
+    },
+    {
+      "name": "VehicleTriggerHandler",
+      "covered": 20,
+      "total": 20
+    }
+  ],
+  "selectedSourceHashesUnchanged": 20,
+  "liveOriginalTriggersStillActive": [
+    {
+      "Name": "LeadAfterConvertSeedBlock",
+      "TableEnumOrId": "Lead",
+      "Status": "Active"
+    },
+    {
+      "Name": "LeadBeforeConvertGuard",
+      "TableEnumOrId": "Lead",
+      "Status": "Active"
+    },
+    {
+      "Name": "LeadRoutingTrigger",
+      "TableEnumOrId": "Lead",
+      "Status": "Active"
+    },
+    {
+      "Name": "TestDriveFollowupTrigger",
+      "TableEnumOrId": "Test_Drive__c",
+      "Status": "Active"
+    },
+    {
+      "Name": "TestDriveTrigger",
+      "TableEnumOrId": "Test_Drive__c",
+      "Status": "Active"
+    },
+    {
+      "Name": "VehicleCounterTrigger",
+      "TableEnumOrId": "Vehicle__c",
+      "Status": "Active"
+    },
+    {
+      "Name": "VehicleTrigger",
+      "TableEnumOrId": "Vehicle__c",
+      "Status": "Active"
+    }
+  ],
+  "actualDeploymentPerformed": false,
+  "batch1Acceptance": "DEFERRED: browser/gallery/events, operational access/placement, VIN credentials"
+}

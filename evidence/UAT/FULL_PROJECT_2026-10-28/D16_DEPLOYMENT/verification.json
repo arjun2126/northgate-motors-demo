@@ -1,0 +1,20 @@
+{
+  "targetOrg": "ng-demo",
+  "orgId": "00Daj00001Ae3iWEAR",
+  "deploymentJob": "0Afaj00000paLbdCAE",
+  "status": "Succeeded",
+  "checkOnly": false,
+  "intendedComponentsDeployed": 1,
+  "componentErrors": 0,
+  "testsRun": 0,
+  "validatedSourceStillMatches": {
+    "force-app/main/default/permissionsets/PS_Executive_Service_Field_Read.permissionset-meta.xml": true,
+    "manifest/uat-executive-field-read.xml": true
+  },
+  "deployedPermissionSetId": "0PSaj00000hKcDFGA0",
+  "assignmentPerformed": false,
+  "assignmentStatus": "BLOCKED: affected browser identity not established",
+  "postAssignmentEffectiveAccess": "NOT VERIFIED: no assignment performed",
+  "browserAcceptance": "PENDING: no connected browser tabs; no rendering evidence",
+  "nextOwnerAction": "Confirm the affected dashboard browser session belongs to arjun.ngdemo@northgate.demo before assignment authorization can be exercised"
+}

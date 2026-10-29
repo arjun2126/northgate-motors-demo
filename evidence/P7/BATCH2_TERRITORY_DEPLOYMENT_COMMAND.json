@@ -1,0 +1,15 @@
+[
+  "sf",
+  "project",
+  "deploy",
+  "start",
+  "--target-org",
+  "ng-demo",
+  "--manifest",
+  "manifest/p7-12-territories.xml",
+  "--test-level",
+  "NoTestRun",
+  "--wait",
+  "10",
+  "--json"
+]

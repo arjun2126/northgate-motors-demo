@@ -1,0 +1,34 @@
+## Vehicle_Model fields in PS
+{
+  "name": "INVALID_QUERY_FILTER_OPERATOR",
+  "message": "\nParent.Name = 'PS_Sales_Rep' AND Field LIKE 'Vehicle_Model__c%' ORDER\n                                 ^\nERROR at Row:1:Column:109\ninvalid operator on id field",
+  "exitCode": 1,
+  "context": "DataSoqlQueryCommand",
+  "data": {
+    "message": "\nParent.Name = 'PS_Sales_Rep' AND Field LIKE 'Vehicle_Model__c%' ORDER\n                                 ^\nERROR at Row:1:Column:109\ninvalid operator on id field",
+    "errorCode": "INVALID_QUERY_FILTER_OPERATOR"
+  },
+  "stack": "INVALID_QUERY_FILTER_OPERATOR: \nParent.Name = 'PS_Sales_Rep' AND Field LIKE 'Vehicle_Model__c%' ORDER\n                                 ^\nERROR at Row:1:Column:109\ninvalid operator on id field\n    at SfCommandError.from (file:///Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/node_modules/@salesforce/sf-plugins-core/lib/SfCommandError.js:48:16)\n    at DataSoqlQueryCommand.catch (file:///Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/node_modules/@salesforce/sf-plugins-core/lib/sfCommand.js:333:47)\n    at DataSoqlQueryCommand._run (/Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/node_modules/@oclif/core/lib/command.js:187:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async Config.runCommand (/Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/node_modules/@oclif/core/lib/config/config.js:392:25)\n    at async run (/Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/node_modules/@oclif/core/lib/main.js:95:16)\n    at async file:///Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/bin/run.js:15:1",
+  "cause": "INVALID_QUERY_FILTER_OPERATOR: \nParent.Name = 'PS_Sales_Rep' AND Field LIKE 'Vehicle_Model__c%' ORDER\n                                 ^\nERROR at Row:1:Column:109\ninvalid operator on id field\n    at HttpApi.getError (/Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/node_modules/@jsforce/jsforce-node/lib/http-api.js:315:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async /Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/node_modules/@jsforce/jsforce-node/lib/http-api.js:127:33\n    at async Query._execute (/Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/node_modules/@jsforce/jsforce-node/lib/query.js:373:22)\n    at async /Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/node_modules/@jsforce/jsforce-node/lib/query.js:305:17 {\n  data: {\n    message: '\\n' +\n      \"Parent.Name = 'PS_Sales_Rep' AND Field LIKE 'Vehicle_Model__c%' ORDER\\n\" +\n      '                                 ^\\n' +\n      'ERROR at Row:1:Column:109\\n' +\n      'invalid operator on id field',\n    errorCode: 'INVALID_QUERY_FILTER_OPERATOR'\n  },\n  errorCode: 'INVALID_QUERY_FILTER_OPERATOR'\n}",
+  "warnings": [],
+  "code": "1",
+  "status": 1,
+  "commandName": "DataSoqlQueryCommand"
+}
+## All QuoteLineItem-related object perms in PS
+{
+  "name": "INVALID_QUERY_FILTER_OPERATOR",
+  "message": "\nParent.Name = 'PS_Sales_Rep' AND SobjectType LIKE 'Quote%' ORDER\n                                 ^\nERROR at Row:1:Column:154\ninvalid operator on id field",
+  "exitCode": 1,
+  "context": "DataSoqlQueryCommand",
+  "data": {
+    "message": "\nParent.Name = 'PS_Sales_Rep' AND SobjectType LIKE 'Quote%' ORDER\n                                 ^\nERROR at Row:1:Column:154\ninvalid operator on id field",
+    "errorCode": "INVALID_QUERY_FILTER_OPERATOR"
+  },
+  "stack": "INVALID_QUERY_FILTER_OPERATOR: \nParent.Name = 'PS_Sales_Rep' AND SobjectType LIKE 'Quote%' ORDER\n                                 ^\nERROR at Row:1:Column:154\ninvalid operator on id field\n    at SfCommandError.from (file:///Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/node_modules/@salesforce/sf-plugins-core/lib/SfCommandError.js:48:16)\n    at DataSoqlQueryCommand.catch (file:///Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/node_modules/@salesforce/sf-plugins-core/lib/sfCommand.js:333:47)\n    at DataSoqlQueryCommand._run (/Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/node_modules/@oclif/core/lib/command.js:187:29)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async Config.runCommand (/Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/node_modules/@oclif/core/lib/config/config.js:392:25)\n    at async run (/Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/node_modules/@oclif/core/lib/main.js:95:16)\n    at async file:///Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/bin/run.js:15:1",
+  "cause": "INVALID_QUERY_FILTER_OPERATOR: \nParent.Name = 'PS_Sales_Rep' AND SobjectType LIKE 'Quote%' ORDER\n                                 ^\nERROR at Row:1:Column:154\ninvalid operator on id field\n    at HttpApi.getError (/Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/node_modules/@jsforce/jsforce-node/lib/http-api.js:315:15)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async /Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/node_modules/@jsforce/jsforce-node/lib/http-api.js:127:33\n    at async Query._execute (/Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/node_modules/@jsforce/jsforce-node/lib/query.js:373:22)\n    at async /Users/arjunsubramanya/.local/share/sf/client/2.153.5-577d18f/node_modules/@jsforce/jsforce-node/lib/query.js:305:17 {\n  data: {\n    message: '\\n' +\n      \"Parent.Name = 'PS_Sales_Rep' AND SobjectType LIKE 'Quote%' ORDER\\n\" +\n      '                                 ^\\n' +\n      'ERROR at Row:1:Column:154\\n' +\n      'invalid operator on id field',\n    errorCode: 'INVALID_QUERY_FILTER_OPERATOR'\n  },\n  errorCode: 'INVALID_QUERY_FILTER_OPERATOR'\n}",
+  "warnings": [],
+  "code": "1",
+  "status": 1,
+  "commandName": "DataSoqlQueryCommand"
+}

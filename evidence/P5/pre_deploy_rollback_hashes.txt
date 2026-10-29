@@ -1,0 +1,14 @@
+# Pre-deployment rollback snapshot hashes (2026-10-19)
+4919c84432d5b7130dcd6a9f372a62b78342d63fb5d1ad8763e53fa59044b0fd  rollback/ng-demo-2026-10-19-pre-remediation/layouts/Consent__c-Consent Layout.layout-meta.xml
+0febee1a79f2bc4c4f11b2cba94494aab1c7b5f50a50a5f6b764b39d2dcc6b4c  rollback/ng-demo-2026-10-19-pre-remediation/layouts/Data_Load_Batch__c-Data Load Batch Layout.layout-meta.xml
+cb6457b4752388f6471910b4bb49285f868f9d3966f568a301a2f8cba7c5faa3  rollback/ng-demo-2026-10-19-pre-remediation/layouts/Loyalty_Transaction__c-Loyalty Transaction Layout.layout-meta.xml
+4f0955269175fb970dad0ed6f27f29a2df5733f262bff703fdc9c9767b10b10c  rollback/ng-demo-2026-10-19-pre-remediation/layouts/Rooftop__c-Rooftop Layout.layout-meta.xml
+bb217aaeed621cc3a347107039a3d5c294ec058065a54ea6d765b840e828a8ff  rollback/ng-demo-2026-10-19-pre-remediation/layouts/Service_Visit__c-Service Visit Layout.layout-meta.xml
+4f0955269175fb970dad0ed6f27f29a2df5733f262bff703fdc9c9767b10b10c  rollback/ng-demo-2026-10-19-pre-remediation/layouts/Staff__c-Staff Layout.layout-meta.xml
+bb217aaeed621cc3a347107039a3d5c294ec058065a54ea6d765b840e828a8ff  rollback/ng-demo-2026-10-19-pre-remediation/layouts/Test_Drive__c-Test Drive Layout.layout-meta.xml
+4f7d50c85c07f8a93d8581cbc40ce67c391365a39f10261a47e95fda1531168d  rollback/ng-demo-2026-10-19-pre-remediation/layouts/Trade_In__c-Trade-In Layout.layout-meta.xml
+4f0955269175fb970dad0ed6f27f29a2df5733f262bff703fdc9c9767b10b10c  rollback/ng-demo-2026-10-19-pre-remediation/layouts/Vehicle_Model__c-Vehicle Model Layout.layout-meta.xml
+c1b6d2a5b5fddd65f3b35e4c30cb57466bf73978583f737896dbfecb20279e50  rollback/ng-demo-2026-10-19-pre-remediation/layouts/Vehicle__c-New Layout.layout-meta.xml
+c1b6d2a5b5fddd65f3b35e4c30cb57466bf73978583f737896dbfecb20279e50  rollback/ng-demo-2026-10-19-pre-remediation/layouts/Vehicle__c-Used Layout.layout-meta.xml
+2c50fe5a618e92bcd5490bd2a96d07138e3c791c494236a47edcc8296c41f165  rollback/ng-demo-2026-10-19-pre-remediation/layouts/Vehicle__c-Vehicle Layout.layout-meta.xml
+6ef7348056d82f7662954ce2c190dfe28a781c810da9e49e8f988e5f84dfb640  rollback/ng-demo-2026-10-19-pre-remediation/permissionsets/PS_Sales_Rep.permissionset-meta.xml

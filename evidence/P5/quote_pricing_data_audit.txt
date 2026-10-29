@@ -1,0 +1,9 @@
+# Seeded Quote pricing data audit (read-only)
+quotes_with_opp_vehicle 5
+quotes_null_adjusted 60
+## Quotes with opp vehicle: quote, opp vehicle model, QLI product names
+Q-0056 – White Household – Purchase 66 | Halcyon Sport 2022 | None
+Q-0057 – Silva Household – Purchase 67 | Kestrel Sport 2023 | None
+Q-0058 – Nguyen Household – Purchase 68 | Cascadia Premium 2024 | None
+Q-0059 – Jackson Household – Purchase 69 | Kestrel LX 2025 | None
+Q-0060 – Powell Household – Purchase 70 | Kestrel EX 2024 | None

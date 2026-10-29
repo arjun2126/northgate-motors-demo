@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Booking_Display__c</fullName>
+        <description>Read-only booking description using the vehicle year, model make/model/trim, and existing stock number. No data backfill is required.</description>
+        <formula>TRIM(TEXT(Year__c) &amp; &quot; &quot; &amp; TEXT(Vehicle_Model__r.Make__c) &amp; &quot; &quot; &amp; IF(Vehicle_Model__r.Model__c = TEXT(Vehicle_Model__r.Make__c), &quot;&quot;, Vehicle_Model__r.Model__c &amp; &quot; &quot;) &amp; TEXT(Vehicle_Model__r.Trim__c)) &amp; &quot; | Stock &quot; &amp; Name</formula>
+        <formulaTreatBlanksAs>BlankAsBlank</formulaTreatBlanksAs>
+        <label>Booking Description</label>
+        <type>Text</type>
+    </fields>
+    <listViews>
+        <fullName>All_Vehicles</fullName>
+        <columns>NAME</columns>
+        <columns>Booking_Display__c</columns>
+        <columns>Status__c</columns>
+        <columns>VIN__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Vehicles</label>
+    </listViews>
+</CustomObject>

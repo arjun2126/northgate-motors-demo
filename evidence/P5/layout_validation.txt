@@ -1,0 +1,49 @@
+0Afaj00000oHOQyCAO... Succeeded
+
+Deploy Info
+┌──────────────────────────┬──────────────────────────┐
+│ Key                      │ Value                    │
+├──────────────────────────┼──────────────────────────┤
+│ checkOnly                │ true                     │
+│ completedDate            │ 2026-10-19T12:53:08.000Z │
+│ createdBy                │ 005aj00000feqbN          │
+│ createdByName            │ Arjun Subramanya         │
+│ createdDate              │ 2026-10-19T12:53:03.000Z │
+│ done                     │ true                     │
+│ id                       │ 0Afaj00000oHOQyCAO       │
+│ ignoreWarnings           │ false                    │
+│ lastModifiedDate         │ 2026-10-19T12:53:08.000Z │
+│ numberComponentErrors    │ 0                        │
+│ numberComponentsDeployed │ 13                       │
+│ numberComponentsTotal    │ 13                       │
+│ numberFiles              │ 16                       │
+│ numberTestErrors         │ 0                        │
+│ numberTestsCompleted     │ 0                        │
+│ numberTestsTotal         │ 0                        │
+│ rollbackOnError          │ true                     │
+│ runTestsEnabled          │ false                    │
+│ startDate                │ 2026-10-19T12:53:04.000Z │
+│ status                   │ Succeeded                │
+│ success                  │ true                     │
+│ zipSize                  │ 72940                    │
+└──────────────────────────┴──────────────────────────┘
+
+
+Deploy Options
+┌──────────────────┬─────────────────────────────────────────────────────────────────┐
+│ Key              │ Value                                                           │
+├──────────────────┼─────────────────────────────────────────────────────────────────┤
+│ dry-run          │ true                                                            │
+│ ignore-conflicts │ false                                                           │
+│ ignore-errors    │ false                                                           │
+│ ignore-warnings  │ false                                                           │
+│ manifest         │ /Users/arjunsubramanya/.sf/manifestCache/0Afaj00000oHOQyCAO.xml │
+│ target-org       │ arjun.ngdemo@northgate.demo                                     │
+│ api              │ SOAP                                                            │
+│ wait             │ 10 minutes                                                      │
+│ isMdapi          │ false                                                           │
+│ status           │ Succeeded                                                       │
+│ job-id           │ 0Afaj00000oHOQyCAO                                              │
+└──────────────────┴─────────────────────────────────────────────────────────────────┘
+
+

@@ -1,0 +1,38 @@
+=== Test Results
+TEST NAME                                                                                  OUTCOME  MESSAGE  RUNTIME (MS)
+─────────────────────────────────────────────────────────────────────────────────────────  ───────  ───────  ────────────
+QuoteBuilderControllerTest.createQuote_buyerMismatch_noLoyalty                             Pass              3625        
+QuoteBuilderControllerTest.createQuote_crossCategoryNoVehicle_keepsListAndStoresBothLines  Pass              1242        
+QuoteBuilderControllerTest.createQuote_emptyLines_throws                                   Pass              242         
+QuoteBuilderControllerTest.createQuote_happyPath_writesEngineAndStamps                     Pass              1282        
+QuoteBuilderControllerTest.createQuote_noRules_keepsListAndNotRequired                     Pass              1061        
+QuoteBuilderControllerTest.createQuote_savesUnderSalesPersonaAccess                        Pass              1797        
+QuoteBuilderControllerTest.getBuyerContacts_loadsUnderSalesPersonaAccess                   Pass              970         
+QuoteBuilderControllerTest.getBuyerContacts_returnsAccountContacts                         Pass              575         
+QuoteBuilderControllerTest.getCatalog_loadsUnderSalesPersonaAccess                         Pass              426         
+QuoteBuilderControllerTest.getCatalog_returnsOnlyRequestedCategory                         Pass              527         
+QuoteBuilderControllerTest.submitForApproval_above10ResolvesVpApprover                     Pass              1612        
+QuoteBuilderControllerTest.submitForApproval_belowThreshold_rejectedWithoutApprovalCall    Pass              676         
+
+
+=== Test Setup Time by Test Class for Run 707aj00001MTBEP
+TEST SETUP METHOD NAME            SETUP TIME
+────────────────────────────────  ──────────
+QuoteBuilderControllerTest.setup  1512      
+
+
+=== Test Summary
+NAME                 VALUE                      
+───────────────────  ───────────────────────────
+Outcome              Passed                     
+Tests Ran            13                         
+Pass Rate            100%                       
+Fail Rate            0%                         
+Skip Rate            0%                         
+Test Run Id          707aj00001MTBEP            
+Test Setup Time      1512 ms                    
+Test Execution Time  14035 ms                   
+Test Total Time      15547 ms                   
+Org Id               00Daj00001Ae3iWEAR         
+Username             arjun.ngdemo@northgate.demo
+

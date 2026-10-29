@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesIncludeBosses>true</doesIncludeBosses>
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Finance Approvals</name>
+    <queueMembers>
+        <roles>
+            <role>Finance_Manager</role>
+        </roles>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Financing__c</sobjectType>
+    </queueSobject>
+</Queue>

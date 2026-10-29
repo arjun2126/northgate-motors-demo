@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+    <testsuite name="force.apex" timestamp="2026-10-21T22:57:39.766Z" hostname="https://orgfarm-25065ad46a-dev-ed.develop.my.salesforce.com" tests="11" failures="2"  errors="0"  time="17.52">
+        <properties>
+            <property name="commandTime" value="0.00 s"/>
+            <property name="failRate" value="18.18%"/>
+            <property name="failing" value="2"/>
+            <property name="hostname" value="https://orgfarm-25065ad46a-dev-ed.develop.my.salesforce.com"/>
+            <property name="orgId" value="00Daj00001Ae3iWEAR"/>
+            <property name="passRate" value="81.82%"/>
+            <property name="passing" value="9"/>
+            <property name="skipped" value="0"/>
+            <property name="testExecutionTime" value="17.52 s"/>
+            <property name="testStartTime" value="Wed Oct 21 2026 6:57:39 PM"/>
+            <property name="testTotalTime" value="17.52 s"/>
+            <property name="testsRan" value="11"/>
+            <property name="username" value="arjun.ngdemo@northgate.demo"/>
+        </properties>
+        <testcase name="confirmationLookupDoesNotUseUnsharedContacts" classname="TestDriveFollowUpTest" time="1.60">
+        </testcase>
+        <testcase name="insertCreatesTask" classname="TestDriveFollowUpTest" time="0.78">
+        </testcase>
+        <testcase name="restrictedBookingCannotReferenceUnsharedContact" classname="TestDriveFollowUpTest" time="0.95">
+        </testcase>
+        <testcase name="restrictedBookingWithoutEmailSkipsConfirmation" classname="TestDriveFollowUpTest" time="0.94">
+        </testcase>
+        <testcase name="restrictedBookingsRejectOverlapAndAllowAdjacent" classname="TestDriveFollowUpTest" time="1.08">
+        </testcase>
+        <testcase name="restrictedCancellationReleasesSlotAndUpdatesCounter" classname="TestDriveFollowUpTest" time="1.69">
+        </testcase>
+        <testcase name="restrictedLifecycleCompletionMaintainsTasksAndCounters" classname="TestDriveFollowUpTest" time="0.96">
+        </testcase>
+        <testcase name="statusChangeCreatesAdditionalTask" classname="TestDriveFollowUpTest" time="0.69">
+        </testcase>
+        <testcase name="unauthorizedUserCannotCreateBookingOrSideEffects" classname="TestDriveFollowUpTest" time="0.56">
+        </testcase>
+        <testcase name="internalElevationDoesNotAllowDirectTaskOrCounterWrites" classname="TestDriveFollowUpTest" time="0.66">
+            <failure message="System.TypeException: DML operation UPDATE not allowed on Vehicle_Model__c"><![CDATA[Class.TestDriveFollowUpTest.internalElevationDoesNotAllowDirectTaskOrCounterWrites: line 304, column 1]]></failure>
+        </testcase>
+        <testcase name="restrictedBookingCreatesOwnedTaskAndKeepsEmailHidden" classname="TestDriveFollowUpTest" time="1.45">
+            <failure message="System.AssertException: Assertion Failed: confirmation is attempted, not proof of delivery; TD_EMAIL_DIAGNOSTIC={&quot;invocationsAfterProbe&quot;:0,&quot;probeResults&quot;:[],&quot;probeExceptionMessage&quot;:&quot;SendEmail failed. First exception on row 0; first error: NO_SINGLE_MAIL_PERMISSION, Single email is not enabled for your organization or profile.: []&quot;,&quot;probeExceptionType&quot;:&quot;System.EmailException&quot;,&quot;probeReturnedResult&quot;:false,&quot;probeSendAttempted&quot;:true,&quot;visibleContactCountAfterBooking&quot;:1,&quot;invocationsAfterBooking&quot;:0,&quot;bookingSaved&quot;:true,&quot;invocationsBeforeBooking&quot;:0,&quot;senderPermissionEnabled&quot;:false,&quot;emailFieldReadableByActor&quot;:false,&quot;visibleContactCount&quot;:1,&quot;storedEmailPresent&quot;:true}: Expected: 1, Actual: 0"><![CDATA[Class.TestDriveFollowUpTest.restrictedBookingCreatesOwnedTaskAndKeepsEmailHidden: line 194, column 1]]></failure>
+        </testcase>
+    </testsuite>
+</testsuites>

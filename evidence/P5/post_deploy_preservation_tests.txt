@@ -1,0 +1,89 @@
+=== Test Results
+TEST NAME                                                                             OUTCOME  MESSAGE  RUNTIME (MS)
+────────────────────────────────────────────────────────────────────────────────────  ───────  ───────  ────────────
+LoyaltyEnrolmentServiceTest.enrolOnDelivery_createsMemberWithDefaults                 Pass              1157        
+LoyaltyEnrolmentServiceTest.enrolOnDelivery_isIdempotent_secondCallReturnsExisting    Pass              703         
+LoyaltyEnrolmentServiceTest.enrolOnDelivery_nullBuyer_returnsNullAndDoesNotInsert     Pass              62          
+LoyaltyEnrolmentServiceTest.generateMemberNumber_producesNGPrefix                     Pass              11          
+QuotePricingServiceTest.age60_boundary_applies60only                                  Pass              950         
+QuotePricingServiceTest.age90_boundary_applies90only                                  Pass              637         
+QuotePricingServiceTest.ageBelow60_noDiscount                                         Pass              646         
+QuotePricingServiceTest.basisNotIdentified_reportsBlocker                             Pass              645         
+QuotePricingServiceTest.bulk200Lines_stillWorks                                       Pass              1774        
+QuotePricingServiceTest.fullStack_appliesAllWinners_inApprovedOrder                   Pass              1048        
+QuotePricingServiceTest.inactiveRule_skipped                                          Pass              606         
+QuotePricingServiceTest.loyalty_bronze_applies                                        Pass              876         
+QuotePricingServiceTest.loyalty_buyerMismatchedAccount_noDiscount                     Pass              650         
+QuotePricingServiceTest.loyalty_noBuyer_noDiscount                                    Pass              674         
+QuotePricingServiceTest.malformedNegativePercent_surfaces                             Pass              673         
+QuotePricingServiceTest.malformedNullPercent_surfaces                                 Pass              652         
+QuotePricingServiceTest.malformedNullValue_surfaces                                   Pass              624         
+QuotePricingServiceTest.modelNameMissing_noBlocker_noVehicleRules                     Pass              608         
+QuotePricingServiceTest.noRulesQualify_returnsUnchanged                               Pass              647         
+QuotePricingServiceTest.nonNumericValue_throws                                        Pass              601         
+QuotePricingServiceTest.nullQuote_throws                                              Pass              68          
+QuotePricingServiceTest.premiumOnly_negativeNetDocumented                             Pass              618         
+QuotePricingServiceTest.rounding2dp_applied                                           Pass              718         
+QuotePricingServiceTest.trimMismatch_noPremium_noOtherRules                           Pass              641         
+QuotePricingServiceTest.volume12_picksOver10NotFleet                                  Pass              602         
+QuotePricingServiceTest.volume4_noDiscount                                            Pass              741         
+QuotePricingServiceTest.zeroPricedLines_zeroFloor                                     Pass              680         
+FinancingStatusServiceTest.allValidSequences_completeLifecycle                        Pass              1203        
+FinancingStatusServiceTest.blankStatusOnInsert_defaultsToDraft                        Pass              541         
+FinancingStatusServiceTest.bulkInsert_appliesMatrixToEachRecord                       Pass              1267        
+FinancingStatusServiceTest.bulkUpdate_succeedsOrFailsAsAWhole                         Pass              1708        
+FinancingStatusServiceTest.declinedFollowedByCancel_landsCancelled                    Pass              531         
+FinancingStatusServiceTest.draftCancelWithoutTerm_worksThroughBothRules               Pass              369         
+FinancingStatusServiceTest.forbiddenTransitions_coverEachCell                         Pass              8230        
+FinancingStatusServiceTest.fundedAndCancelled_areTerminal                             Pass              1134        
+FinancingStatusServiceTest.fundedInsertIsBlocked_atAnyPath                            Pass              258         
+FinancingStatusServiceTest.fundedPath_satisfiesFundedRequiresApprovedVR               Pass              555         
+FinancingStatusServiceTest.initialStatusDraft_stampsNullPrevious                      Pass              323         
+FinancingStatusServiceTest.initialStatusNonDraft_blockedExceptDraft                   Pass              1233        
+FinancingStatusServiceTest.nonDraftWithoutTerm_isStillBlocked                         Pass              1941        
+FinancingStatusServiceTest.previousStatusSpoofing_isOverwrittenOnInsert               Pass              506         
+FinancingStatusServiceTest.previousStatusSpoofing_isOverwrittenOnUpdate               Pass              445         
+FinancingStatusServiceTest.sameStatusUpdate_cannotSpoofPreviousStatus                 Pass              535         
+FinancingStatusServiceTest.sameStatusUpdate_preservesPreviousStatus                   Pass              571         
+FinancingStatusServiceTest.skippingIntermediateStatuses_isBlocked                     Pass              463         
+DiscountApprovalTest.above10_skipsManager_routesToVP_andApproves                      Pass              745         
+DiscountApprovalTest.above5_routesToRooftopManager_andApproves                        Pass              559         
+DiscountApprovalTest.livePersona_controllerDerivesVpFor12                             Pass              479         
+DiscountApprovalTest.livePersona_rep12_vpApprovesWithWriteBack                        Pass              549         
+DiscountApprovalTest.managerSubmit_above10_doesNotSelfApprove                         Pass              433         
+DiscountApprovalTest.rejection_captured_onOpportunity                                 Pass              505         
+DeliveryCloseServiceTest.buyerAddedAfterCompletion_enrolsOnLateAssignment             Pass              1414        
+DeliveryCloseServiceTest.buyerReplacement_doesNotAutoEnrolNewBuyer                    Pass              1576        
+DeliveryCloseServiceTest.completedDeliveryWithBuyerAtCompletion_enrols                Pass              2025        
+DeliveryCloseServiceTest.completingDelivery_enrolsBuyerInLoyalty                      Pass              1145        
+DeliveryCloseServiceTest.completingDelivery_incrementsContactLifetimeVehicles         Pass              1174        
+DeliveryCloseServiceTest.completingDelivery_isIdempotent                              Pass              1436        
+DeliveryCloseServiceTest.completingDelivery_setsOppClosedWonAndDeliveryCompletedFlag  Pass              1197        
+DeliveryCloseServiceTest.nonCompletedUpdate_doesNotCloseOpp                           Pass              847         
+DeliveryCloseServiceTest.repeatedUpdatesAfterCompletion_doNotDuplicateEnrolment       Pass              1532        
+
+
+=== Test Setup Time by Test Class for Run 707aj00001MTN8z
+TEST SETUP METHOD NAME             SETUP TIME
+─────────────────────────────────  ──────────
+LoyaltyEnrolmentServiceTest.setup  1160      
+QuotePricingServiceTest.setup      93        
+DiscountApprovalTest.setup         1946      
+DeliveryCloseServiceTest.setup     1195      
+
+
+=== Test Summary
+NAME                 VALUE                      
+───────────────────  ───────────────────────────
+Outcome              Passed                     
+Tests Ran            64                         
+Pass Rate            100%                       
+Fail Rate            0%                         
+Skip Rate            0%                         
+Test Run Id          707aj00001MTN8z            
+Test Setup Time      4394 ms                    
+Test Execution Time  55741 ms                   
+Test Total Time      60135 ms                   
+Org Id               00Daj00001Ae3iWEAR         
+Username             arjun.ngdemo@northgate.demo
+

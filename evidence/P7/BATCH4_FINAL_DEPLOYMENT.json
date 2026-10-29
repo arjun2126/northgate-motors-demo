@@ -1,0 +1,108 @@
+{
+  "status": 0,
+  "result": {
+    "checkOnly": false,
+    "completedDate": "2026-10-26T13:59:05.000Z",
+    "createdBy": "005aj00000feqbN",
+    "createdDate": "2026-10-26T13:59:00.000Z",
+    "details": {
+      "componentSuccesses": [
+        {
+          "changed": true,
+          "componentType": "LightningComponentBundle",
+          "created": true,
+          "createdDate": "2026-10-26T13:59:05.000Z",
+          "deleted": false,
+          "fileName": "lwc/vehiclePhotoHeader",
+          "fullName": "vehiclePhotoHeader",
+          "id": "0Rbaj000006LnK1CAK",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "FlexiPage",
+          "created": true,
+          "createdDate": "2026-10-26T13:59:05.000Z",
+          "deleted": false,
+          "fileName": "flexipages/NG_Vehicle_Photo_Header.flexipage",
+          "fullName": "NG_Vehicle_Photo_Header",
+          "id": "0M0aj00000IkZQDCA3",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "",
+          "created": false,
+          "createdDate": "2026-10-26T13:59:05.000Z",
+          "deleted": false,
+          "fileName": "package.xml",
+          "fullName": "package.xml",
+          "success": true
+        }
+      ],
+      "runTestResult": {
+        "numFailures": 0,
+        "numTestsRun": 0,
+        "totalTime": 0,
+        "codeCoverage": [],
+        "codeCoverageWarnings": [],
+        "failures": [],
+        "flowCoverage": [],
+        "flowCoverageWarnings": [],
+        "successes": []
+      },
+      "componentFailures": []
+    },
+    "done": true,
+    "id": "0Afaj00000pCURZCA4",
+    "ignoreWarnings": false,
+    "lastModifiedDate": "2026-10-26T13:59:05.000Z",
+    "numberComponentErrors": 0,
+    "numberComponentsDeployed": 2,
+    "numberComponentsTotal": 2,
+    "numberFiles": "9",
+    "numberTestErrors": 0,
+    "numberTestsCompleted": 0,
+    "numberTestsTotal": 0,
+    "rollbackOnError": true,
+    "runTestsEnabled": false,
+    "startDate": "2026-10-26T13:59:01.000Z",
+    "status": "Succeeded",
+    "success": true,
+    "zipSize": 3772,
+    "files": [
+      {
+        "fullName": "NG_Vehicle_Photo_Header",
+        "type": "FlexiPage",
+        "state": "Created",
+        "filePath": "force-app/main/default/flexipages/NG_Vehicle_Photo_Header.flexipage-meta.xml"
+      },
+      {
+        "fullName": "vehiclePhotoHeader",
+        "type": "LightningComponentBundle",
+        "state": "Created",
+        "filePath": "force-app/main/default/lwc/vehiclePhotoHeader/vehiclePhotoHeader.css"
+      },
+      {
+        "fullName": "vehiclePhotoHeader",
+        "type": "LightningComponentBundle",
+        "state": "Created",
+        "filePath": "force-app/main/default/lwc/vehiclePhotoHeader/vehiclePhotoHeader.html"
+      },
+      {
+        "fullName": "vehiclePhotoHeader",
+        "type": "LightningComponentBundle",
+        "state": "Created",
+        "filePath": "force-app/main/default/lwc/vehiclePhotoHeader/vehiclePhotoHeader.js"
+      },
+      {
+        "fullName": "vehiclePhotoHeader",
+        "type": "LightningComponentBundle",
+        "state": "Created",
+        "filePath": "force-app/main/default/lwc/vehiclePhotoHeader/vehiclePhotoHeader.js-meta.xml"
+      }
+    ],
+    "zipFileCount": 6
+  },
+  "warnings": []
+}

@@ -1,0 +1,54 @@
+# Post-deploy permission verification (read-only)
+## Opportunity.AccountId FLS
+{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "FieldPermissions",
+          "url": "/services/data/v68.0/sobjects/FieldPermissions/01kaj0001NjcyRvAQI"
+        },
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000gDl7UGAS"
+          },
+          "Name": "PS_Sales_Rep"
+        },
+        "Field": "Contact.AccountId",
+        "PermissionsRead": true,
+        "PermissionsEdit": false
+      },
+      {
+        "attributes": {
+          "type": "FieldPermissions",
+          "url": "/services/data/v68.0/sobjects/FieldPermissions/01kaj0001O0XVhFAQW"
+        },
+        "Parent": {
+          "attributes": {
+            "type": "PermissionSet",
+            "url": "/services/data/v68.0/sobjects/PermissionSet/0PSaj00000gDl7UGAS"
+          },
+          "Name": "PS_Sales_Rep"
+        },
+        "Field": "Opportunity.AccountId",
+        "PermissionsRead": true,
+        "PermissionsEdit": true
+      }
+    ],
+    "totalSize": 2,
+    "done": true
+  },
+  "warnings": []
+}
+## QuoteLineItem object permission
+{
+  "status": 0,
+  "result": {
+    "records": [],
+    "totalSize": 0,
+    "done": true
+  },
+  "warnings": []
+}

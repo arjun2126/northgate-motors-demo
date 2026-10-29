@@ -1,0 +1,270 @@
+# P8-01 — Northgate Owner Portal site creation (ng-demo `00Daj00001Ae3iWEAR`)
+
+Executed 2026-10-26 UTC under explicit owner authorization. Scope: create only the login-only
+Customer Service (Aura) site on the existing Experience domain, leave it unpublished, disable
+self-registration, and verify guest access. No profile/permission/sharing/role change, no external
+user, no site membership, no deployment, no publish/activate, no Git operation, no ng-dev access.
+
+## 1. Preconditions (read-only, before creation)
+
+CONFIRMED — Digital Experiences enabled. `sf project retrieve start --metadata "Settings:Communities"`:
+
+```xml
+<enableNetworksEnabled>true</enableNetworksEnabled>
+```
+
+CONFIRMED — no equivalent site existed. Raw pre-creation output:
+
+```json
+Network  -> {"records":[],"totalSize":0,"done":true}
+CustomSite (list metadata) -> []
+Network (list metadata) -> []
+ExperienceBundle (list metadata) -> []
+DigitalExperienceBundle -> only "enablement/sfdcEnablement_EnablementWorkspace" (enablement workspace, not a site)
+```
+
+CONFIRMED — native template available: `sf community list template` returns 11 templates including
+`{"publisher":"Salesforce","templateName":"Customer Service"}`.
+
+CONFIRMED — existing Experience domain already provisioned (no new domain created): `Domain`
+`0I4aj00000G182LCAR` = `orgfarm-25065ad46a-dev-ed.develop.my.site.com` (`DomainType=DNS`).
+
+## 2. Creation mechanism and result
+
+Supported mechanism: `sf community create` (Salesforce CLI `community` plugin, Connect API site
+creation). It creates the site in preview/under-construction status; no publish command was run.
+
+Command:
+
+```sh
+sf community create -n "Northgate Owner Portal" -t "Customer Service" -p owners \
+  -d "Northgate Owner Portal - login-only customer portal for approved vehicle owners. Phase 8 P8-01." \
+  -o ng-demo --json
+```
+
+CONFIRMED — raw response (`community_create_raw_2026-10-26.json`):
+
+```json
+{
+  "status": 0,
+  "result": {
+    "message": "Your Site is being created.",
+    "name": "Northgate Owner Portal",
+    "jobId": "08Paj00001CQFPWEA5",
+    "action": "Site creation is under way. To track its status, query the BackgroundOperation object and include the jobId."
+  }
+}
+```
+
+CONFIRMED — async job completed (`BackgroundOperation 08Paj00001CQFPWEA5`):
+
+```json
+{"Id":"08Paj00001CQFPWEA5","Status":"Complete","Error":null,"Type":"SiteTaskCreate"}
+```
+
+## 3. Resulting IDs
+
+| Artifact | API name / label | Salesforce ID |
+|---|---|---|
+| Network (site) | `Northgate Owner Portal` | `0DBaj000006bf3xGAA` |
+| CustomSite | `Northgate_Owner_Portal` | `0DMaj000006c7JZGAY` |
+| ExperienceBundle | `Northgate_Owner_Portal1` | `0DMaj000006c7JaGAI` |
+| DomainSite (`/owners`) | path `/owners` | `0Jfaj000004Z1tNCAS` |
+| DomainSite (`/owners/s`) | path `/owners/s` | `0Jfaj000004Z1tOCAS` |
+| Domain | `orgfarm-25065ad46a-dev-ed.develop.my.site.com` | `0I4aj00000G182LCAR` |
+| Site guest user | `Northgate Owner Portal Site Guest User` (UserType=Guest, active) | `005aj00000gnLcbAAE` |
+| Site guest profile | `Northgate Owner Portal Profile` (Guest User License) | `00eaj00000UB3CcAAL` |
+
+Site creation job: `08Paj00001CQFPWEA5`. Created by `005aj00000feqbNAAQ`; CreatedDate
+`2026-10-26T20:40:41.000Z` (Network), `20:40:39Z` (CustomSite), `20:40:57Z` (ExperienceBundle).
+
+## 4. Site configuration — CONFIRMED
+
+Raw Network query (`network_final.json`):
+
+```json
+{
+  "Id": "0DBaj000006bf3xGAA",
+  "Name": "Northgate Owner Portal",
+  "UrlPathPrefix": "owners",
+  "Status": "UnderConstruction",
+  "FirstActivationDate": null,
+  "SelfRegProfileId": null,
+  "OptionsSelfRegistrationEnabled": false,
+  "OptionsAllowInternalUserLogin": false,
+  "OptionsGuestMemberVisibility": false,
+  "OptionsInvitationsEnabled": false,
+  "CreatedDate": "2026-10-26T20:40:41.000+0000"
+}
+```
+
+Retrieved Network metadata (`retrieved/networks/Northgate Owner Portal.network-meta.xml`):
+
+```xml
+<allowInternalUserLogin>false</allowInternalUserLogin>
+<enableGuestChatter>false</enableGuestChatter>
+<enableGuestFileAccess>false</enableGuestFileAccess>
+<enableGuestMemberVisibility>false</enableGuestMemberVisibility>
+<enableInvitation>false</enableInvitation>
+<selfRegistration>false</selfRegistration>
+<status>UnderConstruction</status>
+<urlPathPrefix>owners</urlPathPrefix>
+<site>Northgate_Owner_Portal</site>
+<picassoSite>Northgate_Owner_Portal1</picassoSite>
+<siteArchiveStatus>NotArchived</siteArchiveStatus>
+```
+
+Retrieved CustomSite metadata (`retrieved/sites/Northgate_Owner_Portal.site-meta.xml`) key values:
+
+```xml
+<active>true</active>
+<authorizationRequiredPage>CommunitiesLogin</authorizationRequiredPage>
+<indexPage>CommunitiesLanding</indexPage>
+<masterLabel>Northgate Owner Portal</masterLabel>
+<selfRegPage>CommunitiesSelfReg</selfRegPage>
+<siteType>ChatterNetwork</siteType>
+<urlPathPrefix>owners</urlPathPrefix>
+```
+
+Interpretation: `<active>true</active>` is the standard CustomSite registration value generated by
+site creation; publication state is the Network `status=UnderConstruction` with
+`FirstActivationDate=null`. No `sf community publish` (or equivalent) was run. The site is not live.
+
+## 5. URL and current status
+
+- URL: `https://orgfarm-25065ad46a-dev-ed.develop.my.site.com/owners`
+- Aura app path: `https://orgfarm-25065ad46a-dev-ed.develop.my.site.com/owners/s/`
+- Status: **Under Construction (not published / not activated)** — `FirstActivationDate` null.
+- Guest behaviour (raw curl, 2026-10-26):
+  - `GET /owners` → `200`, 512-byte bootstrap page whose only script redirects to `/owners/login`.
+  - `GET /owners/s/` → `302` → `/owners/login?ec=302&startURL=%2Fowners%2Fs%2F`.
+  - `GET /owners/s/aura` → `302` → `/owners/login?ec=302&startURL=%2Fowners%2Fs%2Faura`.
+  - `GET /owners/login` → `200`, title `Login | Northgate Owner Portal`; contains only the login form
+    (Username/Password/Log In/forgot password); no Vehicle/Case/Loyalty business content.
+- No customer can log in: zero Customer Community Plus users and zero customer/external site
+  memberships exist. The only three `NetworkMember` rows are Salesforce-generated internal
+  admin/automation memberships (`005aj00000feqbNAAQ`, `005aj00000fH2LxAAK`, `005aj00000gBoPVAA0`,
+  all Standard users), not customer access.
+
+## 6. Guest-access / security verification — CONFIRMED
+
+**Correction 2026-10-26 (P8-02 investigation):** profile permissions are stored under the profile's
+profile-owned permission set, not under the Profile Id. The earlier queries against the Profile Id
+returned empty sets and understated the guest configuration. Verified against the guest
+profile-owned permission set `0PSaj00000h7bZyGAI` (`X00eaj00000UB3CcAAL`, `IsOwnedByProfile=true`):
+
+| Check | Result |
+|---|---|
+| ObjectPermissions | **0 rows** — no Read/Create/Edit/Delete/View All/Modify All on any object |
+| FieldPermissions | **988 rows (988 readable, 930 editable)** — standard guest FLS defaults; inert without object permission |
+| SetupEntityAccess | **16 ApexPage + 1 TabSet, 0 ApexClass** — standard site pages (incl. `CommunitiesSelfReg`, `CommunitiesLogin`, `SiteRegister`, `UnderConstruction`), no custom Apex |
+| System permissions | all checked false (API, View Setup, Modify All, View All, Manage Users, Author Apex, Data Export, Manage Sharing, Run Reports, Manage Cases) |
+| Permission-set assignments | only the profile-owned set; no additive permission set |
+
+CONFIRMED — no business-record access remains because ObjectPermissions is zero for every object,
+including Account, Contact, Case, Delivery__c, Vehicle__c, Service_Visit__c, Loyalty_Member__c and
+Loyalty_Transaction__c. The broad FLS rows and standard page access do not grant record access on
+their own.
+
+CONFIRMED — zero system permissions (`guest_profile_system_perms.json`):
+
+```json
+{"PermissionsApiEnabled":false,"PermissionsViewSetup":false,"PermissionsModifyAllData":false,
+ "PermissionsViewAllData":false,"PermissionsManageUsers":false,"PermissionsAuthorApex":false,
+ "PermissionsDataExport":false,"PermissionsManageSharing":false,"PermissionsRunReports":false,
+ "PermissionsManageCases":false}
+```
+
+CONFIRMED — guest user's only permission-set assignment is its own profile-owned set
+(`X00eaj00000UB3CcAAL`, `IsOwnedByProfile=true`); no additive permission set.
+
+CONFIRMED — public registration disabled: `selfRegistration=false`, `SelfRegProfileId=null`,
+`enableInvitation=false`. No registration was submitted or attempted (that would create external
+users, which is out of scope).
+
+Observation (residual check, not a config failure): the standard `CommunitiesSelfReg` Visualforce
+page still renders its form for an unauthenticated visitor (`GET /owners/CommunitiesSelfReg` → 200,
+title `New User Registration`). The site-level self-registration setting is false and no
+self-registration profile is assigned, so registration is expected to be rejected on submit, but
+submission was not exercised because it could create an external user. Verify/close before any
+publish.
+
+## 7. Preservation checks — CONFIRMED
+
+- No external users created; `UserType IN (PowerCustomerSuccess, CustomerSuccess, PowerPartner)`
+  returns `{"records":[],"totalSize":0}`. The only new user is the generated Guest user.
+- Licenses unchanged: Customer Community Plus 5 total / 0 used; Customer Community 5/0; Partner
+  Community 5/0; External Identity 9/0; Guest User License 1/0.
+- Fixture records unchanged:
+  - `001aj000049ZoXNAA0` Northgate Portal Test Customer A, OwnerId `005aj00000gE0b3AAC`
+  - `001aj000049ZoXOAA0` Northgate Portal Test Customer B, OwnerId `005aj00000gE0b3AAC`
+  - `003aj00002Xl4IfAAJ` → Account `001aj000049ZoXNAA0`
+  - `003aj00002Xl4IgAAJ` → Account `001aj000049ZoXOAA0`
+- Row counts unchanged: Account 157, Contact 231, Network 1 (exactly the new site).
+- External OWD unchanged (`EntityDefinition`): Account, Contact, Case, Delivery__c, Vehicle__c,
+  Service_Visit__c, Vehicle_Model__c all `ExternalSharingModel=Private`; Loyalty_Transaction__c
+  `ControlledByParent`. No sharing rule, role, profile or OWD change was made.
+- The four prepared foundation definitions remain undeployed: zero `OwnerPortal%` ApexClass, zero
+  `PS_Owner_Portal%` PermissionSet, zero `Access_Northgate%` CustomPermission.
+- Git: no stage/commit/push; HEAD remains `0423863794b70bb13c3c59128f7b57a0313aa0f4`.
+
+## 8. Not done (out of this authorization)
+
+Publish/activate; external users; site memberships; record shares; hardened portal profile;
+permission-set assignment; deployment of the four foundation components; OWD/sharing/role changes;
+Account/Contact edits; Git operations; ng-dev access.
+
+## 9. Raw artifacts in this folder
+
+`community_create_raw_2026-10-26.json`, `network_final.json`, `network_after_create.json`,
+`network_members.json`, `guest_user.json`, `guest_profile_object_permissions.json`,
+`guest_profile_system_perms.json`, `licenses.json`, `recent_users.json`, `count_accounts.json`,
+`count_contacts.json`, `count_networks.json`, `domains.json`, `domainsite.json`,
+`external_owd.json`, `fixtures_accounts.json`, `fixtures_contacts.json`,
+`absent_apex.json`, `absent_permset.json`, `experiencebundle_retrieve_result.json`,
+`guest_root_response.html`, `guest_login_response.html`, `guest_selfreg_response.html`,
+`precheck/` (Communities settings), `retrieved/` (CustomSite, Network, guest Profile metadata).
+
+## 10. Additional read-only confirmations
+
+CONFIRMED — no new domain was created; the two Domain records are pre-existing:
+
+```json
+[
+  {"Id":"0I4aj00000G182LCAR","Domain":"orgfarm-25065ad46a-dev-ed.develop.my.site.com","DomainType":"DNS"},
+  {"Id":"0I4aj00000G182MCAR","Domain":"orgfarm-25065ad46a-dev-ed.develop.my.salesforce-sites.com","DomainType":"DNS"}
+]
+```
+
+The new site's DomainSite rows (`/owners`, `/owners/s`) both point to the existing my.site.com
+domain. No My Domain, vanity-domain or domain registration change was made.
+
+CONFIRMED — external OWD unchanged (`external_owd.json`):
+
+```
+Account Private/Private            Contact Private/Private
+Case Private/Private               Delivery__c ReadWrite/Private
+Vehicle__c ReadWrite/Private       Service_Visit__c Private/Private
+Loyalty_Member__c ReadWrite/Private Loyalty_Transaction__c ControlledByParent/ControlledByParent
+Vehicle_Model__c ReadWrite/Private Rooftop__c ReadWrite/Private
+```
+
+ExperienceBundle source retrieval was NOT possible: the org returns
+`"ExperienceBundle isn't enabled for Aura sites. To enable ExperienceBundle, in Setup, select Enable
+ExperienceBundle Metadata API in Digital Experiences | Settings."` Enabling that org setting was
+outside this authorization, so site source evidence is the retrieved CustomSite + Network metadata
+plus the live URL checks. Recorded in `experiencebundle_retrieve_result.json`.
+
+CONFIRMED — additional reachability checks (2026-10-26):
+
+```
+GET https://orgfarm-25065ad46a-dev-ed.develop.my.salesforce-sites.com/owners -> 404
+GET https://orgfarm-25065ad46a-dev-ed.develop.my.site.com/owners/s/login   -> 302 -> /owners/login?ec=302&startURL=%2Fowners%2Fs%2Flogin
+```
+
+The legacy Sites domain does not serve the portal; the Experience app path always bounces to the
+login page for an unauthenticated caller.
+
+Site creation also generated the standard `Guest License User` profile (`00eaj00000UB3CbAAL`), which
+is not assigned to this site's guest user and is normal platform infrastructure. Async job evidence:
+`background_operation.json`.

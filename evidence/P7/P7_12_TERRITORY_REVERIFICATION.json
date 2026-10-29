@@ -1,0 +1,113 @@
+{
+  "observedAtUtc": "2026-10-26T01:24:13.114948+00:00",
+  "organization": [
+    {
+      "Id": "00Daj00001Ae3iWEAR",
+      "OrganizationType": "Developer Edition",
+      "IsSandbox": false
+    }
+  ],
+  "settingsRetrieve": {
+    "id": "09Saj00000mlFcfEAE",
+    "status": "Succeeded",
+    "file": "evidence/P7/P7_12_TERRITORY_SETTINGS_READBACK/unpackaged/unpackaged/settings/Territory2.settings"
+  },
+  "territorySettings": {
+    "defaultAccountAccessLevel": "Read",
+    "defaultCaseAccessLevel": "None",
+    "defaultContactAccessLevel": "Edit",
+    "defaultOpportunityAccessLevel": "None",
+    "enableTerritoryManagement2": "true",
+    "opportunityFilterSettings": "\n        ",
+    "showTM2EnabledBanner": "true",
+    "t2ForecastAccessLevel": "Read",
+    "tm2BypassRealignAccInsert": "false",
+    "tm2EnableUserAssignmentLog": "false"
+  },
+  "requiredObjectAccess": {
+    "ObjectTerritory2Association": {
+      "exposed": true,
+      "querySucceeded": true,
+      "records": [
+        {
+          "total": 0
+        }
+      ]
+    },
+    "Territory2": {
+      "exposed": true,
+      "querySucceeded": true,
+      "records": []
+    },
+    "Territory2Model": {
+      "exposed": true,
+      "querySucceeded": true,
+      "records": []
+    },
+    "Territory2Type": {
+      "exposed": true,
+      "querySucceeded": true,
+      "records": []
+    }
+  },
+  "userTerritoryAssociationCount": [
+    {
+      "total": 0
+    }
+  ],
+  "rooftops": [
+    {
+      "Id": "a07aj00001MCKYvAAP",
+      "Name": "Northgate Airport"
+    },
+    {
+      "Id": "a07aj00001MCKYtAAP",
+      "Name": "Northgate Downtown"
+    },
+    {
+      "Id": "a07aj00001MCKYuAAP",
+      "Name": "Northgate North"
+    },
+    {
+      "Id": "a07aj00001MCKYwAAP",
+      "Name": "Northgate Service Centre"
+    }
+  ],
+  "accountPreferredRooftopCounts": [
+    {
+      "Preferred_Rooftop__c": null,
+      "total": 5
+    },
+    {
+      "Preferred_Rooftop__c": "a07aj00001MCKYvAAP",
+      "total": 37
+    },
+    {
+      "Preferred_Rooftop__c": "a07aj00001MCKYuAAP",
+      "total": 38
+    },
+    {
+      "Preferred_Rooftop__c": "a07aj00001MCKYtAAP",
+      "total": 38
+    },
+    {
+      "Preferred_Rooftop__c": "a07aj00001MCKYwAAP",
+      "total": 37
+    }
+  ],
+  "salesTerritoryEnabled": true,
+  "allFourRequiredObjectsQueryable": true,
+  "writesPerformed": {
+    "metadataDeployments": 0,
+    "configurationChanges": 0,
+    "recordMutations": 0,
+    "accountAssignments": 0,
+    "userAssignments": 0
+  },
+  "limits": [
+    "Authenticated administrative API context only; no operational persona/browser proof.",
+    "Settings and object access do not establish a configured/active model or P7-12 acceptance.",
+    "Account Preferred_Rooftop grouping is a mapping candidate, not approved territory assignments.",
+    "Batch 2 passing tests are reused, not rerun."
+  ]
+}

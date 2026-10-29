@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "replacementComponents": 10,
+  "removedTriggers": [
+    "LeadAfterConvertSeedBlock",
+    "LeadBeforeConvertGuard",
+    "TestDriveFollowupTrigger",
+    "VehicleCounterTrigger"
+  ],
+  "singleEntryTriggers": {
+    "Lead": [
+      "LeadRoutingTrigger"
+    ],
+    "Vehicle__c": [
+      "VehicleTrigger"
+    ],
+    "Test_Drive__c": [
+      "TestDriveTrigger"
+    ]
+  },
+  "inventoryAge": "Existing native formula; no field write",
+  "automaticMaintenanceEnqueue": false,
+  "sourceFileCount": 20,
+  "sourceSha256": {
+    "force-app/main/default/classes/InventoryReconciliationJob.cls": "f5c3441ffc7870a5a685fa0feed101c9e93b865e13320dd1524800bbb60b0918",
+    "force-app/main/default/classes/InventoryReconciliationJob.cls-meta.xml": "f2912b0a45f41538bdd7ba12baca853bffac82ab6937da21b0cad49b78e3b7f7",
+    "force-app/main/default/classes/InventoryReconciliationJobTest.cls": "ff0ba92489022b6310a3ac37ec972bcd5a8a502cd4157a5643f9ed72a4aae071",
+    "force-app/main/default/classes/InventoryReconciliationJobTest.cls-meta.xml": "f2912b0a45f41538bdd7ba12baca853bffac82ab6937da21b0cad49b78e3b7f7",
+    "force-app/main/default/classes/LeadRoutingHandler.cls": "ba8d24cc33af83174326da980bb4a7d1ca3404c9c5be6b46e2482c38cd6bd9f0",
+    "force-app/main/default/classes/LeadRoutingHandler.cls-meta.xml": "d61a5e940622b0ba248df9de701b26c9b9bb440ffaf0d2325ae8e446eb7bf728",
+    "force-app/main/default/classes/LeadTriggerHandler.cls": "58c7ae298304172ad259f156921ce7a63335e72789d57843801dca99d7ebda4f",
+    "force-app/main/default/classes/LeadTriggerHandler.cls-meta.xml": "f2912b0a45f41538bdd7ba12baca853bffac82ab6937da21b0cad49b78e3b7f7",
+    "force-app/main/default/classes/P7TriggerArchitectureTest.cls": "f4a981d9e1d938e59a73ef785dc90639eff45d1aa6d06eca7746bb0cdd15fa9e",
+    "force-app/main/default/classes/P7TriggerArchitectureTest.cls-meta.xml": "f2912b0a45f41538bdd7ba12baca853bffac82ab6937da21b0cad49b78e3b7f7",
+    "force-app/main/default/classes/TestDriveTriggerHandler.cls": "23cd4411a00bef8f45f86ec032f81133b6c4188df97b21465f759a5932b65529",
+    "force-app/main/default/classes/TestDriveTriggerHandler.cls-meta.xml": "f2912b0a45f41538bdd7ba12baca853bffac82ab6937da21b0cad49b78e3b7f7",
+    "force-app/main/default/classes/VehicleTriggerHandler.cls": "bc22b1d39ac438a9779b0b2e0420cbee355554c424d2648601502683c0d2b61a",
+    "force-app/main/default/classes/VehicleTriggerHandler.cls-meta.xml": "f2912b0a45f41538bdd7ba12baca853bffac82ab6937da21b0cad49b78e3b7f7",
+    "force-app/main/default/triggers/LeadRoutingTrigger.trigger": "0ae53c6c27fdb6c7e5ea8198c4b76079507aea4997124eb10f08d0243e4f9015",
+    "force-app/main/default/triggers/LeadRoutingTrigger.trigger-meta.xml": "f12e29844fe1e896f4ba69355d0bb1309c3f75deb2589b0f33ddd440d1a3f131",
+    "force-app/main/default/triggers/TestDriveTrigger.trigger": "ac94b5824ec0e89c712a858b0e4c98bd964096a4e1ea93f407f31f952f125640",
+    "force-app/main/default/triggers/TestDriveTrigger.trigger-meta.xml": "f12e29844fe1e896f4ba69355d0bb1309c3f75deb2589b0f33ddd440d1a3f131",
+    "force-app/main/default/triggers/VehicleTrigger.trigger": "5ccb2dc1b1e166ab1f78c3cde50e7189bae9dca72b8dfa082d1d25c860dbc61c",
+    "force-app/main/default/triggers/VehicleTrigger.trigger-meta.xml": "f12e29844fe1e896f4ba69355d0bb1309c3f75deb2589b0f33ddd440d1a3f131"
+  },
+  "governanceReferences": [
+    "README.md",
+    "DEMO_ORG_BACKLOG.md"
+  ],
+  "localWhitespaceFilesChecked": 33,
+  "territoryDisposition": "BLOCKED: required native territory objects are not exposed; owner capability disposition required.",
+  "apexExecution": "Not established by this local structural check"
+}

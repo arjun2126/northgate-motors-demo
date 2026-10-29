@@ -1,0 +1,51 @@
+{
+  "claim": "CONFIRMED",
+  "checks": {
+    "exact_subject_read_only_delta": "CONFIRMED",
+    "A_Case_unchanged": "CONFIRMED",
+    "A_Contact_Vehicle_Relationship__c_unchanged": "CONFIRMED",
+    "A_Service_Visit__c_unchanged": "CONFIRMED",
+    "A_Vehicle_Model__c_unchanged": "CONFIRMED",
+    "A_Vehicle__c_unchanged": "CONFIRMED",
+    "A_record_access_unchanged": "CONFIRMED",
+    "B_Case_unchanged": "CONFIRMED",
+    "B_Contact_Vehicle_Relationship__c_unchanged": "CONFIRMED",
+    "B_Service_Visit__c_unchanged": "CONFIRMED",
+    "B_Vehicle_Model__c_unchanged": "CONFIRMED",
+    "B_Vehicle__c_unchanged": "CONFIRMED",
+    "B_record_access_unchanged": "CONFIRMED",
+    "assignments_unchanged": "CONFIRMED",
+    "case_unchanged": "CONFIRMED",
+    "definition_unchanged": "CONFIRMED",
+    "identity_unchanged": "CONFIRMED",
+    "objects_unchanged": "CONFIRMED",
+    "setup_unchanged": "CONFIRMED",
+    "users_unchanged": "CONFIRMED",
+    "visit_unchanged": "CONFIRMED",
+    "A_existing_assignments_retained": "CONFIRMED",
+    "B_existing_assignments_retained": "CONFIRMED",
+    "submitted_source_hashes_unchanged": "CONFIRMED",
+    "55_existing_implementation_hashes_unchanged": "CONFIRMED"
+  },
+  "validationId": "0Afaj00000pTterCAC",
+  "deploymentId": "0Afaj00000pTuFxCAK",
+  "localTestsPassed": 12,
+  "apexTestsPassed": 22,
+  "apexTestErrors": 0,
+  "deployedComponents": 1,
+  "addedFieldPermission": {
+    "Field": "Case.Subject",
+    "PermissionsRead": true,
+    "PermissionsEdit": false
+  },
+  "assignmentsAdded": 0,
+  "browserUAT": "NOT RUN",
+  "phase8Complete": false,
+  "limitations": [
+    "No authenticated Customer B My Cases browser retest performed.",
+    "Existing targeted Apex tests use historical fixture permission sets, not the minimal runtime combination.",
+    "Per-user record checks cover the existing B Case and Service Visit only; not an exhaustive audit.",
+    "No full CP2, booking or service-history browser regression performed.",
+    "Effective FLS established by live grants and existing assignments; previously failing UserFieldAccess API not retried."
+  ]
+}

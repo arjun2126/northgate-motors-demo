@@ -1,0 +1,59 @@
+CONFIRMED — raw check-only test successes from 0Afaj00000p7GCLCA2
+[
+  {
+    "id": "01paj00000c0OSiAAM",
+    "methodName": "bulkDriveLifecycleHasNoDuplicateFollowups",
+    "name": "P7TriggerArchitectureTest",
+    "namespace": null,
+    "time": 3399
+  },
+  {
+    "id": "01paj00000c0OSiAAM",
+    "methodName": "bulkVehiclePartialReservationAndLaterTransition",
+    "name": "P7TriggerArchitectureTest",
+    "namespace": null,
+    "time": 2567
+  },
+  {
+    "id": "01paj00000c0OSiAAM",
+    "methodName": "convertedSeedCleanupIsBulkAndTransitionOnly",
+    "name": "P7TriggerArchitectureTest",
+    "namespace": null,
+    "time": 7133
+  },
+  {
+    "id": "01paj00000c0OSiAAM",
+    "methodName": "hierarchyBypassPreservesDistinctValidationContracts",
+    "name": "P7TriggerArchitectureTest",
+    "namespace": null,
+    "time": 770
+  },
+  {
+    "id": "01paj00000c0OSiAAM",
+    "methodName": "missingConvertedAccountRetainsGuard",
+    "name": "P7TriggerArchitectureTest",
+    "namespace": null,
+    "time": 64
+  },
+  {
+    "id": "01paj00000c0OSiAAM",
+    "methodName": "partialDriveSaveDoesNotSuppressValidFollowup",
+    "name": "P7TriggerArchitectureTest",
+    "namespace": null,
+    "time": 597
+  },
+  {
+    "id": "01paj00000c0OSiAAM",
+    "methodName": "partialLeadInsertRetainsRoutingAndAllowsReentry",
+    "name": "P7TriggerArchitectureTest",
+    "namespace": null,
+    "time": 7318
+  },
+  {
+    "id": "01paj00000c0OSiAAM",
+    "methodName": "unconfiguredLaneHandles200AndLaterSaves",
+    "name": "P7TriggerArchitectureTest",
+    "namespace": null,
+    "time": 6484
+  }
+]

@@ -1,0 +1,15 @@
+# Source hashes for manifest/remediation-deploy.xml (2026-10-19)
+a092008e92f1c4a4066a385a6ec041a2fc10cbabaf97f8ddba5c9f43cdca741a  manifest/remediation-deploy.xml
+f673fc516f7302c7198bfd48fc8f005cc5df7b5b8edfe38833657caad6c0e022  force-app/main/default/permissionsets/PS_Sales_Rep.permissionset-meta.xml
+c80028e3b97100d9654189755b1fc7a70d90b4ad1a7f5c4ef0c47ff7dd634e43  force-app/main/default/layouts/Consent__c-Consent Layout.layout-meta.xml
+31aae8e7307411fe587df776e566e75fa4b42440bf81e6d633c33b0c01c80f9e  force-app/main/default/layouts/Data_Load_Batch__c-Data Load Batch Layout.layout-meta.xml
+a36b2bb56e2119029a95c7e18f9bd1572c6b94aa25be9bde3f0edd85afefbb4c  force-app/main/default/layouts/Loyalty_Transaction__c-Loyalty Transaction Layout.layout-meta.xml
+07255d8ff26d7628a0b563cf1a8a3777f8bd253570866edd5a3ac7c043d4bdfe  force-app/main/default/layouts/Rooftop__c-Rooftop Layout.layout-meta.xml
+a50af1aa1231dd097129d6404f521aabeb080f7035390810ad01621cdbc808d6  force-app/main/default/layouts/Service_Visit__c-Service Visit Layout.layout-meta.xml
+621ac4fe26240efed2eaee7837f18f3a8068af813342764e9dd342de8b7c7df3  force-app/main/default/layouts/Staff__c-Staff Layout.layout-meta.xml
+767884de69b312054f0c0ba4f45b2acfc15dda7d71ad1b40e9bf721e688a82af  force-app/main/default/layouts/Test_Drive__c-Test Drive Layout.layout-meta.xml
+c84941f26386c4ac3a768e96c4428764b7f65e92cbdba0a785c2f935d6680b5f  force-app/main/default/layouts/Trade_In__c-Trade-In Layout.layout-meta.xml
+36965c4dbbb6c52320150ce55c38a539c1f2dea34b4906260f6c55f95e0ff549  force-app/main/default/layouts/Vehicle_Model__c-Vehicle Model Layout.layout-meta.xml
+90c3520b3202e084d744de16b891dd3b3877238aa9b9f5903da24e9d61c4da9f  force-app/main/default/layouts/Vehicle__c-New Layout.layout-meta.xml
+6e255b44bc71d487cd5bc9694fd757aee830d6a445e95f5236927f3f99da60cb  force-app/main/default/layouts/Vehicle__c-Used Layout.layout-meta.xml
+0c74a53480d5f01b82787040e28432b9ef0b6c5697aa93534241fd2654f4b5ae  force-app/main/default/layouts/Vehicle__c-Vehicle Layout.layout-meta.xml

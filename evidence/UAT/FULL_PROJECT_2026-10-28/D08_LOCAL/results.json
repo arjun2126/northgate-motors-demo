@@ -1,0 +1,73 @@
+{
+  "status": "LOCAL_VALIDATED_NOT_DEPLOYED",
+  "uiTests": {
+    "pass": 14,
+    "fail": 0,
+    "receipt": "focused-ui.tap",
+    "scope": "mocked state/static, not browser"
+  },
+  "metadataTests": {
+    "pass": 4,
+    "fail": 0,
+    "receipt": "metadata-tests.txt",
+    "scope": "offline XML/preservation, not server validation"
+  },
+  "capturedBaselineFiles": 266,
+  "changedPreexistingCapturedSource": [
+    "force-app/main/default/lwc/quoteSummary/quoteSummary.html",
+    "force-app/main/default/lwc/financeApplication/financeApplication.js",
+    "force-app/main/default/lwc/financeApplication/financeApplication.html",
+    "force-app/main/default/dashboards/NG_Sales/DM_Exec_OperationsOverview.dashboard-meta.xml"
+  ],
+  "filesChangedOrCreated": [
+    "force-app/main/default/lwc/quoteSummary/quoteSummary.html",
+    "force-app/main/default/lwc/financeApplication/financeApplication.js",
+    "force-app/main/default/lwc/financeApplication/financeApplication.html",
+    "force-app/main/default/dashboards/NG_Sales/DM_Exec_OperationsOverview.dashboard-meta.xml",
+    "force-app/main/default/lwc/quoteSummary/quoteSummary.css",
+    "force-app/main/default/objects/Financing__c/listViews/NG_Overview.listView-meta.xml",
+    "force-app/main/default/objects/Trade_In__c/listViews/NG_Overview.listView-meta.xml",
+    "force-app/main/default/objects/Delivery__c/listViews/NG_Overview.listView-meta.xml",
+    "force-app/main/default/objects/Loyalty_Member__c/listViews/NG_Overview.listView-meta.xml",
+    "force-app/main/default/objects/Loyalty_Transaction__c/listViews/NG_Overview.listView-meta.xml",
+    "force-app/main/default/objects/Consent__c/listViews/NG_Overview.listView-meta.xml",
+    "manifest/d08-presentation-local.xml",
+    "scripts/tests/finance_launch_context.test.mjs",
+    "scripts/tests/d08_quote_presentation.test.mjs",
+    "scripts/tests/d08_metadata_test.py",
+    "docs/planning/D08_LOCAL_CORRECTIONS_2026-10-28.md",
+    "evidence/UAT/FULL_PROJECT_2026-10-28/UAT_REGISTER.md"
+  ],
+  "newEvidenceFiles": [
+    "evidence/UAT/FULL_PROJECT_2026-10-28/D08_LOCAL/before_hashes.json",
+    "evidence/UAT/FULL_PROJECT_2026-10-28/D08_LOCAL/focused-ui.tap",
+    "evidence/UAT/FULL_PROJECT_2026-10-28/D08_LOCAL/metadata-tests.txt",
+    "evidence/UAT/FULL_PROJECT_2026-10-28/D08_LOCAL/results.json"
+  ],
+  "sourceHashes": {
+    "force-app/main/default/lwc/quoteSummary/quoteSummary.html": "0d4fd1a4387bc9efdd7d845db3f3e4d7a25d16b0d02daeedb635c7d0a2f04ad0",
+    "force-app/main/default/lwc/financeApplication/financeApplication.js": "41de264ed670310d1bde3b10eab36462def00a2016a60f819bbaaf7dfdda7d28",
+    "force-app/main/default/lwc/financeApplication/financeApplication.html": "6cade3108be1cbff17e2f0a824d4548ccdec2c782f4dadd30c1c1c34cf633061",
+    "force-app/main/default/dashboards/NG_Sales/DM_Exec_OperationsOverview.dashboard-meta.xml": "ff60a17d532c7ddde76467157487b46490e2b87f314c55b19b79d916454f40e6",
+    "force-app/main/default/lwc/quoteSummary/quoteSummary.css": "2406e6140fc385999cf53d4b3683ddc24ffcf9040713a9001212985104e69559",
+    "force-app/main/default/objects/Financing__c/listViews/NG_Overview.listView-meta.xml": "d125496b42e6d051cc8e144d71981b02d49a6564ec0bc4dc8ca75739f005f267",
+    "force-app/main/default/objects/Trade_In__c/listViews/NG_Overview.listView-meta.xml": "f29c5d0488eda21c05f9470de2e0802483675779f51785930b2e130bff2b7a2b",
+    "force-app/main/default/objects/Delivery__c/listViews/NG_Overview.listView-meta.xml": "150bc73caf08197b30e100247b2dce3c27c1368485d4f7c45b08efa591ea2ce9",
+    "force-app/main/default/objects/Loyalty_Member__c/listViews/NG_Overview.listView-meta.xml": "9eb8b7850dab0df87fefba18bfc8425502e9402d98c7957e34a8fa3bfa43b959",
+    "force-app/main/default/objects/Loyalty_Transaction__c/listViews/NG_Overview.listView-meta.xml": "7e2829a74077c16954920b0e32bb82e01a8e9a6309248f1a812d54a05b3b2a5b",
+    "force-app/main/default/objects/Consent__c/listViews/NG_Overview.listView-meta.xml": "25271549c29b05fa4e4cfe4c05ffd43f18053421e861f021fca3d44aec62864c",
+    "manifest/d08-presentation-local.xml": "d3a6a9b47bf10a560fdbf7ebcc69f3b3e395b8c73795ef4543d6257472d7110a",
+    "scripts/tests/finance_launch_context.test.mjs": "2bc65a54505432ce6f8f1ad621c5f5bba1d248177c936d8e5b4c4ab6d4310074",
+    "scripts/tests/d08_quote_presentation.test.mjs": "bad47bcfaf49f23ad18799f6d37acd935effbcdde74b85a2c94075da00b53e72",
+    "scripts/tests/d08_metadata_test.py": "704bf7c3814af88cdc71ec7b07aecdd1db95ad3e804c949c3cf7e3b8acae9e0d",
+    "docs/planning/D08_LOCAL_CORRECTIONS_2026-10-28.md": "58ac5b3e46871a7847ecc99af88aad873d577298fda335c6a76cc7026df97a15",
+    "evidence/UAT/FULL_PROJECT_2026-10-28/UAT_REGISTER.md": "a470d865ea3da6d6c0f05f8316421f91397263c2199c6fb4cbfd87d9751b3866"
+  },
+  "deploymentComponents": 9,
+  "browserVerified": false,
+  "salesforceCalls": 0,
+  "apexTestsRun": 0,
+  "deployments": 0,
+  "gitCommits": 0,
+  "gitPushes": 0
+}

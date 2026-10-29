@@ -1,0 +1,198 @@
+{
+  "status": 0,
+  "result": {
+    "checkOnly": false,
+    "completedDate": "2026-10-19T13:22:42.000Z",
+    "createdBy": "005aj00000feqbN",
+    "createdByName": "Arjun Subramanya",
+    "createdDate": "2026-10-19T13:22:37.000Z",
+    "details": {
+      "componentSuccesses": [
+        {
+          "changed": true,
+          "componentType": "Layout",
+          "created": false,
+          "createdDate": "2026-10-19T13:22:42.000Z",
+          "deleted": false,
+          "fileName": "layouts/Consent__c-Consent Layout.layout",
+          "fullName": "Consent__c-Consent Layout",
+          "id": "00haj00000jNFvhAAG",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "Layout",
+          "created": false,
+          "createdDate": "2026-10-19T13:22:42.000Z",
+          "deleted": false,
+          "fileName": "layouts/Data_Load_Batch__c-Data Load Batch Layout.layout",
+          "fullName": "Data_Load_Batch__c-Data Load Batch Layout",
+          "id": "00haj00000jNFviAAG",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "Layout",
+          "created": false,
+          "createdDate": "2026-10-19T13:22:42.000Z",
+          "deleted": false,
+          "fileName": "layouts/Loyalty_Transaction__c-Loyalty Transaction Layout.layout",
+          "fullName": "Loyalty_Transaction__c-Loyalty Transaction Layout",
+          "id": "00haj00000jNFvoAAG",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "Layout",
+          "created": false,
+          "createdDate": "2026-10-19T13:22:42.000Z",
+          "deleted": false,
+          "fileName": "layouts/Rooftop__c-Rooftop Layout.layout",
+          "fullName": "Rooftop__c-Rooftop Layout",
+          "id": "00haj00000jNFvrAAG",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "Layout",
+          "created": false,
+          "createdDate": "2026-10-19T13:22:42.000Z",
+          "deleted": false,
+          "fileName": "layouts/Service_Visit__c-Service Visit Layout.layout",
+          "fullName": "Service_Visit__c-Service Visit Layout",
+          "id": "00haj00000jNFvsAAG",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "Layout",
+          "created": false,
+          "createdDate": "2026-10-19T13:22:42.000Z",
+          "deleted": false,
+          "fileName": "layouts/Staff__c-Staff Layout.layout",
+          "fullName": "Staff__c-Staff Layout",
+          "id": "00haj00000jNFvtAAG",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "Layout",
+          "created": false,
+          "createdDate": "2026-10-19T13:22:42.000Z",
+          "deleted": false,
+          "fileName": "layouts/Test_Drive__c-Test Drive Layout.layout",
+          "fullName": "Test_Drive__c-Test Drive Layout",
+          "id": "00haj00000jNFvuAAG",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "Layout",
+          "created": false,
+          "createdDate": "2026-10-19T13:22:42.000Z",
+          "deleted": false,
+          "fileName": "layouts/Trade_In__c-Trade-In Layout.layout",
+          "fullName": "Trade_In__c-Trade-In Layout",
+          "id": "00haj00000jNFvvAAG",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "Layout",
+          "created": false,
+          "createdDate": "2026-10-19T13:22:42.000Z",
+          "deleted": false,
+          "fileName": "layouts/Vehicle_Model__c-Vehicle Model Layout.layout",
+          "fullName": "Vehicle_Model__c-Vehicle Model Layout",
+          "id": "00haj00000jNFvwAAG",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "Layout",
+          "created": false,
+          "createdDate": "2026-10-19T13:22:42.000Z",
+          "deleted": false,
+          "fileName": "layouts/Vehicle__c-New Layout.layout",
+          "fullName": "Vehicle__c-New Layout",
+          "id": "00haj00000jNSZkAAO",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "Layout",
+          "created": false,
+          "createdDate": "2026-10-19T13:22:42.000Z",
+          "deleted": false,
+          "fileName": "layouts/Vehicle__c-Used Layout.layout",
+          "fullName": "Vehicle__c-Used Layout",
+          "id": "00haj00000jNSZlAAO",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "Layout",
+          "created": false,
+          "createdDate": "2026-10-19T13:22:42.000Z",
+          "deleted": false,
+          "fileName": "layouts/Vehicle__c-Vehicle Layout.layout",
+          "fullName": "Vehicle__c-Vehicle Layout",
+          "id": "00haj00000jNFvxAAG",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "PermissionSet",
+          "created": false,
+          "createdDate": "2026-10-19T13:22:42.000Z",
+          "deleted": false,
+          "fileName": "permissionsets/PS_Sales_Rep.permissionset",
+          "fullName": "PS_Sales_Rep",
+          "id": "0PSaj00000gDl7UGAS",
+          "success": true
+        },
+        {
+          "changed": true,
+          "componentType": "",
+          "created": false,
+          "createdDate": "2026-10-19T13:22:42.000Z",
+          "deleted": false,
+          "fileName": "package.xml",
+          "fullName": "package.xml",
+          "success": true
+        }
+      ],
+      "runTestResult": {
+        "numFailures": 0,
+        "numTestsRun": 0,
+        "totalTime": 0,
+        "codeCoverage": [],
+        "codeCoverageWarnings": [],
+        "failures": [],
+        "flowCoverage": [],
+        "flowCoverageWarnings": [],
+        "successes": []
+      },
+      "componentFailures": []
+    },
+    "done": true,
+    "id": "0Afaj00000oHtT8CAK",
+    "ignoreWarnings": false,
+    "lastModifiedDate": "2026-10-19T13:22:42.000Z",
+    "numberComponentErrors": 0,
+    "numberComponentsDeployed": 13,
+    "numberComponentsTotal": 13,
+    "numberFiles": "16",
+    "numberTestErrors": 0,
+    "numberTestsCompleted": 0,
+    "numberTestsTotal": 0,
+    "rollbackOnError": true,
+    "runTestsEnabled": false,
+    "startDate": "2026-10-19T13:22:38.000Z",
+    "status": "Succeeded",
+    "success": true,
+    "zipSize": "72940",
+    "files": []
+  },
+  "warnings": []
+}

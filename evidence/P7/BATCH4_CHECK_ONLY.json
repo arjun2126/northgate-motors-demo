@@ -1,0 +1,23 @@
+{
+  "status": 0,
+  "result": {
+    "id": "0Afaj00000pBPvPCAW",
+    "status": "Succeeded",
+    "checkOnly": true,
+    "completedDate": "2026-10-26T12:44:18.000Z",
+    "numberComponentsDeployed": 2,
+    "numberComponentsTotal": 2,
+    "numberComponentErrors": 0,
+    "numberTestsCompleted": 0,
+    "numberTestsTotal": 0,
+    "numberTestErrors": 0,
+    "details": {
+      "componentSuccesses": [
+        {"componentType":"LightningComponentBundle","fullName":"vehiclePhotoHeader","success":true},
+        {"componentType":"FlexiPage","fullName":"NG_Vehicle_Photo_Header","success":true}
+      ],
+      "componentFailures": []
+    }
+  },
+  "warnings": []
+}

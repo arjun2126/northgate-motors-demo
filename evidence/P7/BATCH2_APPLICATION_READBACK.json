@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "deploymentId": "0Afaj00000p84KRCAY",
+  "activeEntryTriggers": [
+    "LeadRoutingTrigger",
+    "TestDriveTrigger",
+    "VehicleTrigger"
+  ],
+  "obsoleteTriggersAbsent": [
+    "LeadAfterConvertSeedBlock",
+    "LeadBeforeConvertGuard",
+    "TestDriveFollowupTrigger",
+    "VehicleCounterTrigger"
+  ],
+  "classBodiesMatchSource": 7,
+  "unrelatedTriggersUnchanged": 12
+}

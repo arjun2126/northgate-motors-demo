@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "metadataComponents": 2,
+  "apexComponents": 0,
+  "photoReader": "Lightning UI API; required Name and optional photo/model fields",
+  "currentPersonaScripts": 5,
+  "localLinksChecked": 27,
+  "priorBatch2SourceHashesPreserved": 26,
+  "batch3DraftPromptUnchangedAndExcluded": true,
+  "apexTestsRerun": 0,
+  "pageAssignmentsIncluded": 0,
+  "actualScreenshotsAndWalkthroughs": "NOT VERIFIED",
+  "selectedSha256": {
+    "force-app/main/default/lwc/vehiclePhotoHeader/vehiclePhotoHeader.js-meta.xml": "3674995da6762b5de5c66f2adf370432340480345ba983633f1fc9c70b212b67",
+    "force-app/main/default/lwc/vehiclePhotoHeader/vehiclePhotoHeader.js": "a604c1aa470822a77534a3b763dd3156cd2ff1e106dd8edd0740b36bf7adba65",
+    "force-app/main/default/lwc/vehiclePhotoHeader/vehiclePhotoHeader.html": "7a7dcd69d076fcea28db0e9b441307272c6bac683ba6e8c28a0d7828b0709a4e",
+    "force-app/main/default/lwc/vehiclePhotoHeader/vehiclePhotoHeader.css": "427c2affd0b94b6d89d5274abf8a8d2df0bb50e899fe7ee222aee57948d0cfb5",
+    "force-app/main/default/flexipages/NG_Vehicle_Photo_Header.flexipage-meta.xml": "cf99a29754e4bb9f4b2f885a3f4e8450980f9ab5746cadf8a8da1eedc7744279",
+    "manifest/p7-batch4-check.xml": "1f7134a180f25d6ff102792cdd409ef81e68f791e39bf9c8bde699b85b1c73ad"
+  }
+}

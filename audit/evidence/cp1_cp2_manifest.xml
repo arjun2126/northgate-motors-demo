@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Quote.Quote_Valid_Until__c</members>
+        <members>Quote.Adjusted_Subtotal__c</members>
+        <members>Quote.Buyer_Contact__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>QuotePricingService</members>
+        <members>QuotePricingServiceTest</members>
+        <members>QuoteBuilderController</members>
+        <members>QuoteBuilderControllerTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>quoteBuilder</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>NG_Opportunity_Quote_Builder</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>PS_Sales_Rep</members>
+        <name>PermissionSet</name>
+    </types>
+    <version>68.0</version>
+</Package>

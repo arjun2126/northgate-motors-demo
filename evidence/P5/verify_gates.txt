@@ -1,0 +1,56 @@
+# Phase 5 §9a Release Gate Verification
+# Target org: ng-demo
+# Generated: 2026-10-19 (read-only replication; node deps unavailable)
+# Storage used (MB): 3.00
+# Task count: 200
+# Event count: 50
+# Canonical manifest: 1985 Seed_Tag__c values across 27 objects (from data/csv/)
+
+Phase 5 §9a Release Gates
+======================================================================
+Gate  1 [PASS] invalid-vin
+        0 vehicles where Is_VIN_Valid__c = false
+        expected: 0    actual: 0
+Gate  2 [PASS] duplicate-vin
+        0 duplicate VIN__c (Unique field is the primary guard)
+        expected: 0    actual: 0
+Gate  3 [PASS] opp-nonpositive-amount
+        0 opportunities with Amount <= 0 past Prospecting
+        expected: 0    actual: 0
+Gate  4 [PASS] won-no-delivery
+        0 Closed Won opportunities where Delivery_Completed__c = false
+        expected: 0    actual: 0
+Gate  5 [PASS] financing-rate-term
+        0 Financing__c with Annual_Rate__c outside 0-25 or term outside {36,48,60,72,84,96}
+        expected: 0    actual: 0
+Gate  6 [PASS] loyalty-negative
+        0 loyalty members with Points_Balance__c < 0
+        expected: 0    actual: 0
+Gate  7 [PASS] sv-completed-zero-cost
+        0 Completed service visits with Total_Cost__c = 0
+        expected: 0    actual: 0
+Gate  8 [PASS] canonical-seed-tag-reconciliation
+        Every canonical Seed_Tag__c from data/csv/ exists exactly once in org with correct value; no missing/malformed/extra/duplicate tags
+        expected: all canonical tags present, no extras    actual: 0 discrepancies
+        detail:   verified 1985 canonical tags across 27 objects
+Gate  9 [PASS] batch-status
+        Every Data_Load_Batch__c row Status__c in {Loaded, Partial}
+        expected: all Loaded/Partial    actual: 20 rows, 0 bad
+Gate 10 [PASS] counts-canonical-vs-envelope
+        Canonical loaded records match (2085); full §2.1 envelope (2115) requires SEED-98 which is deferred
+        expected: canonical: 2085; envelope: 2115    actual: canonical: 2085 (match); SEED-98: 0 (deferred); envelope: 2085/2115
+        detail:   A) canonical: PASS (2085 actual = 1835 clean + 250 activities vs 2085 expected) | B) SEED-98 deferred: PASS (0 actual vs 0 expected for deferred) | C) full §2.1 envelope: NOT SATISFIED (2085 + 0 = 2085 vs 2115 expected; 30 SEED-98 records deferred)
+Gate 11 [PASS] email-test-domain
+        0 leads/contacts with email outside *.test domains
+        expected: 0    actual: 0
+Gate 12 [PASS] consent-revoked-date
+        0 consent rows Revoked without Revoked_On__c
+        expected: 0    actual: 0
+Gate 13 [PASS] storage-budget
+        Storage Usage <= 4 MB after full reset
+        expected: <= 4 MB    actual: 3.00 MB
+Gate 14 [PASS] seed98-boundary
+        0 records in SEED-98-* outside the 30-record legacy batch (or 0 if not loaded)
+        expected: 0 or 30    actual: 0
+======================================================================
+Result: 14 PASS, 0 FAIL (of 14)

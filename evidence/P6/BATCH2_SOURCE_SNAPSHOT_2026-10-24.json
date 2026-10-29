@@ -1,0 +1,12 @@
+{
+  "validationId": "0Afaj00000oyOkDCAU",
+  "capture": "After successful validation in the same execution session; no selected source edits followed validation",
+  "manifest": "manifest/p6-batch2-check.xml",
+  "manifestSha256": "68a3b167f6b427154d09493622b53d3d823bdb73949b51ce52d585fb93f21145",
+  "packageSha256": "752c88415acce4cfd65fb33711568bd0a987349a8f203617edeb997e65e6e49d",
+  "sourceFiles": 90,
+  "programActive": false,
+  "validator": "python3 scripts/tests/check_p6_batch2_package.py",
+  "convertedSourceArchive": "evidence/P6/BATCH2_SOURCE_ARCHIVE_2026-10-24",
+  "note": "Hashes attest local snapshot consistency, not independent byte comparison with Salesforce's stored ZIP. Future deployment must use the explicitly approved stored validation payload."
+}

@@ -1,0 +1,25 @@
+{
+  "status": 1,
+  "result": {
+    "id": "0Afaj00000pBWLmCAO",
+    "status": "Failed",
+    "checkOnly": true,
+    "completedDate": "2026-10-26T12:42:19.000Z",
+    "numberComponentsDeployed": 1,
+    "numberComponentsTotal": 2,
+    "numberComponentErrors": 1,
+    "numberTestsCompleted": 0,
+    "numberTestsTotal": 0,
+    "details": {
+      "componentFailures": [{
+        "componentType": "FlexiPage",
+        "fullName": "NG_Vehicle_Photo_Header",
+        "problem": "We couldn't retrieve the design time component information for component force:recordDetail.",
+        "problemType": "Error",
+        "success": false
+      }],
+      "componentSuccesses": [{"componentType":"LightningComponentBundle","fullName":"vehiclePhotoHeader","success":true}]
+    }
+  },
+  "warnings": []
+}

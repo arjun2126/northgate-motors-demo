@@ -1,0 +1,898 @@
+{
+  "vehicleObject": [
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "Accept",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "Accept",
+          "children": []
+        },
+        {
+          "tag": "formFactor",
+          "text": "Large",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "Accept",
+          "children": []
+        },
+        {
+          "tag": "formFactor",
+          "text": "Small",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "CancelEdit",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "CancelEdit",
+          "children": []
+        },
+        {
+          "tag": "formFactor",
+          "text": "Large",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "CancelEdit",
+          "children": []
+        },
+        {
+          "tag": "formFactor",
+          "text": "Small",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "Clone",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "Clone",
+          "children": []
+        },
+        {
+          "tag": "formFactor",
+          "text": "Large",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "Clone",
+          "children": []
+        },
+        {
+          "tag": "formFactor",
+          "text": "Small",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "Delete",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "Delete",
+          "children": []
+        },
+        {
+          "tag": "formFactor",
+          "text": "Large",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "Delete",
+          "children": []
+        },
+        {
+          "tag": "formFactor",
+          "text": "Small",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "Edit",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "Edit",
+          "children": []
+        },
+        {
+          "tag": "formFactor",
+          "text": "Large",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "Edit",
+          "children": []
+        },
+        {
+          "tag": "formFactor",
+          "text": "Small",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "List",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "List",
+          "children": []
+        },
+        {
+          "tag": "formFactor",
+          "text": "Large",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "List",
+          "children": []
+        },
+        {
+          "tag": "formFactor",
+          "text": "Small",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "New",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "New",
+          "children": []
+        },
+        {
+          "tag": "formFactor",
+          "text": "Large",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "New",
+          "children": []
+        },
+        {
+          "tag": "formFactor",
+          "text": "Small",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "SaveEdit",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "SaveEdit",
+          "children": []
+        },
+        {
+          "tag": "formFactor",
+          "text": "Large",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "SaveEdit",
+          "children": []
+        },
+        {
+          "tag": "formFactor",
+          "text": "Small",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "Tab",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "Tab",
+          "children": []
+        },
+        {
+          "tag": "formFactor",
+          "text": "Large",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "Tab",
+          "children": []
+        },
+        {
+          "tag": "formFactor",
+          "text": "Small",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "View",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "View",
+          "children": []
+        },
+        {
+          "tag": "formFactor",
+          "text": "Large",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    },
+    {
+      "tag": "actionOverrides",
+      "text": "",
+      "children": [
+        {
+          "tag": "actionName",
+          "text": "View",
+          "children": []
+        },
+        {
+          "tag": "formFactor",
+          "text": "Small",
+          "children": []
+        },
+        {
+          "tag": "type",
+          "text": "Default",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "allApplicationOverrides": {
+    "standard__Insights": [],
+    "standard__AlmDevops": [],
+    "standard__AppLauncher": [],
+    "standard__AIWorkbench": [],
+    "standard__Chatter": [],
+    "standard__Community": [],
+    "Northgate_Service": [
+      {
+        "tag": "actionOverrides",
+        "text": "",
+        "children": [
+          {
+            "tag": "actionName",
+            "text": "View",
+            "children": []
+          },
+          {
+            "tag": "comment",
+            "text": "Action override created by Lightning App Builder during activation.",
+            "children": []
+          },
+          {
+            "tag": "content",
+            "text": "Case_Record_Page",
+            "children": []
+          },
+          {
+            "tag": "formFactor",
+            "text": "Large",
+            "children": []
+          },
+          {
+            "tag": "skipRecordTypeSelect",
+            "text": "false",
+            "children": []
+          },
+          {
+            "tag": "type",
+            "text": "Flexipage",
+            "children": []
+          },
+          {
+            "tag": "pageOrSobjectType",
+            "text": "Case",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "standard__AgentforceStudio": [],
+    "standard__AllTabSet": [],
+    "standard__DataManager": [],
+    "standard__Approvals": [],
+    "standard__FlowsApp": [],
+    "standard__LightningBolt": [],
+    "standard__Shield": [],
+    "standard__Sales": [],
+    "standard__Content": [],
+    "standard__ServiceConsole": [],
+    "standard__LightningSales": [],
+    "standard__LightningInstrumentation": [],
+    "standard__Service": [],
+    "standard__Sites": [],
+    "Northgate_Admin": [],
+    "standard__SalesCloudMobile": [],
+    "standard__Audience360": [],
+    "standard__LightningService": [],
+    "Northgate_Service_Console": [],
+    "Northgate_Sales_Console": [
+      {
+        "tag": "actionOverrides",
+        "text": "",
+        "children": [
+          {
+            "tag": "actionName",
+            "text": "View",
+            "children": []
+          },
+          {
+            "tag": "content",
+            "text": "Financing_Record_Page",
+            "children": []
+          },
+          {
+            "tag": "formFactor",
+            "text": "Large",
+            "children": []
+          },
+          {
+            "tag": "skipRecordTypeSelect",
+            "text": "false",
+            "children": []
+          },
+          {
+            "tag": "type",
+            "text": "Flexipage",
+            "children": []
+          },
+          {
+            "tag": "pageOrSobjectType",
+            "text": "Financing__c",
+            "children": []
+          }
+        ]
+      },
+      {
+        "tag": "actionOverrides",
+        "text": "",
+        "children": [
+          {
+            "tag": "actionName",
+            "text": "View",
+            "children": []
+          },
+          {
+            "tag": "content",
+            "text": "NG_Opportunity_Quote_Builder",
+            "children": []
+          },
+          {
+            "tag": "formFactor",
+            "text": "Large",
+            "children": []
+          },
+          {
+            "tag": "skipRecordTypeSelect",
+            "text": "false",
+            "children": []
+          },
+          {
+            "tag": "type",
+            "text": "Flexipage",
+            "children": []
+          },
+          {
+            "tag": "pageOrSobjectType",
+            "text": "Opportunity",
+            "children": []
+          }
+        ]
+      },
+      {
+        "tag": "actionOverrides",
+        "text": "",
+        "children": [
+          {
+            "tag": "actionName",
+            "text": "View",
+            "children": []
+          },
+          {
+            "tag": "content",
+            "text": "NG_Quote_Summary",
+            "children": []
+          },
+          {
+            "tag": "formFactor",
+            "text": "Large",
+            "children": []
+          },
+          {
+            "tag": "skipRecordTypeSelect",
+            "text": "false",
+            "children": []
+          },
+          {
+            "tag": "type",
+            "text": "Flexipage",
+            "children": []
+          },
+          {
+            "tag": "pageOrSobjectType",
+            "text": "Quote",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "standard__LightningScheduler": [],
+    "Northgate_Sales": [
+      {
+        "tag": "actionOverrides",
+        "text": "",
+        "children": [
+          {
+            "tag": "actionName",
+            "text": "View",
+            "children": []
+          },
+          {
+            "tag": "comment",
+            "text": "Action override created by Lightning App Builder during activation.",
+            "children": []
+          },
+          {
+            "tag": "content",
+            "text": "Financing_Record_Page",
+            "children": []
+          },
+          {
+            "tag": "formFactor",
+            "text": "Large",
+            "children": []
+          },
+          {
+            "tag": "skipRecordTypeSelect",
+            "text": "false",
+            "children": []
+          },
+          {
+            "tag": "type",
+            "text": "Flexipage",
+            "children": []
+          },
+          {
+            "tag": "pageOrSobjectType",
+            "text": "Financing__c",
+            "children": []
+          }
+        ]
+      },
+      {
+        "tag": "actionOverrides",
+        "text": "",
+        "children": [
+          {
+            "tag": "actionName",
+            "text": "View",
+            "children": []
+          },
+          {
+            "tag": "comment",
+            "text": "NG Opportunity Quote Builder (UI-008).",
+            "children": []
+          },
+          {
+            "tag": "content",
+            "text": "NG_Opportunity_Quote_Builder",
+            "children": []
+          },
+          {
+            "tag": "formFactor",
+            "text": "Large",
+            "children": []
+          },
+          {
+            "tag": "skipRecordTypeSelect",
+            "text": "false",
+            "children": []
+          },
+          {
+            "tag": "type",
+            "text": "Flexipage",
+            "children": []
+          },
+          {
+            "tag": "pageOrSobjectType",
+            "text": "Opportunity",
+            "children": []
+          }
+        ]
+      },
+      {
+        "tag": "actionOverrides",
+        "text": "",
+        "children": [
+          {
+            "tag": "actionName",
+            "text": "View",
+            "children": []
+          },
+          {
+            "tag": "comment",
+            "text": "NG Quote Summary (UI-009).",
+            "children": []
+          },
+          {
+            "tag": "content",
+            "text": "NG_Quote_Summary",
+            "children": []
+          },
+          {
+            "tag": "formFactor",
+            "text": "Large",
+            "children": []
+          },
+          {
+            "tag": "skipRecordTypeSelect",
+            "text": "false",
+            "children": []
+          },
+          {
+            "tag": "type",
+            "text": "Flexipage",
+            "children": []
+          },
+          {
+            "tag": "pageOrSobjectType",
+            "text": "Quote",
+            "children": []
+          }
+        ]
+      }
+    ],
+    "standard__SalesforceCMS": [],
+    "standard__MSJApp": [],
+    "standard__QueueManagement": [],
+    "standard__LightningSalesConsole": [],
+    "Northgate_Inventory": [],
+    "standard__RevenueCloudConsole": [],
+    "standard__Platform": [],
+    "standard__Marketing": []
+  }
+}

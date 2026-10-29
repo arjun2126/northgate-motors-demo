@@ -1,0 +1,99 @@
+Compiled successfully.
+Executed successfully.
+
+68.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO
+Execute Anonymous: Product2 p = [SELECT Id, Name, Category__c FROM Product2 WHERE Name = 'Kestrel Sport 2023' LIMIT 1];
+Execute Anonymous: PricebookEntry pbe = [SELECT Id, UnitPrice FROM PricebookEntry WHERE Product2Id = :p.Id AND Pricebook2.IsStandard = true LIMIT 1];
+Execute Anonymous: PricebookEntry pe = new PricebookEntry(Id = pbe.Id, UnitPrice = pbe.UnitPrice, Product2 = p);
+Execute Anonymous: QuoteLineItem line = new QuoteLineItem(Quantity = 1, UnitPrice = pbe.UnitPrice, PricebookEntry = pe);
+Execute Anonymous: List<QuoteLineItem> lines = new List<QuoteLineItem>{ line };
+Execute Anonymous: Quote q = new Quote(Name = 'read-only pricing probe');
+Execute Anonymous: QuotePricingService.VehicleContext v = new QuotePricingService.VehicleContext();
+Execute Anonymous: v.hasVehicle = true;
+Execute Anonymous: v.modelName = p.Name;
+Execute Anonymous: v.trim = 'Sport';
+Execute Anonymous: v.ageDays = 899;
+Execute Anonymous: QuotePricingService.BuyerContext b = new QuotePricingService.BuyerContext();
+Execute Anonymous: b.associated = false;
+Execute Anonymous: List<Price_Rule__mdt> rules = [
+Execute Anonymous:     SELECT DeveloperName, Is_Active__c, Rule_Type__c, Percent_Adjustment__c, Fixed_Adjustment__c,
+Execute Anonymous:            Attribute__c, Operator__c, Value__c, Priority__c, Max_Applies__c, Target__c
+Execute Anonymous:     FROM Price_Rule__mdt WHERE Is_Active__c = true
+Execute Anonymous: ];
+Execute Anonymous: QuotePricingService.QuotePricingResult r = QuotePricingService.evaluate(q, lines, rules, v, b);
+Execute Anonymous: System.debug('CP2_PROBE ' + JSON.serialize(r));
+09:24:35.106 (106546176)|USER_INFO|[EXTERNAL]|005aj00000feqbN|arjun.ngdemo@northgate.demo|(GMT-04:00) Eastern Daylight Time (America/Toronto)|GMT-04:00
+09:24:35.106 (106587337)|EXECUTION_STARTED
+09:24:35.106 (106607027)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+09:24:35.106 (181363369)|USER_DEBUG|[20]|DEBUG|CP2_PROBE {"volumeVehicleQuantity":1,"vehicleListPrice":50615.00,"vehicleLineCount":1,"vehicleBasisIdentified":true,"vehicleAdjustedPrice":43022.75,"rulesApplied":1,"netDiscountPercent":15.00,"listSubtotal":50615.00,"buyerAssociated":false,"blockerMessage":null,"basisMatchCount":1,"appliedRules":[{"percent":15.00,"direction":"Discount","developerName":"Aged_Inventory_Discount_90","category":"Age_Days","base":50615.00,"adjustment":7592.25}],"adjustedSubtotal":43022.75}
+09:24:35.181 (181483120)|CUMULATIVE_LIMIT_USAGE
+09:24:35.181 (181483120)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 12 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 10000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:24:35.181 (181483120)|CUMULATIVE_LIMIT_USAGE_END
+
+09:24:35.106 (181552051)|CODE_UNIT_FINISHED|execute_anonymous_apex
+09:24:35.106 (181563841)|EXECUTION_FINISHED
+
+
+# Q-0058 post-deploy probe
+Compiled successfully.
+Executed successfully.
+
+68.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO
+Execute Anonymous: Quote q = [SELECT Id, Name FROM Quote WHERE Name LIKE 'Q-0058%' LIMIT 1];
+Execute Anonymous: List<QuoteLineItem> lines = [
+Execute Anonymous:     SELECT Id, Quantity, UnitPrice, PricebookEntry.Product2.Name, PricebookEntry.Product2.Category__c
+Execute Anonymous:     FROM QuoteLineItem WHERE QuoteId = :q.Id
+Execute Anonymous: ];
+Execute Anonymous: QuotePricingService.VehicleContext v = new QuotePricingService.VehicleContext();
+Execute Anonymous: v.hasVehicle = true;
+Execute Anonymous: v.modelName = 'Cascadia Premium 2024';
+Execute Anonymous: v.trim = 'Premium';
+Execute Anonymous: v.ageDays = 322;
+Execute Anonymous: QuotePricingService.BuyerContext b = new QuotePricingService.BuyerContext();
+Execute Anonymous: b.associated = false;
+Execute Anonymous: List<Price_Rule__mdt> rules = [
+Execute Anonymous:     SELECT DeveloperName, Is_Active__c, Rule_Type__c, Percent_Adjustment__c, Fixed_Adjustment__c,
+Execute Anonymous:            Attribute__c, Operator__c, Value__c, Priority__c, Max_Applies__c, Target__c
+Execute Anonymous:     FROM Price_Rule__mdt WHERE Is_Active__c = true
+Execute Anonymous: ];
+Execute Anonymous: QuotePricingService.QuotePricingResult r = QuotePricingService.evaluate(q, lines, rules, v, b);
+Execute Anonymous: System.debug('CP2_PROBE_Q58 ' + JSON.serialize(r));
+09:37:57.89 (89272588)|USER_INFO|[EXTERNAL]|005aj00000feqbN|arjun.ngdemo@northgate.demo|(GMT-04:00) Eastern Daylight Time (America/Toronto)|GMT-04:00
+09:37:57.89 (89306419)|EXECUTION_STARTED
+09:37:57.89 (89325879)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+09:37:57.89 (182317869)|USER_DEBUG|[19]|DEBUG|CP2_PROBE_Q58 {"volumeVehicleQuantity":1.00,"vehicleListPrice":55829.00,"vehicleLineCount":1,"vehicleBasisIdentified":true,"vehicleAdjustedPrice":49827.38,"rulesApplied":2,"netDiscountPercent":10.75,"listSubtotal":55829.00,"buyerAssociated":false,"blockerMessage":null,"basisMatchCount":1,"appliedRules":[{"percent":15.00,"direction":"Discount","developerName":"Aged_Inventory_Discount_90","category":"Age_Days","base":55829.00,"adjustment":8374.35},{"percent":5.00,"direction":"Premium","developerName":"Trim_Premium_Premium","category":"Trim","base":47454.65,"adjustment":2372.73}],"adjustedSubtotal":49827.38}
+09:37:57.182 (182407060)|CUMULATIVE_LIMIT_USAGE
+09:37:57.182 (182407060)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 2 out of 100
+  Number of query rows: 12 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of Publish Immediate DML: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 10000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:37:57.182 (182407060)|CUMULATIVE_LIMIT_USAGE_END
+
+09:37:57.89 (182502571)|CODE_UNIT_FINISHED|execute_anonymous_apex
+09:37:57.89 (182514052)|EXECUTION_FINISHED
+

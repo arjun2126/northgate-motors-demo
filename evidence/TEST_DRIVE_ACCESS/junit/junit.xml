@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+    <testsuite name="force.apex" timestamp="2026-10-21T22:25:35.025Z" hostname="https://orgfarm-25065ad46a-dev-ed.develop.my.salesforce.com" tests="5" failures="0"  errors="0"  time="2.85">
+        <properties>
+            <property name="commandTime" value="0.00 s"/>
+            <property name="failRate" value="0.00%"/>
+            <property name="failing" value="0"/>
+            <property name="hostname" value="https://orgfarm-25065ad46a-dev-ed.develop.my.salesforce.com"/>
+            <property name="orgId" value="00Daj00001Ae3iWEAR"/>
+            <property name="passRate" value="100%"/>
+            <property name="passing" value="5"/>
+            <property name="skipped" value="0"/>
+            <property name="testExecutionTime" value="2.85 s"/>
+            <property name="testStartTime" value="Wed Oct 21 2026 6:25:35 PM"/>
+            <property name="testTotalTime" value="2.85 s"/>
+            <property name="testsRan" value="5"/>
+            <property name="username" value="arjun.ngdemo@northgate.demo"/>
+        </properties>
+        <testcase name="adjacentDriveIsAllowed" classname="TestDriveBookingGuardTest" time="0.85">
+        </testcase>
+        <testcase name="cancelledDriveDoesNotBlock" classname="TestDriveBookingGuardTest" time="0.60">
+        </testcase>
+        <testcase name="overlappingDriveIsBlocked" classname="TestDriveBookingGuardTest" time="0.43">
+        </testcase>
+        <testcase name="insertCreatesTask" classname="TestDriveFollowUpTest" time="0.40">
+        </testcase>
+        <testcase name="statusChangeCreatesAdditionalTask" classname="TestDriveFollowUpTest" time="0.50">
+        </testcase>
+    </testsuite>
+</testsuites>

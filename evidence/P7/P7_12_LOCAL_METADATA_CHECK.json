@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "localComponents": 6,
+  "model": "NG_Rooftops",
+  "sharedType": "NG_Rooftop",
+  "siblingTerritories": [
+    "Airport",
+    "Downtown",
+    "North",
+    "Service_Centre"
+  ],
+  "explicitAccess": {
+    "accountAccessLevel": "Read",
+    "contactAccessLevel": "None",
+    "opportunityAccessLevel": "None",
+    "caseAccessLevel": "None"
+  },
+  "assignmentRules": 0,
+  "userMemberships": 0,
+  "settingsComponents": 0,
+  "unchangedBatch2SourceFiles": 20,
+  "convertedComponentsChecked": 6,
+  "serverValidation": "NOT RUN: local-only preparation; default/override behavior requires scoped check-only approval",
+  "apexTestsRerun": 0,
+  "sha256": {
+    "force-app/main/default/territory2Models/NG_Rooftops/NG_Rooftops.territory2Model-meta.xml": "a977a9d97eed1ddd1b38bec0d8de0e5b2b4fb9108e94ea6b65235244db864e3d",
+    "force-app/main/default/territory2Types/NG_Rooftop.territory2Type-meta.xml": "08182eecb2858bb79f879593ca5243158fde395effa135ab47677c0d70e0040e",
+    "force-app/main/default/territory2Models/NG_Rooftops/territories/Airport.territory2-meta.xml": "6148bf96fbe07360348cb00f7e81e8ad2e4b04bb2e23654dcc66d78231288af2",
+    "force-app/main/default/territory2Models/NG_Rooftops/territories/Downtown.territory2-meta.xml": "d2431ab498d186a22b00911d809111221a192721c246602840062f16ef418c0e",
+    "force-app/main/default/territory2Models/NG_Rooftops/territories/North.territory2-meta.xml": "448b182774ba5cf4557a0860397c1110e200bf72e36877db553506683df3f3eb",
+    "force-app/main/default/territory2Models/NG_Rooftops/territories/Service_Centre.territory2-meta.xml": "70987f7a417e3b56c4cbb0a3b8838a3ef9a628fcdd7dc65c5079e687bc1a38ba"
+  }
+}

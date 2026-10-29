@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "resourceId": "081aj00000LQd1dAAD",
+  "resourceName": "NG_VehicleImages",
+  "deployedArchiveBytes": 1807209,
+  "deployedPhotoContentMatches": 30,
+  "deployedRootFiles": 31,
+  "photographerAndLicenseRegisterMatches": true,
+  "optionalAttributionMarkdown": "Excluded by existing .forceignore *.md; no ignore/source repair performed. CC0 credits remain in licenses.json.",
+  "existingModelPathsCompatible": 30,
+  "recordChanges": 0,
+  "selectedSourceFilesUnchangedSincePreflight": 70,
+  "browserGalleryEventAcceptance": "DEFERRED",
+  "frontEndHttpImageRendering": "NOT VERIFIED: direct API-host resource stream was empty; authenticated REST archive contents verified."
+}

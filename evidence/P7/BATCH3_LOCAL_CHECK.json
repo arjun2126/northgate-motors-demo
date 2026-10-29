@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "batch3MetadataComponents": 1,
+  "promptStatus": "Draft",
+  "activePromptVersions": 0,
+  "caseInputFields": [
+    "Subject",
+    "Status",
+    "Priority"
+  ],
+  "seamNotesIndexed": 5,
+  "preservedBatch2SourceHashes": 26,
+  "apexTestsRerun": 0,
+  "promptSourceSha256": "1fbccd60013ce5465519c1dcfd641bfb5328b0f535bdb4a559e31f00e1fec1c8",
+  "nativeAgentIngestionPortalAcceptance": "NOT PASSED: capability/authorization gates documented"
+}

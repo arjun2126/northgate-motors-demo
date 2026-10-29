@@ -1,0 +1,62 @@
+# Post-deploy FLS and layout verification (read-only)
+## Opportunity.AccountId in PS_Sales_Rep
+{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "FieldPermissions",
+          "url": "/services/data/v68.0/sobjects/FieldPermissions/01kaj0001NjcyRvAQI"
+        },
+        "Field": "Contact.AccountId",
+        "PermissionsRead": true,
+        "PermissionsEdit": false
+      },
+      {
+        "attributes": {
+          "type": "FieldPermissions",
+          "url": "/services/data/v68.0/sobjects/FieldPermissions/01kaj0001O0XVhFAQW"
+        },
+        "Field": "Opportunity.AccountId",
+        "PermissionsRead": true,
+        "PermissionsEdit": true
+      }
+    ],
+    "totalSize": 2,
+    "done": true
+  },
+  "warnings": []
+}
+## Vehicle_Model__c.Name describe
+[{'name': 'Name', 'type': 'string', 'permissionable': False}]
+## QuoteLineItem ObjectPermissions count (org-wide)
+{
+  "status": 0,
+  "result": {
+    "records": [
+      {
+        "attributes": {
+          "type": "AggregateResult"
+        },
+        "c": 0
+      }
+    ],
+    "totalSize": 1,
+    "done": true
+  },
+  "warnings": []
+}
+## Layout field-set comparison (post vs source)
+Consent__c-Consent Layout: post=13 source=13 missing_in_post=[] extra_in_post=[]
+Data_Load_Batch__c-Data Load Batch Layout: post=14 source=14 missing_in_post=[] extra_in_post=[]
+Loyalty_Transaction__c-Loyalty Transaction Layout: post=14 source=14 missing_in_post=[] extra_in_post=[]
+Rooftop__c-Rooftop Layout: post=14 source=14 missing_in_post=[] extra_in_post=[]
+Service_Visit__c-Service Visit Layout: post=26 source=26 missing_in_post=[] extra_in_post=[]
+Staff__c-Staff Layout: post=12 source=12 missing_in_post=[] extra_in_post=[]
+Test_Drive__c-Test Drive Layout: post=21 source=21 missing_in_post=[] extra_in_post=[]
+Trade_In__c-Trade-In Layout: post=22 source=22 missing_in_post=[] extra_in_post=[]
+Vehicle_Model__c-Vehicle Model Layout: post=17 source=17 missing_in_post=[] extra_in_post=[]
+Vehicle__c-New Layout: post=23 source=23 missing_in_post=[] extra_in_post=[]
+Vehicle__c-Used Layout: post=23 source=23 missing_in_post=[] extra_in_post=[]
+Vehicle__c-Vehicle Layout: post=26 source=26 missing_in_post=[] extra_in_post=[]

@@ -1,0 +1,93 @@
+{
+  "deploymentId": "0Afaj00000p8GtRCAU",
+  "models": [
+    {
+      "Id": "0MAaj0000017bLdGAI",
+      "DeveloperName": "NG_Rooftops",
+      "State": "Planning"
+    }
+  ],
+  "types": [
+    {
+      "Id": "0M5aj000000AsyPCAS",
+      "DeveloperName": "NG_Rooftop",
+      "Priority": 1
+    }
+  ],
+  "territories": [
+    {
+      "Id": "0MIaj000000u1z7GAA",
+      "DeveloperName": "Airport",
+      "ParentTerritory2Id": null,
+      "Territory2Type": {
+        "attributes": {
+          "type": "Territory2Type",
+          "url": "/services/data/v68.0/sobjects/Territory2Type/0M5aj000000AsyPCAS"
+        },
+        "DeveloperName": "NG_Rooftop"
+      },
+      "AccountAccessLevel": "Read",
+      "ContactAccessLevel": "None",
+      "OpportunityAccessLevel": "None",
+      "CaseAccessLevel": "None"
+    },
+    {
+      "Id": "0MIaj000000u1z8GAA",
+      "DeveloperName": "Downtown",
+      "ParentTerritory2Id": null,
+      "Territory2Type": {
+        "attributes": {
+          "type": "Territory2Type",
+          "url": "/services/data/v68.0/sobjects/Territory2Type/0M5aj000000AsyPCAS"
+        },
+        "DeveloperName": "NG_Rooftop"
+      },
+      "AccountAccessLevel": "Read",
+      "ContactAccessLevel": "None",
+      "OpportunityAccessLevel": "None",
+      "CaseAccessLevel": "None"
+    },
+    {
+      "Id": "0MIaj000000u1z9GAA",
+      "DeveloperName": "North",
+      "ParentTerritory2Id": null,
+      "Territory2Type": {
+        "attributes": {
+          "type": "Territory2Type",
+          "url": "/services/data/v68.0/sobjects/Territory2Type/0M5aj000000AsyPCAS"
+        },
+        "DeveloperName": "NG_Rooftop"
+      },
+      "AccountAccessLevel": "Read",
+      "ContactAccessLevel": "None",
+      "OpportunityAccessLevel": "None",
+      "CaseAccessLevel": "None"
+    },
+    {
+      "Id": "0MIaj000000u1zAGAQ",
+      "DeveloperName": "Service_Centre",
+      "ParentTerritory2Id": null,
+      "Territory2Type": {
+        "attributes": {
+          "type": "Territory2Type",
+          "url": "/services/data/v68.0/sobjects/Territory2Type/0M5aj000000AsyPCAS"
+        },
+        "DeveloperName": "NG_Rooftop"
+      },
+      "AccountAccessLevel": "Read",
+      "ContactAccessLevel": "None",
+      "OpportunityAccessLevel": "None",
+      "CaseAccessLevel": "None"
+    }
+  ],
+  "objectAssociations": [
+    {
+      "total": 0
+    }
+  ],
+  "userMemberships": [
+    {
+      "total": 0
+    }
+  ]
+}
