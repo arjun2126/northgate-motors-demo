@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Read-only access to three deidentified stored Service metric fields. Requires existing object/report access. Internal reporting readers only; assignment requires owner approval.</description>
+    <fieldPermissions><editable>false</editable><field>Executive_Service_Metrics__c.Overdue_Count__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Executive_Service_Metrics__c.CSI_Score_Total__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Executive_Service_Metrics__c.CSI_Response_Count__c</field><readable>true</readable></fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Executive Service Metric Field Read</label>
+</PermissionSet>

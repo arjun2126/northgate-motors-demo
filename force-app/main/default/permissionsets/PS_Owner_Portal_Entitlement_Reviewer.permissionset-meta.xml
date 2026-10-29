@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses><apexClass>OwnerPortalOwnershipService</apexClass><enabled>true</enabled></classAccesses>
+    <customPermissions><enabled>true</enabled><name>Manage_Northgate_Vehicle_Entitlements</name></customPermissions>
+    <description>Unassigned internal reviewer. Only ledger create/read/edit, no delete, Vehicle grants, share creation or customer assignment. Evidence requires explicit human review.</description>
+    <fieldPermissions><editable>true</editable><field>Contact_Vehicle_Relationship__c.Effective_To__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Contact_Vehicle_Relationship__c.Source_Delivery__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Contact_Vehicle_Relationship__c.Revocation_Reason__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Contact_Vehicle_Relationship__c.Verified_By__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Contact_Vehicle_Relationship__c.Verified_At__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Contact_Vehicle_Relationship__c.Revoked_At__c</field><readable>true</readable></fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Owner Portal Entitlement Reviewer</label>
+    <objectPermissions><allowCreate>true</allowCreate><allowDelete>false</allowDelete><allowEdit>true</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>Contact_Vehicle_Relationship__c</object><viewAllRecords>false</viewAllRecords></objectPermissions>
+</PermissionSet>

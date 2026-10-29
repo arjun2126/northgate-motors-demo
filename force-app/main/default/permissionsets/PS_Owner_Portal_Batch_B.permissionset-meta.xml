@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses><apexClass>OwnerPortalBatchBController</apexClass><enabled>true</enabled></classAccesses>
+    <description>LOCAL ONLY: bounded portal reads and Case create. Requires foundation gate and reviewed profile/shares. No Vehicle, finance, Case Edit or appointment writes.</description>
+    <fieldPermissions><editable>true</editable><field>Case.AccountId</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Case.ContactId</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Case.Description</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Case.Subject</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Case.Origin</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>true</editable><field>Case.Priority</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Service_Visit__c.Status__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Service_Visit__c.Service_Type__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Service_Visit__c.Mileage_At_Checkin__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Service_Visit__c.Case__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Loyalty_Member__c.Points_Balance__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Loyalty_Member__c.Tier__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Loyalty_Member__c.Status__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Loyalty_Transaction__c.Points__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Loyalty_Transaction__c.Type__c</field><readable>true</readable></fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>Owner Portal Batch B (Local Preparation)</label>
+    <objectPermissions><allowCreate>true</allowCreate><allowDelete>false</allowDelete><allowEdit>false</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>Case</object><viewAllRecords>false</viewAllRecords></objectPermissions>
+    <objectPermissions><allowCreate>false</allowCreate><allowDelete>false</allowDelete><allowEdit>false</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>Service_Visit__c</object><viewAllRecords>false</viewAllRecords></objectPermissions>
+    <objectPermissions><allowCreate>false</allowCreate><allowDelete>false</allowDelete><allowEdit>false</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>Loyalty_Member__c</object><viewAllRecords>false</viewAllRecords></objectPermissions>
+    <objectPermissions><allowCreate>false</allowCreate><allowDelete>false</allowDelete><allowEdit>false</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>Loyalty_Transaction__c</object><viewAllRecords>false</viewAllRecords></objectPermissions>
+    <recordTypeVisibilities><recordType>Case.Service</recordType><visible>true</visible></recordTypeVisibilities>
+</PermissionSet>
