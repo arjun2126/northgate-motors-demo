@@ -38,7 +38,8 @@ a full status inventory, a binary tracked-change patch and a SHA-256 file manife
 | 7 | `7a311c1` | Harness Engineering, UAT/regression tooling, scoped manifests, Phase 5 data generator/loader source and small fixtures |
 | 8 | `a863574` | README, execution guide, handoff, architecture/decisions/security/planning documentation and root project metadata |
 | 9 | `4128d25` | Curated deployment/test evidence, UAT register, rollback snapshots and post-deployment verification metadata |
-| 10 | this commit | Generated-file exclusions and this status record |
+| 10 | `c4177f6` | Generated-file exclusions and the initial status record |
+| 11 | this commit | Final local validation record and the Phase 6 investigation summary |
 
 ## State separation
 
@@ -92,9 +93,12 @@ The following remain in the working tree/backup but are intentionally not in Git
 
 ## Validation performed
 
-- Archive integrity and restore verification: PASS.
+- Archive integrity and representative restore verification: PASS.
 - Git bundle verification: PASS.
 - Tracked-change reverse-applicability check: PASS.
+- Working-tree preservation comparison against the pre-recovery manifest: 6,898 non-`.git` files
+  checked, 0 missing, 0 hash mismatches (excluding the intentional `.gitignore` change and the
+  new status record).
 - Commit 1: 58 files, 0 deletions.
 - Commit 2: 96 files, 0 deletions.
 - Commit 3: 181 files, 0 deletions.
@@ -104,6 +108,26 @@ The following remain in the working tree/backup but are intentionally not in Git
 - Commit 7: 170 files, 0 deletions.
 - Commit 8: 92 files, 0 deletions.
 - Commit 9: 294 files, 0 deletions.
+- Commit 10: 2 files, 0 deletions.
+- `harness/check.sh fast`: PASS, including offline UAT orchestration, regression-runner,
+  entry-point safety and preservation contracts.
+- Focused `portal`: PASS, 26/26 local UI/state tests.
+- Focused `finance`: PASS, 10/10 local UI/state tests.
+- Focused `inventory`: PASS, 19/19 local UI/state tests.
+- Complete selected local UI mock suite: PASS, 59/59 tests.
+- Focused `presentation`: 14/14 UI tests PASS; `d08_metadata_test.py` FAILS one pre-existing
+  baseline check because `PS_Owner_Portal_Dashboard_Runtime` changed after the D08 baseline for
+  later P8 FLS deployments. The current file is byte-identical to the pre-recovery backup; this
+  recovery did not change it. The failure is reported, not repaired by editing the test.
+- Tracked JSON: 113 checked, 0 parse errors. Tracked Python: 49 checked, 0 syntax errors.
+  Tracked Bash: 11 checked, 0 syntax errors.
+- Generic XML parsing flags the two Aura bundles and one Visualforce page as unbound-prefix
+  because those formats use Salesforce-specific namespace conventions; this is not treated as a
+  metadata defect. Apex/LWC compilation was not run without an authorized org/toolchain.
+- `git fsck` reports four pre-existing metadata artifacts: the Finder file `.git/refs/.DS_Store`
+  and three duplicate loose-object filenames ending in ` 2`. All 10 recovery commits and all
+  2,524 reachable objects are valid; `git show-ref` and fast-forward ancestry succeed. These
+  artifacts were preserved in the backup and were not deleted.
 - No Salesforce CLI org authentication, deployment, data change, permission change, browser UAT
   or Apex test execution was performed by this recovery.
 - No GitHub push, tag, reset, clean, rebase, cherry-pick or force operation was performed.
