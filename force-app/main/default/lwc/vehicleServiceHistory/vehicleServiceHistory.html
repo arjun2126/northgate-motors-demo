@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Vehicle Service History" icon-name="standard:service_appointment">
+        <template lwc:if={loading}><lightning-spinner alternative-text="Loading history" size="small"></lightning-spinner></template>
+        <div class="slds-p-around_small">
+            <h2 class="slds-text-heading_small">Visits and recorded mileage</h2>
+            <template lwc:if={visitError}><p role="alert">{visitError}</p></template>
+            <template lwc:if={noVisits}><p>No accessible service visits.</p></template>
+            <lightning-datatable key-field="id" data={visits} columns={visitColumns} hide-checkbox-column></lightning-datatable>
+            <template lwc:if={moreVisits}><lightning-button label="Load more visits" onclick={nextVisits} disabled={loading}></lightning-button></template>
+            <h2 class="slds-text-heading_small slds-m-top_medium">Cases</h2>
+            <template lwc:if={caseError}><p role="alert">{caseError}</p></template>
+            <template lwc:if={noCases}><p>No accessible Cases.</p></template>
+            <lightning-datatable key-field="id" data={cases} columns={caseColumns} hide-checkbox-column></lightning-datatable>
+            <template lwc:if={moreCases}><lightning-button label="Load more Cases" onclick={nextCases} disabled={loading}></lightning-button></template>
+        </div>
+    </lightning-card>
+</template>

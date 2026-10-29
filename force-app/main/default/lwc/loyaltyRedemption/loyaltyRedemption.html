@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Redeem Loyalty Points">
+        <div class="slds-p-around_medium">
+            <p>Demonstration only. No payment or Quote is changed.</p>
+            <lightning-input type="number" label="Points" min="1" max="99999999" step="1" required value={points} onchange={changePoints} disabled={busy}></lightning-input>
+            <lightning-button label="Submit request" onclick={submit} disabled={busy}></lightning-button>
+            <template lwc:if={message}><p role="status">{message}</p></template>
+        </div>
+    </lightning-card>
+</template>

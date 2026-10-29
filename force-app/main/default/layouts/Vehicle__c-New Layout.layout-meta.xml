@@ -78,6 +78,10 @@
                 <field>MSRP__c</field>
             </layoutItems>
             <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Invoice_Cost__c</field>
+            </layoutItems>
+            <layoutItems>
                 <behavior>Readonly</behavior>
                 <field>Photo__c</field>
             </layoutItems>

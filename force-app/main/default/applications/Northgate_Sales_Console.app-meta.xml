@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides><actionName>View</actionName><content>Financing_Record_Page</content><formFactor>Large</formFactor><skipRecordTypeSelect>false</skipRecordTypeSelect><type>Flexipage</type><pageOrSobjectType>Financing__c</pageOrSobjectType></actionOverrides>
+    <actionOverrides><actionName>View</actionName><content>NG_Opportunity_Quote_Builder</content><formFactor>Large</formFactor><skipRecordTypeSelect>false</skipRecordTypeSelect><type>Flexipage</type><pageOrSobjectType>Opportunity</pageOrSobjectType></actionOverrides>
+    <actionOverrides><actionName>View</actionName><content>NG_Quote_Summary</content><formFactor>Large</formFactor><skipRecordTypeSelect>false</skipRecordTypeSelect><type>Flexipage</type><pageOrSobjectType>Quote</pageOrSobjectType></actionOverrides>
+    <description>Additive Sales Console, preserving existing quote and finance entry points. Existing security applies.</description>
+    <formFactors>Large</formFactors><isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled><isNavPersonalizationDisabled>false</isNavPersonalizationDisabled><isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled><isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>Northgate Sales Console</label><navType>Console</navType>
+    <tabs>standard-Lead</tabs><tabs>standard-Account</tabs><tabs>standard-Contact</tabs><tabs>standard-Opportunity</tabs><tabs>standard-Quote</tabs><tabs>Test_Drive__c</tabs><tabs>Trade_In__c</tabs><tabs>Financing__c</tabs><tabs>Delivery__c</tabs><tabs>Vehicle__c</tabs><tabs>standard-report</tabs><tabs>standard-Dashboard</tabs>
+    <uiType>Lightning</uiType><workspaceConfig><mappings><tab>standard-Lead</tab></mappings><mappings><tab>standard-Account</tab></mappings><mappings><tab>standard-Contact</tab></mappings><mappings><tab>standard-Opportunity</tab></mappings><mappings><tab>standard-Quote</tab></mappings><mappings><tab>Test_Drive__c</tab></mappings><mappings><tab>Trade_In__c</tab></mappings><mappings><tab>Financing__c</tab></mappings><mappings><tab>Delivery__c</tab></mappings><mappings><tab>Vehicle__c</tab></mappings><mappings><tab>standard-report</tab></mappings><mappings><tab>standard-Dashboard</tab></mappings></workspaceConfig>
+</CustomApplication>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Captured_At__c</fullName>
+    <description>Last successful publication time. Reports show this timestamp and capture age; metrics older than 24 hours are not displayed as current values.</description>
+    <label>Last Successful Capture</label>
+    <required>true</required>
+    <type>DateTime</type>
+</CustomField>

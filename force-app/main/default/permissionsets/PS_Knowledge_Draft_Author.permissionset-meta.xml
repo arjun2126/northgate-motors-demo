@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Article Body Read/Edit only for the existing authorized Knowledge administrator. No article CRUD, publication, external access or user administration grants.</description>
+    <fieldPermissions><editable>true</editable><field>Knowledge__kav.Body__c</field><readable>true</readable></fieldPermissions>
+    <label>Knowledge Draft Body Author</label>
+</PermissionSet>

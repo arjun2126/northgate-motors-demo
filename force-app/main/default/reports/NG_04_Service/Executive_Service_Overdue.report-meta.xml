@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>IF(CDF1:SUM &lt;= 24, Executive_Service_Metrics__c.Overdue_Count__c:SUM, NULL)</calculatedFormula>
+        <datatype>number</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Current Overdue Visits</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <columns><field>Executive_Service_Metrics__c$Name</field></columns>
+    <columns><aggregateTypes>Sum</aggregateTypes><field>Executive_Service_Metrics__c$Overdue_Count__c</field></columns>
+    <columns><field>Executive_Service_Metrics__c$Captured_At__c</field></columns>
+    <columns><aggregateTypes>Sum</aggregateTypes><field>CDF1</field></columns>
+    <customDetailFormulas>
+        <calculatedFormula>(NOW() - Executive_Service_Metrics__c.Captured_At__c) * 24</calculatedFormula>
+        <dataType>Double</dataType>
+        <developerName>CDF1</developerName>
+        <label>Capture Age Hours (over 24 is stale)</label>
+        <scale>2</scale>
+    </customDetailFormulas>
+    <description>Published dealership overdue count, not summary-record count. Capture time and age are visible; FORMULA1 is blank when capture age exceeds 24 hours.</description>
+    <filter>
+        <criteriaItems><column>Executive_Service_Metrics__c$Metric_Key__c</column><operator>equals</operator><value>DEALERSHIP</value></criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown><dateGranularity>None</dateGranularity><field>Executive_Service_Metrics__c$Metric_Key__c</field><sortOrder>Asc</sortOrder></groupingsDown>
+    <name>Executive Service Overdue</name>
+    <reportType>ExecutiveServiceMetrics__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter><dateColumn>Executive_Service_Metrics__c$Captured_At__c</dateColumn><interval>INTERVAL_CUSTOM</interval></timeFrameFilter>
+</Report>

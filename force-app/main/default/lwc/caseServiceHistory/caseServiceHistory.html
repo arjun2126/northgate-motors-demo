@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Service History" icon-name="standard:service_appointment">
+        <template if:true={hasVisits}>
+            <lightning-datatable key-field="id" data={visits} columns={columns} hide-checkbox-column></lightning-datatable>
+            <div class="slds-p-around_small slds-grid slds-grid_align-spread">
+                <lightning-button label="Previous" onclick={previousPage} disabled={firstPage}></lightning-button>
+                <lightning-button label="Next" onclick={nextPage} disabled={lastPage}></lightning-button>
+            </div>
+        </template>
+        <template if:false={hasVisits}>
+            <p class="slds-p-around_small">No accessible service history.</p>
+        </template>
+    </lightning-card>
+</template>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns><field>Contact$Name</field></columns><columns><field>Contact$Id</field></columns>
+    <crossFilters>
+        <criteriaItems><column>Status__c</column><operator>equals</operator><value>Completed</value></criteriaItems>
+        <operation>with</operation><primaryTableColumn>Contact$Id</primaryTableColumn><relatedTable>Service_Visit__c</relatedTable><relatedTableJoinColumn>Contact__c</relatedTableJoinColumn>
+    </crossFilters>
+    <crossFilters>
+        <criteriaItems><column>Repeat_Purchase_Open__c</column><operator>equals</operator><value>true</value></criteriaItems>
+        <operation>with</operation><primaryTableColumn>Contact$Id</primaryTableColumn><relatedTable>Quote</relatedTable><relatedTableJoinColumn>Buyer_Contact__c</relatedTableJoinColumn>
+    </crossFilters>
+    <description>Contacts with Completed service and an explicit Quote buyer link to an open Opportunity. Coexisting activity signal, not purchase intent or proof of chronology.</description>
+    <format>Tabular</format><name>Repeat Purchase Contact Signal</name><params><name>co</name><value>1</value></params><reportType>Batch3Contacts__c</reportType>
+    <scope>organization</scope><showDetails>true</showDetails><showGrandTotal>true</showGrandTotal><showSubTotals>false</showSubTotals>
+    <timeFrameFilter><dateColumn>Contact$CreatedDate</dateColumn><interval>INTERVAL_CUSTOM</interval></timeFrameFilter>
+</Report>

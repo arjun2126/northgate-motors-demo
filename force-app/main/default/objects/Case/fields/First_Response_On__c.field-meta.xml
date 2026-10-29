@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Response_On__c</fullName><description>Advisor-recorded first customer response time. This is not evidence of automatic message delivery.</description>
+    <label>First Response On</label><required>false</required><trackHistory>true</trackHistory><type>DateTime</type>
+</CustomField>

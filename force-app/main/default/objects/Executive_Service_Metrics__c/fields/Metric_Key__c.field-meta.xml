@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Metric_Key__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>The publisher upserts DEALERSHIP. Executive reports filter to that unique key.</description>
+    <externalId>true</externalId>
+    <label>Metric Key</label>
+    <length>80</length>
+    <required>true</required>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

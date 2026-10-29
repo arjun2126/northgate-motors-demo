@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CSI_Score_Total__c</fullName>
+    <description>Sum of nonblank CSI scores across all Service Visit statuses, matching Service_CSI_Proxy.</description>
+    <label>CSI Score Total</label>
+    <precision>18</precision>
+    <scale>2</scale>
+    <type>Number</type>
+</CustomField>

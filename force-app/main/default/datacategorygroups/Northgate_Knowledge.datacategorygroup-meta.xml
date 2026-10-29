@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory><label>Service</label><name>Service</name></dataCategory>
+        <dataCategory><label>Buying</label><name>Buying</name></dataCategory>
+        <dataCategory><label>Financing</label><name>Financing</name></dataCategory>
+        <dataCategory><label>Ownership</label><name>Ownership</name></dataCategory>
+        <dataCategory><label>Safety</label><name>Safety</name></dataCategory>
+        <label>All</label><name>All</name>
+    </dataCategory>
+    <description>Classification for ten internal Northgate article drafts. No category visibility or article sharing grants.</description>
+    <label>Northgate Knowledge</label>
+    <objectUsage><object>KnowledgeArticleVersion</object></objectUsage>
+</DataCategoryGroup>

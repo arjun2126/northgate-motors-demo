@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns><field>Loyalty_Member__c$Name</field></columns>
+    <columns><aggregateTypes>Sum</aggregateTypes><field>Loyalty_Member__c$Points_Balance__c</field></columns>
+    <columns><aggregateTypes>Sum</aggregateTypes><field>Loyalty_Member__c$Estimated_Liability_CAD__c</field></columns>
+    <description>All-date stored member balance and configured demonstration liability, grouped by tier/status. No historical ledger reconciliation or loyalty activation.</description>
+    <format>Summary</format>
+    <groupingsDown><dateGranularity>Day</dateGranularity><field>Loyalty_Member__c$Tier__c</field><sortOrder>Asc</sortOrder></groupingsDown>
+    <groupingsDown><dateGranularity>Day</dateGranularity><field>Loyalty_Member__c$Status__c</field><sortOrder>Asc</sortOrder></groupingsDown>
+    <name>Loyalty Tier Mix and Estimated Liability</name><params><name>co</name><value>1</value></params><reportType>Batch3LoyaltyMembers__c</reportType>
+    <scope>organization</scope><showDetails>true</showDetails><showGrandTotal>true</showGrandTotal><showSubTotals>true</showSubTotals>
+    <timeFrameFilter><dateColumn>Loyalty_Member__c$CreatedDate</dateColumn><interval>INTERVAL_CUSTOM</interval></timeFrameFilter>
+</Report>

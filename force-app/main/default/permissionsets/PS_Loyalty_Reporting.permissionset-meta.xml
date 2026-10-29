@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldPermissions><editable>false</editable><field>Loyalty_Member__c.Tier__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Loyalty_Member__c.Status__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Loyalty_Member__c.Points_Balance__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Loyalty_Member__c.Estimated_Liability_CAD__c</field><readable>true</readable></fieldPermissions>
+    <label>Loyalty Reporting</label>
+    <objectPermissions><allowCreate>false</allowCreate><allowDelete>false</allowDelete><allowEdit>false</allowEdit><allowRead>true</allowRead><modifyAllRecords>false</modifyAllRecords><object>Loyalty_Member__c</object><viewAllRecords>false</viewAllRecords></objectPermissions>
+</PermissionSet>

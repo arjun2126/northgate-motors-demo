@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns><field>Service_Visit__c$Name</field></columns><columns><aggregateTypes>Average</aggregateTypes><field>Service_Visit__c$CSI_Score__c</field></columns>
+    <description>Recorded scores only. Zero responses means N/A, not zero satisfaction; inspect response count before interpreting average.</description>
+    <filter><criteriaItems><column>Service_Visit__c$CSI_Score__c</column><operator>notEqual</operator><value></value></criteriaItems><language>en_US</language></filter>
+    <format>Summary</format><groupingsDown><dateGranularity>Day</dateGranularity><field>Service_Visit__c$Rooftop__c</field><sortOrder>Asc</sortOrder></groupingsDown>
+    <name>Recorded Service CSI</name><params><name>co</name><value>1</value></params><reportType>ServiceVisitList__c</reportType>
+    <scope>organization</scope><showDetails>true</showDetails><showGrandTotal>true</showGrandTotal><showSubTotals>true</showSubTotals>
+    <timeFrameFilter><dateColumn>Service_Visit__c$Scheduled_Start__c</dateColumn><interval>INTERVAL_CUSTOM</interval></timeFrameFilter>
+</Report>

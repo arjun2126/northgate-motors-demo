@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Campaign</baseObject><category>campaigns</category><deployed>true</deployed>
+    <description>Managed campaign membership audit; eligibility is a snapshot, not authority to send.</description>
+    <join><outerJoin>false</outerJoin><relationship>CampaignMembers</relationship></join><label>Batch 3 Managed Campaign Members</label>
+    <sections>
+        <columns><checkedByDefault>true</checkedByDefault><field>Name</field><table>Campaign</table></columns>
+        <columns><checkedByDefault>true</checkedByDefault><field>Nurture_Managed__c</field><table>Campaign</table></columns>
+        <columns><checkedByDefault>true</checkedByDefault><field>Consent_Purpose__c</field><table>Campaign</table></columns>
+        <columns><checkedByDefault>true</checkedByDefault><field>Consent_Channel__c</field><table>Campaign</table></columns>
+        <masterLabel>Campaign Policy</masterLabel>
+    </sections>
+    <sections>
+        <columns><checkedByDefault>true</checkedByDefault><field>Id</field><table>Campaign.CampaignMembers</table></columns>
+        <columns><checkedByDefault>true</checkedByDefault><field>Status</field><table>Campaign.CampaignMembers</table></columns>
+        <columns><checkedByDefault>true</checkedByDefault><field>Consent_Managed__c</field><table>Campaign.CampaignMembers</table></columns>
+        <columns><checkedByDefault>true</checkedByDefault><field>Nurture_Eligible__c</field><table>Campaign.CampaignMembers</table></columns>
+        <masterLabel>Membership Snapshot</masterLabel>
+    </sections>
+</ReportType>

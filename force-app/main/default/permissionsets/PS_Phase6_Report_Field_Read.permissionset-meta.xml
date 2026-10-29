@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Read-only access to six fields required by Phase 6 reports for an already authorized reporting user. No object CRUD, record visibility, audience-preview or write grants.</description>
+    <fieldPermissions><editable>false</editable><field>Quote.Repeat_Purchase_Open__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Campaign.Consent_Purpose__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Campaign.Consent_Channel__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>CampaignMember.Consent_Managed__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>CampaignMember.Nurture_Eligible__c</field><readable>true</readable></fieldPermissions>
+    <fieldPermissions><editable>false</editable><field>Loyalty_Member__c.Estimated_Liability_CAD__c</field><readable>true</readable></fieldPermissions>
+    <label>Phase 6 Report Field Read</label>
+</PermissionSet>

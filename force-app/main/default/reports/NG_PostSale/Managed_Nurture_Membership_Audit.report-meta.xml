@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns><field>Campaign$Name</field></columns><columns><field>Campaign$Consent_Purpose__c</field></columns><columns><field>Campaign$Consent_Channel__c</field></columns>
+    <columns><field>Campaign.CampaignMembers$Id</field></columns><columns><field>Campaign.CampaignMembers$Status</field></columns><columns><field>Campaign.CampaignMembers$Nurture_Eligible__c</field></columns>
+    <description>Managed retained memberships including suppressed rows. Snapshot eligibility is not authority to send; use fresh permission-controlled audience preview. No messages are sent.</description>
+    <filter><criteriaItems><column>Campaign.CampaignMembers$Consent_Managed__c</column><operator>equals</operator><value>true</value></criteriaItems><language>en_US</language></filter>
+    <format>Tabular</format><name>Managed Nurture Membership Audit</name><params><name>co</name><value>1</value></params><reportType>Batch3CampaignMembers__c</reportType>
+    <scope>organization</scope><showDetails>true</showDetails><showGrandTotal>true</showGrandTotal><showSubTotals>false</showSubTotals>
+</Report>

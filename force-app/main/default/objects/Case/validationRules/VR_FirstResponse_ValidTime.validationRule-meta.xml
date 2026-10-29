@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_FirstResponse_ValidTime</fullName><active>true</active>
+    <description>New advisor response evidence cannot be in the future or precede Case creation.</description>
+    <errorConditionFormula>AND(ISCHANGED(First_Response_On__c), NOT(ISBLANK(First_Response_On__c)), OR(First_Response_On__c &gt; NOW(), AND(NOT(ISNEW()), First_Response_On__c &lt; CreatedDate)))</errorConditionFormula>
+    <errorDisplayField>First_Response_On__c</errorDisplayField><errorMessage>First response must be between Case creation and the current time.</errorMessage>
+</ValidationRule>
