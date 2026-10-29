@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns><field>Trade_In__c$Name</field></columns><columns><field>Trade_In__c$Trade_VIN__c</field></columns>
+    <description>Six intentionally invalid legacy Trade-In VINs. Together with 24 SEED98 Contacts, P5-07 requires exactly 30 fixtures.</description>
+    <filter><criteriaItems><column>Trade_In__c$Seed_Tag__c</column><operator>startsWith</operator><value>SEED-98-VIN-</value></criteriaItems></filter>
+    <format>Summary</format><groupingsDown><dateGranularity>Day</dateGranularity><field>Trade_In__c$Seed_Tag__c</field><sortOrder>Asc</sortOrder></groupingsDown>
+    <name>SEED98 Trade Ins</name><reportType>TradeInList__c</reportType><scope>organization</scope>
+    <showDetails>true</showDetails><showGrandTotal>true</showGrandTotal><showSubTotals>true</showSubTotals>
+    <timeFrameFilter><dateColumn>Trade_In__c$CreatedDate</dateColumn><interval>INTERVAL_CUSTOM</interval></timeFrameFilter>
+</Report>

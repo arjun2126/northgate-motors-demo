@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Vehicle__c$Name</field>
+    </columns>
+    <columns>
+        <field>Vehicle__c$VIN__c</field>
+    </columns>
+    <columns>
+        <field>Vehicle__c$Acquisition_Date__c</field>
+    </columns>
+    <columns>
+        <field>Vehicle__c$List_Price__c</field>
+    </columns>
+    <columns>
+        <field>Vehicle__c$Rooftop__c</field>
+    </columns>
+    <description>P5-09 / Plan §9b #18: BAD-06 aged inventory older than 120 days. Drift alarm: expected 12 from canonical SEED-06.</description>
+    <filter>
+        <criteriaItems>
+            <column>Vehicle__c$Acquisition_Date__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessOrEqual</operator>
+            <value>LAST_N_DAYS:120</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Vehicle__c$Status__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Aged Inventory</name>
+    <params><name>co</name><value>1</value></params>
+    <reportType>VehicleList__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Vehicle__c$Acquisition_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

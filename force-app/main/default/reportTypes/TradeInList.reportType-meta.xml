@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Trade_In__c</baseObject><category>other</category><deployed>true</deployed>
+    <description>Trade-In legacy-quality fixtures and VIN review.</description><label>Trade-In List</label>
+    <sections>
+        <columns><checkedByDefault>true</checkedByDefault><field>Name</field><table>Trade_In__c</table></columns>
+        <columns><checkedByDefault>true</checkedByDefault><field>Seed_Tag__c</field><table>Trade_In__c</table></columns>
+        <columns><checkedByDefault>true</checkedByDefault><field>Trade_VIN__c</field><table>Trade_In__c</table></columns>
+        <columns><checkedByDefault>false</checkedByDefault><field>CreatedDate</field><table>Trade_In__c</table></columns>
+        <masterLabel>Trade-In</masterLabel>
+    </sections>
+</ReportType>

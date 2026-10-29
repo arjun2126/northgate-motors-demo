@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Service_Visit__c</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Service visits with type, status, schedule, rooftop, vehicle, contact, and staff associations for SLA and overdue reports.</description>
+    <label>Service Visit List</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Service_Visit__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Service_Type__c</field>
+            <table>Service_Visit__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Status__c</field>
+            <table>Service_Visit__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Scheduled_Start__c</field>
+            <table>Service_Visit__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Duration_Minutes__c</field>
+            <table>Service_Visit__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Rooftop__c</field>
+            <table>Service_Visit__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Vehicle__c</field>
+            <table>Service_Visit__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Contact__c</field>
+            <table>Service_Visit__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Advisor_Staff__c</field>
+            <table>Service_Visit__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Technician_Staff__c</field>
+            <table>Service_Visit__c</table>
+        </columns>
+        <columns><checkedByDefault>true</checkedByDefault><field>CSI_Score__c</field><table>Service_Visit__c</table></columns>
+        <columns><checkedByDefault>true</checkedByDefault><field>Is_Overdue__c</field><table>Service_Visit__c</table></columns>
+        <masterLabel>Service Visit Details</masterLabel>
+    </sections>
+</ReportType>

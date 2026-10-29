@@ -1,10 +1,39 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Financing_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Financing__c</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>NG Opportunity Quote Builder (UI-008).</comment>
+        <content>NG_Opportunity_Quote_Builder</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>NG Quote Summary (UI-009).</comment>
+        <content>NG_Quote_Summary</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Quote</pageOrSobjectType>
+    </actionOverrides>
     <defaultLandingTab>standard-home</defaultLandingTab>
     <description>Sales app: leads to delivery, one tab list.</description>
     <formFactors>Large</formFactors>
     <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
     <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
     <label>Northgate Sales</label>
     <navType>Standard</navType>
     <tabs>standard-home</tabs>
@@ -15,13 +44,15 @@
     <tabs>standard-Quote</tabs>
     <tabs>Test_Drive__c</tabs>
     <tabs>Trade_In__c</tabs>
+    <tabs>Delivery__c</tabs>
     <tabs>Vehicle__c</tabs>
     <tabs>Vehicle_Model__c</tabs>
     <tabs>Rooftop__c</tabs>
     <tabs>Loyalty_Member__c</tabs>
     <tabs>Loyalty_Transaction__c</tabs>
     <tabs>Consent__c</tabs>
-    <tabs>standard-Report</tabs>
+    <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
+    <tabs>Financing__c</tabs>
     <uiType>Lightning</uiType>
 </CustomApplication>

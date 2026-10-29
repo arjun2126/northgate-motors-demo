@@ -36,6 +36,10 @@ private class DiscountApprovalTest {
             new PermissionSetAssignment(AssigneeId = managerUser.Id, PermissionSetId = psIdByName.get('PS_Sales_Manager')),
             new PermissionSetAssignment(AssigneeId = vpUser.Id, PermissionSetId = psIdByName.get('PS_Sales_Manager'))
         };
+
+        Id salesProfileId = [SELECT Id FROM Profile WHERE Name = 'NG_Sales' LIMIT 1].Id;
+        User outsider = user('outsider.approval', 'outsapp', 'Sales_Rep', roleIdByName.get('Sales_Rep'), salesProfileId);
+        insert outsider;
     }
 
     private static User user(String suffix, String alias, String lastName, Id roleId, Id profileId) {
@@ -108,12 +112,16 @@ private class DiscountApprovalTest {
         return [SELECT Id FROM User WHERE LastName = 'vp.approval' LIMIT 1];
     }
 
+    private static User outsiderUser() {
+        return [SELECT Id FROM User WHERE LastName = 'outsider.approval' LIMIT 1];
+    }
+
     private static User liveRep() {
-        return [SELECT Id FROM User WHERE Username = 'ngrep@northgate.demo' AND IsActive = true LIMIT 1];
+        return repUser();
     }
 
     private static User liveVp() {
-        return [SELECT Id FROM User WHERE Username = 'ngpersona@northgate.demo' AND IsActive = true LIMIT 1];
+        return vpUser();
     }
 
     @isTest
@@ -153,7 +161,6 @@ private class DiscountApprovalTest {
     static void livePersona_controllerDerivesVpFor12() {
         List<ProcessDefinition> defs = [SELECT State FROM ProcessDefinition WHERE DeveloperName = 'VP_Discount_Approval'];
         System.assert(!defs.isEmpty() && defs[0].State == 'Active', 'Activate VP_Discount_Approval before this test runs.');
-        Id vpId = liveVp().Id;
         Id stdPb = Test.getStandardPricebookId();
         Opportunity opp = makeOpportunity(12);
         opp.Approval_Status__c = 'Pending';
@@ -167,7 +174,12 @@ private class DiscountApprovalTest {
         }
         List<Id> actors = firstStepActors(instanceId);
         System.assertEquals(1, actors.size(), 'controller-derived submit has one actor');
-        System.assertEquals(vpId, actors[0], 'controller derived the live VP for >10%');
+        Id expectedVpId = [
+            SELECT Id FROM User
+            WHERE UserRole.DeveloperName = 'VP_Sales' AND IsActive = true
+            ORDER BY CreatedDate, Id LIMIT 1
+        ].Id;
+        System.assertEquals(expectedVpId, actors[0], 'controller selects the oldest active VP deterministically');
     }
 
     private static List<Id> firstStepActors(Id processInstanceId) {
@@ -261,6 +273,42 @@ private class DiscountApprovalTest {
 
         Opportunity finalOpp = [SELECT Approval_Status__c FROM Opportunity WHERE Id = :opportunityId];
         System.assertEquals('Rejected', finalOpp.Approval_Status__c, 'rejection captured on the opportunity');
+    }
+
+    @isTest
+    static void unauthorizedUser_cannotApproveAssignedStep() {
+        List<ProcessDefinition> defs = [SELECT State FROM ProcessDefinition WHERE DeveloperName = 'VP_Discount_Approval'];
+        System.assert(!defs.isEmpty() && defs[0].State == 'Active', 'Activate VP_Discount_Approval before this test runs.');
+
+        Id vpId = vpUser().Id;
+        Id opportunityId;
+
+        System.runAs(repUser()) {
+            Opportunity opp = makeOpportunity(12);
+            insert opp;
+            opportunityId = opp.Id;
+            submitForApproval(opp.Id, vpId);
+        }
+
+        Id processInstanceId = [SELECT Id FROM ProcessInstance WHERE TargetObjectId = :opportunityId ORDER BY CreatedDate DESC LIMIT 1].Id;
+        Id workitemId = [SELECT Id FROM ProcessInstanceWorkitem WHERE ProcessInstanceId = :processInstanceId LIMIT 1].Id;
+        Boolean rejected = false;
+        System.runAs(outsiderUser()) {
+            Approval.ProcessWorkitemRequest request = new Approval.ProcessWorkitemRequest();
+            request.setAction('Approve');
+            request.setWorkitemId(workitemId);
+            try {
+                Approval.ProcessResult result = Approval.process(request);
+                rejected = !result.isSuccess();
+            } catch (Exception e) {
+                rejected = true;
+            }
+        }
+        System.assert(rejected, 'a non-approver must not approve the assigned VP step');
+        List<Id> actors = firstStepActors(processInstanceId);
+        System.assertEquals(vpId, actors[0], 'workitem stays assigned to the VP');
+        Opportunity finalOpp = [SELECT Approval_Status__c FROM Opportunity WHERE Id = :opportunityId];
+        System.assertEquals('Pending', finalOpp.Approval_Status__c, 'unauthorized approve leaves status pending');
     }
 
     @isTest

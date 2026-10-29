@@ -90,8 +90,8 @@
     <dashboardType>SpecifiedUser</dashboardType>
     <description>P4-10 Deal Desk. Avg days to fund via Average of Days_To_Fund__c. 3 other metrics via App Builder. Fixed running user.</description>
     <isGridLayout>true</isGridLayout>
-    <owner>arjun.ngdev@northgate.demo</owner>
-    <runningUser>arjun.ngdev@northgate.demo</runningUser>
+    <owner>arjun.ngdemo@northgate.demo</owner>
+    <runningUser>arjun.ngdemo@northgate.demo</runningUser>
     <textColor>#000000</textColor>
     <title>DM_DealDesk</title>
     <titleColor>#FFFFFF</titleColor>

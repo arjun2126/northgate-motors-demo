@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Loyalty_Member__c$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Loyalty_Member__c$Points_Balance__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Loyalty_Member__c$Lifetime_Points_Earned__c</field>
+    </columns>
+    <columns>
+        <field>Loyalty_Member__c$Member_Number__c</field>
+    </columns>
+    <description>Loyalty member counts and point balances grouped by tier and status. Results reflect the selected join-date range and the viewer's record access. Canonical seed distribution is verified separately.</description>
+    <filter>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Loyalty_Member__c$Tier__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Loyalty_Member__c$Status__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Loyalty Tier Distribution</name>
+    <params><name>co</name><value>1</value></params>
+    <reportType>LoyaltyMemberList__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Loyalty_Member__c$Join_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

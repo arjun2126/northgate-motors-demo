@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Case</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>P5-16 Service + Case. Cases with their Service Visits (outer join). Base is Case because CRT joins run from the parent to child relationships; Service_Visit__c.Case__c is the lookup.</description>
+    <join>
+        <outerJoin>true</outerJoin>
+        <relationship>ServiceVisitCase__r</relationship>
+    </join>
+    <label>Service + Case</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>CaseNumber</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Subject</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Status</field>
+            <table>Case</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Priority</field>
+            <table>Case</table>
+        </columns>
+        <masterLabel>Case Details</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Case.ServiceVisitCase__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Service_Type__c</field>
+            <table>Case.ServiceVisitCase__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Status__c</field>
+            <table>Case.ServiceVisitCase__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Scheduled_Start__c</field>
+            <table>Case.ServiceVisitCase__r</table>
+        </columns>
+        <masterLabel>Service Visits</masterLabel>
+    </sections>
+</ReportType>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reporting_Make__c</fullName>
+    <formula>TEXT(Vehicle_Model__r.Make__c)</formula>
+    <label>Reporting Make</label><type>Text</type>
+</CustomField>

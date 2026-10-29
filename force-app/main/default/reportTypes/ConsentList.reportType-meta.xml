@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Consent__c</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Consent records with purpose, channel, status, and dates for revocation and campaign-membership audits.</description>
+    <label>Consent List</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Consent__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Contact__c</field>
+            <table>Consent__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Purpose__c</field>
+            <table>Consent__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Channel__c</field>
+            <table>Consent__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Status__c</field>
+            <table>Consent__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Granted_On__c</field>
+            <table>Consent__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Revoked_On__c</field>
+            <table>Consent__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Capture_Source__c</field>
+            <table>Consent__c</table>
+        </columns>
+        <masterLabel>Consent Details</masterLabel>
+    </sections>
+</ReportType>

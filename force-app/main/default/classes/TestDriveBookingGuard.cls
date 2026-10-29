@@ -1,6 +1,19 @@
 public with sharing class TestDriveBookingGuard {
     private static final Set<String> BLOCKING_STATUSES = new Set<String>{ 'Requested', 'Scheduled' };
 
+    public static void validateSchedule(List<Test_Drive__c> scope, Map<Id, Test_Drive__c> oldById) {
+        Datetime now = Datetime.now();
+        for (Test_Drive__c drive : scope) {
+            Test_Drive__c previous = oldById == null ? null : oldById.get(drive.Id);
+            Boolean scheduling = previous == null
+                || drive.Scheduled_Start__c != previous.Scheduled_Start__c
+                || (drive.Status__c != previous.Status__c && isBlocking(drive.Status__c));
+            if (scheduling && drive.Scheduled_Start__c != null && drive.Scheduled_Start__c <= now) {
+                drive.addError('Scheduled_Start__c', 'Choose a future start time when creating, rescheduling, or reopening a test drive.');
+            }
+        }
+    }
+
     public static void guard(List<Test_Drive__c> scope) {
         if (scope == null || scope.isEmpty()) {
             return;

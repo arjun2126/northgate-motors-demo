@@ -90,6 +90,18 @@ public with sharing class QuoteBuilderController {
             throw new IllegalArgumentException('At least one product line is required.');
         }
 
+        Integer existingQuoteCount = [
+            SELECT COUNT()
+            FROM Quote
+            WHERE OpportunityId = :opportunityId
+            WITH USER_MODE
+        ];
+        if (existingQuoteCount > 0) {
+            throw new IllegalArgumentException(
+                'This Opportunity already has a quote. Only one quote is allowed per Opportunity.'
+            );
+        }
+
         Opportunity opp = [
             SELECT Id, Name, AccountId, Vehicle__r.Vehicle_Model__r.Name, Vehicle__r.Vehicle_Model__r.Trim__c,
                 Vehicle__r.Inventory_Age_Days__c
@@ -183,12 +195,12 @@ public with sharing class QuoteBuilderController {
             quote.Adjusted_Subtotal__c = result.adjustedSubtotal;
             quote.Rule_Applied_Count__c = result.rulesApplied;
             updateUserMode(quote);
-        }
 
-        Opportunity stamp = new Opportunity(Id = opp.Id);
-        stamp.Discount_Percent__c = result.netDiscountPercent;
-        stamp.Approval_Status__c = result.netDiscountPercent > MANAGER_APPROVAL_THRESHOLD ? 'Pending' : 'Not_Required';
-        updateUserMode(stamp);
+            Opportunity stamp = new Opportunity(Id = opp.Id);
+            stamp.Discount_Percent__c = result.netDiscountPercent;
+            stamp.Approval_Status__c = result.netDiscountPercent > MANAGER_APPROVAL_THRESHOLD ? 'Pending' : 'Not_Required';
+            updateUserMode(stamp);
+        }
 
         return wrapper;
     }

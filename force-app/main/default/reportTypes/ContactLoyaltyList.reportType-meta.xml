@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Contact</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>P5-16 Contact + Loyalty. Contacts with their Loyalty Members (outer join: contacts without membership still appear).</description>
+    <join>
+        <outerJoin>true</outerJoin>
+        <relationship>LoyaltyMemberContact__r</relationship>
+    </join>
+    <label>Contact + Loyalty</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Email</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Phone</field>
+            <table>Contact</table>
+        </columns>
+        <masterLabel>Contact Details</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Contact.LoyaltyMemberContact__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Tier__c</field>
+            <table>Contact.LoyaltyMemberContact__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Status__c</field>
+            <table>Contact.LoyaltyMemberContact__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Points_Balance__c</field>
+            <table>Contact.LoyaltyMemberContact__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Member_Number__c</field>
+            <table>Contact.LoyaltyMemberContact__r</table>
+        </columns>
+        <masterLabel>Loyalty Members</masterLabel>
+    </sections>
+</ReportType>

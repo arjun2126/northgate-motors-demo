@@ -3,5 +3,6 @@
     <description>PSG Manager: wraps PS_Sales_Manager (DATA_MODEL 6.2). Assigned per persona.</description>
     <label>PSG Manager</label>
     <permissionSets>PS_Sales_Manager</permissionSets>
+    <permissionSets>PS_Management_Reports</permissionSets>
     <status>Updated</status>
 </PermissionSetGroup>

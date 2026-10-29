@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>68.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Test Drive Vehicle Picker</masterLabel>
+    <description>User-context vehicle selection for the existing Test Drive booking screen.</description>
+    <targets><target>lightning__FlowScreen</target></targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="objectApiName" type="String" label="Source Object" default="Test_Drive__c" role="inputOnly"/>
+            <property name="fieldApiName" type="String" label="Lookup Field" default="Vehicle__c" role="inputOnly"/>
+            <property name="label" type="String" label="Label" default="Vehicle" role="inputOnly"/>
+            <property name="required" type="Boolean" label="Required" default="true" role="inputOnly"/>
+            <property name="recordId" type="String" label="Selected Vehicle ID"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

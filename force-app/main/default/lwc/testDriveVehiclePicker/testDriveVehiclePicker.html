@@ -1,0 +1,19 @@
+<template>
+    <lightning-input type="toggle" label="Available vehicles only" checked={availableOnly}
+        onchange={handleAvailabilityChange} class="slds-m-bottom_small"></lightning-input>
+    <lightning-record-picker object-api-name="Vehicle__c" label={displayLabel} value={recordId}
+        required={isRequired} disabled={disabled} filter={vehicleFilter}
+        matching-info={matchingInfo} display-info={displayInfo}
+        placeholder="Search make, model, year, VIN, or stock number"
+        onchange={handleChange} onerror={handleError}></lightning-record-picker>
+    <p class="slds-text-body_small slds-text-color_weak slds-m-top_x-small">
+        Select a result to confirm the vehicle. Appointment availability is checked when you book.
+    </p>
+    <div lwc:if={errorMessage} role="alert" class="slds-text-color_error slds-m-top_small">{errorMessage}</div>
+    <section lwc:if={hasSelection} aria-label="Selected vehicle" class="slds-box slds-m-top_small">
+        <h3 class="slds-text-title_bold">Selected vehicle</h3>
+        <p>{selection.description}</p>
+        <p>Status: {selection.status}</p>
+        <p>VIN: {selection.vin}</p>
+    </section>
+</template>

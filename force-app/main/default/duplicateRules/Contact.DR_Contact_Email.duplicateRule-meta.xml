@@ -7,7 +7,7 @@
     <duplicateRuleFilter xsi:nil="true"/>
     <duplicateRuleMatchRules>
         <matchRuleSObjectType>Contact</matchRuleSObjectType>
-        <matchingRule>Contact_Email_LastName</matchingRule>
+        <matchingRule>NG_Contact_Email_LastName</matchingRule>
         <objectMapping xsi:nil="true"/>
     </duplicateRuleMatchRules>
     <isActive>true</isActive>

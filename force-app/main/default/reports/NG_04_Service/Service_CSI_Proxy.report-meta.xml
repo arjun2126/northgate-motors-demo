@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns><field>Service_Visit__c$Name</field></columns>
+    <columns><aggregateTypes>Average</aggregateTypes><field>Service_Visit__c$CSI_Score__c</field></columns>
+    <description>CSI proxy: mean recorded service-visit CSI score. Missing scores are excluded; this is not a licensed survey product.</description>
+    <filter><criteriaItems><column>Service_Visit__c$CSI_Score__c</column><operator>notEqual</operator><value></value></criteriaItems></filter>
+    <format>Summary</format>
+    <groupingsDown><dateGranularity>Day</dateGranularity><field>Service_Visit__c$Rooftop__c</field><sortOrder>Asc</sortOrder></groupingsDown>
+    <name>Service CSI Proxy</name><reportType>ServiceVisitList__c</reportType><scope>organization</scope>
+    <showDetails>true</showDetails><showGrandTotal>true</showGrandTotal><showSubTotals>true</showSubTotals>
+    <timeFrameFilter><dateColumn>Service_Visit__c$Scheduled_Start__c</dateColumn><interval>INTERVAL_CUSTOM</interval></timeFrameFilter>
+</Report>

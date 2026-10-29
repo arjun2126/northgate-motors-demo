@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Vehicle__c</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>P5-16 Vehicle + Test Drive. Vehicles with their Test Drives (outer join: vehicles without drives still appear).</description>
+    <join>
+        <outerJoin>true</outerJoin>
+        <relationship>TestDriveVehicle__r</relationship>
+    </join>
+    <label>Vehicle + Test Drive</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Vehicle__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>VIN__c</field>
+            <table>Vehicle__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Status__c</field>
+            <table>Vehicle__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>List_Price__c</field>
+            <table>Vehicle__c</table>
+        </columns>
+        <masterLabel>Vehicle Details</masterLabel>
+    </sections>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Vehicle__c.TestDriveVehicle__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Outcome__c</field>
+            <table>Vehicle__c.TestDriveVehicle__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Duration_Minutes__c</field>
+            <table>Vehicle__c.TestDriveVehicle__r</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Customer_Score__c</field>
+            <table>Vehicle__c.TestDriveVehicle__r</table>
+        </columns>
+        <masterLabel>Test Drives</masterLabel>
+    </sections>
+</ReportType>

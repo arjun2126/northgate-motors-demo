@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dashboard xmlns="http://soap.sforce.com/2006/04/metadata">
+    <backgroundEndColor>#FFFFFF</backgroundEndColor><backgroundFadeDirection>Diagonal</backgroundFadeDirection><backgroundStartColor>#FFFFFF</backgroundStartColor>
+    <dashboardGridLayout>
+        <dashboardGridComponents><colSpan>6</colSpan><columnIndex>0</columnIndex><dashboardComponent><autoselectColumnsFromReport>false</autoselectColumnsFromReport><chartSummary><aggregate>Sum</aggregate><column>AMOUNT</column></chartSummary><componentType>Metric</componentType><header>Pipeline Amount</header><indicatorHighColor>#00716B</indicatorHighColor><indicatorLowColor>#C23934</indicatorLowColor><indicatorMiddleColor>#CA8501</indicatorMiddleColor><report>NG_01_Pipeline/Pipeline_by_Stage</report></dashboardComponent><rowIndex>0</rowIndex><rowSpan>3</rowSpan></dashboardGridComponents>
+        <dashboardGridComponents><colSpan>6</colSpan><columnIndex>6</columnIndex><dashboardComponent><autoselectColumnsFromReport>false</autoselectColumnsFromReport><chartSummary><column>RowCount</column></chartSummary><componentType>Metric</componentType><header>Open Opportunities by Sales Staff</header><indicatorHighColor>#00716B</indicatorHighColor><indicatorLowColor>#C23934</indicatorLowColor><indicatorMiddleColor>#CA8501</indicatorMiddleColor><report>NG_01_Pipeline/Open_Opps_by_Sales_Staff</report></dashboardComponent><rowIndex>0</rowIndex><rowSpan>3</rowSpan></dashboardGridComponents>
+        <numberOfColumns>12</numberOfColumns><rowHeight>100</rowHeight>
+    </dashboardGridLayout>
+    <dashboardType>SpecifiedUser</dashboardType><description>P5-15 fixed-user sales operations. Management folder access requires explicit owner configuration.</description><isGridLayout>true</isGridLayout>
+    <runningUser>arjun.ngdemo@northgate.demo</runningUser><textColor>#000000</textColor><title>DM_Sales_Operations</title><titleColor>#000000</titleColor><titleSize>12</titleSize>
+</Dashboard>

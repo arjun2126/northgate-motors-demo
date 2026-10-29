@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact$Name</field>
+    </columns>
+    <columns>
+        <field>Contact$Seed_Tag__c</field>
+    </columns>
+
+    <description>BAD-04: fixture-specific view of the 6 canonical revoked-consent CampaignMembers. Preserves all 28 underlying memberships.</description>
+    <filter>
+        <criteriaItems>
+            <column>Contact$Seed_Tag__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>SEED-07-001,SEED-07-002,SEED-07-003,SEED-07-004,SEED-07-005,SEED-07-006</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Revoked Consent Campaign Members</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactWithCampaignMembers__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+</Report>

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <PermissionSetGroup xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>PSG Rep: wraps PS_Sales_Rep (DATA_MODEL 6.2). Assigned per persona.</description>
+    <description>PSG Rep: sales rep object access and Lead conversion. Assigned per persona.</description>
     <label>PSG Rep</label>
+    <permissionSets>PS_Lead_Conversion</permissionSets>
     <permissionSets>PS_Sales_Rep</permissionSets>
+    <permissionSets>PS_Test_Drive_Booking</permissionSets>
     <status>Updated</status>
 </PermissionSetGroup>

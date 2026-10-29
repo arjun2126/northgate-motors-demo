@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Financing_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Financing__c</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>NG Opportunity Quote Builder (UI-008).</comment>
+        <content>NG_Opportunity_Quote_Builder</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Opportunity</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>NG Quote Summary (UI-009).</comment>
+        <content>NG_Quote_Summary</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Quote</pageOrSobjectType>
+    </actionOverrides>
     <defaultLandingTab>standard-home</defaultLandingTab>
     <description>Sales app: leads to delivery, one tab list.</description>
     <formFactors>Large</formFactors>
@@ -28,16 +55,4 @@
     <tabs>standard-Dashboard</tabs>
     <tabs>Financing__c</tabs>
     <uiType>Lightning</uiType>
-    <recordPageAssignments>
-        <name>Financing_Record_Page</name>
-        <object>Financing__c</object>
-    </recordPageAssignments>
-    <recordPageAssignments>
-        <name>Delivery_Record_Page</name>
-        <object>Delivery__c</object>
-    </recordPageAssignments>
-    <recordPageAssignments>
-        <name>Loyalty_Member_Record_Page</name>
-        <object>Loyalty_Member__c</object>
-    </recordPageAssignments>
 </CustomApplication>

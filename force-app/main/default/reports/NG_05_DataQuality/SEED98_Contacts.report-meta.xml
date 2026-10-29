@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns><field>LAST_NAME</field></columns><columns><field>PHONE1</field></columns><columns><field>EMAIL</field></columns>
+    <description>24 intentional legacy Contact fixtures: 10 phone, 8 postal, 6 case-insensitive duplicate emails. Combine with SEED98 Trade Ins for the required 30-row boundary; verify actual defects, not tags alone.</description>
+    <filter><criteriaItems><column>Contact.Seed_Tag__c</column><operator>startsWith</operator><value>SEED-98-</value></criteriaItems></filter>
+    <format>Summary</format><groupingsDown><dateGranularity>Day</dateGranularity><field>Contact.Seed_Tag__c</field><sortOrder>Asc</sortOrder></groupingsDown>
+    <name>SEED98 Contacts</name><reportType>ContactList</reportType><scope>organization</scope>
+    <showDetails>true</showDetails><showGrandTotal>true</showGrandTotal><showSubTotals>true</showSubTotals>
+    <timeFrameFilter><dateColumn>CREATED_DATE</dateColumn><interval>INTERVAL_CUSTOM</interval></timeFrameFilter>
+</Report>

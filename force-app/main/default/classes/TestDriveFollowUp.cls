@@ -7,7 +7,7 @@ public with sharing class TestDriveFollowUp {
         for (Test_Drive__c td : scope) {
             tasks.add(buildTask(td, 'Created'));
         }
-        insert tasks;
+        insert as system tasks;
         sendConfirmation(scope);
     }
 
@@ -30,7 +30,7 @@ public with sharing class TestDriveFollowUp {
             }
         }
         if (!tasks.isEmpty()) {
-            insert tasks;
+            insert as system tasks;
         }
         if (!toConfirm.isEmpty()) {
             sendConfirmation(toConfirm);
@@ -60,7 +60,17 @@ public with sharing class TestDriveFollowUp {
         if (contactIds.isEmpty()) {
             return;
         }
-        Map<Id, Contact> contacts = new Map<Id, Contact>([SELECT Id, Email, FirstName, LastName FROM Contact WHERE Id IN :contactIds]);
+        // Authorize record access before reading notification-only fields in system mode.
+        Set<Id> readableContactIds = new Map<Id, Contact>([
+            SELECT Id FROM Contact WHERE Id IN :contactIds WITH USER_MODE
+        ]).keySet();
+        if (readableContactIds.isEmpty()) {
+            return;
+        }
+        Map<Id, Contact> contacts = new Map<Id, Contact>([
+            SELECT Id, Email, FirstName, LastName
+            FROM Contact WHERE Id IN :readableContactIds WITH SYSTEM_MODE
+        ]);
         List<Messaging.SingleEmailMessage> mails = new List<Messaging.SingleEmailMessage>();
         for (Test_Drive__c td : drives) {
             if (td.Contact__c == null) {

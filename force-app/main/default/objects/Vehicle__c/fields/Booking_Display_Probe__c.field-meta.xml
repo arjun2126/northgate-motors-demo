@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booking_Display_Probe__c</fullName>
+    <description>Temporary diagnostic field. Same text-only formula as Booking_Display__c, with no consumers in layouts, list views, permission sets, reports, LWC or flows. Its only purpose is to test whether a newly created cross-object text formula is registered in the runtime schema. Delete once the diagnostic concludes.</description>
+    <formula>TRIM(TEXT(Year__c) &amp; " " &amp; Vehicle_Model__r.Model__c &amp; " | Stock " &amp; Name)</formula>
+    <formulaTreatBlanksAs>BlankAsBlank</formulaTreatBlanksAs>
+    <label>Booking Description Probe</label>
+    <type>Text</type>
+</CustomField>

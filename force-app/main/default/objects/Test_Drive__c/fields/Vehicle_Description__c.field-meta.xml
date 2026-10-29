@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vehicle_Description__c</fullName>
+    <description>Read-only description of the related Vehicle, reusing its booking description formula.</description>
+    <formula>Vehicle__r.Booking_Display__c</formula>
+    <label>Vehicle Description</label>
+    <type>Text</type>
+</CustomField>

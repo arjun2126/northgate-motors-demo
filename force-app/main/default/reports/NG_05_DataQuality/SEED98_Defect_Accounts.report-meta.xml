@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.Seed_Tag__c</field>
+    </columns>
+    <columns>
+        <field>TYPE</field>
+    </columns>
+    <description>P5-09 / Plan 9b #21: SEED-98 legacy defect accounts. Batch deferred per owner; expected 30 defect rows once SEED-98 is loaded; currently 0.</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Seed_Tag__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>startsWith</operator>
+            <value>SEED-98-</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>SEED-98 Defect Accounts</name>
+    <params><name>co</name><value>1</value></params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+</Report>

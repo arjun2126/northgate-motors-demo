@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <MatchingRules xmlns="http://soap.sforce.com/2006/04/metadata">
     <matchingRules>
-        <fullName>Contact_Email_LastName</fullName>
-        <label>Contact Email + LastName</label>
+        <fullName>NG_Contact_Email_LastName</fullName>
+        <label>NG Contact Email + LastName</label>
+        <description>Exact match on normalized Email and LastName for P5-13 SEED-98 duplicate email detection.</description>
         <matchingRuleItems>
             <blankValueBehavior>NullNotAllowed</blankValueBehavior>
             <fieldName>Email</fieldName>

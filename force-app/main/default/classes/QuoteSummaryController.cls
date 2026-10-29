@@ -28,6 +28,7 @@ public with sharing class QuoteSummaryController {
                 Quote_Valid_Until__c, GrandTotal
             FROM Quote
             WHERE Id = :quoteId
+            WITH USER_MODE
         ];
 
         List<LineDto> lines = new List<LineDto>();
@@ -35,6 +36,7 @@ public with sharing class QuoteSummaryController {
             SELECT Product2.Name, Product2.Category__c, Quantity, UnitPrice
             FROM QuoteLineItem
             WHERE QuoteId = :quoteId
+            WITH USER_MODE
             ORDER BY Product2.Name
         ]) {
             LineDto dto = new LineDto();
@@ -62,7 +64,7 @@ public with sharing class QuoteSummaryController {
         }
         summary.listSubtotal = listTotal.setScale(2);
 
-        Opportunity opp = [SELECT Discount_Percent__c, Approval_Status__c FROM Opportunity WHERE Id = :quote.OpportunityId];
+        Opportunity opp = [SELECT Discount_Percent__c, Approval_Status__c FROM Opportunity WHERE Id = :quote.OpportunityId WITH USER_MODE];
         summary.discountPercent = opp.Discount_Percent__c;
         summary.approvalStatus = opp.Approval_Status__c;
 

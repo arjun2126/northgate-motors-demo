@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Consent__c$Name</field>
+    </columns>
+    <columns>
+        <field>Consent__c$Contact__c</field>
+    </columns>
+    <columns>
+        <field>Consent__c$Status__c</field>
+    </columns>
+    <columns>
+        <field>Consent__c$Revoked_On__c</field>
+    </columns>
+<description>P5-09 / Plan §9b #19: BAD-07 revoked consents. Expected 6 from canonical SEED-24. Lists revoked consents for manual CampaignMember cross-check.</description>
+    <filter>
+        <criteriaItems>
+            <column>Consent__c$Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Revoked</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Consent__c$Channel__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Revoked Consents</name>
+    <params><name>co</name><value>1</value></params>
+    <reportType>ConsentList__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Consent__c$Granted_On__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

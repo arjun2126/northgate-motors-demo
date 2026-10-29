@@ -116,8 +116,8 @@
     </dashboardGridLayout>
     <dashboardType>LoggedInUser</dashboardType>
     <isGridLayout>true</isGridLayout>
-    <owner>arjun.ngdev@northgate.demo</owner>
-    <runningUser>arjun.ngdev@northgate.demo</runningUser>
+    <owner>arjun.ngdemo@northgate.demo</owner>
+    <runningUser>arjun.ngdemo@northgate.demo</runningUser>
     <textColor>#000000</textColor>
     <title>DM_Sales_PipelineSnapshot</title>
     <titleColor>#000000</titleColor>

@@ -24,5 +24,8 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Test Drives</pluralLabel>
+    <searchLayouts>
+        <listViewButtons>Book_Test_Drive</listViewButtons>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
 </CustomObject>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Loyalty_Member__c</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Loyalty members with tier, status, points balance, and contact association for tier-distribution and liability reports.</description>
+    <label>Loyalty Member List</label>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Loyalty_Member__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Contact__c</field>
+            <table>Loyalty_Member__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Tier__c</field>
+            <table>Loyalty_Member__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Status__c</field>
+            <table>Loyalty_Member__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Member_Number__c</field>
+            <table>Loyalty_Member__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Points_Balance__c</field>
+            <table>Loyalty_Member__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Lifetime_Points_Earned__c</field>
+            <table>Loyalty_Member__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Join_Date__c</field>
+            <table>Loyalty_Member__c</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Last_Activity_Date__c</field>
+            <table>Loyalty_Member__c</table>
+        </columns>
+        <masterLabel>Loyalty Member Details</masterLabel>
+    </sections>
+</ReportType>

@@ -154,8 +154,8 @@
     <dashboardType>SpecifiedUser</dashboardType>
     <description>Quote expiration, discount leakage, and win/loss monitoring.</description>
     <isGridLayout>true</isGridLayout>
-    <owner>arjun.ngdev@northgate.demo</owner>
-    <runningUser>arjun.ngdev@northgate.demo</runningUser>
+    <owner>arjun.ngdemo@northgate.demo</owner>
+    <runningUser>arjun.ngdemo@northgate.demo</runningUser>
     <textColor>#000000</textColor>
     <title>DM_QuoteHealth</title>
     <titleColor>#000000</titleColor>

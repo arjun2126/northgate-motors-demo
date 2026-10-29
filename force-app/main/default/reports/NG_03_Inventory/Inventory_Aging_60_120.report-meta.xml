@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Vehicle__c$Name</field>
+    </columns>
+    <columns>
+        <field>Vehicle__c$VIN__c</field>
+    </columns>
+<description>P5-10: Inventory aging >60/120 days grouped by rooftop and make. Drift alarm: expected aged-inventory counts from canonical SEED-06 (BAD-06).</description>
+    <filter>
+        <criteriaItems>
+            <column>Vehicle__c$Inventory_Age_Days__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>60</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Vehicle__c$Rooftop__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Vehicle__c$Reporting_Make__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Vehicle__c$Status__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <name>Inventory Aging</name>
+    <params><name>co</name><value>1</value></params>
+    <reportType>VehicleList__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter><dateColumn>Vehicle__c$Acquisition_Date__c</dateColumn><interval>INTERVAL_CUSTOM</interval></timeFrameFilter>
+</Report>

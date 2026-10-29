@@ -242,6 +242,71 @@ private class QuoteBuilderControllerTest {
     }
 
     @isTest
+    static void createQuote_existingQuote_throwsAndLeavesApprovalUntouched() {
+        Account acc = makeAccount('ExistingQuote');
+        Contact buyer = P2TestDataFactory.makeContact(acc.Id, 'BuyerExisting');
+        Product2 product = makeProduct('Test Accessory Existing', 'Accessory', 100);
+        Opportunity opp = makeOpp(acc.Id, null);
+        List<QuoteBuilderController.LineInput> lines = new List<QuoteBuilderController.LineInput>{
+            line(product.Id, 1)
+        };
+
+        QuoteBuilderController.QuoteResult first = QuoteBuilderController.createQuote(opp.Id, buyer.Id, lines);
+        System.assertNotEquals(null, first.quoteId, 'first quote created');
+
+        opp.Discount_Percent__c = 8.92;
+        opp.Approval_Status__c = 'Pending';
+        update opp;
+
+        Opportunity before = [
+            SELECT Discount_Percent__c, Approval_Status__c
+            FROM Opportunity WHERE Id = :opp.Id
+        ];
+        try {
+            QuoteBuilderController.createQuote(opp.Id, buyer.Id, lines);
+            System.assert(false, 'a second quote must be rejected');
+        } catch (IllegalArgumentException e) {
+            System.assert(e.getMessage().contains('already has a quote'), 'message names the existing quote: ' + e.getMessage());
+        }
+
+        Opportunity after = [
+            SELECT Discount_Percent__c, Approval_Status__c
+            FROM Opportunity WHERE Id = :opp.Id
+        ];
+        System.assertEquals(before.Discount_Percent__c, after.Discount_Percent__c, 'discount unchanged');
+        System.assertEquals(before.Approval_Status__c, after.Approval_Status__c, 'approval status unchanged');
+        System.assertEquals(1, [SELECT COUNT() FROM Quote WHERE OpportunityId = :opp.Id], 'no second quote created');
+    }
+
+    @isTest
+    static void createQuote_blocker_doesNotStampOpportunity() {
+        Account acc = makeAccount('Blocker');
+        Contact buyer = P2TestDataFactory.makeContact(acc.Id, 'BuyerBlocker');
+        Vehicle_Model__c model = new Vehicle_Model__c(Name = 'Test Model Blocker A', Trim__c = 'LX');
+        insert model;
+        Vehicle__c vehicle = makeVehicle(model.Id, 10);
+        Product2 product = makeProduct('Test Model Blocker B', 'Vehicle_Trim', 30000);
+        Opportunity opp = makeOpp(acc.Id, vehicle.Id);
+        List<QuoteBuilderController.LineInput> lines = new List<QuoteBuilderController.LineInput>{
+            line(product.Id, 1)
+        };
+
+        Opportunity before = [
+            SELECT Discount_Percent__c, Approval_Status__c
+            FROM Opportunity WHERE Id = :opp.Id
+        ];
+        QuoteBuilderController.QuoteResult result = QuoteBuilderController.createQuote(opp.Id, buyer.Id, lines);
+        System.assertNotEquals(null, result.blockerMessage, 'ambiguous vehicle basis blocks pricing');
+
+        Opportunity after = [
+            SELECT Discount_Percent__c, Approval_Status__c
+            FROM Opportunity WHERE Id = :opp.Id
+        ];
+        System.assertEquals(before.Discount_Percent__c, after.Discount_Percent__c, 'blocked pricing must not stamp discount');
+        System.assertEquals(before.Approval_Status__c, after.Approval_Status__c, 'blocked pricing must not stamp approval status');
+    }
+
+    @isTest
     static void getCatalog_loadsUnderSalesPersonaAccess() {
         // Regression test: sales rep (NG_Sales profile + PS_Sales_Rep) must be able
         // to load the catalog. getCatalog runs WITH USER_MODE, so the persona needs

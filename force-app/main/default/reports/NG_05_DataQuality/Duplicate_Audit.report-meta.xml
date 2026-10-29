@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>PHONE1</field>
+    </columns>
+    <description>P5-13: duplicate audit view for contacts (BAD-01 households and malformed-email review). Expected 8 duplicate pairs and 6 malformed emails only once SEED-99 and SEED-98 are loaded.</description>
+    <filter>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Duplicate Audit</name>
+    <params><name>co</name><value>1</value></params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+</Report>

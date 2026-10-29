@@ -41,6 +41,11 @@
                     <default>false</default>
                     <label>Manual Adjustment</label>
                 </value>
+                <value>
+                    <fullName>Service_Redemption</fullName>
+                    <default>false</default>
+                    <label>Service Redemption</label>
+                </value>
             </valueSetDefinition>
         </valueSet>
 </CustomField>

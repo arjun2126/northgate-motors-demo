@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject>Contact</baseObject>
+    <category>other</category>
+    <deployed>true</deployed>
+    <description>Contacts with their Campaign Memberships, exposing Contact.Seed_Tag__c for BAD-04 fixture-specific reporting without deleting data.</description>
+    <label>Contact with Campaign Members</label>
+    <join>
+        <outerJoin>false</outerJoin>
+        <relationship>CampaignMembers</relationship>
+    </join>
+    <sections>
+        <columns>
+            <checkedByDefault>true</checkedByDefault>
+            <field>Name</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Seed_Tag__c</field>
+            <table>Contact</table>
+        </columns>
+        <columns>
+            <checkedByDefault>false</checkedByDefault>
+            <field>Id</field>
+            <table>Contact.CampaignMembers</table>
+        </columns>
+        <masterLabel>Contact Campaign Membership</masterLabel>
+    </sections>
+</ReportType>

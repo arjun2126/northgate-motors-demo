@@ -34,6 +34,6 @@ public with sharing class TestDriveCounters {
         for (Id mid : modelIds) {
             updates.add(new Vehicle_Model__c(Id = mid, Completed_Test_Drives__c = completed.containsKey(mid) ? completed.get(mid) : 0));
         }
-        update updates;
+        update as system updates;
     }
 }

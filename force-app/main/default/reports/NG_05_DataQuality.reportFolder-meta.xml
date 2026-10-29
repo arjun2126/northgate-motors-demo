@@ -2,8 +2,13 @@
 <ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
     <folderShares>
         <accessLevel>Manage</accessLevel>
-        <sharedTo>arjun.ngdev@northgate.demo</sharedTo>
+        <sharedTo>arjun.ngdemo@northgate.demo</sharedTo>
         <sharedToType>User</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>PG_All_Sales</sharedTo>
+        <sharedToType>Group</sharedToType>
     </folderShares>
     <name>NG_05_DataQuality</name>
 </ReportFolder>

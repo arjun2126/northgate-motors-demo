@@ -1,5 +1,7 @@
 @isTest
 private class FinancingStatusServiceTest {
+    private static final String NO_BYPASS_USERNAME = 'fin.status.nobypass@northgate.example';
+
     private static Financing__c make(Decimal termMonths) {
         Account acc = P2TestDataFactory.makeAccount('Fin' + String.valueOf(Math.abs((termMonths == null ? 0 : termMonths).hashCode())));
         Contact applicant = P2TestDataFactory.makeContact(acc.Id, 'FinApplicant');
@@ -284,14 +286,45 @@ private class FinancingStatusServiceTest {
 
     @isTest
     static void nonDraftWithoutTerm_isStillBlocked() {
+        // Category A fix: create a test persona WITHOUT Bypass_Automation permission.
+        // Default test runner (arjun.ngdemo) has Bypass_Automation via PS_Demo_Admin,
+        // which disables VR_Financing_TermRequired. We run the blocked-path test as a
+        // persona without that custom permission. Persona creation (setup DML) is wrapped
+        // in System.runAs to avoid MIXED_DML_OPERATION with the non-setup Account creation below.
+        Id repId;
+        System.runAs(new User(Id = UserInfo.getUserId())) {
+            Profile p = [SELECT Id FROM Profile WHERE Name = 'NG_Sales' LIMIT 1];
+            User rep = new User(
+                Alias = 'fsnbp',
+                Email = NO_BYPASS_USERNAME,
+                EmailEncodingKey = 'UTF-8',
+                LastName = 'FinancingNoBypass',
+                LanguageLocaleKey = 'en_US',
+                LocaleSidKey = 'en_US',
+                ProfileId = p.Id,
+                TimeZoneSidKey = 'America/New_York',
+                UserName = NO_BYPASS_USERNAME
+            );
+            insert rep;
+            // PS_Finance_Wizard_Access grants Financing__c object permissions that
+            // PS_Sales_Rep lacks; without it the persona fails on "Access to entity 'Financing__c' denied".
+            PermissionSet ps = [SELECT Id FROM PermissionSet WHERE Name = 'PS_Finance_Wizard_Access' LIMIT 1];
+            insert new PermissionSetAssignment(AssigneeId = rep.Id, PermissionSetId = ps.Id);
+            repId = rep.Id;
+        }
+        User rep = [SELECT Id FROM User WHERE Id = :repId LIMIT 1];
+
         Financing__c record = make(null);
+        record.OwnerId = rep.Id;
         insert record;
         record.Status__c = 'Submitted';
         DmlException caught;
-        try {
-            update record;
-        } catch (DmlException e) {
-            caught = e;
+        System.runAs(rep) {
+            try {
+                update record;
+            } catch (DmlException e) {
+                caught = e;
+            }
         }
         System.assertNotEquals(null, caught, 'Submitted without term must fail');
         Boolean found = false;

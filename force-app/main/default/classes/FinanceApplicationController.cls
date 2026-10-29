@@ -40,6 +40,26 @@ public with sharing class FinanceApplicationController {
     }
 
     @AuraEnabled(cacheable=true)
+    public static WizardData loadForRecord(Id recordId) {
+        if (recordId == null) {
+            throw new IllegalArgumentException('Opportunity or Financing record is required.');
+        }
+        if (recordId.getSObjectType() == Opportunity.SObjectType) {
+            return load(recordId);
+        }
+        if (recordId.getSObjectType() != Financing__c.SObjectType) {
+            throw new IllegalArgumentException('Launch Finance Application from an Opportunity or Financing record.');
+        }
+        List<Financing__c> records = [
+            SELECT Opportunity__c FROM Financing__c WHERE Id = :recordId WITH USER_MODE
+        ];
+        if (records.isEmpty() || records[0].Opportunity__c == null) {
+            throw new IllegalArgumentException('Financing record or linked Opportunity not found or inaccessible.');
+        }
+        return load(records[0].Opportunity__c);
+    }
+
+    @AuraEnabled(cacheable=true)
     public static WizardData load(Id opportunityId) {
         validateOpportunityAccess(opportunityId);
         WizardData data = new WizardData();
