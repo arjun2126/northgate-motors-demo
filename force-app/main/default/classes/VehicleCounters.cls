@@ -23,6 +23,7 @@ public with sharing class VehicleCounters {
         for (Id rid : rooftopIds) {
             updates.add(new Rooftop__c(Id = rid, Vehicles_On_Hand__c = counts.containsKey(rid) ? counts.get(rid) : 0));
         }
-        update updates;
+        // Trigger-owned derived cache, not an authorization to edit Rooftops through the caller's UI.
+        update as system updates;
     }
 }

@@ -1,0 +1,35 @@
+<template>
+    <lightning-card title="Inventory Gallery">
+        <div class="slds-p-around_medium">
+            <div class="filters">
+                <lightning-input label="Make" name="make" value={make} onchange={handleFilter}></lightning-input>
+                <lightning-input label="Body style" name="bodyStyle" value={bodyStyle} onchange={handleFilter}></lightning-input>
+                <lightning-input label="Minimum price" name="minPrice" type="number" min="0" value={minPrice} onchange={handleFilter}></lightning-input>
+                <lightning-input label="Maximum price" name="maxPrice" type="number" min="0" value={maxPrice} onchange={handleFilter}></lightning-input>
+                <lightning-combobox label="Status" name="status" value={status} options={statusOptions} onchange={handleFilter}></lightning-combobox>
+            </div>
+            <lightning-record-picker label="Contact for reservation" object-api-name="Contact" value={contactId} onchange={handleContact}></lightning-record-picker>
+            <lightning-button label="Apply filters / Refresh" onclick={refresh} disabled={busy}></lightning-button>
+            <p class="slds-text-body_small">Photos require the approved image resource. VIN decoding is a preview-only simulation.</p>
+            <template lwc:if={eventNotice}><p role="status">{eventNotice}</p></template>
+            <template lwc:if={error}><p role="alert" class="slds-text-color_error">{error}</p></template>
+            <template lwc:if={notice}><p role="status">{notice}</p></template>
+            <template lwc:if={busy}><lightning-spinner alternative-text="Loading inventory" size="small"></lightning-spinner></template>
+            <template lwc:if={empty}><p>No matching inventory.</p></template>
+            <div class="cards">
+                <template for:each={cards} for:item="card">
+                    <article key={card.id} class="slds-box">
+                        <template lwc:if={card.imagePath}><img src={card.imagePath} alt={card.name} data-id={card.id} onerror={handleImageError} /></template>
+                        <template lwc:else><p class="missing">Photo unavailable</p></template>
+                        <h2 class="slds-text-heading_small">{card.name}</h2><p>{card.make} · {card.bodyStyle}</p>
+                        <p>{card.status}</p><lightning-formatted-number value={card.price} format-style="currency" currency-code="CAD"></lightning-formatted-number>
+                        <p>{card.vin}</p>
+                        <lightning-button label="Reserve" data-id={card.id} disabled={card.reserveDisabled} onclick={handleReserve}></lightning-button>
+                        <lightning-button label="Preview mock VIN" data-vin={card.vin} onclick={handleDecode}></lightning-button>
+                    </article>
+                </template>
+            </div>
+            <template lwc:if={hasMore}><lightning-button label="Load more" onclick={more} disabled={busy}></lightning-button></template>
+        </div>
+    </lightning-card>
+</template>

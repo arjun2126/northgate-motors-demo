@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata"><deploymentStatus>Deployed</deploymentStatus><description>Committed inventory reservation refresh notification. No Contact or financial payload.</description><eventType>HighVolume</eventType><label>Vehicle Reserved</label><pluralLabel>Vehicle Reservations</pluralLabel><publishBehavior>PublishAfterCommit</publishBehavior></CustomObject>

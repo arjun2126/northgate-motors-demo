@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flexiPageRegions>
+        <itemInstances><componentInstance><componentName>force:highlightsPanel</componentName><identifier>highlights</identifier></componentInstance></itemInstances>
+        <name>header</name><type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances><componentInstance><componentName>vehiclePhotoHeader</componentName><identifier>photoHeader</identifier></componentInstance></itemInstances>
+        <itemInstances><componentInstance><componentName>force:detailPanel</componentName><identifier>recordDetails</identifier></componentInstance></itemInstances>
+        <itemInstances><componentInstance><componentName>vehicleServiceHistory</componentName><identifier>serviceHistory</identifier></componentInstance></itemInstances>
+        <name>main</name><type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Vehicle Photo Header and Service History</masterLabel>
+    <sobjectType>Vehicle__c</sobjectType>
+    <template><name>flexipage:recordHomeTemplateDesktop</name></template>
+    <type>RecordPage</type>
+</FlexiPage>

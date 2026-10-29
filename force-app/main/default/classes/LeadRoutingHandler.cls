@@ -96,6 +96,7 @@ public with sharing class LeadRoutingHandler {
             rooftopNames.put(r.Id, r.Name);
         }
         List<Lead> toUpdate = new List<Lead>();
+        Map<String, List<String>> lanes = new Map<String, List<String>>();
         for (Lead l : scope) {
             if (oldMap != null) {
                 Lead old = oldMap.get(l.Id);
@@ -110,7 +111,8 @@ public with sharing class LeadRoutingHandler {
             if (rooftopName == null) {
                 continue;
             }
-            List<String> lane = resolveLane(rooftopName);
+            if (!lanes.containsKey(rooftopName)) lanes.put(rooftopName, resolveLane(rooftopName));
+            List<String> lane = lanes.get(rooftopName);
             if (lane.isEmpty()) {
                 continue;
             }

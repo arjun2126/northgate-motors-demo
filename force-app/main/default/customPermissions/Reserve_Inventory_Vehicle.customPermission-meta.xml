@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><CustomPermission xmlns="http://soap.sforce.com/2006/04/metadata"><description>Use the validated inventory reservation action, without direct Vehicle Edit.</description><label>Reserve Inventory Vehicle</label></CustomPermission>

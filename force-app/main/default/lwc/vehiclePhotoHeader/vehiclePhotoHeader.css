@@ -1,0 +1,17 @@
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 28rem;
+    object-fit: contain;
+    background: white;
+}
+.missing {
+    display: grid;
+    min-height: 12rem;
+    place-items: center;
+    border: 1px solid #c9c9c9;
+    border-radius: 0.25rem;
+    background: #f3f3f3;
+    color: #444;
+}

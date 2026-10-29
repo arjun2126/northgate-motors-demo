@@ -1,0 +1,27 @@
+<template>
+    <lightning-card title="Illustrative Payment and Trade-in Calculator">
+        <div class="slds-p-around_medium">
+            <p>Estimate only. Does not reprice Quotes, save financing, approve rates or change trade-ins.</p>
+            <lightning-input label="Illustrative selling amount" name="sellingPrice" type="number" min="0" step="0.01" value={sellingPrice} onchange={handleInput}></lightning-input>
+            <lightning-input label="Down payment" name="downPayment" type="number" min="0" step="0.01" value={downPayment} onchange={handleInput}></lightning-input>
+            <lightning-input label="Illustrative appraisal" name="appraisal" type="number" min="0" step="0.01" value={appraisal} onchange={handleInput}></lightning-input>
+            <lightning-input label="Payoff" name="payoff" type="number" min="0" step="0.01" value={payoff} onchange={handleInput}></lightning-input>
+            <lightning-input label="Configured credit tier (A, B, C, D, Sub_Prime)" name="creditTier" value={creditTier} onchange={handleInput}></lightning-input>
+            <lightning-input label="Term in months" name="termMonths" type="number" min="1" max="120" value={termMonths} onchange={handleInput}></lightning-input>
+            <lightning-input label="Manual illustrative rate (leave blank for configuration)" name="manualRate" type="number" min="0" max="25" step="0.01" value={manualRate} onchange={handleInput}></lightning-input>
+            <lightning-input label="Manual rate explanation" name="manualReason" value={manualReason} onchange={handleInput}></lightning-input>
+            <lightning-button label="Calculate" onclick={calculate} disabled={busy}></lightning-button>
+            <template lwc:if={busy}><lightning-spinner alternative-text="Calculating estimate" size="small"></lightning-spinner></template>
+            <template lwc:if={error}><p role="alert" class="slds-text-color_error">{error}</p></template>
+            <template lwc:if={result}>
+                <div role="status">
+                    <p>Trade equity: <lightning-formatted-number value={result.equity} format-style="currency" currency-code="CAD"></lightning-formatted-number></p>
+                    <p>Principal: <lightning-formatted-number value={result.principal} format-style="currency" currency-code="CAD"></lightning-formatted-number></p>
+                    <p>Annual rate: {result.annualRate}% ({result.rateSource})</p>
+                    <p>Monthly payment: <lightning-formatted-number value={result.monthlyPayment} format-style="currency" currency-code="CAD"></lightning-formatted-number></p>
+                    <p>Total interest: <lightning-formatted-number value={result.totalInterest} format-style="currency" currency-code="CAD"></lightning-formatted-number></p>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StaticResource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <cacheControl>Public</cacheControl>
+    <contentType>application/zip</contentType>
+    <description>Thirty distinct real automotive photographs with verified CC0 Commons records; illustrative fictional Northgate inventory, no endorsement. Attribution/license register included.</description>
+</StaticResource>

@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title={vehicleName}>
+        <section class="slds-p-around_medium" aria-label="Vehicle photo header">
+            <template lwc:if={noRecord}>
+                <p>Select a Vehicle record to view its photo.</p>
+            </template>
+            <template lwc:elseif={loading}>
+                <lightning-spinner alternative-text="Loading vehicle photo" size="small"></lightning-spinner>
+            </template>
+            <template lwc:elseif={error}>
+                <p role="alert" class="slds-text-color_error">{error}</p>
+            </template>
+            <template lwc:else>
+                <h2 class="slds-text-heading_medium slds-m-bottom_small">{modelLine}</h2>
+                <template lwc:if={imagePath}>
+                    <img src={imagePath} alt={imageAlt} width="800" height="600"
+                        data-record-id={recordId} data-path={imagePath} onerror={handleImageError} />
+                </template>
+                <template lwc:else>
+                    <p class="missing" role="status">Photo unavailable</p>
+                </template>
+            </template>
+        </section>
+    </lightning-card>
+</template>

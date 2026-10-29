@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata"><classAccesses><apexClass>OpportunityCalculatorController</apexClass><enabled>true</enabled></classAccesses><customMetadataTypeAccesses><enabled>true</enabled><name>Rate_Table__mdt</name></customMetadataTypeAccesses><description>Read-only estimate UI and configured illustrative rate metadata for users already authorized for the Opportunity. No object, Finance, pricing or write grants.</description><label>Opportunity Calculator</label></PermissionSet>

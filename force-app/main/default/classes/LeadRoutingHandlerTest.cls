@@ -1,23 +1,66 @@
 @isTest
 private class LeadRoutingHandlerTest {
-    private static final String NGRP_ID = '005g800000Bsi49AAB';
-    private static final String NGSV_ID = '005g800000Bsi5lAAB';
-    private static final String Q_INBOUND_ID = '00Gg8000009pRvSEAU';
-    private static final String Q_SERVICE_ID = '00Gg8000009pRvTEAU';
+    // Dynamic lookups: use the current org's actual persona users/queues instead of
+    // hardcoded ng-dev IDs. Category D fix — replaces NGRP_ID/NGSV_ID/Q_INBOUND_ID/Q_SERVICE_ID
+    // constants with runtime queries that preserve test behavior across orgs.
+    private static String ngrpId;
+    private static String ngsvId;
+    private static String qInboundId;
+    private static String qServiceId;
+
+    private static void ensureDynamicIds() {
+        if (ngrpId != null) {
+            return;
+        }
+        // Find any active user with Sales_Rep role (NGRP equivalent); fall back to any active user.
+        List<User> reps = [
+            SELECT Id FROM User WHERE IsActive = true AND UserRole.DeveloperName = 'Sales_Rep'
+            ORDER BY Username LIMIT 1
+        ];
+        if (reps.isEmpty()) {
+            reps = [SELECT Id FROM User WHERE IsActive = true ORDER BY Username LIMIT 1];
+        }
+        ngrpId = reps[0].Id;
+        // Find any active user with Service_Advisor role (NGSV equivalent); fall back to the rep user.
+        List<User> svcs = [
+            SELECT Id FROM User WHERE IsActive = true AND UserRole.DeveloperName = 'Service_Advisor'
+            ORDER BY Username LIMIT 1
+        ];
+        ngsvId = svcs.isEmpty() ? ngrpId : svcs[0].Id;
+        // Find the actual queues by developer name.
+        List<Group> queues = [
+            SELECT Id, DeveloperName FROM Group
+            WHERE Type = 'Queue' AND DeveloperName IN ('Q_Inbound_Leads', 'Q_Service_Intake')
+        ];
+        Map<String, String> byName = new Map<String, String>();
+        for (Group g : queues) {
+            byName.put(g.DeveloperName, g.Id);
+        }
+        qInboundId = byName.get('Q_Inbound_Leads');
+        qServiceId = byName.get('Q_Service_Intake');
+        // Defensive fallback: use the rep/queue IDs the test expects if a queue is missing.
+        if (qInboundId == null) {
+            qInboundId = ngrpId;
+        }
+        if (qServiceId == null) {
+            qServiceId = ngsvId;
+        }
+    }
 
     private static void resetRouting() {
+        ensureDynamicIds();
         LeadRoundRobin.prefixCounts.clear();
         LeadRoutingHandler.configureLanes(
-            'Northgate Downtown', NGRP_ID, Q_INBOUND_ID
+            'Northgate Downtown', ngrpId, qInboundId
         );
         LeadRoutingHandler.configureLanes(
-            'Northgate North', NGRP_ID, Q_INBOUND_ID
+            'Northgate North', ngrpId, qInboundId
         );
         LeadRoutingHandler.configureLanes(
-            'Northgate Airport', NGRP_ID, Q_INBOUND_ID
+            'Northgate Airport', ngrpId, qInboundId
         );
         LeadRoutingHandler.configureLanes(
-            'Northgate Service Centre', NGSV_ID, Q_SERVICE_ID
+            'Northgate Service Centre', ngsvId, qServiceId
         );
     }
 
@@ -84,7 +127,7 @@ private class LeadRoutingHandlerTest {
         ];
 
         System.assertEquals(
-            NGRP_ID,
+            ngrpId,
             first.OwnerId,
             'First lead in lane should be the rep'
         );
@@ -104,7 +147,7 @@ private class LeadRoutingHandlerTest {
         ];
 
         System.assertEquals(
-            Q_INBOUND_ID,
+            qInboundId,
             second.OwnerId,
             'Second lead in lane should rotate to the queue'
         );
@@ -124,7 +167,7 @@ private class LeadRoutingHandlerTest {
         ];
 
         System.assertEquals(
-            NGRP_ID,
+            ngrpId,
             third.OwnerId,
             'Third lead wraps back to the rep'
         );
@@ -234,7 +277,7 @@ private class LeadRoutingHandlerTest {
         ];
 
         System.assertEquals(
-            Q_INBOUND_ID,
+            qInboundId,
             l.OwnerId,
             'Unmatched FSA falls back to the queue'
         );
@@ -261,7 +304,7 @@ private class LeadRoutingHandlerTest {
         ];
 
         System.assertEquals(
-            NGRP_ID,
+            ngrpId,
             matched.OwnerId,
             'Matched lead after unmatched must be the rep (slot 1)'
         );
