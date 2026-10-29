@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Financing__c$Opportunity__c</field>
+    </columns>
+    <columns>
+        <field>Financing__c$Status__c</field>
+    </columns>
+    <columns>
+        <field>Financing__c$Application_Date__c</field>
+    </columns>
+    <columns>
+        <field>Financing__c$Decision_Date__c</field>
+    </columns>
+    <columns>
+        <field>Financing__c$Funded_Date__c</field>
+    </columns>
+    <columns>
+        <field>Financing__c$Amount_Financed__c</field>
+    </columns>
+    <description>P4-09: Funding lag by Opportunity. Shows Application_Date, Decision_Date, Funded_Date, Amount_Financed. Filtered to Funded status only. Lag in days is computed in the dashboard summary widget, not in the report.</description>
+    <filter>
+        <criteriaItems>
+            <column>Financing__c$Status__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Funded</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Financing__c$Credit_Tier__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Funding Lag</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>FinancingList__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Financing__c$Funded_Date__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+</Report>

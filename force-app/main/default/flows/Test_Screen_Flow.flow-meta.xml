@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <label>Test Screen Flow</label>
+    <processType>Flow</processType>
+    <status>Draft</status>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>TestScreen</targetReference>
+        </connector>
+    </start>
+    <screens>
+        <name>TestScreen</name>
+        <label>Test Screen</label>
+        <locationX>200</locationX>
+        <locationY>50</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+    </screens>
+</Flow>
