@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Northgate_Sales</members>
+        <name>CustomApplication</name>
+    </types>
+    <types>
+        <members>Financing_Record_Page</members>
+        <members>NG_Opportunity_Quote_Builder</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>Financing__c-Financing Layout</members>
+        <members>Opportunity-Retail Layout</members>
+        <members>Opportunity-Fleet Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Opportunity.Finance_Application</members>
+        <name>QuickAction</name>
+    </types>
+    <version>68.0</version>
+</Package>

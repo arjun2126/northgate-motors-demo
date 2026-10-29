@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <name>CustomField</name>
+        <members>Quote.Adjusted_Subtotal__c</members>
+        <members>Quote.Buyer_Contact__c</members>
+        <members>Quote.Prepared_By__c</members>
+        <members>Quote.Quote_Valid_Until__c</members>
+        <members>Quote.Rule_Applied_Count__c</members>
+        <members>Quote.Seed_Tag__c</members>
+    </types>
+    <types>
+        <name>CustomField</name>
+        <members>Trade_In__c.Trade_Equity__c</members>
+        <members>Trade_In__c.Status__c</members>
+    </types>
+    <version>68.0</version>
+</Package>

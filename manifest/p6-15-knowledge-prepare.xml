@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types><members>Knowledge__kav.Body__c</members><name>CustomField</name></types>
+    <types><members>Northgate_Knowledge</members><name>DataCategoryGroup</name></types>
+    <types><members>Knowledge__kav-NG Internal Article Layout</members><name>Layout</name></types>
+    <version>68.0</version>
+</Package>

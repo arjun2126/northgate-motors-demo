@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types><members>ngOwnerContentLayout</members><members>ngOwnerThemeLayout</members><name>AuraDefinitionBundle</name></types>
+    <types><members>ownerPortalHome</members><members>ownerPortalVehicles</members><members>ownerPortalHistory</members><members>ownerPortalAppointment</members><members>ownerPortalCases</members><members>ownerPortalLoyalty</members><name>LightningComponentBundle</name></types>
+    <version>68.0</version>
+</Package>

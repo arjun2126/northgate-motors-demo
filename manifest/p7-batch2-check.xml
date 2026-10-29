@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>LeadTriggerHandler</members>
+        <members>VehicleTriggerHandler</members>
+        <members>TestDriveTriggerHandler</members>
+        <members>LeadRoutingHandler</members>
+        <members>InventoryReconciliationJob</members>
+        <members>P7TriggerArchitectureTest</members>
+        <members>InventoryReconciliationJobTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>LeadRoutingTrigger</members>
+        <members>VehicleTrigger</members>
+        <members>TestDriveTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    <version>68.0</version>
+</Package>

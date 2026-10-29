@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Q_Finance_Approvals</members>
+        <members>Q_Inbound_Leads</members>
+        <members>Q_Service_Intake</members>
+        <name>Queue</name>
+    </types>
+    <version>68.0</version>
+</Package>

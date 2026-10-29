@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>CaseEscalationStampBatch</members>
+        <members>CaseEscalationStampBatchTest</members>
+        <members>CaseServiceHistoryController</members>
+        <members>CaseServiceHistoryControllerTest</members>
+        <members>ExecutiveServiceMetricsPublisherTest</members>
+        <members>ServiceIntakeCaseService</members>
+        <members>ServiceIntakeCaseServiceTest</members>
+        <members>ServiceVisitCapacityGuard</members>
+        <members>ServiceVisitCapacityGuardTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>Case</members>
+        <name>EscalationRules</name>
+    </types>
+    <types>
+        <members>NG_Service_Case_Record_Page</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>caseServiceHistory</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>ServiceVisitTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    <version>68.0</version>
+</Package>

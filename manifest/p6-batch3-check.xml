@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>ConsentGateService</members><members>NurtureAudienceService</members><members>RepeatPurchaseSignalService</members>
+        <members>Batch3TestData</members><members>ConsentGateServiceTest</members><members>NurtureAudienceServiceTest</members>
+        <members>RepeatPurchaseSignalServiceTest</members><members>Batch3ReportingAccessTest</members>
+        <members>LoyaltyLedgerServiceTest</members><members>LoyaltyAccrualServiceTest</members><members>LoyaltyAccrualBatchTest</members>
+        <members>LoyaltyTierEvalBatchTest</members><members>Loyalty_ExpiryBatchTest</members><members>RedemptionServiceTest</members>
+        <members>VehicleServiceHistoryControllerTest</members><members>LoyaltyEnrolmentServiceTest</members>
+        <members>DeliveryCloseServiceTest</members><members>DeliveryCompletionGuardTest</members>
+        <members>QuotePricingServiceTest</members><members>QuoteBuilderControllerTest</members>
+        <members>ExecutiveServiceMetricsPublisherTest</members><members>ServiceVisitCapacityGuardTest</members>
+        <members>ServiceIntakeCaseServiceTest</members><members>CaseEscalationStampBatchTest</members><members>CaseServiceHistoryControllerTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types><members>ConsentTrigger</members><members>CampaignConsentTrigger</members><members>CampaignMemberConsentTrigger</members><members>ContactConsentTrigger</members><name>ApexTrigger</name></types>
+    <types>
+        <members>Campaign.Nurture_Managed__c</members><members>Campaign.Consent_Purpose__c</members><members>Campaign.Consent_Channel__c</members>
+        <members>CampaignMember.Consent_Managed__c</members><members>CampaignMember.Nurture_Eligible__c</members>
+        <members>Loyalty_Member__c.Estimated_Liability_CAD__c</members><members>Quote.Repeat_Purchase_Open__c</members><name>CustomField</name>
+    </types>
+    <types><members>Preview_Nurture_Audience</members><name>CustomPermission</name></types>
+    <types><members>PS_Nurture_Audience</members><members>PS_Service_Operations_Reporting</members><members>PS_Loyalty_Reporting</members><name>PermissionSet</name></types>
+    <types><members>Batch3LoyaltyMembers</members><members>Batch3Contacts</members><members>Batch3CampaignMembers</members><name>ReportType</name></types>
+    <types><members>NG_Service_Operations</members><members>NG_Loyalty_Operations</members><members>NG_PostSale</members><name>ReportFolder</name></types>
+    <types><members>NG_Service_Operations</members><members>NG_Loyalty_Operations</members><name>DashboardFolder</name></types>
+    <types>
+        <members>NG_Service_Operations/Open_Reservations</members><members>NG_Service_Operations/Overdue_Scheduled</members>
+        <members>NG_Service_Operations/Recorded_CSI</members><members>NG_Loyalty_Operations/Tier_Mix_and_Liability</members>
+        <members>NG_PostSale/Repeat_Purchase_Contacts</members><members>NG_PostSale/Managed_Nurture_Membership_Audit</members><name>Report</name>
+    </types>
+    <types><members>NG_Service_Operations/DM_Service_Operations</members><members>NG_Loyalty_Operations/DM_Loyalty_Operations</members><name>Dashboard</name></types>
+    <version>68.0</version>
+</Package>

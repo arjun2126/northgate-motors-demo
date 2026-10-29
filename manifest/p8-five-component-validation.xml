@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types><members>OwnerPortalFoundationController</members><members>OwnerPortalFoundationControllerTest</members><name>ApexClass</name></types>
+    <types><members>Access_Northgate_Owner_Portal</members><name>CustomPermission</name></types>
+    <types><members>PS_Owner_Portal_Foundation</members><name>PermissionSet</name></types>
+    <types><members>NG_Owner_Portal_User</members><name>Profile</name></types>
+    <version>68.0</version>
+</Package>

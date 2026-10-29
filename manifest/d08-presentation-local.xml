@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>quoteSummary</members>
+        <members>financeApplication</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>NG_Sales/DM_Exec_OperationsOverview</members>
+        <name>Dashboard</name>
+    </types>
+    <types>
+        <members>Financing__c.NG_Overview</members>
+        <members>Trade_In__c.NG_Overview</members>
+        <members>Delivery__c.NG_Overview</members>
+        <members>Loyalty_Member__c.NG_Overview</members>
+        <members>Loyalty_Transaction__c.NG_Overview</members>
+        <members>Consent__c.NG_Overview</members>
+        <name>ListView</name>
+    </types>
+    <version>68.0</version>
+</Package>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types><members>PG_Northgate_Management</members><name>Group</name></types>
+    <types><members>PS_Management_Reports</members><name>PermissionSet</name></types>
+    <types><members>PSG_Manager</members><name>PermissionSetGroup</name></types>
+    <types><members>NG_Management</members><name>DashboardFolder</name></types>
+    <types><members>NG_04_Service/Service_SLA_Overdue</members><name>Report</name></types>
+    <version>68.0</version>
+</Package>

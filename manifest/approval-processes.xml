@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Financing__c.Financing_Exception_Approval</members>
+        <members>Opportunity.Opportunity_Discount_Approval</members>
+        <members>Opportunity.VP_Discount_Approval</members>
+        <name>ApprovalProcess</name>
+    </types>
+    <types>
+        <members>Financing__c</members>
+        <members>Opportunity</members>
+        <name>Workflow</name>
+    </types>
+    <version>68.0</version>
+</Package>

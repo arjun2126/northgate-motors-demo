@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <name>Role</name>
+        <members>VP_Sales</members>
+        <members>Sales_Manager_Downtown</members>
+        <members>Sales_Manager_North</members>
+        <members>Sales_Manager_Airport</members>
+        <members>Inventory_Coordinator</members>
+        <members>Service_Manager</members>
+        <members>Service_Advisor</members>
+        <members>Service_Technician</members>
+        <members>Sales_Rep</members>
+    </types>
+    <version>68.0</version>
+</Package>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types><members>Contact_Vehicle_Relationship__c</members><name>CustomObject</name></types>
+    <types><members>Vehicle__c.Portal_Entitlement__c</members><name>SharingReason</name></types>
+    <types><members>Service_Visit__c.Portal_Request_Key__c</members><members>Service_Visit__c.Portal_Request_Fingerprint__c</members><name>CustomField</name></types>
+    <types><members>Manage_Northgate_Vehicle_Entitlements</members><name>CustomPermission</name></types>
+    <types><members>PS_Owner_Portal_Entitlement_Reviewer</members><name>PermissionSet</name></types>
+    <types><members>OwnerPortalOwnershipService</members><members>OwnerPortalOwnershipGuard</members><members>OwnerPortalOwnershipTest</members><members>OwnerPortalShareReconciler</members><members>OwnerPortalShareReconcilerTest</members><members>OwnerPortalVehicleBroker</members><members>OwnerPortalVehicleBrokerTest</members><members>OwnerPortalBatchBController</members><members>ServiceVisitCapacityGuard</members><members>ServiceIntakeCaseService</members><name>ApexClass</name></types>
+    <types><members>ContactVehicleRelationshipTrigger</members><name>ApexTrigger</name></types>
+    <types><members>ownerPortalHome</members><members>ownerPortalVehicles</members><members>ownerPortalAppointment</members><name>LightningComponentBundle</name></types>
+    <version>68.0</version>
+</Package>

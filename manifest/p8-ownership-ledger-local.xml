@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types><members>Contact_Vehicle_Relationship__c</members><name>CustomObject</name></types>
+    <types><members>Vehicle__c.Portal_Entitlement__c</members><name>SharingReason</name></types>
+    <types><members>Manage_Northgate_Vehicle_Entitlements</members><name>CustomPermission</name></types>
+    <types><members>PS_Owner_Portal_Entitlement_Reviewer</members><name>PermissionSet</name></types>
+    <types><members>OwnerPortalOwnershipService</members><members>OwnerPortalOwnershipGuard</members><members>OwnerPortalOwnershipTest</members><name>ApexClass</name></types>
+    <types><members>ContactVehicleRelationshipTrigger</members><name>ApexTrigger</name></types>
+    <version>68.0</version>
+</Package>

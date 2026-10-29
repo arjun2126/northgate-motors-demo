@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>NG_Rooftop</members>
+        <name>Territory2Type</name>
+    </types>
+    <types>
+        <members>NG_Rooftops</members>
+        <name>Territory2Model</name>
+    </types>
+    <types>
+        <members>NG_Rooftops.Downtown</members>
+        <members>NG_Rooftops.North</members>
+        <members>NG_Rooftops.Airport</members>
+        <members>NG_Rooftops.Service_Centre</members>
+        <name>Territory2</name>
+    </types>
+    <version>68.0</version>
+</Package>
