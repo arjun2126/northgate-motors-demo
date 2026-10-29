@@ -1,0 +1,71 @@
+<template>
+    <template lwc:if={guest}>
+        <section class="guest" aria-label="Northgate customer sign-in">
+            <p class="eyebrow">NORTHGATE MOTORS</p><h1>Your ownership experience starts here.</h1>
+            <p role="status">Sign in using the site's native account menu to view your information. Customer data is never shown to guests.</p>
+        </section>
+    </template>
+    <template lwc:else>
+        <div class="portal" onkeydown={closeMenu}>
+            <a class="skip-link" href="#portal-main" onclick={skipToContent}>Skip to portal content</a>
+            <div class="navigation-bar">
+                <button type="button" class="menu-toggle" data-menu-toggle aria-controls="portal-navigation" aria-expanded={menuExpanded} onclick={toggleMenu}>Menu <span aria-hidden="true">☰</span></button>
+                <nav aria-label="Owner portal" id="portal-navigation" class={navigationClass}>
+                    <ul class="navigation-list"><template for:each={navigationItems} for:item="item">
+                        <li key={item.value}><a class={item.className} href={item.href} data-view={item.value} onclick={navigate} aria-current={item.current}>{item.label}</a></li>
+                    </template></ul>
+                </nav>
+                <p class="navigation-context">YOUR NORTHGATE</p>
+            </div>
+            <p class="sr-only" role="status" aria-live="polite">{navigationNotice}</p>
+            <main id="portal-main" class="portal-main">
+                <header class="view-heading"><div><p class="eyebrow">OWNER EXPERIENCE</p><h1 tabindex="-1" data-view-heading>{viewTitle}</h1></div>
+                    <a class="primary-action" href={bookingHref} data-view="service" data-service="booking" onclick={navigate}>Request service <span aria-hidden="true">↗</span></a>
+                </header>
+                <p lwc:if={navigationError} class="message error" role="alert">{navigationError}</p>
+                <section hidden={dashboardHidden} aria-label="Dashboard" data-view-panel="dashboard">
+                    <div class="hero"><div class="hero-copy"><p class="eyebrow">MADE FOR THE ROAD AHEAD</p><h2>Your ownership.<br />One connected place.</h2><p>Look after your vehicle. Plan your next visit. Stay connected to Northgate.</p><a class="hero-link" href={garageHref} data-view="garage" onclick={navigate}>Open My Garage <span aria-hidden="true">→</span></a></div>
+                        <div class="hero-aside"><p class="hero-aside-title">Service that moves with you.</p><p>Choose a convenient location and request care for your eligible vehicle.</p><a href={bookingHref} data-view="service" data-service="booking" onclick={navigate}>Plan a service visit →</a></div>
+                    </div>
+                    <div class="section-heading"><h2>At a glance</h2><lightning-button label="Refresh dashboard" onclick={load} disabled={loading}></lightning-button></div>
+                    <p lwc:if={error} class="message error" role="alert">{error}</p>
+                    <p lwc:if={loading} class="message" role="status">Updating your dashboard…</p>
+                    <div class="summary-grid" aria-busy={loading}>
+                        <template lwc:if={summary}>
+                            <article class="summary-card"><p class="tile-label">SERVICE</p><h3>Next appointment</h3>
+                                <p lwc:if={summary.appointmentError} role="status">Next appointment unavailable.</p><p lwc:if={noAppointment}>No eligible upcoming appointment.</p>
+                                <template for:each={nextAppointments} for:item="visit"><div key={visit.Id}><p class="appointment-date"><lightning-formatted-date-time value={visit.Scheduled_Start__c} year="numeric" month="short" day="2-digit" hour="2-digit" minute="2-digit" time-zone="America/Toronto"></lightning-formatted-date-time></p><p>{visit.Service_Type__c}</p><span class="status-badge">{visit.Status__c}</span></div></template>
+                                <a class="card-link" href={appointmentsHref} data-view="service" onclick={navigate}>View appointment information →</a>
+                            </article>
+                            <article class="summary-card"><p class="tile-label">SUPPORT</p><h3>Open Cases</h3><p lwc:if={summary.caseError} role="status">Open Case count unavailable.</p><p lwc:else><span class="metric">{summary.openCaseCount}</span><span class="metric-caption">open Cases visible to your Contact</span></p><a class="card-link" href={supportHref} data-view="support" onclick={navigate}>Go to Support →</a></article>
+                            <article class="summary-card"><p class="tile-label">REWARDS</p><h3>Stored loyalty balance</h3><p lwc:if={summary.loyaltyError} role="status">Loyalty balance unavailable.</p><p lwc:if={noMembership}>No eligible membership.</p>
+                                <template for:each={memberships} for:item="member"><p key={member.Id}><span class="metric">{member.Points_Balance__c}</span><span class="metric-caption">stored points · {member.Tier__c}</span></p></template><a class="card-link" href={rewardsHref} data-view="rewards" onclick={navigate}>Open Rewards →</a>
+                            </article>
+                            <article class="summary-card garage-card"><p class="tile-label">MY GARAGE</p><h3>Your vehicles</h3><p>View the vehicles available through your current verified ownership.</p><a class="card-link" href={garageHref} data-view="garage" onclick={navigate}>Explore My Garage →</a></article>
+                        </template>
+                    </div>
+                    <p class="data-note" lwc:if={summary}>{summary.vehicleMessage}</p>
+                    <p class="data-note">Times are shown in Toronto time. Requested does not mean Scheduled. Unavailable is not a zero balance.</p>
+                    <aside class="future-experiences" aria-label="Planned experiences"><h2>More to look forward to</h2><p>Planned experiences · not available in this portal yet</p><ul><li>Explore Vehicles</li><li>Vehicle Studio</li><li>Test Drives</li><li>Trade-In</li></ul></aside>
+                </section>
+                <section hidden={garageHidden} aria-label="My Garage" data-view-panel="garage"><template lwc:if={garageVisited}><c-owner-portal-vehicles></c-owner-portal-vehicles></template></section>
+                <section hidden={serviceHidden} aria-label="Service" data-view-panel="service">
+                    <nav aria-label="Service views" class="service-nav"><ul><template for:each={serviceItems} for:item="item"><li key={item.value}><a class={item.className} href={item.href} data-view="service" data-service={item.value} onclick={navigate} aria-current={item.current}>{item.label}</a></li></template></ul></nav>
+                    <section hidden={appointmentsHidden} aria-label="Appointments" data-service-panel="appointments" aria-busy={loading}>
+                        <div class="section-heading"><h2>Next upcoming request or appointment</h2><lightning-button label="Refresh appointment status" onclick={load} disabled={loading}></lightning-button></div>
+                        <p lwc:if={error} class="message error" role="alert">{error}</p><p lwc:if={loading} class="message" role="status">Updating appointment information…</p>
+                        <template lwc:if={summary}><p lwc:if={summary.appointmentError} class="message" role="status">Next appointment unavailable.</p><p lwc:if={noAppointment} class="empty-state">No eligible upcoming appointment.</p>
+                            <template for:each={nextAppointments} for:item="visit"><article key={visit.Id} class="appointment-card"><span class="status-badge">{visit.Status__c}</span><h3>{visit.Service_Type__c}</h3><p><lightning-formatted-date-time value={visit.Scheduled_Start__c} year="numeric" month="short" day="2-digit" hour="2-digit" minute="2-digit" time-zone="America/Toronto"></lightning-formatted-date-time> · Toronto time</p></article></template>
+                        </template>
+                        <p class="data-note">This is the next eligible upcoming visit, not a complete appointment list. Requested does not mean Scheduled.</p><a class="card-link" href={historyHref} data-view="service" data-service="history" onclick={navigate}>View available visits and status in History →</a>
+                    </section>
+                    <section hidden={bookingHidden} aria-label="Request service" data-service-panel="booking"><template lwc:if={bookingVisited}><c-owner-portal-appointment></c-owner-portal-appointment></template></section>
+                    <section hidden={historyHidden} aria-label="History and mileage" data-service-panel="history"><template lwc:if={historyVisited}><c-owner-portal-history></c-owner-portal-history></template></section>
+                </section>
+                <section hidden={supportHidden} aria-label="Support" data-view-panel="support"><template lwc:if={supportVisited}><c-owner-portal-cases></c-owner-portal-cases></template></section>
+                <section hidden={rewardsHidden} aria-label="Rewards" data-view-panel="rewards"><template lwc:if={rewardsVisited}><c-owner-portal-loyalty></c-owner-portal-loyalty></template></section>
+            </main>
+            <footer class="portal-footer"><span>NORTHGATE MOTORS</span><p>Verified ownership and independent servicing authorization protect your experience. Contact Northgate if you need help.</p></footer>
+        </div>
+    </template>
+</template>

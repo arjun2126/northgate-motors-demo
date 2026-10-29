@@ -1,5 +1,5 @@
 import { LightningElement, api, track } from 'lwc';
-import loadFinanceWizard from '@salesforce/apex/FinanceApplicationController.load';
+import loadFinanceWizard from '@salesforce/apex/FinanceApplicationController.loadForRecord';
 import previewApplication from '@salesforce/apex/FinanceApplicationController.preview';
 import saveApplication from '@salesforce/apex/FinanceApplicationController.saveApplication';
 
@@ -66,7 +66,7 @@ export default class FinanceApplication extends LightningElement {
         }
         this.loading = true;
         this.error = null;
-        loadFinanceWizard({ opportunityId: this.recordId })
+        loadFinanceWizard({ recordId: this.recordId })
             .then((data) => {
                 this.data = data;
                 this.quoteId = data.quoteId || null;
@@ -136,7 +136,7 @@ export default class FinanceApplication extends LightningElement {
         }
         const myRequest = this.previewRequestId;
         previewApplication({
-            opportunityId: this.recordId,
+            opportunityId: this.data.opportunityId,
             quoteId: this.quoteId,
             downPayment: this.downPayment,
             creditTier: this.creditTier,
@@ -175,7 +175,7 @@ export default class FinanceApplication extends LightningElement {
         this.error = null;
         saveApplication({
             recordId: this.data && this.data.recordId ? this.data.recordId : null,
-            opportunityId: this.recordId,
+            opportunityId: this.data.opportunityId,
             quoteId: this.quoteId,
             applicantContactId: this.applicantContactId,
             downPayment: this.downPayment,
@@ -208,6 +208,15 @@ export default class FinanceApplication extends LightningElement {
 
     get canPickManualRate() { return this.rateSource === 'Manual_Exception'; }
     get showExistingDraftNotice() { return this.data && this.data.mode === 'edit' && this.data.status === 'Draft'; }
+    get draftNotice() {
+        // A save/load error is authoritative; never contradict it with a stale new-draft banner.
+        if (!this.data || this.loading || this.error) return null;
+        if (this.data.mode === 'ambiguous') return 'Multiple Draft applications exist for this Opportunity.';
+        if (this.savedFinancingId) return 'Draft application saved for this Opportunity.';
+        if (this.showExistingDraftNotice) return 'Editing existing Draft for this Opportunity. Status: Draft.';
+        if (this.data.mode === 'new' && !this.data.recordId) return 'New Draft application.';
+        return 'Finance application details.';
+    }
     get blockReason() {
         if (this.data && this.data.tradeInCount > 1) {
             return 'Multiple Accepted trade-ins exist; cannot pick one deterministically.';

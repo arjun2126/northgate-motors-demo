@@ -1,0 +1,73 @@
+:host {
+    display: block;
+    min-width: 0;
+}
+
+.summary-grid > .slds-col {
+    min-width: 0;
+}
+
+.summary-name,
+.line-name {
+    white-space: normal;
+    overflow-wrap: anywhere;
+}
+
+@media print {
+    :host {
+        width: 100%;
+        max-width: 100%;
+        color: #000;
+        font-size: 10pt;
+    }
+
+    .slds-card__body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .summary-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.5rem;
+        margin: 0 0 0.5rem;
+        break-inside: avoid;
+    }
+
+    .summary-grid > .slds-col {
+        width: auto;
+        padding: 0;
+    }
+
+    .line-items {
+        overflow: visible;
+        max-height: none;
+    }
+
+    .quote-lines {
+        width: 100%;
+        table-layout: fixed;
+        font-size: 9pt;
+    }
+
+    .quote-lines th,
+    .quote-lines td {
+        padding: 0.25rem;
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+    .quote-lines thead {
+        display: table-header-group;
+    }
+
+    .quote-lines tr {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .print-actions,
+    lightning-helptext {
+        display: none;
+    }
+}

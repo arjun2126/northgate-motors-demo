@@ -10,14 +10,9 @@
                 </div>
             </template>
             <template if:true={data}>
-                <template if:true={showExistingDraftNotice}>
+                <template lwc:if={draftNotice}>
                     <div class="slds-notify slds-notify_alert slds-theme_warning slds-m-bottom_small" role="status">
-                        <p>Editing existing Draft for this Opportunity. Status: <strong>{data.status}</strong>. LTV eligibility is not yet verified.</p>
-                    </div>
-                </template>
-                <template if:false={showExistingDraftNotice}>
-                    <div class="slds-notify slds-notify_alert slds-theme_warning slds-m-bottom_small" role="status">
-                        <p>New Draft application. LTV eligibility is not yet verified.</p>
+                        <p>{draftNotice} LTV eligibility is not yet verified.</p>
                     </div>
                 </template>
                 <template if:true={showTaxNotice}>

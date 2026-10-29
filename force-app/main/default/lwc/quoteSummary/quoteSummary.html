@@ -9,14 +9,14 @@
             </template>
 
             <template if:true={hasSummary}>
-                <div class="slds-grid slds-gutters_xx-small slds-m-bottom_medium">
+                <div class="summary-grid slds-grid slds-wrap slds-gutters_xx-small slds-m-bottom_medium">
                     <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
                         <p class="slds-text-title_caps slds-text-color_weak slds-m-bottom_xx-small">Quote</p>
-                        <p class="slds-text-heading_small slds-truncate" title={summary.quoteName}>{summary.quoteName}</p>
+                        <p class="summary-name slds-text-heading_small" title={summary.quoteName}>{summary.quoteName}</p>
                     </div>
                     <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2">
                         <p class="slds-text-title_caps slds-text-color_weak slds-m-bottom_xx-small">Opportunity</p>
-                        <p class="slds-text-heading_small slds-truncate" title={summary.opportunityName}>{summary.opportunityName}</p>
+                        <p class="summary-name slds-text-heading_small" title={summary.opportunityName}>{summary.opportunityName}</p>
                     </div>
                 </div>
 
@@ -24,8 +24,8 @@
                     <h3 class="slds-section__title slds-theme_shade slds-p-horizontal_small slds-p-vertical_xx-small">
                         <span class="slds-truncate slds-text-body_small slds-text-color_weak">Line items</span>
                     </h3>
-                    <div class="slds-scrollable_x">
-                        <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_col-bordered slds-m-bottom_xx-small">
+                    <div class="line-items slds-scrollable_x">
+                        <table class="quote-lines slds-table slds-table_bordered slds-table_cell-buffer slds-table_col-bordered slds-m-bottom_xx-small">
                             <thead>
                                 <tr>
                                     <th scope="col" class="slds-text-title_caps">Item</th>
@@ -38,7 +38,7 @@
                             <tbody>
                                 <template for:each={summary.lines} for:item="line">
                                     <tr key={line.name}>
-                                        <td><div class="slds-truncate" title={line.name}>{line.name}</div></td>
+                                        <td><div class="line-name" title={line.name}>{line.name}</div></td>
                                         <td>{line.category}</td>
                                         <td class="slds-text-align_right"><lightning-formatted-number value={line.quantity} maximum-fraction-digits="0"></lightning-formatted-number></td>
                                         <td class="slds-text-align_right"><lightning-formatted-number format-style="currency" currency-code="USD" value={line.unitPrice}></lightning-formatted-number></td>
@@ -50,7 +50,7 @@
                     </div>
                 </div>
 
-                <div class="slds-grid slds-gutters_xx-small slds-m-bottom_medium">
+                <div class="summary-grid slds-grid slds-wrap slds-gutters_xx-small slds-m-bottom_medium">
                     <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
                         <p class="slds-text-title_caps slds-text-color_weak slds-m-bottom_xx-small">Standard list subtotal</p>
                         <p class="slds-text-heading_small"><lightning-formatted-number format-style="currency" currency-code="USD" value={summary.listSubtotal}></lightning-formatted-number></p>
@@ -67,7 +67,7 @@
                     </div>
                 </div>
 
-                <div class="slds-grid slds-gutters_xx-small slds-m-bottom_medium">
+                <div class="summary-grid slds-grid slds-wrap slds-gutters_xx-small slds-m-bottom_medium">
                     <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
                         <p class="slds-text-title_caps slds-text-color_weak slds-m-bottom_xx-small">Approval status</p>
                         <p class="slds-text-heading_small">{approvalStatusLabel}</p>
@@ -82,14 +82,14 @@
                     </div>
                 </div>
 
-                <div class="slds-grid slds-gutters_xx-small slds-m-bottom_medium">
+                <div class="summary-grid slds-grid slds-wrap slds-gutters_xx-small slds-m-bottom_medium">
                     <div class="slds-col slds-size_2-of-3">
                         <p class="slds-text-title_caps slds-text-color_weak slds-m-bottom_xx-small">Standard grand total
                             <lightning-helptext content="Official document total on the Quote PDF. Tax and shipping are not included in the adjustment."></lightning-helptext>
                         </p>
                         <p class="slds-text-heading_small"><lightning-formatted-number format-style="currency" currency-code="USD" value={summary.grandTotal}></lightning-formatted-number></p>
                     </div>
-                    <div class="slds-col slds-size_1-of-3 slds-grid slds-grid_align-end slds-grid_vertical-align-end">
+                    <div class="print-actions slds-col slds-size_1-of-3 slds-grid slds-grid_align-end slds-grid_vertical-align-end">
                         <lightning-button-group>
                             <lightning-button label="Print / Quote PDF" variant="brand" onclick={handlePrint}></lightning-button>
                             <lightning-button label="Open Opportunity" variant="neutral" disabled={isOpportunityLinkDisabled} onclick={handleOpenOpportunity}></lightning-button>

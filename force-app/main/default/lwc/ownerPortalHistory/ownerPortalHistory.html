@@ -1,0 +1,29 @@
+<template>
+    <div class="panel" aria-busy={loading}>
+        <div class="section-head"><p class="eyebrow">A RECORD OF YOUR JOURNEY</p><h2>Service history &amp; mileage</h2><p class="intro">Your available service visits, recorded readings and linked Cases.</p></div>
+        <p lwc:if={error} class="message error" role="alert">{error}</p>
+        <p lwc:if={loading} class="message" role="status">Loading your service history…</p>
+        <p lwc:if={empty} class="empty-state">No eligible service visits are available for your Contact.</p>
+        <div class="history-grid"><section aria-label="Loaded service visits">
+        <ol class="timeline" aria-label="Chronological service visits">
+            <template for:each={chronologicalVisits} for:item="visit">
+                <li key={visit.Id}>
+                    <p class="timeline-label">SERVICE VISIT · TORONTO DATE</p><h3><lightning-formatted-date-time value={visit.Scheduled_Start__c} year="numeric" month="short" day="2-digit" time-zone="America/Toronto"></lightning-formatted-date-time></h3>
+                    <dl><dt>Service</dt><dd>{visit.Service_Type__c}</dd><dt>Status</dt><dd>{visit.Status__c}</dd><dt>Recorded mileage</dt><dd>{visit.Mileage_At_Checkin__c}</dd></dl>
+                </li>
+            </template>
+        </ol>
+        </section><section class="mileage-panel" aria-label="Recorded mileage and linked Cases">
+        <h3>Mileage over time — loaded service visits</h3>
+        <p>Individual dated odometer readings, not proof of ownership or a combined vehicle mileage total. Load older records for earlier readings.</p>
+        <div class="table-region" role="region" aria-label="Recorded mileage table, horizontally scrollable if needed" tabindex="0">
+            <table><caption>Dated readings from loaded visits</caption><thead><tr><th scope="col">Service date</th><th scope="col">Recorded odometer</th></tr></thead>
+                <tbody><template for:each={mileageReadings} for:item="reading"><tr key={reading.Id}><td><lightning-formatted-date-time value={reading.Scheduled_Start__c} year="numeric" month="short" day="2-digit" time-zone="America/Toronto"></lightning-formatted-date-time></td><td>{reading.Mileage_At_Checkin__c}</td></tr></template></tbody>
+            </table>
+        </div>
+        <h3>Linked Cases available to your Contact</h3>
+        <ul class="linked-cases"><template for:each={cases} for:item="row"><li key={row.Id}><span class="case-reference">Case {row.CaseNumber}</span><span class="status-badge">{row.Status}</span></li></template></ul>
+        </section></div>
+        <lightning-button lwc:if={hasMore} label="Load older records" onclick={load} disabled={loading}></lightning-button>
+    </div>
+</template>

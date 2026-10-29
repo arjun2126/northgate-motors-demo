@@ -1,0 +1,32 @@
+.THIS {
+    position: relative;
+    z-index: 1;
+}
+.THIS.ownerTheme {
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+    margin: 0;
+    background: #f5f7fa;
+    color: #242a32;
+    font-family: 'Salesforce Sans', 'Segoe UI', Arial, sans-serif;
+    overflow-wrap: anywhere;
+}
+.THIS .ownerHeader {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: .75rem;
+    min-height: 4rem;
+    padding: .75rem clamp(1rem, 3vw, 3rem);
+    background: #171a1f;
+    color: #ffffff;
+    border-bottom: 1px solid #424a55;
+}
+.THIS .ownerBrand { display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem 1.25rem; min-width: 0; }
+.THIS .brandName { font-size: .875rem; font-weight: 700; letter-spacing: .1em; }
+.THIS .brandContext { color: #cad3df; font-size: .625rem; letter-spacing: .12em; }
+.THIS .ownerAccount { min-width: 0; max-width: 100%; background: #ffffff; color: #242a32; border-radius: .375rem; }
+.THIS .ownerAccount:empty { display: none; }
+.THIS .ownerBody { width: 100%; max-width: none; min-width: 0; margin: 0; padding: 0; }

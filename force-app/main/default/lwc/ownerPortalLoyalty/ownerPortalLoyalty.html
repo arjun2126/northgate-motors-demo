@@ -1,0 +1,22 @@
+<template>
+    <div class="panel" aria-busy={loading}>
+        <div class="section-head"><div><p class="eyebrow">THE JOURNEY CONTINUES</p><h2>My loyalty &amp; rewards</h2><p class="intro">Your stored membership information, at a glance.</p></div><span class="read-only">READ ONLY</span></div>
+        <p lwc:if={error} class="message error" role="alert">{error}</p>
+        <p lwc:if={loading} class="message" role="status">Loading read-only loyalty information…</p>
+        <p lwc:if={empty} class="empty-state">No eligible loyalty membership is available.</p>
+        <div class="loyalty-grid"><div class="membership-panel">
+        <template for:each={members} for:item="member">
+            <dl key={member.Id} class="balance"><dt>Stored points</dt><dd>{member.Points_Balance__c}</dd><dt>Tier</dt><dd>{member.Tier__c}</dd><dt>Status</dt><dd>{member.Status__c}</dd></dl>
+        </template>
+        <p>Stored balances and historical transactions are shown without recalculation, accrual or redemption.</p>
+        </div><section class="activity-panel" aria-label="Loyalty activity"><h3>Recorded activity</h3><p class="activity-note">Only transactions available to your signed-in identity are shown.</p>
+        <ul class="transactions" aria-label="Read-only loyalty transaction history">
+            <template for:each={transactions} for:item="row"><li key={row.Id}>
+                <lightning-formatted-date-time value={row.Transaction_Date__c} year="numeric" month="short" day="2-digit" time-zone="UTC"></lightning-formatted-date-time>
+                <dl><dt>Type</dt><dd>{row.Type__c}</dd><dt>Points</dt><dd>{row.Points__c}</dd></dl>
+            </li></template>
+        </ul>
+        <lightning-button lwc:if={hasMore} label="Load older transactions" onclick={load} disabled={loading}></lightning-button>
+        </section></div>
+    </div>
+</template>

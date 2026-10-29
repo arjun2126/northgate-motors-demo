@@ -1,0 +1,42 @@
+<template>
+    <div class="panel" aria-busy={loading}>
+        <div class="section-head"><div><p class="eyebrow">WE'RE HERE TO HELP</p><h2>My Cases</h2><p class="intro">Keep in touch with Northgate and follow your service questions.</p></div>
+        <lightning-button label="Refresh Case status" onclick={refresh} disabled={loading}></lightning-button></div>
+        <p lwc:if={error} class="message error" role="alert" data-case-error tabindex="-1">{error}</p>
+        <p lwc:if={notice} class="message success" role="status">{notice}</p>
+        <p lwc:if={loading} class="message" role="status">Updating your Cases…</p>
+        <p lwc:if={empty} class="empty-state">No eligible Cases are visible to your Contact.</p>
+        <ul class="case-list" aria-label="Cases visible to your Contact">
+            <template for:each={caseCards} for:item="row">
+                <li key={row.Id} class={row.className}>
+                    <div class="case-copy"><p class="case-reference">Case {row.CaseNumber}</p><h3>{row.Subject}</h3><span class="status-badge">Status: {row.Status}</span></div>
+                    <button type="button" class="case-select" data-case-id={row.Id} onclick={choose} aria-controls="comment-panel" aria-expanded={row.expanded} disabled={loading}>{row.buttonLabel}</button>
+                </li>
+            </template>
+        </ul>
+        <lightning-button lwc:if={hasMore} label="Load older Cases" onclick={load} disabled={loading}></lightning-button>
+        <div class="support-grid"><section aria-labelledby="new-case-heading" class="form-section">
+        <p class="eyebrow">A NEW CONVERSATION</p>
+        <h3 id="new-case-heading">Ask Northgate Service</h3>
+        <p id="case-help">Submit a service question. Northgate routes it to the service team; this does not book an appointment or grant vehicle access.</p>
+        <lightning-input data-case-input label="New Case subject" name="subject" value={subject} onchange={input} maxlength="255" required aria-describedby="case-help"></lightning-input>
+        <lightning-textarea data-case-input label="Description" name="description" value={description} onchange={input} maxlength="4000" aria-describedby="case-help"></lightning-textarea>
+        <lightning-button variant="brand" label="Submit Case to Northgate Service" onclick={create} disabled={loading}></lightning-button>
+        </section>
+        <section id="comment-panel" aria-labelledby="comment-heading" class="form-section" aria-busy={commentsLoading}>
+        <p class="eyebrow">YOUR CASE CONVERSATION</p>
+        <h3 id="comment-heading" data-comment-heading tabindex="-1">Published comments — {selectedCaseNumber}</h3>
+        <template lwc:if={selectedCase}>
+            <p lwc:if={commentsLoading} class="message" role="status">Loading published comments…</p>
+            <ul class="comment-list" aria-label="Published customer comments">
+                <template for:each={comments} for:item="row"><li key={row.Id}><lightning-formatted-date-time value={row.CreatedDate} year="numeric" month="short" day="2-digit" time-zone="America/Toronto"></lightning-formatted-date-time><p>{row.CommentBody}</p></li></template>
+            </ul>
+            <p id="comment-help">This reply is public to the Case's permitted customer audience. Do not include payment details or passwords.</p>
+            <lightning-textarea data-comment-input label="Add a public customer comment" name="commentBody" value={commentBody} onchange={input} maxlength="4000" required aria-describedby="comment-help"></lightning-textarea>
+            <lightning-button variant="brand" label="Submit comment" onclick={comment} disabled={loading}></lightning-button>
+        </template>
+        <p lwc:else class="comment-prompt">Select a Case above to read or add a published comment.</p>
+        </section>
+        </div>
+    </div>
+</template>

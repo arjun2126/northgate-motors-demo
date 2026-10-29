@@ -1,0 +1,10 @@
+<aura:component implements="forceCommunity:themeLayout" access="global" description="Northgate Owner Experience: full-width theme with the native account menu.">
+    <aura:attribute name="profileMenu" type="Aura.Component[]" required="false" />
+    <div class="ownerTheme">
+        <header class="ownerHeader">
+            <div class="ownerBrand"><span class="brandName">NORTHGATE MOTORS</span><span class="brandContext">OWNER EXPERIENCE</span></div>
+            <div class="ownerAccount">{!v.profileMenu}</div>
+        </header>
+        <div class="ownerBody">{!v.body}</div>
+    </div>
+</aura:component>

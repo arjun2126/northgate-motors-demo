@@ -1,0 +1,33 @@
+<template>
+    <div class="panel" aria-busy={loading}>
+        <div class="section-head"><div><p class="eyebrow">YOUR GARAGE</p><h2>My vehicles</h2><p class="intro">A closer look at the vehicles on your ownership journey.</p></div>
+        <lightning-button label="Refresh owned vehicles" onclick={refresh} disabled={loading}></lightning-button></div>
+        <p lwc:if={error} class="message error" role="alert">{error}</p>
+        <p lwc:if={loading} class="message" role="status">Loading verified vehicle information…</p>
+        <p lwc:if={message} role="status" class="notice">{message}</p>
+        <p lwc:if={empty} class="empty-state">No current verified owned vehicles are available.</p>
+        <ul class="vehicles" aria-label="Your verified owned vehicles">
+            <template for:each={rows} for:item="row"><li key={row.vehicleId}>
+                <div class="vehicle-art" aria-hidden="true"><span class="road-line"></span><lightning-icon icon-name="standard:asset_object" size="large" alternative-text=""></lightning-icon><span class="art-label">NORTHGATE MOTORS</span></div>
+                <div class="vehicle-copy"><span class="status-badge">Verified ownership</span><h3>{row.year} {row.model}</h3><p class="vehicle-colour">{row.colour}</p><p class="vehicle-reference">Vehicle reference · {row.label}</p>
+                <button type="button" data-vehicle-id={row.vehicleId} onclick={select} aria-controls="vehicle-detail">View details for {row.label}</button>
+                </div>
+            </li></template>
+        </ul>
+        <lightning-button lwc:if={hasMore} label="Load more owned vehicles" onclick={load} disabled={loading}></lightning-button>
+        <section id="vehicle-detail" aria-label="Selected owned vehicle" class="vehicle-detail">
+            <template lwc:if={selected}>
+                <p class="eyebrow">VEHICLE DETAILS</p><h3 tabindex="-1" data-detail-heading>{selected.label} — {selected.model}</h3>
+                <div class="detail-grid"><div class="detail-media">
+                <img lwc:if={selected.photoUrl} src={selected.photoUrl} alt={selected.photoAlt} data-vehicle-id={selected.vehicleId} onerror={imageError} loading="lazy" />
+                <div lwc:else class="photo-fallback"><lightning-icon icon-name="standard:asset_object" size="large" alternative-text=""></lightning-icon><p>Vehicle photo unavailable.</p><p class="muted">Your verified vehicle details are shown alongside.</p></div>
+                <p class="image-caption">Stock model photographs are illustrative; they are not proof of this vehicle's exact colour or specification.</p></div>
+                <div class="detail-copy">
+                <dl><dt>Year</dt><dd>{selected.year}</dd><dt>Colour</dt><dd>{selected.colour}</dd><dt>Condition</dt><dd>{selected.condition}</dd></dl>
+                <p lwc:if={selected.canRequestService} class="notice">Verified servicing authorization is available. Use the appointment section to request service.</p>
+                <p lwc:else class="notice">Ownership is verified; separate servicing authorization is required before requesting service.</p>
+                </div></div>
+            </template>
+        </section>
+    </div>
+</template>

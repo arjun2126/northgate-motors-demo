@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NG_Overview</fullName>
+    <columns>NAME</columns>
+    <columns>Loyalty_Member__c</columns>
+    <columns>Type__c</columns>
+    <columns>Points__c</columns>
+    <columns>Transaction_Date__c</columns>
+    <columns>Expiry_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Northgate Overview</label>
+</ListView>

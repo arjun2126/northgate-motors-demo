@@ -1,0 +1,32 @@
+<template>
+    <div class="panel" aria-busy={loading}>
+        <div class="section-head"><div><p class="eyebrow">SERVICE, SIMPLIFIED</p><h2>Request a service appointment</h2><p class="intro">Care for your vehicle, with a little more convenience.</p></div><span class="request-label">REQUEST · REVIEW · SUBMIT</span></div>
+        <p role="status" class="notice">{message}</p>
+        <p lwc:if={error} class="message error" role="alert">{error}</p>
+        <p lwc:if={loading} class="message" role="status">Checking eligibility or submitting your request…</p>
+        <template lwc:if={receipt}>
+            <section class="receipt" aria-label="Service request receipt"><p class="eyebrow">REQUEST RECEIVED</p><h3>Your next step is in motion.</h3><p role="status">Your service request was submitted. Reference: {receipt}. Northgate will confirm scheduling; Requested does not mean Scheduled.</p><p class="receipt-note">Keep this reference for your records. Visit Overview or Service history for the status available to your account.</p></section>
+        </template>
+        <template lwc:else>
+            <p id="appointment-help" class="help">Ownership and separate servicing authorization are checked again on every submission. Times use your device timezone; capacity is evaluated in America/Toronto.</p>
+            <div class="booking-grid"><div class="booking-step"><p class="step-label"><span aria-hidden="true">01</span> YOUR VEHICLE</p>
+            <lightning-combobox data-input name="vehicleId" label="Step 1 — eligible owned vehicle" value={vehicleId} options={vehicleOptions} onchange={input} disabled={loading} required aria-describedby="appointment-help"></lightning-combobox>
+            <p lwc:if={noEligibleVehicle}>No eligible vehicle is currently available for a service request.</p>
+            <lightning-button lwc:if={hasMore} label="Load more owned vehicles" onclick={load} disabled={loading}></lightning-button>
+            </div><div class="booking-step"><p class="step-label"><span aria-hidden="true">02</span> YOUR SERVICE</p>
+            <lightning-combobox data-input name="rooftopId" label="Step 2 — service location" value={rooftopId} options={rooftops} onchange={input} disabled={detailsDisabled} required></lightning-combobox>
+            <lightning-combobox data-input name="serviceType" label="Service type" value={serviceType} options={services} onchange={input} disabled={detailsDisabled} required></lightning-combobox>
+            <lightning-input data-input type="datetime" name="startsAt" label="Requested future date and time" value={startsAt} onchange={input} disabled={detailsDisabled} required></lightning-input>
+            </div></div>
+            <div class="action-row"><p class="help">Your requested time is subject to eligibility and available daily capacity.</p><lightning-button variant="brand" label="Review service request" onclick={review} disabled={detailsDisabled}></lightning-button></div>
+            <section lwc:if={reviewing} class="review-panel" aria-label="Step 3 — review and submit">
+                <p class="step-label"><span aria-hidden="true">03</span> ONE LAST LOOK</p>
+                <h3>Review your request</h3>
+                <dl class="review-details"><dt>Vehicle</dt><dd>{vehicleLabel}</dd><dt>Location</dt><dd>{rooftopLabel}</dd><dt>Service</dt><dd>{serviceLabel}</dd><dt>Requested time · Toronto</dt><dd><lightning-formatted-date-time value={startsAt} year="numeric" month="short" day="2-digit" hour="2-digit" minute="2-digit" time-zone="America/Toronto"></lightning-formatted-date-time></dd></dl>
+                <p>Submitting requests service subject to capacity and current eligibility. Repeat retries use the same request token.</p>
+                <div class="review-actions"><lightning-button label="Back to details" onclick={back} disabled={loading}></lightning-button>
+                <lightning-button variant="brand" label="Submit service request" onclick={submit} disabled={submitDisabled}></lightning-button></div>
+            </section>
+        </template>
+    </div>
+</template>

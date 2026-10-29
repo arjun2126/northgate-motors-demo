@@ -1,0 +1,4 @@
+<aura:component implements="forceCommunity:layout" access="global" description="Northgate Owner Experience: one full-width content region, without a sidebar.">
+    <aura:attribute name="content" type="Aura.Component[]" required="false" />
+    <div class="ownerContent">{!v.content}</div>
+</aura:component>
