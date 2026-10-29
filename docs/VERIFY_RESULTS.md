@@ -13,11 +13,11 @@
 | 7 | Knowledge | Setup → Knowledge | **Available in DE** — standard in this edition; ~10 articles buildable in P6 | Plan to build — ~10 articles in P6 (standard in this edition) | Case templates as documents |
 | 8 | Entitlements + Milestones | Setup → Entitlements | **Available** — `Entitlement` sObject query succeeds; SLA skill buildable | Plan to build in P6 (SLA skill) | Flow-based SLA stamps (fallback) |
 | 9 | Service Console app | Setup → App Manager | **Not verified** — requires Setup click | Use for service persona demo | Custom app only |
-| 10 | Experience Cloud + External Identity licences | Setup → Digital Experiences + licence count | **Available** — External Identity licences present (9 total, 0 used per org) | Small real site in P7 (1–2 External Identity users) | Simulation only (documented) |
-| 11 | Agentforce (service agent, Prompt Builder) | Setup → Agentforce; attempt agent creation | **Not verified** — requires Setup click | Small real build in P7 (≈150 LLM req/hr) | Simulated triage fallback, labelled |
-| 12 | Data Cloud (10 GB, 1 data space, manual refresh) | Setup → Data Cloud | **Not verified** — requires Setup click | Small real build in P7 (ingest + identity resolution) | Ledger note only |
+| 10 | Experience Cloud + external licenses | Read-only ng-demo settings/license inventory, 2026-10-26 | **CONFIRMED** Networks disabled/no Site. Community/Plus/Partner each 5 total/0 used; External Identity 9/0 | Owner chooses/enables approved site and per-object license/security model before P7-18 build | No automatic simulation or enablement |
+| 11 | Agentforce and Prompt Builder | Read-only ng-demo settings/metadata, 2026-10-26 | **CONFIRMED** Prompt platform enabled; Agent Platform/Copilot/Bots disabled. Draft template check-only 1/1; runtime/quota not verified | Owner capability/identity/usage decisions required for actual agent demo | No new Flow fallback without explicit amendment |
+| 12 | Data Cloud | Read-only ng-demo settings/object inventory, 2026-10-26 | **CONFIRMED** CustomerDataPlatform disabled, stream count 0, DataSpace not exposed; historical 10 GB/credit assumption unverified | Owner enables/provisions approved space/limits/source before native ingestion | No custom duplicate data-model substitute |
 | 13 | Dynamic dashboards (limit = 3 — confirmed in Salesforce Help) | Create 1 dynamic dashboard, count remaining | **Not verified** — requires dashboard creation; limit confirmed as 3 of 10 in Help | Mark exactly 3 dynamic (P2-11, P5-14, P6-09); rest fixed-user | Fixed-user dashboards only |
-| 14 | Enterprise Territory Management | Setup search | **Not verified** — requires Setup click | Optional sharing demo | Sharing rules only |
+| 14 | Enterprise Territory Management / Sales Territories | Settings/authorized deployment/read-only SOQL, ng-demo only | **CONFIRMED — 2026-10-26 UTC:** NG_Rooftops deployed in Planning, shared type/four siblings with Read/None/None/None persisted, zero Account/User associations | Assignment/identity/activation and actual tree/persona acceptance still need approval/evidence | No substitute without owner disposition |
 | 15 | Standard Quote/CPQ | Setup → Sales → Quotes | **Enabled** — Quote sObject now present after Setup click; Standard Quote (as planned) | Standard Quote (as planned) | Quote simulation fallback |
 | 16 | Web-to-Lead | Setup → Web-to-Lead | **Not verified** — requires Setup click | Lead intake demo | Flow file-upload intake |
 | 17 | Change Data Capture availability | Setup search / sf data | **Not verified** — requires Setup click | Ledger note (bonus) | Ignore |
@@ -26,6 +26,10 @@
 | 20 | Deployment status / packaging limits | Setup → Deployment Status | **Not verified** — requires Setup click | Note for release strategy | Unlocked package still preferred |
 
 **Notes from read-only checks (Stop B) and Setup clicks (Stop C):**
+
+- **Later P7-12 update, ng-demo only (2026-10-26 UTC):** owner enabled Sales Territories;
+  agent performed read-only verification. Raw settings/query evidence and remaining actions:
+  `evidence/P7/P7_12_READ_ONLY_REVERIFICATION.md`. Other historical matrix rows were not re-audited.
 
 - **Org usernames confirmed**: `arjun.ngdev@northgate.demo` (ng-dev), `arjun.ngdemo@northgate.demo` (ng-demo) — match plan
 - **Org IDs**: ng-dev = `00Dg800000LxahhEAB`, ng-demo = `00Daj00001Ae3iWEAR`

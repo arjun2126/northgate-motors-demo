@@ -1,0 +1,21 @@
+{
+  "name": "northgate-motors-data",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Synthetic data generator and loader for the Northgate Motors demo org (Phase 5).",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "data:generate": "npx tsx data/scripts/generate.ts",
+    "data:load": "npx tsx data/scripts/load.ts",
+    "data:verify": "python3 data/scripts/phase5.py verify",
+    "data:test": "npx tsx data/scripts/tests/vin.test.ts && npx tsx data/scripts/tests/resolve.test.ts && npx tsx data/scripts/tests/incremental.test.ts && npx tsx data/scripts/tests/qli-preflight.test.ts && npx tsx data/scripts/tests/loader-filter.test.ts && npx tsx data/scripts/tests/loader-mappings.test.ts && npx tsx data/scripts/tests/bulk-accounting.test.ts && npx tsx data/scripts/tests/verify.test.ts && npx tsx data/scripts/tests/determinism.test.ts && npx tsx data/scripts/tests/counts.test.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  }
+}

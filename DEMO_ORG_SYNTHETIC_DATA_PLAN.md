@@ -1,6 +1,18 @@
 # Synthetic Data Plan — Northgate Motors
 
-**Status:** PLANNING ONLY. Nothing loads until Phase 0 is approved and the org exists.
+**Status:** LOADED WITH DOCUMENTED EXCEPTIONS in `ng-demo`; Phase 5 was owner-accepted with
+documented exceptions on October 23, 2026. Exact count/storage and historical provenance
+exceptions remain; this is not unconditional original-criteria acceptance.
+
+Recorded seed version: `SEED-2026.10.01`; anchor: `2026-10-01`. The initial seed load is
+recorded on `2026-10-18`; cleanup and the 30-row legacy supplement were executed on
+`2026-10-21` (`docs/planning/P5_EXECUTION_REPORT_2026-10-21.md`). No reload was performed
+for the `2026-10-23` executive-reporting activation. Exact canonical/live count ties,
+precise storage evidence and historical ledger/marker reconciliation remain exceptions;
+this status is not a claim that every original acceptance criterion passed. See the
+P5-01 through P5-20 closure candidate in `DEMO_ORG_BACKLOG.md` and
+`docs/planning/P5_TO_P6_HANDOFF_2026-10-23.md`. Historical `SEED_VERSION.txt` load/status
+markers have not been rewritten to manufacture provenance.
 
 Companions: `DEMO_ORG_MASTER_PLAN.md` (§3.5 keep-alive, §8 reset, §10 docs),
 `DEMO_ORG_DATA_MODEL.md` (fields, §5.6 automation map), `DEMO_ORG_BACKLOG.md` (P5-*).
@@ -46,18 +58,18 @@ demo work (users creating test drives, cases, quotes on camera).
 | 1 | `Rooftop__c` | 4 | 2 | 8 | |
 | 2 | `Vehicle_Model__c` | 30 | 2 | 60 | 6 makes × 5 trims |
 | 3 | `Vehicle__c` | 120 | 2 | 240 | Split §2.2 |
-| 4 | Product2 | 40 | 2 | 80 | 30 trims + 10 packages/accessories |
-| 5 | PricebookEntry | 60 | 2 | 120 | |
+| 4 | Product2 | 60 | 2 | 120 | 30 trims + 5 packages + 25 accessories (matches `data/scripts/generate.ts`; PBE row stays 1:1) |
+| 5 | PricebookEntry | 60 | 2 | 120 | 1 PBE per Product (unchanged) |
 | 6 | Account | 150 | 2 | 300 | incl. 8 BAD-01 duplicate households |
 | 7 | Contact | 185 | 2 | 370 | ~1.9 per household; incl. BAD-01 contacts |
 | 8 | Lead | 130 | 2 | 260 | Unconverted only — see §2.3 |
-| 9 | Opportunity | 100 | 2 | 200 | Split §2.4 |
+| 9 | Opportunity | 100 | 2 | 200 | Split §2.4; 12 Closed Won unchanged |
 | 10 | OpportunityLineItem | 100 | 2 | 200 | |
 | 11 | Quote | 60 | 2 | 120 | incl. 4 BAD-09 stacked-discount quotes |
 | 12 | QuoteLineItem | 80 | 2 | 160 | |
 | 13 | `Trade_In__c` | 45 | 2 | 90 | |
 | 14 | `Financing__c` | 60 | 2 | 120 | |
-| 15 | `Delivery__c` | 40 | 2 | 80 | |
+| 15 | `Delivery__c` | 12 | 2 | 24 | 1:1 with Closed Won opptys per §2.4 (matches `data/scripts/generate.ts`) |
 | 16 | `Test_Drive__c` | 70 | 2 | 140 | |
 | 17 | `Service_Visit__c` | 140 | 2 | 280 | Split §2.5 |
 | 18 | Case | 60 | 2 | 120 | |
@@ -68,19 +80,25 @@ demo work (users creating test drives, cases, quotes on camera).
 | 23 | Campaign | 5 | 8 | 40 | 8 KB each |
 | 24 | CampaignMember | 60 | 2 | 120 | |
 | 25 | `Data_Load_Batch__c` | 20 | 2 | 40 | Loader-written ledger |
-| | **Clean subtotal (`SEED-01..76`)** | **1,843** | | **3,716** | |
+| | **Clean subtotal (`SEED-01..76`)** | **1,835** | | **3,700** | |
 | 26 | Legacy import `SEED-98` | 30 | 2 | 60 | Schema-invalid on purpose — §7.1 |
-| | **Non-activity total** | **1,873** | | **3,776** | incl. campaigns (40 KB) |
+| | **Non-activity total** | **1,865** | | **3,760** | incl. campaigns (40 KB) |
 | 27 | Task + Event | 250 | 1 | 250 | Activities ≈1 KB |
-| | **TOTAL** | **2,123** | | **4,026 KB = 3.93 MB** | of 5 MB |
-| | **Headroom** | | | **1,094 KB = 1.07 MB** | live demos + burst |
+| | **TOTAL** | **2,115** | | **4,010 KB = 3.92 MB** | of 5 MB |
+| | **Headroom** | | | **1,110 KB = 1.08 MB** | live demos + burst |
 
-Arithmetic: non-campaign records 1,868 × 2 KB = 3,736 + campaigns 5 × 8 = 40 +
-activities 250 × 1 = 250 → **4,026 KB = 3.93 MB** (headroom 1.07 MB). BAD-99 rows are
-inside the envelope object counts; only `SEED-98` (30) is additional.
+Arithmetic (single consistent convention: 2 KB per non-campaign record, 8 KB per Campaign record, 1 KB per activity):
 
-Every BAD-01..10 scenario survives at these volumes (§7). Nothing here is loaded with
-`sf data import tree` — see §4.
+- Clean non-campaign records 1,830 × 2 KB = 3,660
+- Campaign 5 × 8 KB = 40
+- Clean subtotal (campaigns + non-campaigns) = 3,660 + 40 = **3,700 KB** (1,835 records)
+- SEED-98 legacy 30 × 2 KB = 60
+- Non-activity total = 3,700 + 60 = **3,760 KB** (1,865 records)
+- Activities 250 × 1 KB = 250
+- **TOTAL = 3,760 + 250 = 4,010 KB = 3.92 MB** (2,115 records)
+- **Headroom = 5,120 − 4,010 = 1,110 KB = 1.08 MB** (using 5 MB = 5,120 KB convention; matches original plan's `5,120 - 4,026 = 1,094 KB` formula)
+
+BAD-99 rows are inside the envelope object counts; only `SEED-98` (30) is additional.
 
 ### 2.2 Vehicle split (120)
 

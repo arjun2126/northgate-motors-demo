@@ -204,7 +204,7 @@ This is the honesty section. Do not claim a feature exists in the free org unles
 | Reports (summary, matrix, joined), dashboards, custom report types, folders | Analyst surface |
 | Role hierarchy, OWD, sharing rules, queues, public groups, profiles, permission sets, permission set groups | Security model |
 | Tasks, email templates, letterhead | Follow-up automation |
-| Static resources (images) | `NG_VehicleImages` — ~30 AI-generated fictional vehicle photos (~50 KB webp each), displayed via formula field + LWC (data model §3.2/§3.3) |
+| Static resources (images) | `NG_VehicleImages` — 30 appropriately licensed real automotive stock photographs under the owner-approved P7-22 sourcing amendment (~50 KB WebP where practical); fictional inventory identities remain unchanged, incidental OEM badges are not removed or endorsements implied; formula field + LWC display (data model §3.2/§3.3) |
 | Agentforce — this edition includes ~150 LLM requests/hour | One service agent + one Prompt Builder template (backlog P7-15). **[VERIFY] in Phase 0** |
 | Data Cloud — this edition includes 10 GB, 1 data space, manual refresh/publish only | One ingestion + identity-resolution demo (backlog P7-16). **[VERIFY] in Phase 0** |
 | Lightning Knowledge (~10 articles) | Service answers and recall knowledge (backlog P6-15) |
@@ -268,6 +268,19 @@ stays licensed: the deliverable is a one-page concept mapping in `docs/architect
 For each of these, the deliverable is an **architecture note** in `docs/` that states: what the
 real product does, what was built instead, and where the seam is. That seam documentation is
 itself an architect-level signal; do not paper over it.
+
+P7-14 implementation seam index (actual source/native boundaries, not paid-product builds):
+
+| Seam | Authoritative note |
+|---|---|
+| Revenue Cloud / CPQ substitute | `docs/architecture/SIMULATION_CPQ.md` |
+| Loyalty Management substitute | `docs/architecture/SIMULATION_LOYALTY.md` |
+| Marketing / consent / nurture substitute | `docs/architecture/SIMULATION_NURTURE.md` |
+| Field Service substitute | `docs/architecture/SIMULATION_FIELD_SERVICE.md` |
+| Integration / native events / mock VIN boundary | `docs/architecture/SIMULATION_INTEGRATION.md` |
+
+All notes preserve current CP2 and Phase 6 acceptance exceptions. They do not authorize native
+feature activation, paid integration, records, messaging or a new project-owned Flow.
 
 ---
 
@@ -757,6 +770,14 @@ UAT signed, screenshots filed, tag applied.
 
 ---
 
+### Post-Phase-8 / Future Enhancements
+
+**Northgate Vehicle Studio — Interactive Car Configurator** is a future proposal, not part of
+Phase 7/8 or M4 acceptance. Start with prepared-asset exterior colour switching; expand later to
+interior/options, saved proposals and an approved CP2 sales handoff; interactive 3D is optional.
+Detailed stages, dependencies, risks and preliminary acceptance criteria live in
+`DEMO_ORG_BACKLOG.md` under **Post-Phase-8 / Future Enhancements**. No implementation is authorized.
+
 ## 13. Approval gate and next step
 
 **Nothing is built yet.** The next step requires explicit owner approval.
@@ -872,7 +893,9 @@ Opportunity/Service_Visit gain `*_Staff__c` lookups. Custom metadata types now 4
 
 Record plan 11,800 → **storage-budgeted**: new §2 per-object table with count × KB
 arithmetic, target ≤ 4.0 MB of 5 MB, ~1,873 records + 250 activities, ~1 MB headroom,
-plus an optional purged burst set. Loader switched from `sf data import tree` (insert-only,
+plus an optional purged burst set. (2026-10-20 governing allocation: 60 Product2 + 12
+Delivery, 1,835 clean + 30 legacy + 250 activities = 2,115 records; the ~1,873 figure and
+2,123 total are historical pre-revision values.) Loader switched from `sf data import tree` (insert-only,
 duplicates on re-run) to `sf data upsert bulk --external-id Seed_Tag__c` in dependency
 order with a `resolve.ts` parent-ID step; re-runnability is an acceptance criterion.
 Added SEED-98 legacy dirty-import batch (~30 records) and split §9 into release gates

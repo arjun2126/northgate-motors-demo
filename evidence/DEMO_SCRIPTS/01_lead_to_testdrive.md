@@ -1,5 +1,12 @@
 # Demo Script 01 — Lead → Test Drive → Opportunity (P2-15)
 
+## Activate persona — historical material only
+
+This is an archived P2-15 script, excluded from the current P7-21 pack. Do not execute the old
+target, role-switch or record-mutation instructions below. Use README.md and the five current
+persona walkthroughs in this directory; current authorization targets ng-demo only and does
+not permit persona changes or business-record writes. The original text is retained as history.
+
 Time: < 5 minutes
 Audience: dealer principal, GM, sales manager
 Org: ng-dev (or ng-demo once parity is in place)

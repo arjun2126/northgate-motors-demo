@@ -1,5 +1,10 @@
 # UAT — Phase 2 Vertical Slice (P2-14)
 
+> **Status 2026-10-20: UNSIGNED TEMPLATE.** No tester, date, result, screenshot, or
+> sign-off row has been completed. This file does not prove Phase 2 UAT passed. The
+> `demo/v0.1` tag does not substitute for UAT evidence. See
+> `docs/planning/PHASE2_SIGNOFF_RECONCILIATION_2026-10-20.md`.
+
 Date: 2026-10-08 (template; fill in during UAT pass)
 Org: ng-dev (`arjun.ngdev@northgate.demo`)
 Tester: ________________

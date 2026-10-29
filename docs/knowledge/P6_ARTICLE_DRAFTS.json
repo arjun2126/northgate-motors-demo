@@ -1,0 +1,89 @@
+{
+  "status": "LocalDraft",
+  "language": "en_US",
+  "audience": "Internal",
+  "categoryGroup": "Northgate_Knowledge",
+  "categories": ["Service", "Buying", "Financing", "Ownership", "Safety"],
+  "articles": [
+    {
+      "title": "Prepare for a service appointment",
+      "urlName": "prepare-for-service-appointment",
+      "category": "Service",
+      "summary": "What an advisor needs before booking and check-in.",
+      "body": "Confirm the customer's identity, vehicle, preferred rooftop and contact method. Record the concern in the customer's words, including when it occurs and any warning indicators. Ask for current mileage and relevant service history. Do not diagnose from a booking request. Explain that Requested is not a confirmed appointment and that rooftop capacity applies to the requested day. At check-in, confirm the agreed inspection scope and how the customer will approve additional work. Record the actual visit and linked Case; do not reuse another household member's vehicle or consent. If the vehicle may be unsafe, refer the customer to the manufacturer's safety instructions and appropriate roadside support rather than advising continued driving.",
+      "caseUse": "Service intake: attach after confirming the correct vehicle and appointment concern."
+    },
+    {
+      "title": "Understand service estimates and approvals",
+      "urlName": "service-estimates-and-approvals",
+      "category": "Service",
+      "summary": "Explain inspection scope, estimates and authorization for additional work.",
+      "body": "Separate the customer's reported concern from a technician's findings. Explain which diagnostic or inspection work the current estimate covers and whether taxes, parts and labour are included. Ask an authorized advisor to confirm current pricing; article text is not a price promise. Before additional work, record the revised scope and the customer's authorization using the approved operational procedure. Do not treat a Case Status change, a loyalty balance or an old estimate as payment or repair authorization. At completion, explain recorded work and any follow-up recommendations using the actual repair documentation. Escalate disputed charges or missing evidence to the Service Manager without rewriting historical records.",
+      "caseUse": "Service estimate question or request for authorization clarification."
+    },
+    {
+      "title": "Plan seasonal tire service",
+      "urlName": "seasonal-tire-service",
+      "category": "Service",
+      "summary": "Prepare a tire-service request without giving vehicle-specific technical advice.",
+      "body": "Ask which vehicle and wheel or tire set the request concerns. Record whether the customer needs installation, inspection or storage information. Follow the manufacturer's specifications for size, pressure, load and installation requirements; this article supplies no universal values. Ask a qualified technician to assess wear, damage or unusual handling. Confirm capacity and parts availability before promising a time. Record customer-reported mileage and concerns on the visit. If the customer reports sudden pressure loss, visible structural damage or unsafe handling, do not promise that the vehicle is safe to drive; direct the customer to appropriate safety or roadside support. Confirm actual work from the repair record before closing the service Case.",
+      "caseUse": "Seasonal tire booking, inspection or preparation question."
+    },
+    {
+      "title": "Respond to a recall notice",
+      "urlName": "respond-to-recall-notice",
+      "category": "Safety",
+      "summary": "Verify recall applicability and manufacturer instructions before booking.",
+      "body": "Record the recall notice reference and identify the exact vehicle through the approved secure process. Have an authorized service advisor verify applicability against current manufacturer recall information. A similar model name or a household relationship does not establish eligibility. Follow any stop-drive, parking or other safety direction in the official notice. Do not tell a customer that a recall is complete, free of charge or immediately repairable without confirming the actual campaign and manufacturer terms. Confirm parts and appointment availability separately. Link the relevant Case and service visit, and record the customer's preferred operational contact method. A recall notice does not create general marketing consent. Close the Case only when the recorded operational outcome supports closure.",
+      "caseUse": "Recall inquiry; attach alongside the verified manufacturer notice reference."
+    },
+    {
+      "title": "Prepare for a test drive",
+      "urlName": "prepare-for-test-drive",
+      "category": "Buying",
+      "summary": "Confirm the vehicle, appointment and dealership requirements before arrival.",
+      "body": "Confirm the intended vehicle, rooftop, appointment time and current availability with the Sales representative. Ask the dealership which identity, licensing and insurance checks apply; do not collect sensitive documents in free-text Case notes. Explain that an inquiry or Requested booking does not reserve a vehicle or guarantee availability. Record accessibility or scheduling needs through the approved process. The representative must follow the existing booking and capacity rules rather than manually bypassing a conflict. Discuss driving questions using the vehicle's current manufacturer information. After the drive, record feedback and next steps without promising a price, finance approval or delivery date. Marketing follow-up must use the relevant consent policy; a test drive is not a marketing opt-in.",
+      "caseUse": "Sales or service inquiry about test-drive preparation."
+    },
+    {
+      "title": "Understand a vehicle quote",
+      "urlName": "understand-vehicle-quote",
+      "category": "Buying",
+      "summary": "Explain quote lines, discounts, expiry and approval boundaries.",
+      "body": "Review the actual current Quote with the authorized Sales representative. Distinguish list price, adjustment lines, applicable taxes, trade-in treatment and any separately stated fees. The accepted quote engine and approval process determine available adjustments; an article never overrides them. Confirm expiration and vehicle availability rather than assuming that an old quote remains valid. A quote is not a lender approval, payment receipt or completed sale. If a customer asks to change quantity, vehicle or trade-in details, use the approved quoting process and retain required appraisal and discount approvals. Do not edit historical values to make a demonstration match an article example. Refer any unexplained amount or approval exception to the authorized Sales or Finance owner.",
+      "caseUse": "Quote clarification; attach without copying private financial data into the article."
+    },
+    {
+      "title": "Understand financing estimates",
+      "urlName": "understand-financing-estimates",
+      "category": "Financing",
+      "summary": "Separate estimated payments from lender decisions and final contracts.",
+      "body": "An estimated payment depends on the quoted amount, rate, term, down payment and any documented fees. Ask an authorized Finance representative to explain the actual estimate and its assumptions. Do not promise credit approval, a rate or affordability based on an article or a loyalty tier. Use the existing financing application and approval lifecycle; an estimate does not authorize skipping underwriting or funding checks. Submit sensitive identity and credit information only through the approved secure process, never public article content or general Case notes. Before signing, ask the Finance representative to review total borrowing cost, payment frequency and contractual terms. The signed agreement and lender disclosures control; this demonstration article is explanatory, not individualized financial advice.",
+      "caseUse": "General financing explanation; restrict actual application details to authorized Finance records."
+    },
+    {
+      "title": "Prepare for vehicle delivery",
+      "urlName": "prepare-for-vehicle-delivery",
+      "category": "Ownership",
+      "summary": "Explain delivery coordination while preserving checklist and funding controls.",
+      "body": "Confirm the agreed vehicle and delivery appointment with the responsible representative. Ask which identification, insurance and registration documents the dealership requires, and use approved secure channels. Delivery scheduling is not proof that funding, preparation or paperwork is complete. The existing Delivery checklist and financing controls still apply. Record outstanding questions and resolve them before the authorized team marks delivery Completed. Ask the representative to explain vehicle features using current manufacturer guidance and to document any promised follow-up. Retain the actual handover and contract records. Do not close an Opportunity, change an approval or create loyalty credit manually to bypass a missing delivery prerequisite.",
+      "caseUse": "Delivery preparation or checklist clarification."
+    },
+    {
+      "title": "Understand demonstration loyalty points",
+      "urlName": "understand-demo-loyalty-points",
+      "category": "Ownership",
+      "summary": "Explain simulated balances without promising live earning or cash value.",
+      "body": "Northgate's loyalty feature is a custom demonstration, not licensed Salesforce Loyalty Management or a cash account. Processing remains inactive unless separately approved. Enrollment, stored balance and historical transaction sums are different concepts; historical records may not reconcile. Only approved managed lots qualify for the implemented redemption and expiry engine. An article does not authorize enabling processing, repairing a balance or changing a transaction. Ask the authorized Service owner to review a disputed balance using source evidence. Tier thresholds, earning rates, multipliers, expiry and display point value come from configured metadata, not this article. A displayed estimated liability is not a cash entitlement or proof of accounting reconciliation. Do not promise points from a visit or sale before the actual approved program policy and processing status are confirmed.",
+      "caseUse": "Loyalty demonstration explanation or escalation of a balance question."
+    },
+    {
+      "title": "Manage contact preferences",
+      "urlName": "manage-contact-preferences",
+      "category": "Ownership",
+      "summary": "Explain channel-specific consent and retained membership suppression.",
+      "body": "Confirm the customer's identity before an authorized operator changes a contact preference. Record the specific purpose and channel through the approved consent process. Service contact details, a vehicle purchase, account membership or loyalty enrollment do not create general marketing permission. A managed Campaign requires a current matching grant; conflicting denial, revocation, expiry or Email opt-out prevents eligibility. Revocation can suppress a retained CampaignMember without deleting history or changing member Status. A stored eligibility snapshot or old export is not authority to send. The demonstration exposes an audience preview but has no email or SMS sender, preference center or external unsubscribe endpoint. Escalate a request that requires unavailable tooling rather than telling the customer it has been completed. Never promise that a consent update recalled a message already delivered.",
+      "caseUse": "Consent or communication-preference inquiry; do not publish individual consent evidence."
+    }
+  ]
+}

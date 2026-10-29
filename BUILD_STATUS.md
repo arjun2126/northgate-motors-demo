@@ -1,6 +1,40 @@
 # Build Status — Northgate Motors demo org
 
-Target org: **ng-dev only** (`arjun.ngdev@northgate.demo`). Never touch ng-demo or other orgs.
+**Current consolidated Phase 5 handoff (2026-10-20):**
+`docs/planning/P5_CONSOLIDATED_COMPLETION_2026-10-20.md` reconciles every original P5 item
+after the scoped release: 15 PARTIAL, 5 BLOCKED; no full Phase 5 acceptance. Live raw evidence
+is in `evidence/P5/consolidated_completion_checks_2026-10-20.md`. Key open dependencies:
+exact <=4.0 MB storage, missing canonical `data/csv/` artifacts, truthful per-batch ledger,
+remaining expected-count report gaps, controlled management UAT and reset/burst acceptance.
+The six Opportunity values are correct, but their report currently excludes them through
+its default fiscal-quarter CloseDate filter. No new deployment, DML or permission change
+occurred in this consolidated planning pass. Older status blocks below are historical.
+
+**Latest preparation (2026-10-20):** `evidence/P5/continuation_2026-10-20.md` records eleven
+passing offline checks, five-component manager-access/SLA check-only `0Afaj00000oSg4LCAS`,
+37-job execution-count reconciliation covering 2,085 canonical IDs, exact SEED-98 parent
+proposals and split/resolved burst files. This continuation made no real deployment, data
+write or persona change. Live Contact duplicate-rule identity is blocked on owner confirmation.
+All original P5 criteria remain open where data, storage, runtime or destructive execution
+evidence is missing. Genuine Phase 2 browser procedure:
+`docs/planning/P2_BROWSER_UAT_PROCEDURE_2026-10-20.md`.
+
+**Controlled release (2026-10-20):** Phase 2 `0Afaj00000oQaj1CAC` and Phase 5
+`0Afaj00000oQtVWCA0` deployed 4/4 and 15/15 with zero errors. Persona-scoped Phase 2 UAT
+remains blocked on a rep browser session; baseline was restored. Governing allocation is
+60 Product2 + 12 Delivery (2,115); original 2,123 preserved as historical. Runtime findings
+and blockers: `evidence/P5/release_uat_2026-10-20.md`. Earlier check-only jobs
+`0Afaj00000oQSwkCAG` / `0Afaj00000oQNXGCA4` and permission impact:
+`evidence/P5/check_only_resolution_2026-10-20.md`.
+
+**Earlier implementation package (2026-10-20):** all original P5-01…20 requirements and
+P2-03 `TestDrive_Book_Screen` remain mandatory. Original eight-phase roadmap includes P8.
+Local generator/evidence/legacy/snapshot work passes 7 focused checks. Phase 2 check-only
+`0Afaj00000oPyx5CAC` and Phase 5 check-only `0Afaj00000oPzQ6CAK` failed; no deployment or
+record write occurred. Exact failures, unimplemented reset/burst work, original eight-record
+count conflict, and approval sequence: `docs/planning/P2_P5_IMPLEMENTATION_2026-10-20.md`.
+
+Current target org: **ng-demo** (`arjun.ngdemo@northgate.demo`, `00Daj00001Ae3iWEAR`). Historical Phase 1-4 entries below reference `ng-dev`; do not access `ng-dev` or other orgs without explicit owner approval.
 CLI: @salesforce/cli 2.153.5. sourceApiVersion 68.0, org API 68.0.
 
 Working and escalation rules live in `AGENTS.md` at the repository root and apply to every agent in every session.
@@ -11,12 +45,15 @@ Phase 1 complete and exit report written (`evidence/P1/phase1_exit_report.md`).
 CI green: `validate.yml` run 37718718354 PASS.
 All blockers resolved. Users created; PSGs assigned; persona switch verified.
 
-## Phase 2 — DONE (M1 gate passed, tag `demo/v0.1`)
+## Phase 2 — IMPLEMENTATION DONE; UAT SIGN-OFF UNVERIFIED
 
 End-to-end vertical slice: web lead → qualification → test drive → opportunity,
 with automation, reports and tests. First demoable state.
 
-M1 gate passed: dry-run clean, tests 100%, DQ 0 rows, UAT_P2 signed, tag `demo/v0.1` pushed.
+Implementation and tests are present, but the earlier "UAT_P2 signed" claim is not
+supported by the repository. `evidence/UAT/UAT_P2.md` is an unsigned template, and tag
+`demo/v0.1` points to `ccc7565` without UAT evidence. Treat Phase 2 UAT as open, not
+passed. See `docs/planning/PHASE2_SIGNOFF_RECONCILIATION_2026-10-20.md`.
 
 ## Phase 3 — DONE (commit `638524df`, M2 gate, 24/24 tests)
 
@@ -47,7 +84,7 @@ Outstanding prerequisites and manual steps (not defects; not resolved by code):
 - **Finance Manager queue membership**: `Q_Finance_Approvals` routes to `Finance_Manager` role. For future P4-05 UAT cycles, owner must temporarily assign `Finance_Manager` to `ngadmin` and revert. `ngpersona` cannot be modified.
 - **QuickAction on Financing page layout highlights panel**: `Submit_For_Exception_Approval` QuickAction is deployed as a new record action; one Setup click adds it to the page layout's "Salesforce Mobile and Lightning Experience Actions" list to surface in the highlights panel. (The `Layout` metadata schema does not support a quick-action list element.)
 - **`Contact.Lifetime_Vehicles_Owned__c` for Delivery 0**: observation only. Whether to increment to 1 is a business decision and is not automatically authorized.
-- **P4-10..P4-13** are NOT done (still backlog).
+- **P4-10..P4-13** have source and partial evidence but are not closed here. P4-10 `DM_DealDesk` exists in `ng-demo` with the three required metrics; P4-11 `FinancingFlsEnforcementTest` passed in the `ng-demo` full suite `707aj00001MTeI1` (189/189); P4-12 `docs/architecture/SIMULATION_FINANCE.md` exists; P4-13 target classes meet 90% in `evidence/P4/tests.txt`. Missing acceptance evidence is the P4-10 dashboard screenshot and explicit closure sign-off. They are not Phase 5 data-load blockers.
 - **P4-04 LTV eligibility** is still Draft-only (true LTV source and valuation tool remain a Phase 5+ decision).
 
 **P3-01 Trade-In Appraisal — ACCEPTED for this demo scope**
@@ -117,9 +154,35 @@ and open scope conflicts recorded in `evidence/P3/p3_03_source_mappings.md`.
 
 ## Phase 4 — Financing, approval and delivery — DONE (P4-01 through P4-09 ACCEPTED AND CLOSED)
 
-See the "## Phase 4 — DONE" block at the top of this document for the full closure record (deploy jobs, deploy IDs, owner browser evidence, backfill evidence, outstanding prerequisites). **The M2 exit gate ("full retail deal runs from lead to delivered vehicle with financing, approvals and loyalty enrolment") is MET** for `ng-dev`. The Phase 4 implementation, tests, layouts, reports, permission sets, queue, approval process, workflow, triggers, and LWCs are present in the working tree as untracked files (see `NORTHGATE_PROJECT_HANDOFF.md` §14). No commits, no pushes were authorized. P4-10..P4-13 remain backlog (not done).
+See the "## Phase 4 — DONE" block at the top of this document for the full closure record (deploy jobs, deploy IDs, owner browser evidence, backfill evidence, outstanding prerequisites). **The M2 exit gate ("full retail deal runs from lead to delivered vehicle with financing, approvals and loyalty enrolment") is MET** for `ng-dev`. The Phase 4 implementation, tests, layouts, reports, permission sets, queue, approval process, workflow, triggers, and LWCs are present in the working tree as untracked files (see `NORTHGATE_PROJECT_HANDOFF.md` §14). No commits, no pushes were authorized. P4-10..P4-13 remain open for acceptance evidence/sign-off, not data-load blockers.
 
-## Phase 5 — Synthetic data load and reporting depth (Backlog)
+## Phase 5 — Data load complete; acceptance evidence open
+
+**2026-10-20 readiness clarification:** Phase 5 development is not complete. Executive and
+manager dashboards, ledger reconciliation, reset/snapshot safeguards, expected-count report
+verification and other backlog criteria remain open. See
+`docs/planning/REMAINING_ACCEPTANCE_2026-10-20.md` for the scoped investigation and plan.
+
+Canonical seed load is preserved in `ng-demo`: the 2026-10-19 verification records 2,085
+records, 14/14 canonical-scope gates, and 3.00 MB storage. Current `/limits` returns Max 5 MB /
+Remaining 1 MB; exact current usage still needs the owner screenshot. `SEED-98` (30 records)
+is deferred. The 20 live
+ledger rows are placeholders (`Object__c=Mixed`, `Inserted_Count__c=0`); additive
+reconciliation proposal is not executed. P5-03 storage evidence is also missing. Do not
+run a new canonical load. See `docs/planning/PRE_PHASE5_READINESS_2026-10-20.md` and
+`evidence/P5/ledger_design_additive.md`.
+
+Owner Sales Rep browser UAT completed 2026-10-20; evidence: `evidence/UAT/live_2026-10-19/REP_UAT_COMPLETED_2026-10-20.md`. Loyalty and Delivery lists, reports, and dashboard access passed owner checks. Dashboard metric values displayed zero; accuracy remains unverified. Loyalty report description is outdated, nonblocking.
+
+`P3-DEF-01` deployed as exactly `QuoteBuilderController` and `QuoteBuilderControllerTest`.
+Check-only `0Afaj00000oNfTyCAK` passed 14/14. Deploy `0Afaj00000oON8LCAW` succeeded
+with 14/14 tests. Focused test run `707aj00001McoRy` passed 15/15 results (14 methods plus
+`setup`). `scripts/uat/rep_verify.apex` returned `PASS`; one Quote and one QLI remain.
+Initial check-only `0Afaj00000oOEWUCA4` failed before baseline restore because no active
+`VP_Sales` user existed. After owner UAT and restore, `ngpersona` supplied test precondition.
+No PermissionSet or other metadata deployed. Loyalty/Delivery ListViews were deployed
+separately as two ListView components (`0Afaj00000oOKSDCA4`). Owner screenshot confirms
+Delivery tab already visible; do not deploy a tab change without new evidence.
 
 ## Phase 6 — Service, cases and post-sale (Backlog)
 
@@ -137,4 +200,4 @@ component is implemented. Keep Phase 5 as the next active implementation phase (
 
 ---
 
-**No ng-demo deployment, Salesforce data changes, role/permission changes, or Setup changes without explicit owner approval.** Phase 4 closure in `ng-dev` is complete; the next authorized actions are the Phase 5 backlog items (synthetic data load + reporting depth).
+**No ng-demo deployment, Salesforce data changes, role/permission changes, or Setup changes without explicit owner approval.** Phase 4 closure in `ng-dev` is complete. Phase 5 data load is complete, but acceptance evidence and the pre-Phase-5 remediation deploy remain open. No live action is authorized until the owner approves the consolidated request.

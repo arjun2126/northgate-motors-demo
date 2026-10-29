@@ -10,6 +10,37 @@ This file applies to **every agent working in this repository**, in every sessio
 - Never touch `ng-demo`, other orgs, or Phase 3 work without explicit owner approval.
 - Prefer the smallest safe change. Reuse existing patterns. Add no speculative abstraction.
 
+## Engineering harness (current operational rules)
+
+- Start with `PLANS.md` and inspect `git status --short --branch` before edits. Never assume a
+  clean tree: preserve existing tracked, deleted, untracked and staged work. Capture the scoped
+  before-state; a diff against HEAD alone cannot distinguish this task from existing work.
+- This working tree is intentionally shared by Harness Engineering, Owner Portal Expansion and
+  UAT / Regression Closure. Do not require whole-tree equality or pause other workstreams.
+  Use `harness/preservation.py` to separate exact intended harness edits, protected/required-input
+  conflicts and informational unrelated drift. Writer attribution is unknown unless independently
+  established. Required-input changes invalidate the affected result even when made legitimately;
+  report that conflict without blaming a writer, silently ignoring it or auto-retrying tests.
+- Preserve completed Phase 1–8 functionality without declaring all phases accepted. The current
+  UAT register governs acceptance/defects; older planning headers and handoff snapshots can be stale.
+- Protect CP2 pricing, one-Quote guard, signed premiums, primary-vehicle basis, rounding, approvals
+  and historical records. Do not reopen closed P3-DEF-01 or reinterpret old create-only guidance
+  as permission to create another Quote. See `docs/decisions/STATUS.md`.
+- Never modify or access `ng-dev`, including via old CI instructions. Do not dispatch the existing
+  ng-dev workflow. `ng-demo` access still requires explicit owner approval and verified org identity.
+- Separate read-only investigation, local changes, local validation, server-side validation,
+  deployment, operational/data changes and Git operations. Approval for one is not approval for another.
+- Deployment and Git push always require explicit owner approval. Staging/commit/tag also require
+  separate authorization; never stage unrelated files or use blanket staging on this dirty tree.
+- Preserve CRUD/FLS, sharing, customer isolation and actual-persona negative tests. Never modify
+  Salesforce records, configuration, permissions or fixtures merely to manufacture passing checks.
+- Respect ratified architecture. Reconsider only with a demonstrated defect and a bounded owner
+  decision; no speculative redesign, new application feature or abstraction in harness-only work.
+- Run `bash harness/check.sh` for local checks; see `harness/REGRESSION_MATRIX.md` for focused/full
+  local checks and separately gated Salesforce validation. PASS is scoped, SKIPPED is not PASS.
+  Keep raw evidence and assumptions separate using `harness/RUN_TEMPLATE.md`; follow
+  `harness/TRIAGE.md` on failure. The wrapper is a safety boundary, not a sandbox for other commands.
+
 ## Escalation policy
 
 **When blocked by an unexpected test failure, deployment failure, corrupted commands, mangled
