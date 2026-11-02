@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Buyer_Lead_Queue_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Queue owner for public buyer website Leads.</shortDescription>
+        <value>00Gaj00000ZYezmEAD</value>
+    </labels>
+</CustomLabels>

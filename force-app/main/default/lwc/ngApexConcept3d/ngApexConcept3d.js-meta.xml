@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>68.0</apiVersion>
+    <description>Northgate Apex Concept 3D viewer: desktop-first progressive enhancement with a static preview fallback. Concept only, not inventory.</description>
+    <isExposed>true</isExposed>
+    <masterLabel>Northgate Apex Concept 3D</masterLabel>
+    <targets>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property name="inquiryUrl" type="String" label="Inquiry URL"
+                description="Destination for 'Discuss this concept'. Leave blank to use the Buyer contact section on this site." />
+            <property name="forceStaticPreview" type="Boolean" label="Force static preview" default="false"
+                description="When on, the still preview is always shown and 3D is never loaded automatically." />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

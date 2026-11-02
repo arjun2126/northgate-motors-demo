@@ -1,0 +1,264 @@
+<template>
+    <a class="skip-link" href="#buyer-main">Skip to main content</a>
+    <div class="site" onkeydown={handleKeydown}>
+        <header class="site-head">
+            <a class="brand" href={homeUrl} aria-label="Northgate Motors home">
+                <span class="brand-mark">N</span>
+                <span class="brand-name">NORTHGATE<span>MOTORS</span></span>
+            </a>
+            <div class="head-actions">
+                <a class="head-cta" href={contactUrl}>Contact Northgate</a>
+                <button type="button" class="menu-toggle" data-menu-toggle aria-controls="buyer-navigation" aria-expanded={menuExpanded} onclick={toggleMenu}>
+                    <span class="menu-label">{menuLabel}</span>
+                    <span class="menu-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+            <nav id="buyer-navigation" class={navigationClass} aria-label="Primary">
+                <a href={homeUrl} onclick={closeMenu} aria-current={homeCurrent}>Home</a>
+                <a href={inventoryUrl} onclick={closeMenu} aria-current={inventoryCurrent}>Inventory</a>
+                <a href={studioUrl} onclick={closeMenu} aria-current={studioCurrent}>3D Studio</a>
+                <a href={aboutUrl} onclick={closeMenu} aria-current={aboutCurrent}>About</a>
+                <a href={contactUrl} onclick={closeMenu} aria-current={contactCurrent}>Contact</a>
+            </nav>
+        </header>
+
+        <main id="buyer-main" tabindex="-1">
+            <section id="top" class={heroClass}>
+                <div class="hero-copy">
+                    <p class="eyebrow">{pageEyebrow}</p>
+                    <h1>{pageHeading}</h1>
+                    <p class="hero-lede">{pageLede}</p>
+                    <div class="hero-actions">
+                        <a lwc:if={showHome} class="button primary" href={inventoryUrl}>Browse inventory</a>
+                        <a lwc:if={showHome} class="button ghost" href={studioUrl}>Explore 3D Studio</a>
+                        <a lwc:if={showInventory} class="button primary" href={studioUrl}>Explore the Apex Concept</a>
+                        <a lwc:if={showStudio} class="button ghost" href={inventoryUrl}>Browse listed inventory</a>
+                    </div>
+                    <p lwc:if={showHome} class="hero-mobile-note">Representative imagery · not a specific vehicle</p>
+                </div>
+                <div lwc:if={showHome} class="hero-media">
+                    <img lwc:if={heroImage} src={heroImage} alt="Representative Northgate model photo" data-id="hero" data-image-name={heroImageName} onerror={imageError} />
+                    <div lwc:else class="hero-fallback"><span>Vehicle image unavailable</span></div>
+                    <p class="hero-caption">Representative imagery · not a specific vehicle</p>
+                </div>
+            </section>
+
+            <div lwc:if={showHome} class="hero-band" aria-label="Inventory at a glance">
+                <dl class="hero-stats">
+                    <template for:each={heroStats} for:item="stat">
+                        <div key={stat.label}><dt>{stat.value}</dt><dd>{stat.label}</dd></div>
+                    </template>
+                </dl>
+                <div class="hero-band-side">
+                    <p class="hero-band-note">Browse listings without an account.</p>
+                    <a class="hero-band-link" href={inventoryUrl}>Browse inventory <span aria-hidden="true">→</span></a>
+                </div>
+            </div>
+
+            <section lwc:if={showHome} class="trust" aria-label="Why buy from Northgate">
+                <div><span class="trust-num">01</span><h2>Explore inventory</h2><p>Browse vehicles in the Northgate demo catalogue.</p></div>
+                <div><span class="trust-num">02</span><h2>Clear list prices</h2><p>List prices are shown for reference. Formal quotes follow Northgate's sales process.</p></div>
+                <div><span class="trust-num">03</span><h2>Ask Northgate</h2><p>Send an inquiry or request a test drive. No account required.</p></div>
+            </section>
+
+            <section lwc:if={showHome} class="families" aria-labelledby="families-heading">
+                <div class="section-head">
+                    <div><p class="eyebrow">THE RANGE</p><h2 id="families-heading">Explore the Northgate range.</h2></div>
+                    <p class="section-note">Browse by model family. The Apex Concept lives in the 3D Studio.</p>
+                </div>
+                <div class="family-grid">
+                    <template for:each={familyCards} for:item="family">
+                        <button key={family.key} type="button" class="family-card" data-family={family.key} onclick={openFamily} aria-label={family.ariaLabel}>
+                            <span class="family-media">
+                                <img lwc:if={family.imagePath} src={family.imagePath} alt={family.photoAlt} loading="lazy" data-kind="family" data-id={family.key} data-image-name={family.imageName} onerror={imageError} />
+                                <span lwc:else class="image-fallback"><span>Image unavailable</span></span>
+                            </span>
+                            <span class="family-body">
+                                <span class="family-name">{family.title}</span>
+                                <span class="family-meta">{family.meta} · {family.priceLabel}</span>
+                                <span class="family-cta">View inventory <span aria-hidden="true">→</span></span>
+                            </span>
+                        </button>
+                    </template>
+                </div>
+            </section>
+
+            <section lwc:if={showInventory} id="inventory" class="section" data-inventory aria-labelledby="inventory-heading">
+                <div class="section-head">
+                    <div><p class="eyebrow">THE COLLECTION</p><h2 id="inventory-heading" tabindex="-1" data-inventory-heading>Explore the listings.</h2></div>
+                    <p class="section-note" aria-live="polite">{resultLabel}</p>
+                </div>
+                <p lwc:if={loading} class="sr-only" role="status">Loading inventory…</p>
+                <div lwc:if={loading} class="skeleton-grid" aria-hidden="true">
+                    <template for:each={skeletonCards} for:item="card"><div key={card.id} class="skeleton-card"><span class="skeleton-media"></span><span class="skeleton-line"></span><span class="skeleton-line short"></span><span class="skeleton-line"></span></div></template>
+                </div>
+                <p lwc:if={noInventory} class="state">No vehicles are listed right now. Contact Northgate with your requirements.</p>
+                <p lwc:if={loadError} class="state error" role="alert">{loadError}</p>
+                <template lwc:if={hasInventory}>
+                    <div class="filter-bar">
+                        <button type="button" class="filters-toggle" aria-controls="inventory-filters" aria-expanded={filtersExpanded} onclick={toggleFilters}>
+                            <span>Filters</span>
+                            <span lwc:if={activeFilterCount} class="filters-count">{activeFilterCount}</span>
+                            <span class="filters-caret" aria-hidden="true"></span>
+                        </button>
+                        <p class="filter-summary">{filterSummary}</p>
+                    </div>
+                    <div id="inventory-filters" class={filtersPanelClass} role="group" aria-label="Filter inventory">
+                        <label>Model family<select data-filter="filterFamily" value={filterFamily} onchange={handleFilter}><template for:each={familyOptions} for:item="option"><option key={option.value} value={option.value}>{option.label}</option></template></select></label>
+                        <label>Model / trim<select data-filter="filterModel" value={filterModel} onchange={handleFilter}><template for:each={modelOptions} for:item="option"><option key={option.value} value={option.value}>{option.label}</option></template></select></label>
+                        <label>Body style<select data-filter="filterBody" value={filterBody} onchange={handleFilter}><template for:each={bodyOptions} for:item="option"><option key={option.value} value={option.value}>{option.label}</option></template></select></label>
+                        <label>Colour<select data-filter="filterColour" value={filterColour} onchange={handleFilter}><template for:each={colourOptions} for:item="option"><option key={option.value} value={option.value}>{option.label}</option></template></select></label>
+                        <label>Condition<select data-filter="filterCondition" value={filterCondition} onchange={handleFilter}><template for:each={conditionOptions} for:item="option"><option key={option.value} value={option.value}>{option.label}</option></template></select></label>
+                        <label>Maximum listed price<input type="number" min="0" step="1000" placeholder="Any" data-filter="maxPrice" value={maxPrice} onchange={handleFilter} /></label>
+                        <button type="button" class="text-button" onclick={clearFilters} disabled={clearDisabled} aria-disabled={clearDisabled}>Clear filters</button>
+                    </div>
+                    <p lwc:if={noVehicles} class="state">No vehicles match those filters. Try fewer filters or contact Northgate.</p>
+                    <p class="fineprint photo-note">Illustrative model images. Recorded colour is listed on each vehicle.</p>
+                    <ul class="vehicle-grid" aria-label="Vehicle listings">
+                        <template for:each={visibleVehicles} for:item="vehicle">
+                            <li key={vehicle.id} class="vehicle-card">
+                                <div class="vehicle-media">
+                                    <img lwc:if={vehicle.imagePath} src={vehicle.imagePath} alt={vehicle.photoAlt} loading="eager" data-id={vehicle.id} data-image-name={vehicle.imageName} onerror={imageError} />
+                                    <div lwc:else class="image-fallback"><span>Image unavailable</span></div>
+                                    <span class={vehicle.statusClass}>{vehicle.statusLabel}</span>
+                                </div>
+                                <div class="vehicle-body">
+                                    <p class="vehicle-meta">{vehicle.conditionLabel}</p>
+                                    <h3>{vehicle.title}</h3>
+                                    <p class="vehicle-price">{vehicle.priceLabel}</p>
+                                    <p lwc:if={vehicle.colour} class="vehicle-colour"><span>Colour</span>{vehicle.colour}</p>
+                                    <p class="vehicle-sub">Stock number {vehicle.stockNumber}<span lwc:if={vehicle.mileageLabel}> · {vehicle.mileageLabel}</span></p>
+                                    <p class={vehicle.availabilityClass}>{vehicle.availabilityNote}</p>
+                                    <button type="button" class="text-button card-cta" data-vehicle-id={vehicle.id} onclick={viewVehicle} aria-controls="vehicle-detail">{vehicle.detailLabel}</button>
+                                </div>
+                            </li>
+                        </template>
+                    </ul>
+                    <nav lwc:if={showPagination} class="pagination" aria-label="Inventory pages">
+                        <button type="button" class="button ghost" onclick={previousInventoryPage} disabled={firstInventoryPage}>Previous</button>
+                        <p aria-live="polite">{inventoryPageLabel}</p>
+                        <button type="button" class="button ghost" onclick={nextInventoryPage} disabled={lastInventoryPage}>Next</button>
+                    </nav>
+                </template>
+            </section>
+
+            <section lwc:if={showVehicle} id="vehicle-detail" class="section detail" aria-labelledby="detail-heading">
+                <div lwc:if={noVehicleSelected} class="state empty-detail">
+                    <p>Choose a vehicle from the inventory to see its details.</p>
+                    <a class="button ghost" href={inventoryUrl}>Browse inventory</a>
+                </div>
+                <div lwc:if={selectedVehicle} class="detail-grid">
+                    <div class="detail-media">
+                        <img lwc:if={selectedVehicle.imagePath} src={selectedVehicle.imagePath} alt={selectedVehicle.photoAlt} data-id={selectedVehicle.id} data-image-name={selectedVehicle.imageName} onerror={imageError} />
+                        <div lwc:else class="image-fallback large"><span>Image unavailable</span></div>
+                    </div>
+                    <div class="detail-copy">
+                        <p lwc:if={isAll} class="eyebrow">VEHICLE DETAILS</p>
+                        <h2 id="detail-heading" tabindex="-1" data-detail-heading class={detailHeadingClass}>{selectedVehicle.title}</h2>
+                        <p class="eyebrow">List price</p>
+                        <p class="vehicle-price big">{selectedVehicle.priceLabel}</p>
+                        <p class="detail-status">{selectedVehicle.statusLabel}<span lwc:if={selectedUnavailable}> · contact us for availability</span></p>
+                        <p class={selectedVehicle.availabilityClass}>{selectedVehicle.availabilityNote}</p>
+                        <dl class="specs">
+                            <template for:each={detailSpecs} for:item="spec"><div key={spec.label}><dt>{spec.label}</dt><dd>{spec.value}</dd></div></template>
+                        </dl>
+                        <p class="fineprint">Illustrative photo. Confirm vehicle specifications, colour and availability with Northgate.</p>
+                        <div class="detail-actions">
+                            <button type="button" class="button primary" data-type="Test Drive" data-vehicle-id={selectedVehicle.id} onclick={startInquiry} disabled={testDriveDisabled} aria-disabled={testDriveDisabled}>Request a test drive</button>
+                            <button type="button" class="button ghost" data-type="Purchase Inquiry" data-vehicle-id={selectedVehicle.id} onclick={startInquiry}>Send inquiry</button>
+                            <a class="text-button" href={inventoryUrl}>Back to inventory</a>
+                        </div>
+                        <p lwc:if={testDriveDisabled} class="fineprint">This vehicle is not listed as available for a test drive. Ask about similar vehicles.</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section lwc:if={showStudio} id="studio" class="section apex-3d" data-studio aria-labelledby="studio-heading">
+                <div class="section-head">
+                    <div><p lwc:if={isAll} class="eyebrow">3D STUDIO</p><h2 id="studio-heading" tabindex="-1" data-studio-heading>Build your Apex Concept.</h2></div>
+                    <p lwc:if={isAll} class="section-note">Illustrative finishes · not a vehicle in inventory</p>
+                </div>
+                <p class="studio-sub">The Apex Concept is the only configurator in the Studio. Choose a paint finish and explore the car in 3D; listed inventory stays in Inventory.</p>
+                <div class="apex-panel">
+                    <c-ng-apex-concept-3d onfinishchange={handleApexFinish} hide-inquiry></c-ng-apex-concept-3d>
+                </div>
+                <div class="studio-actions">
+                    <a class="button primary" href={priorityUrl} onclick={startPriorityInterest}>Join the Priority List</a>
+                    <a lwc:if={isAll} class="button ghost" href={inventoryUrl}>Browse listed inventory</a>
+                </div>
+                <p class="micro">Priority list interest is not a reservation, confirmed allocation, price or purchase commitment. The Apex Concept is a concept preview, not a vehicle in inventory.</p>
+            </section>
+
+            <section lwc:if={showAbout} id="why" class="section about" aria-labelledby="about-heading">
+                <div class="about-grid">
+                    <div>
+                        <p lwc:if={isAll} class="eyebrow">ABOUT NORTHGATE</p>
+                        <h2 id="about-heading">From browsing to ownership.</h2>
+                        <p class="about-lede">Northgate Motors is a fictional dealership used to demonstrate a modern retail experience end to end.</p>
+                        <p>Every listing, price and specification on this site is sample data drawn from the demonstration org. Photography is illustrative. Nothing here is a real offer, and no vehicle is reserved or sold through this site.</p>
+                        <p>Sales, finance and service journeys are demonstrations of Salesforce capability: pricing, approvals and records remain inside Northgate's internal process.</p>
+                    </div>
+                    <div class="about-aside">
+                        <h3>Owners</h3>
+                        <p>Vehicle, service history, support requests, loyalty and rewards live in the Owner Portal.</p>
+                        <a class="button ghost" href={portalUrl}>Open the Owner Portal</a>
+                        <h3>Four locations, one inventory</h3>
+                        <p>One searchable catalogue across the Northgate group.</p>
+                        <h3>Contact</h3>
+                        <p>Questions about a listing, a test drive or the Apex Concept?</p>
+                        <a class="button ghost" href={contactUrl}>Contact Northgate</a>
+                    </div>
+                </div>
+            </section>
+
+            <section lwc:if={inquiryPanelVisible} id="inquiry" class="section inquiry" aria-labelledby="inquiry-heading">
+                <div class="inquiry-copy">
+                    <p lwc:if={isAll} class="eyebrow">CONTACT</p>
+                    <h2 id="inquiry-heading">Start a conversation.</h2>
+                    <p>Tell us what you are looking for. This demo records your inquiry; it does not reserve a vehicle, confirm a price or book an appointment.</p>
+                    <p class="inquiry-vehicle">Vehicle: <strong>{inquiryVehicleLabel}</strong></p>
+                    <p lwc:if={inquiryConfigSummary} class="inquiry-config">Preferences: <strong>{inquiryConfigSummary}</strong></p>
+                    <p class="fineprint">Demo only. Use a .test or .example email address, such as buyer@northgate.test. Do not enter real contact or payment details.</p>
+                    <ol lwc:if={isContact} class="next-steps" aria-label="What happens next">
+                        <li><strong>Send a demo inquiry.</strong><span>Use fictional contact details to explore the request process.</span></li>
+                        <li><strong>Keep your confirmation reference.</strong><span>A successful submission displays a reference. This demonstration does not promise advisor follow-up.</span></li>
+                        <li><strong>Nothing is held or committed here.</strong><span>No reservation, confirmed price or appointment is created by this form.</span></li>
+                    </ol>
+                </div>
+                <div class="inquiry-form">
+                    <template lwc:if={inquiryUnconfirmed}>
+                        <div class="state" role="alert" tabindex="-1" data-inquiry-focus><h3>Confirmation delayed</h3><p>We couldn't confirm your request. Your request may already have been received. Please do not send it again. Contact Northgate to check.</p><button type="button" class="button ghost" onclick={acknowledgeUnconfirmed}>I understand — start a new request</button></div>
+                    </template>
+                    <template lwc:elseif={inquiryReference}>
+                        <div class="success" role="status" tabindex="-1" data-inquiry-focus><h3>Request received</h3><p>Your reference is <strong>{inquiryReference}</strong>. {inquirySuccessNote}</p><button type="button" class="button ghost" onclick={startGeneralInquiry}>Send another request</button></div>
+                    </template>
+                    <template lwc:else>
+                        <p lwc:if={inquiryError} class="state error" role="alert">{inquiryError}</p>
+                        <p lwc:if={testDriveNeedsVehicle} class="state error" role="alert">Choose a listed vehicle, then select “Request a test drive”.</p>
+                        <label>Request type<select data-field="inquiryType" onchange={handleInquiryInput}><template for:each={inquiryTypeOptions} for:item="option"><option key={option.value} value={option.value} selected={option.selected}>{option.label}</option></template></select></label>
+                        <label>Name<input type="text" maxlength="80" required data-field="inquiryName" data-inquiry-name value={inquiryName} onchange={handleInquiryInput} autocomplete="name" /></label>
+                        <label>Email<input type="email" maxlength="120" required data-field="inquiryEmail" value={inquiryEmail} onchange={handleInquiryInput} autocomplete="email" /></label>
+                        <label>Phone (optional)<input type="tel" maxlength="40" data-field="inquiryPhone" value={inquiryPhone} onchange={handleInquiryInput} autocomplete="tel" /></label>
+                        <label>Message (optional)<textarea maxlength="1200" rows="4" data-field="inquiryMessage" value={inquiryMessage} onchange={handleInquiryInput} placeholder="Your vehicle preferences, preferred timing or questions. Do not include payment or financial account details."></textarea></label>
+                        <label class="consent"><input type="checkbox" checked={consent} onchange={handleConsent} /> I agree to be contacted about this inquiry.</label>
+                        <button type="button" class="button primary" onclick={submitInquiry} disabled={submitDisabled}>{submitButtonLabel}</button>
+                    </template>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-foot">
+            <div class="foot-brand"><span class="brand-name">NORTHGATE<span>MOTORS</span></span><p>Four locations. One standard.</p></div>
+            <nav class="foot-nav" aria-label="Footer">
+                <a href={homeUrl}>Home</a>
+                <a href={inventoryUrl}>Inventory</a>
+                <a href={studioUrl}>3D Studio</a>
+                <a href={aboutUrl}>About</a>
+                <a href={contactUrl}>Contact</a>
+                <a href="#top">Back to top</a>
+            </nav>
+            <p class="fineprint">Fictional dealership demo. Listings, prices and specifications are sample data; photos are illustrative. Sales, finance and service features are demonstrations, not real offers.</p>
+        </footer>
+    </div>
+</template>

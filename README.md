@@ -1,148 +1,159 @@
-# Northgate Motors
+# Northgate Motors — Salesforce Experience Cloud dealership demo
 
-A fictional dealership demo on Salesforce: Lead routing/conversion, inventory/reservations,
-test drives, standard Quotes with custom CP2 pricing, approvals, financing/delivery, and custom
-service/loyalty/consent workflows. Licensed-product seams are documented honestly; this is not
-an Automotive Cloud, Revenue Cloud/CPQ, Field Service or Loyalty Management installation.
+A fictional premium dealership built end-to-end on Salesforce: a six-page public buyer site with a
+live 3D concept-car studio, a customer Owner Portal, and the internal sales, finance and service
+operations behind them.
 
-Current authority/status: [project handoff](NORTHGATE_PROJECT_HANDOFF.md),
-[backlog](DEMO_ORG_BACKLOG.md), [governance checklist](docs/GOVERNANCE.md) and
-[technical-debt register](docs/TECH_DEBT.md). A document or command example is not authorization.
+Everything here is synthetic. Nothing is a real vehicle, price, offer or customer.
 
-## What exists and what remains gated
+![Northgate buyer home](docs/screenshots/home-1440.jpg)
 
-| Area | Actual state |
+## What this demonstrates
+
+| Surface | Highlights |
 |---|---|
-| Phases 1–5 | Implemented lifecycle; Phase 5 owner-accepted with documented exceptions |
-| Phase 6 | Owner-accepted with documented exceptions on October 24, 2026; ten Knowledge Drafts remain unpublished; loyalty/jobs and operational gates stay explicit |
-| P7 Batch 1 | Application and thirty licensed stock photographs deployed; browser/gallery/event acceptance, page placement, operational access and VIN credentials deferred; not owner-accepted |
-| P7 Batch 2 | Ten application components/four trigger removals deployed atomically; separate six-component territory package deployed; NG_Rooftops remains Planning with zero Account/User associations; not owner-accepted |
-| P7 Batch 3 | Strategy/seams and regression wrapper delivered; Case triage prompt deployed in Draft/inactive state; actual Agentforce, Data Cloud, portal and full regression acceptance remain outstanding |
-| P7 Batch 4 | Concept note/README/persona pack delivered; photo header and new Vehicle page deployed but unassigned/inactive; placement, screenshots and live walkthrough acceptance remain separate |
-| Phase 8 | Final development package deployed `0Afaj00000pPottCAC` (34/34, zero errors; reused 43/43 tests, UI 25/25). P8-05/07 broker deployed; no native customer Vehicle CRUD/Visit Create. Existing customer access/data/sharing/pages/scheduler preserved. Ledger empty/reviewer unassigned/site unpublished. Operational two-customer/data/access/placement/publication/UAT approvals remain; not owner-accepted. See handoff §71 and `evidence/P8/BROKER_DEPLOYMENT/RESULT.md` |
+| **Buyer site** (Experience Cloud, public) | Cinematic home, 87-listing catalogue (demo org data; sample data not included) with six dependent filters and pagination, deep-linkable vehicle details, Apex Concept 3D studio, editorial about page, inquiry form with draft-preserving guards |
+| **3D Studio** | Three.js viewer, licensed glTF concept car, three paint finishes, orbit/zoom/view controls, poster fallback on touch and low-capability devices |
+| **Owner Portal** (authenticated) | Dashboard, My Garage, service appointments and booking, support cases, rewards — accepted at Core 1.0, **not retested in the latest cycle** |
+| **Sales operations** | Lead intake and queue routing, opportunities, standard Quotes with custom CP2 pricing, approvals, financing and delivery |
+| **Service operations** | Cases, SLA, visits, loyalty and consent models |
+| **Engineering** | 80 offline static LWC contracts, local harness, scoped deployment manifests, UAT evidence register |
 
-Batch 3 capability inspection finds Prompt platform enabled, Agent Platform/Copilot/Bots,
-CustomerDataPlatform and Networks disabled. Available external license counts do not choose a
-portal identity/sharing model. No live agent, ingestion, identity-resolution or portal demo is
-claimed. See [capability gates](docs/planning/P7_BATCH3_CAPABILITY_GATES.md).
+## Screenshots
 
-## Architecture and repository map
+| Buyer home | Inventory |
+|---|---|
+| ![Home](docs/screenshots/home-1440.jpg) | ![Inventory](docs/screenshots/inventory-1440.jpg) |
 
-- `force-app/main/default/`: authoritative metadata/LWC/Apex source. Standard objects include
-  Account, Contact, Lead, Opportunity, Quote/QuoteLineItem, Product2/PricebookEntry, Case and Campaign.
-- Custom Vehicle/Model/Rooftop/Staff, finance/delivery, service visit, consent and loyalty models
-  reuse existing domain services. CP2 pricing/approvals are not replaced by Phase 7 UI components.
-- Native Platform Events, queues, reports, approvals, business-hours SLA and Sales Territories
-  remain native. No new project-owned Flow or React portal is introduced.
-- `manifest/`: exact scoped packages, not permission to deploy every file in this dirty tree.
-- `scripts/` and `data/`: tests, read-only verification and separately controlled data tooling.
-- `docs/`: [org strategy](docs/architecture/ORG_STRATEGY.md),
-  [Automotive concept mapping](docs/architecture/AUTOMOTIVE_CLOUD_MAPPING.md),
-  [CPQ](docs/architecture/SIMULATION_CPQ.md), [service](docs/architecture/SIMULATION_FIELD_SERVICE.md),
-  [loyalty](docs/architecture/SIMULATION_LOYALTY.md), [nurture](docs/architecture/SIMULATION_NURTURE.md)
-  and [integration](docs/architecture/SIMULATION_INTEGRATION.md) seams.
-- `evidence/`: timestamped validation/deployment/exception receipts, not fabricated acceptance.
-  [Current persona walkthroughs](evidence/DEMO_SCRIPTS/README.md) begin with Activate persona.
+| Vehicle details | Apex Concept 3D Studio |
+|---|---|
+| ![Vehicle](docs/screenshots/vehicle-detail-1440.jpg) | ![Studio](docs/screenshots/studio-3d-1440.jpg) |
 
-## Org strategy and access boundaries
+| About | Contact |
+|---|---|
+| ![About](docs/screenshots/about-1440.jpg) | ![Contact](docs/screenshots/contact-1440.jpg) |
 
-All current commands target **ng-demo**, expected ID **00Daj00001Ae3iWEAR** (Developer Edition).
-The original two-org build/UAT-versus-demo strategy is history; never access ng-dev under current
-authorization. No scratch orgs. Preserve separate Sales/Finance identities, administrator accounts
-and VP reporting boundaries. Historical persona-switcher/permission-matrix documents do not
-authorize role swaps, grants, user creation or a substitute administrator persona.
+Mobile captures of every page are in [`docs/screenshots/`](docs/screenshots/) at 390 px.
 
-Use explicit target flags and verify identity before authorized org work:
+## Architecture
 
-```sh
-sf data query --target-org ng-demo --query "SELECT Id, OrganizationType FROM Organization" --json
+```text
+Experience Cloud site  /owners/s/*
+        │
+        ├── ngBuyerSite (LWC)          one component, six explicit `page` modes
+        │     ├── BuyerShowcaseController   public catalogue DTO (no record access for guests)
+        │     ├── BuyerInquiryController    validated Lead insert, queue routing, NG-XXXXXX reference
+        │     └── ngApexConcept3d           Three.js viewer + finishes + Priority List handoff
+        │
+        └── Owner Portal (authenticated)
+              └── ownerPortal* LWC + OwnerPortalBatchBController   dashboard, garage, service, cases, rewards
 ```
 
-The worktree contains prior modified/untracked source and is not a reproducible clean release.
-Do not stage/commit/push, discard unrelated work, infer remote freshness or create a release tag
-without owner authorization. Never place secrets or personal identities in source/evidence.
+- **Six pages from one component.** `page` is set per Experience page (`home`, `inventory`,
+  `vehicle`, `studio`, `about`, `contact`); `all` remains a compatibility fallback. URL parsing never
+  overrides an explicit Builder assignment.
+- **Guest-safe data.** The buyer site reads a purpose-built DTO through one `@AuraEnabled` method.
+  Guests get no native object permissions, no `WITH SECURITY_ENFORCED` catalogue queries and no
+  record ids beyond the public DTO.
+- **Inquiry intake.** `BuyerInquiryController` validates a fixed field set, enforces the demo
+  `.test`/`.example` email rule, inserts a Lead in system mode to the queue named by custom label
+  `Buyer_Lead_Queue_Id`, and returns a reference derived from the Lead Id.
+- **Dependent filters.** Model options are scoped to the selected family and a family change clears an
+  incompatible trim, so the two filters cannot combine into a guaranteed-empty result.
+- **3D without a rebuild.** A pinned Three.js build and licensed glTF assets ship as static
+  resources; the component degrades to a poster rather than a blank stage.
 
-## Toolchain and focused validation
+More detail: [buyer experience architecture](docs/architecture/BUYER_EXPERIENCE.md),
+[org strategy](docs/architecture/ORG_STRATEGY.md), [acceptance status](docs/ACCEPTANCE_STATUS.md).
+`docs/architecture/EXPERIENCE_PORTAL.md` is kept as the Phase 8 planning record and describes an
+earlier pre-publication state.
 
-Use the existing Salesforce CLI, Node 22+ and Python toolchain. TypeScript/tsx in package.json is
-for existing data tooling; no new LWC test framework/dependency is required for the header tests.
-The following commands are local only; run focused checks when relevant source changes:
+## Technology
 
-```sh
-node --test scripts/tests/vehicle_photo_header.test.mjs
-python3 scripts/tests/check_p7_batch4.py
-bash scripts/test.sh --plan
+Salesforce Platform (API 68.0) · Experience Cloud (Aura site) · Lightning Web Components ·
+Apex (system-mode DTO and intake) · Custom objects (`Vehicle__c`, `Vehicle_Model__c`, …) ·
+Three.js r187 + glTF/WebGL · Node 22 test runner · Python + Bash engineering harness.
+
+## Repository layout
+
+```text
+force-app/main/default/     authoritative metadata: LWC, Apex, objects, permissions, pages
+docs/                       architecture, decisions, acceptance status, screenshots
+scripts/tests/              ng_buyer_site.test.mjs — self-contained Buyer contracts
+harness/                    local check runner, regression matrix, preservation tooling
+manifest/                   scoped deployment packages
+sfdx-project.json           Salesforce DX project definition
 ```
 
-The Node checks execute real component state with UI API stubs, not a browser/DOM or actual-persona
-permission test. The header uses Lightning UI API record/FLS boundaries, optional model/photo
-fields and the same local WebP path contract as the gallery. It never injects Photo__c IMAGE
-markup as HTML, reads financial fields or writes records. A separate unassigned page retains
-native highlights/details and existing service history; current pages/mappings are untouched.
+Internal execution evidence, local preview harnesses and generated data exports are deliberately not
+published; they contain environment-specific receipts rather than product source.
 
-[P7-17 regression guidance](docs/verification/P7_REGRESSION_GATE.md) describes the explicit
-full-run command. It performs only check-only/tests and existing strict read-only DQ gates,
-requires real storage evidence, and stops on failure. Do not rerun the unchanged successful
-235 Apex methods merely to read this README or demo the wrapper. A green full native run,
-strict-DQ disposition and clean-checkout/M3 release acceptance remain outstanding.
+## Setup
 
-## Check-only and deployment workflow
-
-For a newly authorized scope, inspect exact manifest/source hashes and relevant dependencies,
-then use an explicit check-only. These most recently reviewed scopes remain separate; they are
-already deployed, so examples are for future authorized changes, not a request to repeat checks:
+Prerequisites: Salesforce CLI, Node 22, Python 3, a Developer Edition org with Digital Experiences
+enabled, and the static resources listed in `force-app/main/default/staticresources`.
 
 ```sh
-# Batch 3: one Draft prompt only; no prompt execution, activation or agent setup.
-sf project deploy start --dry-run --target-org ng-demo --manifest manifest/p7-batch3-check.xml --test-level NoTestRun --wait 10 --json
-# Batch 4: Vehicle photo header LWC plus new unassigned Vehicle FlexiPage only.
-sf project deploy start --dry-run --target-org ng-demo --manifest manifest/p7-batch4-check.xml --test-level NoTestRun --wait 10 --json
+git clone https://github.com/arjun2126/northgate-motors-demo.git
+cd northgate-motors-demo
+sf org login web --alias ng-demo
+sf project deploy start --manifest manifest/buyer-3-0.xml --target-org ng-demo
 ```
 
-These examples do not request repeating completed validations. NoTestRun is supported for this
-Developer Edition metadata-only scope; changes to Apex/security/behavior need the relevant tests.
-Actual deployment requires separate owner approval of the exact reviewed scope and command;
-only then remove `--dry-run` for that approved package. No broad `force-app/` deployment.
-Activation, page assignment, permissions, users, data and jobs remain separate approvals even
-after a metadata deployment succeeds. Stop on unexpected failures; do not weaken tests or gates.
+Then create the six Experience pages, place `ngBuyerSite` once per page and set the matching `page`
+attribute (`home`, `inventory`, `vehicle`, `studio`, `about`, `contact`). The studio page needs the
+Apex viewer, model and poster static resources.
 
-Batch 2 application deployment `0Afaj00000p84KRCAY` already atomically installed/replaced ten
-components and removed four obsolete triggers using supported native pre-destructive packaging.
-Do not replay that destructive manifest as a routine regression step. Territory deployment
-`0Afaj00000p8GtRCAU` persists Account Read / Contact None / Opportunity None / Case None; do not
-activate or assign Accounts/users. Preserve the five Accounts without Preferred_Rooftop__c.
-
-## Reset and data handling
-
-There is **no authorized reset execution**. `scripts/reset.sh` only prepares an exact-ID plan
-from a fresh snapshot; it refuses deletion/reload. Existing loader/automation-control tools can
-mutate records/settings and must not be run as part of a demo or regression check.
-
-Under separate read-only snapshot authorization, the documented planning sequence is:
+## Testing
 
 ```sh
-python3 data/scripts/phase5.py snapshot --output evidence/P7/fresh-reset-snapshot.json
-bash scripts/reset.sh --snapshot evidence/P7/fresh-reset-snapshot.json
+node --test scripts/tests/ng_buyer_site.test.mjs   # 80 LWC contracts (VM + static)
+bash harness/check.sh focused buyer                # buyer lane + scoped preservation
+bash harness/check.sh                              # fast local checks
 ```
 
-These commands are documentation, not actions performed in Batch 4. Use a new snapshot path;
-the existing tool refuses overwrite. A resulting reset plan does not authorize deletion, reload,
-BAD-fixture correction, replaying the completed Knowledge import, loyalty reconciliation or jobs.
-Read [data-quality notes](docs/DATA_QUALITY.md) and preserved acceptance exceptions first.
+The harness proves local contracts only. It does not deploy, call Apex, drive a browser or replace
+UAT; server-side and browser results are recorded separately in the acceptance register.
 
-## Evidence and remaining acceptance
+## Verified state
 
-- [Phase 6 owner acceptance/exception index](evidence/P6/PHASE6_OWNER_ACCEPTANCE_2026-10-24.md).
-- [Batch 1 deployment/limits](evidence/P7/BATCH1_STANDARD_DEPLOYMENT_2026-10-25.md).
-- [Batch 2 actual deployments/readback](evidence/P7/BATCH2_DEPLOYMENT.md).
-- [Batch 3 actual local results/gates](evidence/P7/BATCH3_EXECUTION.md).
-- [Batch 4 source/check-only history](evidence/P7/BATCH4_EXECUTION.md).
-- [Final Batch 3/4 actual deployment/readback](evidence/P7/P7_FINAL_DEPLOYMENT.md).
-- [All 23 Phase 7 block states and acceptance exceptions](docs/planning/PHASE7_FINAL_STATUS_2026-10-26.md).
-- [Phase 8 preparation: all eleven requirements, no implementation](docs/planning/PHASE8_HANDOFF_2026-10-26.md).
-- [Persona walkthroughs and unexecuted acceptance checklist](evidence/DEMO_SCRIPTS/README.md).
+Observed 2026-11-01 against the demo org. Validation receipts are kept in the private engineering register and are not published with this repository.
 
-Source/check-only success is not actual page rendering, event delivery, persona access or UAT.
-No screenshot is invented. Agentforce, Data Cloud, portal and full regression gates remain open;
-Batch 1/2 owner review, Batch 4 page placement/screenshots/walkthroughs, strict release DQ,
-clean tag and final M3 approval remain outstanding.
+| Check | Result |
+|---|---|
+| Buyer contracts | 80 / 80 passing |
+| Public routes | six live, one component each, correct mode |
+| Inventory filters | family/model dependency fixed and re-verified live |
+| 3D Studio | hardware WebGL canvas, drag/zoom and paint selection verified |
+| Guest inquiry | one synthetic submission, reference `NG-APJEAW`, one Lead in the Inbound Leads queue (an active assignment rule did not apply to the Apex insert) |
+| Portal isolation | all portal routes redirect anonymous visitors to login |
+| Deployment parity | 8/8 normalised files match reviewed source |
+
+## Limitations
+
+- **Fictional demo.** Vehicles, prices, photographs, people and locations are synthetic or
+  illustrative. Nothing is an offer, reservation or availability claim.
+- **Not a licensed Automotive Cloud / CPQ / Field Service / Loyalty install.** Those are documented
+  seams and simulations, not managed-package features.
+- **Apex Concept is a concept.** Not for sale, not in inventory, finishes are visual only; the
+  Priority List is interest, not allocation.
+- **Demo email rule.** Inquiries must use a `.test` or `.example` address; real contact details are
+  rejected by design.
+- **Not yet verified:** screen-reader output, Safari/WebKit, real iOS/Android devices, and a fully
+  authenticated Owner Portal walk-through in the latest cycle. See
+  [acceptance status](docs/ACCEPTANCE_STATUS.md).
+- **Single demo org.** Published for demonstration from one Developer Edition org; no scratch-org or
+  multi-tenant provisioning is included.
+
+## Asset credits
+
+**3D concept car.** “Car Concept” asset copyright: © 2015, Khronos Group, Khronos logo.
+© 2017, Khronos Group, 3D Commerce logo. Asset is CC BY 4.0 International, created by Eric Chadwick
+of Darmstadt Graphics Group GmbH, 2024. Adapted for this demo: geometry and textures optimised, paint
+finishes re-tinted, third-party number-plate mark removed. No affiliation or endorsement is implied.
+
+**Vehicle photography.** Illustrative CC0 1.0 stock photographs from Wikimedia Commons, resized and
+converted to WebP. Per-image photographer, source URL and licence are recorded in
+[`force-app/main/default/staticresources/NG_VehicleImages/ATTRIBUTION.md`](force-app/main/default/staticresources/NG_VehicleImages/ATTRIBUTION.md).
+Northgate model names are fictional; photographed vehicles are not inventory and do not imply
+manufacturer endorsement. CC0 does not grant trademark rights.

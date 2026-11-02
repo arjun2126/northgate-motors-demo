@@ -1,0 +1,344 @@
+:host {
+    display: block;
+    --apex-ink: #12151a;
+    --apex-ink-soft: #3c434d;
+    --apex-line: #d8d1c4;
+    --apex-accent: #8c6b34;
+    --apex-control: 44px;
+}
+
+* { box-sizing: border-box; }
+
+.apex { color: var(--apex-ink); display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(17rem, 1fr); gap: 1.5rem; align-items: start; }
+.apex-viewer, .apex-configuration { min-width: 0; }
+.apex-configuration { padding: .25rem 0; }
+.apex > .apex-credit { grid-column: 1 / -1; margin-top: 0; padding-top: 1rem; border-top: 1px solid var(--apex-line); }
+
+/* ---------- stage ---------- */
+
+.apex-stage {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    min-height: 320px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: radial-gradient(78% 62% at 50% 16%, #3d444f 0%, #232932 42%, #10151b 76%, #0a0e13 100%);
+    box-shadow: inset 0 -40px 80px rgba(0, 0, 0, .45), inset 0 0 70px rgba(0, 0, 0, .35);
+    touch-action: pan-y;
+}
+
+.apex-canvas-host {
+    position: absolute;
+    inset: 0;
+}
+
+.apex-poster {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.apex-scrim {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+    margin: 0;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: .9rem;
+    color: #e7e2d8;
+    background: rgba(10, 12, 16, .62);
+}
+
+.apex-spinner {
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid rgba(231, 226, 216, .25);
+    border-top-color: #f4f0e8;
+    border-radius: 50%;
+    animation: apex-spin 1.1s linear infinite;
+}
+
+@keyframes apex-spin { to { transform: rotate(360deg); } }
+
+.apex-error {
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    margin: 0;
+    padding: .8rem 1rem;
+    border-radius: 8px;
+    background: rgba(10, 12, 16, .9);
+    color: #f1ece2;
+    font-size: .84rem;
+}
+
+.apex-start {
+    position: absolute;
+    left: 50%;
+    bottom: 1rem;
+    transform: translateX(-50%);
+    min-height: var(--apex-control);
+    padding: .6rem 1.1rem;
+    border: 1px solid rgba(244, 240, 232, .55);
+    border-radius: 999px;
+    background: rgba(10, 12, 16, .86);
+    color: #fff;
+    font: inherit;
+    font-size: .82rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.apex-hint {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: .55rem .9rem;
+    font-size: .72rem;
+    color: rgba(241, 236, 226, .72);
+    pointer-events: none;
+}
+
+.apex-caption {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin: .7rem 0 0;
+    font-size: .74rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--apex-ink-soft);
+}
+
+.apex-dot {
+    width: .45rem;
+    height: .45rem;
+    border-radius: 50%;
+    background: var(--apex-accent);
+}
+
+/* ---------- toolbar ---------- */
+
+.apex-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: .4rem;
+    margin-top: .8rem;
+}
+
+.apex-toolbar button {
+    min-width: var(--apex-control);
+    min-height: var(--apex-control);
+    padding: .4rem .7rem;
+    border: 1px solid var(--apex-line);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--apex-ink);
+    font: inherit;
+    font-size: .8rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.apex-toolbar button[disabled] { opacity: .42; cursor: not-allowed; }
+
+.apex-toolbar button:not([disabled]):hover { border-color: #b9b0a0; }
+
+.apex-gap { flex: 1 1 1rem; }
+
+.apex-reset { margin-left: auto; }
+
+/* ---------- finishes ---------- */
+
+.apex-finishes {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.apex-finishes legend {
+    padding: 0;
+    margin-bottom: .5rem;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--apex-ink-soft);
+}
+
+.apex-finish-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: .5rem;
+}
+
+.apex-finish {
+    display: flex;
+    align-items: center;
+    gap: .45rem;
+    min-height: var(--apex-control);
+    padding: .55rem .65rem;
+    border: 1px solid var(--apex-line);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--apex-ink);
+    font: inherit;
+    font-size: .82rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.apex-finish.is-selected {
+    border-color: var(--apex-ink);
+    box-shadow: inset 0 0 0 1px var(--apex-ink);
+}
+
+.apex-chip {
+    flex: 0 0 auto;
+    width: 1.15rem;
+    height: 1.15rem;
+    border-radius: 50%;
+    border: 1px solid rgba(18, 21, 26, .28);
+    background: #b9b2a4;
+}
+
+.apex-chip-carmine { background: #8c1122; }
+.apex-chip-pearl { background: #e9e7e2; }
+.apex-chip-graphite { background: #2b2e33; }
+
+.apex-micro {
+    margin: .55rem 0 0;
+    font-size: .76rem;
+    color: var(--apex-ink-soft);
+}
+
+/* ---------- content ---------- */
+
+.apex-facts {
+    margin: 1.3rem 0 0;
+    border-top: 1px solid var(--apex-line);
+}
+
+.apex-facts div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem 1rem;
+    justify-content: space-between;
+    padding: .55rem 0;
+    border-bottom: 1px solid var(--apex-line);
+}
+
+.apex-facts dt {
+    font-size: .74rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    color: var(--apex-ink-soft);
+}
+
+.apex-facts dd { margin: 0; font-size: .86rem; text-align: right; }
+
+.apex-note {
+    margin: 1rem 0 0;
+    padding: .85rem 1rem;
+    border-left: 3px solid var(--apex-accent);
+    background: #ebe5da;
+    font-size: .82rem;
+    color: var(--apex-ink-soft);
+}
+
+.apex-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: var(--apex-control);
+    margin-top: 1.1rem;
+    padding: .7rem 1.2rem;
+    border-radius: 8px;
+    background: var(--apex-ink);
+    color: #fff;
+    font-size: .84rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.apex-cta:hover { background: #232932; }
+
+.apex-credit {
+    margin: 1rem 0 0;
+    font-size: .72rem;
+    line-height: 1.5;
+    color: var(--apex-ink-soft);
+}
+
+.apex-credit a { color: inherit; text-underline-offset: 2px; }
+
+.apex-sr {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+:host button:focus-visible,
+:host a:focus-visible {
+    outline: 3px solid #1f6feb;
+    outline-offset: 2px;
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 64rem) {
+    .apex { grid-template-columns: minmax(0, 1fr); }
+    .apex-stage { aspect-ratio: 4 / 3; }
+}
+
+@media (max-width: 26rem) {
+    .apex-stage { aspect-ratio: 1 / 1; min-height: 260px; }
+    .apex-finish-grid { grid-template-columns: 1fr; }
+    /* A flex toolbar ran out of room here and split the camera controls across three ragged
+       rows, leaving Reset stranded. Two deliberate rows: six orbit/zoom keys, then the
+       Front/Side/Rear/Reset view keys. Same controls, same handlers, 44px tap height. */
+    .apex-toolbar {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        gap: .3rem;
+    }
+    .apex-toolbar button {
+        min-width: 0;
+        padding: .35rem .2rem;
+        font-size: .74rem;
+    }
+    .apex-toolbar button[data-cam]:not(.apex-reset) { grid-column: span 2; }
+    .apex-toolbar button[data-view],
+    .apex-toolbar .apex-reset { grid-column: span 3; }
+    .apex-gap { display: none; }
+    .apex-reset { margin-left: 0; }
+    /* The caption wraps to two lines at this width; keep the status dot on the first line
+       instead of leaving it floating between lines. */
+    .apex-caption { align-items: flex-start; }
+    .apex-caption .apex-dot { margin-top: .34em; flex: 0 0 auto; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    /* A frozen spinner still reads as "loading"; show progress as static text instead. */
+    .apex-spinner { display: none; }
+    * { transition-duration: .001ms !important; }
+}
