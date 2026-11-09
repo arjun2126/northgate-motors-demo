@@ -35,6 +35,83 @@ Everything here is synthetic. Nothing is a real vehicle, price, offer or custome
 
 Mobile captures of every page are in [`docs/screenshots/`](docs/screenshots/) at 390 px.
 
+## Salesforce Platform gallery
+
+Internal dealership workflows captured November 9, 2026. These cropped, optimized copies hide
+personal identities and identifying values; dark blocks indicate redactions. They illustrate UI
+and data-model design, **not fresh functional, security or acceptance tests**. Dashboard values
+are historical cached snapshots, not live KPIs.
+
+### Sales and delivery
+
+| Lead workspace | Delivery handoff |
+|---|---|
+| ![Lead status path, activity timeline and duplicate panel](docs/screenshots/salesforce-platform/sales/lead-path-and-activity.jpg) | ![Custom Delivery record with status and handoff checklist](docs/screenshots/salesforce-platform/sales/delivery-handoff-details.jpg) |
+
+Native Lead Path and activities support intake; the custom Delivery model organizes the handoff.
+**Consultant:** sales-process mapping and handoff requirements. **Developer:** Lightning record
+pages, custom objects and relationship modeling. Account, test-drive and trade-in captures are
+included in the [complete inventory](docs/screenshots/salesforce-platform/INVENTORY.md).
+
+### Inventory and dealership locations
+
+| Vehicle details | Rooftop details |
+|---|---|
+| ![Custom Vehicle record with pricing, status and inventory age](docs/screenshots/salesforce-platform/inventory/vehicle-record-details.jpg) | ![Custom Rooftop record with location type and service capacity](docs/screenshots/salesforce-platform/inventory/rooftop-record-details.jpg) |
+
+Custom Vehicle and Rooftop objects connect stock, pricing, location and service capacity.
+**Consultant:** inventory lifecycle and multi-location requirements. **Developer:** lookup
+relationships, field design and list-view configuration.
+
+### Financing and approvals
+
+| Finance Application | Approval submission |
+|---|---|
+| ![Custom Finance Application action showing demo rates and payment estimates](docs/screenshots/salesforce-platform/finance/finance-application-action.jpg) | ![Native Submit for Approval comments dialog on a Financing record](docs/screenshots/salesforce-platform/finance/financing-submit-for-approval.jpg) |
+
+The custom finance action presents quote-based estimates, rate choices and an existing draft;
+the native approval dialog captures submission comments. **Consultant:** finance requirements
+and approval governance. **Developer:** LWC quick actions, Apex-backed calculations and native
+approval integration. A dialog alone does not prove submission, routing or approval.
+
+### Service operations
+
+| Service Visit | Service Appointment |
+|---|---|
+| ![Custom Service Visit form for vehicle, contact, staff and costs](docs/screenshots/salesforce-platform/service/service-visit-create.jpg) | ![Standard Service Appointment form with parent, scheduling and address fields](docs/screenshots/salesforce-platform/service/service-appointment-create.jpg) |
+
+The custom Service Visit captures workshop activity; the standard Service Appointment form
+shows scheduling fields. **Consultant:** service intake and scheduling requirements.
+**Developer:** custom-versus-standard object selection and related-record design. This is not
+evidence of a licensed Field Service implementation or a completed booking.
+
+### Loyalty data model
+
+| Member profile | Transaction ledger |
+|---|---|
+| ![Custom Loyalty Member with tier, balance and lifetime activity](docs/screenshots/salesforce-platform/loyalty/loyalty-member-details.jpg) | ![Custom Loyalty Transaction with points, type and related-record fields](docs/screenshots/salesforce-platform/loyalty/loyalty-transaction-details.jpg) |
+
+Custom member and transaction objects model tiers, balances and points history—not the licensed
+Salesforce Loyalty Management product. **Consultant:** rewards lifecycle and ledger requirements.
+**Developer:** relational modeling and audit-oriented field design; screenshots do not verify accrual.
+
+### Reporting and dashboards
+
+| Executive operations | Sales pipeline |
+|---|---|
+| ![Executive dashboard with historical pipeline, inventory, service and loyalty tiles](docs/screenshots/salesforce-platform/analytics/executive-operations-dashboard.jpg) | ![Sales dashboard with stage chart, opportunity count and lead-source conversion](docs/screenshots/salesforce-platform/analytics/sales-pipeline-dashboard.jpg) |
+
+Native reports and dashboards summarize operational data. **Consultant:** KPI definition,
+stakeholder reporting and data-freshness interpretation. **Developer:** report groupings,
+dashboard components and source-data relationships. Cached tiles do not establish current accuracy
+or persona-specific access; the matrix report is also in the inventory.
+
+**All 21 screenshots:** [feature inventory, source mapping and privacy notes](docs/screenshots/salesforce-platform/INVENTORY.md).
+Original uploads remain unchanged in the private source checkout and are not published here.
+Only the named derivative files are included. Inherited repository-wide exposure findings remain
+separate and are not remediated by this gallery. Local image/link checks alone do not establish
+GitHub-hosted rendering or repository-wide publication safety.
+
 ## Architecture
 
 ```text
